@@ -1,0 +1,112 @@
+.Wrapper {
+    height: 100vh;
+    width: 100vw;
+    background-color: white;
+    position: absolute;
+    z-index: -2;
+    font-family: 'Source Sans Pro', sans-serif;
+    line-height: 1.5;
+}
+
+.Background {
+    background: linear-gradient(to right, #134b98, #0967c6 50%,#0278e2 90%, #0279e3);
+    width: 100vw;
+    height: 450px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.Logo {
+    width: 138px;
+    height: 37px;
+    margin-bottom: 30px;
+}
+
+.Container {
+    width: 800px;
+    margin: 40px auto;
+    
+}
+
+.Container .Top {
+    color: white;
+}
+
+.Container h1 {
+    font-weight: bold;
+    font-size: 30px;
+    margin: 20px 0px;
+}
+
+.Top {
+    margin: 55px 20px 25px 20px;
+}
+
+.Form {
+    width: 100%;
+    margin: 0px auto;
+    background-color: white;
+    border: 1px solid rgb(222, 222, 222);
+    border-bottom: none;
+    border-radius: 4px;
+}
+
+.FormWrapper {
+    margin: 35px;
+}
+
+.Form input {
+    width: 98%;
+    padding: 10px 0px 15px 20px;
+    border: 1px solid #bec0c2;
+    margin-bottom: 40px;
+}
+
+.Form input:focus {
+    border: 1px solid #2ea1ee;
+}
+
+.Form input:hover {
+    border: 1px solid #2ea1ee;
+}
+
+.Form h3 {
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.Form p {
+    font-size: 15px;
+}
+
+.Form textarea {
+    width: 98%;
+    resize: vertical;
+    border: 1px solid #bec0c2;
+    padding: 10px;
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+
+.Form textarea:focus {
+    border: 1px solid #2ea1ee;
+}
+
+.Form textarea:hover {
+    border: 1px solid #2ea1ee;
+}
+
+.Form textarea::placeholder {
+    font-size: 14px;
+    font-family: 'Source Sans Pro', sans-serif;  
+}
+
+.PostMyProjectButton {
+    float: right;
+    margin-right: -10px;
+    padding: 10px;
+}
+
