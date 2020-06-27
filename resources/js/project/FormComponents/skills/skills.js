@@ -9,7 +9,8 @@ class Skills extends React.Component {
         this.state = {
             value: '',
             searchResults: [],
-            selectedSkills: []
+            selectedSkills: [],
+            showSkillsSearchResults: false
         }
         
 
@@ -21,12 +22,13 @@ class Skills extends React.Component {
 
     async handleChange (event) {       
         this.setState({value: event.target.value});
+        this.setState({showSkillsSearchResults: true});
 
         let searchResults = [];
         await axios.get(`http://localhost:8000/skills?q=${this.state.value}`)
             .then(response => {
                 response.data.map(data => {
-                    searchResults.push([data.id, data.name]);
+                        searchResults.push([data.id, data.name]);
                 });
             })
             .catch(err => console.log(err));
@@ -42,7 +44,8 @@ class Skills extends React.Component {
         // because the searchsuggestions will be immediately closed if the settimeout is not implemented
         // as soon as handleBlur activates
         setTimeout(function() {
-            this.setState({value: ''})
+            this.setState({value: ''});
+            this.setState({showSkillsSearchResults: false});
         }.bind(this), 100);
     }
 
@@ -73,7 +76,9 @@ class Skills extends React.Component {
         if (this.state.searchResults && this.state.value !== '') 
         {
             results = this.state.searchResults.map(result => {
-                
+                for (let i = 0; i < this.state.selectedSkills.length; i++) {
+                    if (this.state.selectedSkills[i][0] === result[0]) return;
+                }
                 return <div 
                             key={result[0]} 
                             result_id={result[0]}
@@ -127,9 +132,11 @@ class Skills extends React.Component {
                         onBlur={this.handleBlur}
                     />
                 </div>
-                <div className="SkillsSearchResults">
-                    {results}
-                </div>
+                { this.state.showSkillsSearchResults ?
+                    <div className="SkillsSearchResults">
+                        {results}
+                    </div>
+                : null }
            </React.Fragment>
         )
     }

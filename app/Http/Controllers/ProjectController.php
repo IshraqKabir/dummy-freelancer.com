@@ -40,6 +40,7 @@ class ProjectController extends Controller
         $data = request()->validate([
             'name' => 'required|max:255',
             'details' => 'required|max:4000',
+            'skills' => 'required|max:5'
         ]);
 
         $project = Project::create([

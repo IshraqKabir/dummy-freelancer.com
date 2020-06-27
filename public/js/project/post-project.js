@@ -32394,7 +32394,8 @@ var Skills = /*#__PURE__*/function (_React$Component) {
     _this.state = {
       value: '',
       searchResults: [],
-      selectedSkills: []
+      selectedSkills: [],
+      showSkillsSearchResults: false
     };
     _this.handleChange = _this.handleChange.bind(_assertThisInitialized(_this));
     _this.handleBlur = _this.handleBlur.bind(_assertThisInitialized(_this));
@@ -32415,8 +32416,11 @@ var Skills = /*#__PURE__*/function (_React$Component) {
                 this.setState({
                   value: event.target.value
                 });
+                this.setState({
+                  showSkillsSearchResults: true
+                });
                 searchResults = [];
-                _context.next = 4;
+                _context.next = 5;
                 return axios.get("http://localhost:8000/skills?q=".concat(this.state.value)).then(function (response) {
                   response.data.map(function (data) {
                     searchResults.push([data.id, data.name]);
@@ -32425,12 +32429,12 @@ var Skills = /*#__PURE__*/function (_React$Component) {
                   return console.log(err);
                 });
 
-              case 4:
+              case 5:
                 this.setState({
                   searchResults: searchResults
                 });
 
-              case 5:
+              case 6:
               case "end":
                 return _context.stop();
             }
@@ -32455,6 +32459,9 @@ var Skills = /*#__PURE__*/function (_React$Component) {
       setTimeout(function () {
         this.setState({
           value: ''
+        });
+        this.setState({
+          showSkillsSearchResults: false
         });
       }.bind(this), 100);
     }
@@ -32495,6 +32502,10 @@ var Skills = /*#__PURE__*/function (_React$Component) {
 
       if (this.state.searchResults && this.state.value !== '') {
         results = this.state.searchResults.map(function (result) {
+          for (var i = 0; i < _this2.state.selectedSkills.length; i++) {
+            if (_this2.state.selectedSkills[i][0] === result[0]) return;
+          }
+
           return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
             key: result[0],
             result_id: result[0],
@@ -32543,9 +32554,9 @@ var Skills = /*#__PURE__*/function (_React$Component) {
         value: this.state.value,
         onChange: this.handleChange,
         onBlur: this.handleBlur
-      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+      })), this.state.showSkillsSearchResults ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         className: "SkillsSearchResults"
-      }, results));
+      }, results) : null);
     }
   }]);
 
