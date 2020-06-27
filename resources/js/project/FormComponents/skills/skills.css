@@ -33,3 +33,7 @@
 .SelectedSkillClose {
     cursor: pointer;
 }
+
+.SkillsContainer option {
+    style: none;
+}

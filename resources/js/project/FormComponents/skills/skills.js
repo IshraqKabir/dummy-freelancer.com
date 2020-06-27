@@ -83,16 +83,27 @@ class Skills extends React.Component {
         }
 
         let selectedSkills = null;
+        let selectedSkillsOptions = null;
         if (this.state.selectedSkills)
         {
             selectedSkills = this.state.selectedSkills.map(skill => {
                 
                 return <span 
                             key={skill[0]} 
-                            skill_id={skill[0]}
+                            value={skill[0]}
                             className="SelectedSkill"
                         >{skill[1]} <span onClick={this.handleSelectedSkillCloseClicked.bind(this, skill[0])} className="SelectedSkillClose">x</span></span>
-            })
+            });
+            selectedSkillsOptions = this.state.selectedSkills.map(skill => {
+                
+                return <option 
+                            key={skill[0]} 
+                            value={skill[0]}
+                            className="SelectedSkill"
+                            selected
+                            hidden
+                        >{skill[1]}</option>
+            });
         }
 
 
@@ -103,6 +114,9 @@ class Skills extends React.Component {
                 <div className="SkillsContainer">
                     <div className="SelectedSkills">
                         {selectedSkills}
+                        <select name="skills[]" multiple hidden>
+                            {selectedSkillsOptions}
+                        </select>
                     </div>
                     <input 
                         type="text" 

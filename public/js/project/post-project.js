@@ -1942,7 +1942,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, ".SkillsSearchField {\r\n    width: 90%;\r\n    font-size: 15px;\r\n    border: none!important;\r\n}\r\n\r\n.SkillsContainer {\r\n    border:1px solid #bec0c2;\r\n    overflow: hidden;\r\n}\r\n\r\n.SkillsContainer:hover {\r\n    border: 1px solid #2ea1ee;\r\n}\r\n\r\n.SelectedSkills {\r\n    width: 95%;\r\n    margin: 0 auto;\r\n}\r\n\r\n.SkillsSearchResults {\r\n    border: 1px solid black;\r\n}\r\n\r\n.SelectedSkill {\r\n    border: 1px solid black;\r\n    padding: 2px 10px;\r\n    font-size: 15px;\r\n    height: 100%;\r\n    margin: auto 5px;\r\n}\r\n\r\n.SelectedSkillClose {\r\n    cursor: pointer;\r\n}", ""]);
+exports.push([module.i, ".SkillsSearchField {\r\n    width: 90%;\r\n    font-size: 15px;\r\n    border: none!important;\r\n}\r\n\r\n.SkillsContainer {\r\n    border:1px solid #bec0c2;\r\n    overflow: hidden;\r\n}\r\n\r\n.SkillsContainer:hover {\r\n    border: 1px solid #2ea1ee;\r\n}\r\n\r\n.SelectedSkills {\r\n    width: 95%;\r\n    margin: 0 auto;\r\n}\r\n\r\n.SkillsSearchResults {\r\n    border: 1px solid black;\r\n}\r\n\r\n.SelectedSkill {\r\n    border: 1px solid black;\r\n    padding: 2px 10px;\r\n    font-size: 15px;\r\n    height: 100%;\r\n    margin: auto 5px;\r\n}\r\n\r\n.SelectedSkillClose {\r\n    cursor: pointer;\r\n}\r\n\r\n.SkillsContainer option {\r\n    style: none;\r\n}", ""]);
 
 // exports
 
@@ -32504,17 +32504,27 @@ var Skills = /*#__PURE__*/function (_React$Component) {
       }
 
       var selectedSkills = null;
+      var selectedSkillsOptions = null;
 
       if (this.state.selectedSkills) {
         selectedSkills = this.state.selectedSkills.map(function (skill) {
           return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
             key: skill[0],
-            skill_id: skill[0],
+            value: skill[0],
             className: "SelectedSkill"
           }, skill[1], " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
             onClick: _this2.handleSelectedSkillCloseClicked.bind(_this2, skill[0]),
             className: "SelectedSkillClose"
           }, "x"));
+        });
+        selectedSkillsOptions = this.state.selectedSkills.map(function (skill) {
+          return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("option", {
+            key: skill[0],
+            value: skill[0],
+            className: "SelectedSkill",
+            selected: true,
+            hidden: true
+          }, skill[1]);
         });
       }
 
@@ -32522,7 +32532,11 @@ var Skills = /*#__PURE__*/function (_React$Component) {
         className: "SkillsContainer"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         className: "SelectedSkills"
-      }, selectedSkills), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
+      }, selectedSkills, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("select", {
+        name: "skills[]",
+        multiple: true,
+        hidden: true
+      }, selectedSkillsOptions)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
         type: "text",
         className: "SkillsSearchField",
         placeholder: "Enter skills here...",

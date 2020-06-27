@@ -34,16 +34,20 @@ class ProjectController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
+    {   
+
+        // dd($request->get('skills'));
         $data = request()->validate([
             'name' => 'required|max:255',
-            'details' => 'required|max:4000'
+            'details' => 'required|max:4000',
         ]);
 
-        Project::create([
+        $project = Project::create([
             'name' => $data['name'],
             'details' => $data['details']
         ]);
+
+        $project->skills()->attach($request->get('skills'));
 
         return redirect()->route('home');
     }
