@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Resources\Skill as SkillResource;
+use App\Skill;
 
 Route::get('/', function () {
     return view('welcome');
@@ -11,6 +13,7 @@ Route::get('/', function () {
 Route::get('/post-project', 'ProjectController@create')->name('create-project');
 Route::post('/post-project', 'ProjectController@store')->name('store-project');
 
+Route::get('/skills', 'SkillController@index')->name('skill-index-api');
 
 Auth::routes();
 

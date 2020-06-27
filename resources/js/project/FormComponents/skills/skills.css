@@ -1,0 +1,23 @@
+.SkillsSearchField {
+    width: 90%;
+    font-size: 15px;
+    border: none!important;
+}
+
+.SkillsContainer {
+    border:1px solid #bec0c2;
+    overflow: hidden;
+}
+
+.SkillsContainer:hover {
+    border: 1px solid #2ea1ee;
+}
+
+.SelectedSkills {
+    width: 95%;
+    margin: 0 auto;
+}
+
+.SkillsSearchResults {
+    border: 1px solid black;
+}

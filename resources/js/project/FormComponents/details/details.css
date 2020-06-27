@@ -1,0 +1,13 @@
+.CharactersRemaining {
+    font-size: small;
+    float: right;
+    margin-right: -6px;
+    color: #4d525b;
+}
+
+.ErrorAndCharsRem {
+    display: block;
+    margin-bottom: 25px;
+}
+
+
