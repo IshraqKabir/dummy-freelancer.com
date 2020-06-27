@@ -1942,7 +1942,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, ".SkillsSearchField {\r\n    width: 90%;\r\n    font-size: 15px;\r\n    border: none!important;\r\n}\r\n\r\n.SkillsContainer {\r\n    border:1px solid #bec0c2;\r\n    overflow: hidden;\r\n}\r\n\r\n.SkillsContainer:hover {\r\n    border: 1px solid #2ea1ee;\r\n}\r\n\r\n.SelectedSkills {\r\n    width: 95%;\r\n    margin: 0 auto;\r\n}\r\n\r\n.SkillsSearchResults {\r\n    border: 1px solid black;\r\n}\r\n", ""]);
+exports.push([module.i, ".SkillsSearchField {\r\n    width: 90%;\r\n    font-size: 15px;\r\n    border: none!important;\r\n}\r\n\r\n.SkillsContainer {\r\n    border:1px solid #bec0c2;\r\n    overflow: hidden;\r\n}\r\n\r\n.SkillsContainer:hover {\r\n    border: 1px solid #2ea1ee;\r\n}\r\n\r\n.SelectedSkills {\r\n    width: 95%;\r\n    margin: 0 auto;\r\n}\r\n\r\n.SkillsSearchResults {\r\n    border: 1px solid black;\r\n}\r\n\r\n.SelectedSkill {\r\n    border: 1px solid black;\r\n    padding: 2px 10px;\r\n    font-size: 15px;\r\n    height: 100%;\r\n    margin: auto 5px;\r\n}\r\n\r\n.SelectedSkillClose {\r\n    cursor: pointer;\r\n}", ""]);
 
 // exports
 
@@ -32339,6 +32339,18 @@ __webpack_require__.r(__webpack_exports__);
 
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
@@ -32387,6 +32399,7 @@ var Skills = /*#__PURE__*/function (_React$Component) {
     _this.handleChange = _this.handleChange.bind(_assertThisInitialized(_this));
     _this.handleBlur = _this.handleBlur.bind(_assertThisInitialized(_this));
     _this.handleSearchResultSkillClicked = _this.handleSearchResultSkillClicked.bind(_assertThisInitialized(_this));
+    _this.handleSelectedSkillCloseClicked = _this.handleSelectedSkillCloseClicked.bind(_assertThisInitialized(_this));
     return _this;
   }
 
@@ -32447,8 +32460,31 @@ var Skills = /*#__PURE__*/function (_React$Component) {
     }
   }, {
     key: "handleSearchResultSkillClicked",
-    value: function handleSearchResultSkillClicked(id) {
+    value: function handleSearchResultSkillClicked(id, name) {
+      var joined = _toConsumableArray(this.state.selectedSkills);
+
+      joined.push([id, name]);
+      this.setState({
+        selectedSkills: joined
+      });
+    }
+  }, {
+    key: "handleSelectedSkillCloseClicked",
+    value: function handleSelectedSkillCloseClicked(id) {
       console.log(id);
+
+      var joined = _toConsumableArray(this.state.selectedSkills);
+
+      for (var i = 0; i < joined.length; i++) {
+        if (joined[i][0] === id) {
+          joined.splice(i, 1);
+          break;
+        }
+      }
+
+      this.setState({
+        selectedSkills: joined
+      });
     }
   }, {
     key: "render",
@@ -32462,8 +32498,23 @@ var Skills = /*#__PURE__*/function (_React$Component) {
           return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
             key: result[0],
             result_id: result[0],
-            onClick: _this2.handleSearchResultSkillClicked.bind(_this2, result[0])
+            onClick: _this2.handleSearchResultSkillClicked.bind(_this2, result[0], result[1])
           }, result[1]);
+        });
+      }
+
+      var selectedSkills = null;
+
+      if (this.state.selectedSkills) {
+        selectedSkills = this.state.selectedSkills.map(function (skill) {
+          return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
+            key: skill[0],
+            skill_id: skill[0],
+            className: "SelectedSkill"
+          }, skill[1], " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
+            onClick: _this2.handleSelectedSkillCloseClicked.bind(_this2, skill[0]),
+            className: "SelectedSkillClose"
+          }, "x"));
         });
       }
 
@@ -32471,7 +32522,7 @@ var Skills = /*#__PURE__*/function (_React$Component) {
         className: "SkillsContainer"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         className: "SelectedSkills"
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
+      }, selectedSkills), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
         type: "text",
         className: "SkillsSearchField",
         placeholder: "Enter skills here...",

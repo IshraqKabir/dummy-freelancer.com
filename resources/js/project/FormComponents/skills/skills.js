@@ -16,6 +16,7 @@ class Skills extends React.Component {
         this.handleChange = this.handleChange.bind(this);
         this.handleBlur = this.handleBlur.bind(this);
         this.handleSearchResultSkillClicked = this.handleSearchResultSkillClicked.bind(this);
+        this.handleSelectedSkillCloseClicked = this.handleSelectedSkillCloseClicked.bind(this);
     }
 
     async handleChange (event) {       
@@ -45,14 +46,30 @@ class Skills extends React.Component {
         }.bind(this), 100);
     }
 
-    handleSearchResultSkillClicked (id)
+    handleSearchResultSkillClicked (id, name)
     {
+        let joined = [...this.state.selectedSkills];
+        joined.push([id, name]);
+        this.setState({selectedSkills: joined})
+    }
+
+    handleSelectedSkillCloseClicked (id) {
         console.log(id)
+        let joined = [...this.state.selectedSkills];
+
+        for (let i = 0; i < joined.length; i++) 
+        {
+            if (joined[i][0] === id) {
+                joined.splice(i, 1);
+                break;
+            }
+        }
+        
+        this.setState({selectedSkills: joined});
     }
 
     render() {
         let results = null;
-
         if (this.state.searchResults && this.state.value !== '') 
         {
             results = this.state.searchResults.map(result => {
@@ -60,16 +77,33 @@ class Skills extends React.Component {
                 return <div 
                             key={result[0]} 
                             result_id={result[0]}
-                            onClick={this.handleSearchResultSkillClicked.bind(this, result[0])}
+                            onClick={this.handleSearchResultSkillClicked.bind(this, result[0], result[1])}
                         >{result[1]}</div>
             })
         }
+
+        let selectedSkills = null;
+        if (this.state.selectedSkills)
+        {
+            selectedSkills = this.state.selectedSkills.map(skill => {
+                
+                return <span 
+                            key={skill[0]} 
+                            skill_id={skill[0]}
+                            className="SelectedSkill"
+                        >{skill[1]} <span onClick={this.handleSelectedSkillCloseClicked.bind(this, skill[0])} className="SelectedSkillClose">x</span></span>
+            })
+        }
+
+
         return (
            <React.Fragment>
                 <h3>What skills are required?</h3>
                 <p> We've detected the following skills to suit your project. Feel free to modify these choices to best suit your needs.</p>
                 <div className="SkillsContainer">
-                    <div className="SelectedSkills"></div>
+                    <div className="SelectedSkills">
+                        {selectedSkills}
+                    </div>
                     <input 
                         type="text" 
                         className="SkillsSearchField" 
