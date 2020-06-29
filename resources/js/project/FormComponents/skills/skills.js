@@ -10,7 +10,8 @@ class Skills extends React.Component {
             value: '',
             searchResults: [],
             selectedSkills: [],
-            showSkillsSearchResults: false
+            showSkillsSearchResults: false,
+            error: null
         }
         
 
@@ -37,7 +38,7 @@ class Skills extends React.Component {
     }
 
     handleBlur () 
-    {   
+    {           
         // setTimeout may seem redundant here
         // but it is here to prevent the searchsuggestions closing too early
         // which will cause in the searchsuggestions onclick not working
@@ -46,18 +47,43 @@ class Skills extends React.Component {
         setTimeout(function() {
             this.setState({value: ''});
             this.setState({showSkillsSearchResults: false});
-        }.bind(this), 100);
+
+            // error checking
+            if (this.state.selectedSkills.length === 0) 
+            {
+                this.setState({error: 'Please enter atleast 1 skill'});
+            }
+            else if (this.state.selectedSkills.length > 3)
+            {
+                this.setState({error: 'Please enter atmost 3 skills'});
+            }
+            else {
+                this.setState({error: null});
+            }
+        }.bind(this), 100);        
     }
 
     handleSearchResultSkillClicked (id, name)
-    {
+    {   
         let joined = [...this.state.selectedSkills];
         joined.push([id, name]);
-        this.setState({selectedSkills: joined})
+        this.setState({selectedSkills: joined});
+
+        // error checking
+        if (joined.length === 0) 
+        {
+            this.setState({error: 'Please enter atleast 1 skill'});
+        }
+        else if (joined.length > 3)
+        {
+            this.setState({error: 'Please enter atmost 3 skills'});
+        }
+        else {
+            this.setState({error: null});
+        }
     }
 
     handleSelectedSkillCloseClicked (id) {
-        console.log(id)
         let joined = [...this.state.selectedSkills];
 
         for (let i = 0; i < joined.length; i++) 
@@ -69,6 +95,21 @@ class Skills extends React.Component {
         }
         
         this.setState({selectedSkills: joined});
+
+        // error checking
+        if (joined.length === 0) 
+        {
+            this.setState({error: 'Please enter atleast 1 skill'});
+        }
+        else if (joined.length > 3)
+        {
+            this.setState({error: 'Please enter atmost 3 skills'});
+        }
+        else {
+            this.setState({error: null});
+        }
+
+        console.log('handleselectedskillclosed')
     }
 
     render() {
@@ -79,11 +120,12 @@ class Skills extends React.Component {
                 for (let i = 0; i < this.state.selectedSkills.length; i++) {
                     if (this.state.selectedSkills[i][0] === result[0]) return;
                 }
-                return <div 
+                return <span 
                             key={result[0]} 
                             result_id={result[0]}
+                            className="SearchResult"
                             onClick={this.handleSearchResultSkillClicked.bind(this, result[0], result[1])}
-                        >{result[1]}</div>
+                        >{result[1]}</span>
             })
         }
 
@@ -104,7 +146,6 @@ class Skills extends React.Component {
                 return <option 
                             key={skill[0]} 
                             value={skill[0]}
-                            className="SelectedSkill"
                             selected
                             hidden
                         >{skill[1]}</option>
@@ -116,6 +157,7 @@ class Skills extends React.Component {
            <React.Fragment>
                 <h3>What skills are required?</h3>
                 <p> We've detected the following skills to suit your project. Feel free to modify these choices to best suit your needs.</p>
+                    
                 <div className="SkillsContainer">
                     <div className="SelectedSkills">
                         {selectedSkills}
@@ -130,8 +172,11 @@ class Skills extends React.Component {
                         value={this.state.value}
                         onChange={this.handleChange}
                         onBlur={this.handleBlur}
-                    />
+                        />
                 </div>
+                { this.state.error ? 
+                        <span className="error">{this.state.error}</span>
+                    : null}
                 { this.state.showSkillsSearchResults ?
                     <div className="SkillsSearchResults">
                         {results}

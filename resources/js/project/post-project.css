@@ -119,6 +119,7 @@
     font-size: 20px;
     background: linear-gradient(to right, #f8800f, #f8810f);
     border: 1px solid #f69f61;
+    margin-top: 25px;
 }
 
 .PostMyProjectButton:hover {
@@ -133,3 +134,4 @@
 .BorderError {
     border: 1px solid #eb3730!important;
 }
+

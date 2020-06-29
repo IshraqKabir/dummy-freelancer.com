@@ -1942,7 +1942,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, ".SkillsSearchField {\r\n    width: 90%;\r\n    font-size: 15px;\r\n    border: none!important;\r\n}\r\n\r\n.SkillsContainer {\r\n    border:1px solid #bec0c2;\r\n    overflow: hidden;\r\n}\r\n\r\n.SkillsContainer:hover {\r\n    border: 1px solid #2ea1ee;\r\n}\r\n\r\n.SelectedSkills {\r\n    width: 95%;\r\n    margin: 0 auto;\r\n}\r\n\r\n.SkillsSearchResults {\r\n    border: 1px solid black;\r\n}\r\n\r\n.SelectedSkill {\r\n    border: 1px solid black;\r\n    padding: 2px 10px;\r\n    font-size: 15px;\r\n    height: 100%;\r\n    margin: auto 5px;\r\n}\r\n\r\n.SelectedSkillClose {\r\n    cursor: pointer;\r\n}\r\n\r\n.SkillsContainer option {\r\n    style: none;\r\n}", ""]);
+exports.push([module.i, ".SkillsSearchField {\r\n    width: 90%;\r\n    font-size: 15px;\r\n    border: none!important;\r\n}\r\n\r\n.SkillsContainer {\r\n    border:1px solid #bec0c2;\r\n    overflow: hidden;\r\n}\r\n\r\n.SkillsContainer:hover {\r\n    border: 1px solid #2ea1ee;\r\n}\r\n\r\n.SelectedSkills {\r\n    width: 95%;\r\n    margin: 0 auto;\r\n}\r\n\r\n.SkillsSearchResults {\r\n    z-index: 1;\r\n    border: 1px solid #2ea1ee;\r\n    border-top: none;\r\n    max-height: 124px;\r\n    cursor: pointer;\r\n    overflow-y: scroll;\r\n    -ms-overflow-style: none;  /* Internet Explorer 10+ */\r\n    scrollbar-width: none;  /* Firefox */\r\n}\r\n\r\n.SkillsSearchResults::-webkit-scrollbar { \r\n    display: none;  /* Safari and Chrome */\r\n}\r\n\r\n.SelectedSkill {\r\n    margin: 2px 10px;\r\n    border: 1px solid #bec0c2;\r\n    padding: 2px;\r\n    font-size: 15px;\r\n}\r\n\r\n.SelectedSkill:hover {\r\n    border: 1px solid #2ea1ee;\r\n}\r\n\r\n.SelectedSkillClose {\r\n    cursor: pointer;\r\n}\r\n\r\n\r\n\r\n.SearchResult {\r\n    display: block;\r\n    border-bottom: 1px solid #bec0c2;\r\n    padding-left: 5px;\r\n    font-size: 15px;    \r\n}\r\n\r\n.SearchResult:hover {\r\n    background: #f0f0f0;\r\n}\r\n\r\n.error {\r\n    font-size: 15px;\r\n    margin-left: 5px;\r\n}", ""]);
 
 // exports
 
@@ -1961,7 +1961,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".Wrapper {\r\n    height: 100%;\r\n    width: 100%;\r\n    background-color: white;\r\n    position: absolute;\r\n    z-index: -2;\r\n    font-family: 'Source Sans Pro', sans-serif;\r\n    line-height: 1.5;\r\n}\r\n\r\n.Background {\r\n    background: linear-gradient(to right, #1b61c0, #0967c6 50%,#0278e2 90%, #0279e3);\r\n    width: 100vw;\r\n    height: 450px;\r\n    position: absolute;\r\n    top: 0;\r\n    left: 0;\r\n    z-index: -1;\r\n}\r\n\r\n.Logo {\r\n    width: 169px;\r\n    height: 47px;\r\n    margin-bottom: 30px;\r\n}\r\n\r\n.Container {\r\n    width: 800px;\r\n    margin: 0px auto;\r\n    \r\n}\r\n\r\n.Container .Top {\r\n    color: white;\r\n}\r\n\r\n.Container h1 {\r\n    font-weight: bold;\r\n    font-size: 30px;\r\n    margin: 20px 0px 10px 0px;\r\n}\r\n\r\n.Top {\r\n    margin: 55px 0px 25px 0px;\r\n}\r\n\r\n.Form {\r\n    width: 100%;\r\n    margin: 0px auto;\r\n    background-color: white;\r\n    border: 1px solid rgb(222, 222, 222);\r\n    border-bottom: none;\r\n    border-radius: 4px;\r\n    margin-bottom: 100px;\r\n}\r\n\r\n.FormWrapper {\r\n    margin: 35px;\r\n    position: relative;\r\n}\r\n\r\n.Form input {\r\n    width: 98%;\r\n    padding: 10px 0px 15px 20px;\r\n    border: 1px solid #bec0c2;\r\n    margin-bottom: 5px;\r\n}\r\n\r\n.Form .Input {\r\n    margin-bottom: 35px\r\n}\r\n\r\n.Form input:focus {\r\n    border: 1px solid #2ea1ee;\r\n}\r\n\r\n.Form input:hover {\r\n    border: 1px solid #2ea1ee;\r\n}\r\n\r\n.Form h3 {\r\n    font-weight: bold;\r\n    font-size: 20px;\r\n    margin-bottom: 10px;\r\n}\r\n\r\n.Form p {\r\n    font-size: 15px;\r\n}\r\n\r\n.Form textarea {\r\n    width: 98%;\r\n    resize: vertical;\r\n    overflow: hidden;\r\n    border: 1px solid #bec0c2;\r\n    padding: 10px;\r\n    margin-top: 15px;\r\n    margin-bottom: 5px;\r\n}\r\n\r\n.Form textarea:focus {\r\n    border: 1px solid #2ea1ee;\r\n}\r\n\r\n.Form textarea:hover {\r\n    border: 1px solid #2ea1ee;\r\n}\r\n\r\n.Form textarea::-moz-placeholder {\r\n    font-size: 14px;\r\n}\r\n\r\n.Form textarea:-ms-input-placeholder {\r\n    font-size: 14px;\r\n}\r\n\r\n.Form textarea::-ms-input-placeholder {\r\n    font-size: 14px;\r\n}\r\n\r\n.Form textarea::placeholder {\r\n    font-size: 14px;\r\n}\r\n\r\n.PostMyProjectButton {\r\n    float: right;\r\n    margin-right: -10px;\r\n    padding: 10px 20px;\r\n    color: #fff;\r\n    font-weight: bold;\r\n    font-size: 20px;\r\n    background: linear-gradient(to right, #f8800f, #f8810f);\r\n    border: 1px solid #f69f61;\r\n}\r\n\r\n.PostMyProjectButton:hover {\r\n    background: #f27922;\r\n}\r\n\r\n.error {\r\n    color: red;\r\n    font-size: small;\r\n}\r\n\r\n.BorderError {\r\n    border: 1px solid #eb3730!important;\r\n}", ""]);
+exports.push([module.i, ".Wrapper {\r\n    height: 100%;\r\n    width: 100%;\r\n    background-color: white;\r\n    position: absolute;\r\n    z-index: -2;\r\n    font-family: 'Source Sans Pro', sans-serif;\r\n    line-height: 1.5;\r\n}\r\n\r\n.Background {\r\n    background: linear-gradient(to right, #1b61c0, #0967c6 50%,#0278e2 90%, #0279e3);\r\n    width: 100vw;\r\n    height: 450px;\r\n    position: absolute;\r\n    top: 0;\r\n    left: 0;\r\n    z-index: -1;\r\n}\r\n\r\n.Logo {\r\n    width: 169px;\r\n    height: 47px;\r\n    margin-bottom: 30px;\r\n}\r\n\r\n.Container {\r\n    width: 800px;\r\n    margin: 0px auto;\r\n    \r\n}\r\n\r\n.Container .Top {\r\n    color: white;\r\n}\r\n\r\n.Container h1 {\r\n    font-weight: bold;\r\n    font-size: 30px;\r\n    margin: 20px 0px 10px 0px;\r\n}\r\n\r\n.Top {\r\n    margin: 55px 0px 25px 0px;\r\n}\r\n\r\n.Form {\r\n    width: 100%;\r\n    margin: 0px auto;\r\n    background-color: white;\r\n    border: 1px solid rgb(222, 222, 222);\r\n    border-bottom: none;\r\n    border-radius: 4px;\r\n    margin-bottom: 100px;\r\n}\r\n\r\n.FormWrapper {\r\n    margin: 35px;\r\n    position: relative;\r\n}\r\n\r\n.Form input {\r\n    width: 98%;\r\n    padding: 10px 0px 15px 20px;\r\n    border: 1px solid #bec0c2;\r\n    margin-bottom: 5px;\r\n}\r\n\r\n.Form .Input {\r\n    margin-bottom: 35px\r\n}\r\n\r\n.Form input:focus {\r\n    border: 1px solid #2ea1ee;\r\n}\r\n\r\n.Form input:hover {\r\n    border: 1px solid #2ea1ee;\r\n}\r\n\r\n.Form h3 {\r\n    font-weight: bold;\r\n    font-size: 20px;\r\n    margin-bottom: 10px;\r\n}\r\n\r\n.Form p {\r\n    font-size: 15px;\r\n}\r\n\r\n.Form textarea {\r\n    width: 98%;\r\n    resize: vertical;\r\n    overflow: hidden;\r\n    border: 1px solid #bec0c2;\r\n    padding: 10px;\r\n    margin-top: 15px;\r\n    margin-bottom: 5px;\r\n}\r\n\r\n.Form textarea:focus {\r\n    border: 1px solid #2ea1ee;\r\n}\r\n\r\n.Form textarea:hover {\r\n    border: 1px solid #2ea1ee;\r\n}\r\n\r\n.Form textarea::-moz-placeholder {\r\n    font-size: 14px;\r\n}\r\n\r\n.Form textarea:-ms-input-placeholder {\r\n    font-size: 14px;\r\n}\r\n\r\n.Form textarea::-ms-input-placeholder {\r\n    font-size: 14px;\r\n}\r\n\r\n.Form textarea::placeholder {\r\n    font-size: 14px;\r\n}\r\n\r\n.PostMyProjectButton {\r\n    float: right;\r\n    margin-right: -10px;\r\n    padding: 10px 20px;\r\n    color: #fff;\r\n    font-weight: bold;\r\n    font-size: 20px;\r\n    background: linear-gradient(to right, #f8800f, #f8810f);\r\n    border: 1px solid #f69f61;\r\n    margin-top: 25px;\r\n}\r\n\r\n.PostMyProjectButton:hover {\r\n    background: #f27922;\r\n}\r\n\r\n.error {\r\n    color: red;\r\n    font-size: small;\r\n}\r\n\r\n.BorderError {\r\n    border: 1px solid #eb3730!important;\r\n}\r\n\r\n", ""]);
 
 // exports
 
@@ -32395,7 +32395,8 @@ var Skills = /*#__PURE__*/function (_React$Component) {
       value: '',
       searchResults: [],
       selectedSkills: [],
-      showSkillsSearchResults: false
+      showSkillsSearchResults: false,
+      error: null
     };
     _this.handleChange = _this.handleChange.bind(_assertThisInitialized(_this));
     _this.handleBlur = _this.handleBlur.bind(_assertThisInitialized(_this));
@@ -32462,7 +32463,21 @@ var Skills = /*#__PURE__*/function (_React$Component) {
         });
         this.setState({
           showSkillsSearchResults: false
-        });
+        }); // error checking
+
+        if (this.state.selectedSkills.length === 0) {
+          this.setState({
+            error: 'Please enter atleast 1 skill'
+          });
+        } else if (this.state.selectedSkills.length > 3) {
+          this.setState({
+            error: 'Please enter atmost 3 skills'
+          });
+        } else {
+          this.setState({
+            error: null
+          });
+        }
       }.bind(this), 100);
     }
   }, {
@@ -32473,13 +32488,25 @@ var Skills = /*#__PURE__*/function (_React$Component) {
       joined.push([id, name]);
       this.setState({
         selectedSkills: joined
-      });
+      }); // error checking
+
+      if (joined.length === 0) {
+        this.setState({
+          error: 'Please enter atleast 1 skill'
+        });
+      } else if (joined.length > 3) {
+        this.setState({
+          error: 'Please enter atmost 3 skills'
+        });
+      } else {
+        this.setState({
+          error: null
+        });
+      }
     }
   }, {
     key: "handleSelectedSkillCloseClicked",
     value: function handleSelectedSkillCloseClicked(id) {
-      console.log(id);
-
       var joined = _toConsumableArray(this.state.selectedSkills);
 
       for (var i = 0; i < joined.length; i++) {
@@ -32491,7 +32518,23 @@ var Skills = /*#__PURE__*/function (_React$Component) {
 
       this.setState({
         selectedSkills: joined
-      });
+      }); // error checking
+
+      if (joined.length === 0) {
+        this.setState({
+          error: 'Please enter atleast 1 skill'
+        });
+      } else if (joined.length > 3) {
+        this.setState({
+          error: 'Please enter atmost 3 skills'
+        });
+      } else {
+        this.setState({
+          error: null
+        });
+      }
+
+      console.log('handleselectedskillclosed');
     }
   }, {
     key: "render",
@@ -32506,9 +32549,10 @@ var Skills = /*#__PURE__*/function (_React$Component) {
             if (_this2.state.selectedSkills[i][0] === result[0]) return;
           }
 
-          return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+          return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
             key: result[0],
             result_id: result[0],
+            className: "SearchResult",
             onClick: _this2.handleSearchResultSkillClicked.bind(_this2, result[0], result[1])
           }, result[1]);
         });
@@ -32532,7 +32576,6 @@ var Skills = /*#__PURE__*/function (_React$Component) {
           return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("option", {
             key: skill[0],
             value: skill[0],
-            className: "SelectedSkill",
             selected: true,
             hidden: true
           }, skill[1]);
@@ -32554,7 +32597,9 @@ var Skills = /*#__PURE__*/function (_React$Component) {
         value: this.state.value,
         onChange: this.handleChange,
         onBlur: this.handleBlur
-      })), this.state.showSkillsSearchResults ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+      })), this.state.error ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
+        className: "error"
+      }, this.state.error) : null, this.state.showSkillsSearchResults ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         className: "SkillsSearchResults"
       }, results) : null);
     }
