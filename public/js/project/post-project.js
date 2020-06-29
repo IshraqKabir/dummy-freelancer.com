@@ -1942,7 +1942,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, ".SkillsSearchField {\r\n    width: 90%;\r\n    font-size: 15px;\r\n    border: none!important;\r\n}\r\n\r\n.SkillsContainer {\r\n    border:1px solid #bec0c2;\r\n    overflow: hidden;\r\n}\r\n\r\n.SkillsContainer:hover {\r\n    border: 1px solid #2ea1ee;\r\n}\r\n\r\n.SelectedSkills {\r\n    width: 95%;\r\n    margin: 0 auto;\r\n}\r\n\r\n.SkillsSearchResults {\r\n    z-index: 1;\r\n    border: 1px solid #2ea1ee;\r\n    border-top: none;\r\n    max-height: 124px;\r\n    cursor: pointer;\r\n    overflow-y: scroll;\r\n    -ms-overflow-style: none;  /* Internet Explorer 10+ */\r\n    scrollbar-width: none;  /* Firefox */\r\n}\r\n\r\n.SkillsSearchResults::-webkit-scrollbar { \r\n    display: none;  /* Safari and Chrome */\r\n}\r\n\r\n.SelectedSkill {\r\n    margin: 2px 10px;\r\n    border: 1px solid #bec0c2;\r\n    padding: 2px;\r\n    font-size: 15px;\r\n}\r\n\r\n.SelectedSkill:hover {\r\n    border: 1px solid #2ea1ee;\r\n}\r\n\r\n.SelectedSkillClose {\r\n    cursor: pointer;\r\n}\r\n\r\n\r\n\r\n.SearchResult {\r\n    display: block;\r\n    border-bottom: 1px solid #bec0c2;\r\n    padding-left: 5px;\r\n    font-size: 15px;    \r\n}\r\n\r\n.SearchResult:hover {\r\n    background: #f0f0f0;\r\n}\r\n\r\n.error {\r\n    font-size: 15px;\r\n    margin-left: 5px;\r\n}", ""]);
+exports.push([module.i, ".SkillsSearchField {\r\n    width: 90%;\r\n    font-size: 15px;\r\n    border: none!important;\r\n}\r\n\r\n.SkillsContainer {\r\n    border:1px solid #bec0c2;\r\n    overflow: hidden;\r\n}\r\n\r\n.SkillsContainer:hover {\r\n    border: 1px solid #2ea1ee;\r\n}\r\n\r\n.SelectedSkills {\r\n    width: 95%;\r\n    margin: 0 auto;\r\n}\r\n\r\n.SkillsSearchResults {\r\n    position: relative;\r\n    z-index: 10;\r\n    border: 1px solid #2ea1ee;\r\n    border-top: none;\r\n    max-height: 124px;\r\n    cursor: pointer;\r\n    overflow-y: scroll;\r\n    -ms-overflow-style: none;  /* Internet Explorer 10+ */\r\n    scrollbar-width: none;  /* Firefox */\r\n}\r\n\r\n.SkillsSearchResults::-webkit-scrollbar { \r\n    display: none;  /* Safari and Chrome */\r\n}\r\n\r\n.SelectedSkill {\r\n    margin: 2px 10px;\r\n    border: 1px solid #bec0c2;\r\n    padding: 2px;\r\n    font-size: 15px;\r\n}\r\n\r\n.SelectedSkill:hover {\r\n    border: 1px solid #2ea1ee;\r\n}\r\n\r\n.SelectedSkillClose {\r\n    cursor: pointer;\r\n}\r\n\r\n\r\n\r\n.SearchResult {\r\n    display: block;\r\n    border-bottom: 1px solid #bec0c2;\r\n    padding-left: 5px;\r\n    font-size: 15px;    \r\n}\r\n\r\n.SearchResult:hover {\r\n    background: #f0f0f0;\r\n}\r\n\r\n.error {\r\n    font-size: 13px;\r\n}", ""]);
 
 // exports
 
@@ -32420,8 +32420,11 @@ var Skills = /*#__PURE__*/function (_React$Component) {
                 this.setState({
                   showSkillsSearchResults: true
                 });
+                this.setState({
+                  error: null
+                });
                 searchResults = [];
-                _context.next = 5;
+                _context.next = 6;
                 return axios.get("http://localhost:8000/skills?q=".concat(this.state.value)).then(function (response) {
                   response.data.map(function (data) {
                     searchResults.push([data.id, data.name]);
@@ -32430,12 +32433,12 @@ var Skills = /*#__PURE__*/function (_React$Component) {
                   return console.log(err);
                 });
 
-              case 5:
+              case 6:
                 this.setState({
                   searchResults: searchResults
                 });
 
-              case 6:
+              case 7:
               case "end":
                 return _context.stop();
             }
@@ -32533,8 +32536,6 @@ var Skills = /*#__PURE__*/function (_React$Component) {
           error: null
         });
       }
-
-      console.log('handleselectedskillclosed');
     }
   }, {
     key: "render",

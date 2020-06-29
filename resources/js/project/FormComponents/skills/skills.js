@@ -24,6 +24,7 @@ class Skills extends React.Component {
     async handleChange (event) {       
         this.setState({value: event.target.value});
         this.setState({showSkillsSearchResults: true});
+        this.setState({error: null});
 
         let searchResults = [];
         await axios.get(`http://localhost:8000/skills?q=${this.state.value}`)
@@ -109,7 +110,6 @@ class Skills extends React.Component {
             this.setState({error: null});
         }
 
-        console.log('handleselectedskillclosed')
     }
 
     render() {

@@ -19,7 +19,8 @@
 }
 
 .SkillsSearchResults {
-    z-index: 1;
+    position: relative;
+    z-index: 10;
     border: 1px solid #2ea1ee;
     border-top: none;
     max-height: 124px;
@@ -62,6 +63,5 @@
 }
 
 .error {
-    font-size: 15px;
-    margin-left: 5px;
+    font-size: 13px;
 }
