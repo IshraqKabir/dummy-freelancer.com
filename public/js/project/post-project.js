@@ -35587,12 +35587,7 @@ var Details = /*#__PURE__*/function (_React$Component) {
     _classCallCheck(this, Details);
 
     _this = _super.call(this, props);
-    _this.state = {
-      value: '',
-      length: 0,
-      error: false,
-      emptyError: false
-    };
+    _this.state = {};
     _this.characterLimit = 4000;
     _this.handleChange = _this.handleChange.bind(_assertThisInitialized(_this));
     _this.handleBlur = _this.handleBlur.bind(_assertThisInitialized(_this));
@@ -35608,35 +35603,23 @@ var Details = /*#__PURE__*/function (_React$Component) {
     key: "handleChange",
     value: function handleChange(event) {
       if (event.target.value.length > 4000) {
-        this.setState({
-          error: true
-        });
+        this.props.handleError(true);
       } else {
-        this.setState({
-          error: false
-        });
+        this.props.handleError(false);
       }
 
       if (event.target.value.length !== 0) {
-        this.setState({
-          emptyError: false
-        });
+        this.props.handleEmtpyError(false);
       }
 
-      this.setState({
-        value: event.target.value
-      });
-      this.setState({
-        length: event.target.value.length
-      });
+      this.props.handleChange(event.target.value);
+      this.props.setLength(event.target.value.length);
     }
   }, {
     key: "handleBlur",
     value: function handleBlur() {
-      if (this.state.length === 0) {
-        this.setState({
-          emptyError: true
-        });
+      if (this.props.length === 0) {
+        this.props.handleEmtpyError(true);
       }
     }
   }, {
@@ -35646,19 +35629,19 @@ var Details = /*#__PURE__*/function (_React$Component) {
         name: "details",
         placeholder: "Describe your project here...",
         rows: "4",
-        value: this.state.value,
+        value: this.props.value,
         onChange: this.handleChange,
         onBlur: this.handleBlur,
-        className: this.state.emptyError ? "BorderError" : null
+        className: this.props.emptyError ? "BorderError" : null
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "ErrorAndCharsRem"
-      }, this.state.error ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+      }, this.props.error, this.props.error ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
         className: "detailsError error"
-      }, "Please enter atmost 4000 characters") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null), this.state.emptyError ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+      }, "Please enter atmost 4000 characters") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null), this.props.emptyError ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
         className: "detailsError error"
       }, "Please enter a description") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
         className: "CharactersRemaining"
-      }, this.characterLimit - this.state.length, " characters remaining")));
+      }, this.characterLimit - this.props.length, " characters remaining")));
     }
   }]);
 
@@ -35666,7 +35649,12 @@ var Details = /*#__PURE__*/function (_React$Component) {
 }(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
 
 function mapStoreToProps(store) {
-  return {};
+  return {
+    value: store.details.value,
+    error: store.details.error,
+    emptyError: store.details.emptyError,
+    length: store.details.length
+  };
 }
 
 function mapDispatchToProps(dispatch) {
@@ -35676,11 +35664,35 @@ function mapDispatchToProps(dispatch) {
         type: 'connected',
         componentName: componentName
       });
+    },
+    handleChange: function handleChange(value) {
+      return dispatch({
+        type: 'SET_DETAILS',
+        value: value
+      });
+    },
+    setLength: function setLength(value) {
+      return dispatch({
+        type: 'SET_DETAILS_LENGTH',
+        value: value
+      });
+    },
+    handleError: function handleError(value) {
+      return dispatch({
+        type: 'SET_DETAILS_ERROR',
+        value: value
+      });
+    },
+    handleEmtpyError: function handleEmtpyError(value) {
+      return dispatch({
+        type: 'SET_DETAILS_EMPTY_ERROR',
+        value: value
+      });
     }
   };
 }
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["connect"])(mapStoreToProps, mapDispatchToProps)(Details)); // export default Details;
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["connect"])(mapStoreToProps, mapDispatchToProps)(Details));
 
 /***/ }),
 
@@ -35757,7 +35769,7 @@ var Name = /*#__PURE__*/function (_React$Component) {
       }
 
       this.props.handleChange(event.target.value);
-      this.props.setNameLength(event.target.value.length);
+      this.props.setLength(event.target.value.length);
     }
   }, {
     key: "handleBlur",
@@ -35813,7 +35825,7 @@ function mapDispatchToProps(dispatch) {
         value: value
       });
     },
-    setNameLength: function setNameLength(value) {
+    setLength: function setLength(value) {
       return dispatch({
         type: 'SET_NAME_LENGTH',
         value: value
@@ -36872,6 +36884,8 @@ var initialState = {
   details: {
     value: '',
     error: null,
+    emptyError: null,
+    length: 0,
     isVisited: false
   },
   skills: {
@@ -36922,6 +36936,22 @@ function reducer() {
 
     case 'SET_NAME_EMPTY_ERROR':
       newState.name.emptyError = action.value;
+      break;
+
+    case 'SET_DETAILS':
+      newState.details.value = action.value;
+      break;
+
+    case 'SET_DETAILS_LENGTH':
+      newState.details.length = action.value;
+      break;
+
+    case 'SET_DETAILS_ERROR':
+      newState.details.error = action.value;
+      break;
+
+    case 'SET_DETAILS_EMPTY_ERROR':
+      newState.details.emptyError = action.value;
       break;
 
     default:

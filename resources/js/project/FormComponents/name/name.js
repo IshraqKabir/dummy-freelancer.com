@@ -32,7 +32,7 @@ class Name extends React.Component {
         }
 
         this.props.handleChange(event.target.value);
-        this.props.setNameLength(event.target.value.length);
+        this.props.setLength(event.target.value.length);
     }
 
     handleBlur () 
@@ -78,7 +78,7 @@ function mapDispatchToProps (dispatch)
   return {
     connect: (componentName) => dispatch({type:'connected', componentName}),
     handleChange: (value) => dispatch({type: 'SET_NAME', value}),
-    setNameLength: (value) => dispatch({type: 'SET_NAME_LENGTH', value}),
+    setLength: (value) => dispatch({type: 'SET_NAME_LENGTH', value}),
     handleError: (value) => dispatch({type: 'SET_NAME_ERROR', value}),
     handleEmtpyError: (value) => dispatch({type: 'SET_NAME_EMPTY_ERROR', value}),
 

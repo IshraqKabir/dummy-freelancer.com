@@ -11,6 +11,8 @@ const initialState = {
     details : {
         value: '',
         error: null,
+        emptyError: null,
+        length: 0,
         isVisited: false
     },
     skills : {
@@ -55,6 +57,18 @@ function reducer (state = initialState, action)
         break;
     case 'SET_NAME_EMPTY_ERROR':
         newState.name.emptyError = action.value;
+        break;
+    case 'SET_DETAILS':
+        newState.details.value = action.value
+        break;
+    case 'SET_DETAILS_LENGTH':
+        newState.details.length = action.value;
+        break;
+    case 'SET_DETAILS_ERROR':
+        newState.details.error = action.value;
+        break;
+    case 'SET_DETAILS_EMPTY_ERROR':
+        newState.details.emptyError = action.value;
         break;
     default:
         break;

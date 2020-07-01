@@ -7,10 +7,7 @@ class Details extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            value: '',
-            length: 0,
-            error: false,
-            emptyError: false
+   
         }
         
         this.characterLimit = 4000;
@@ -26,25 +23,25 @@ class Details extends React.Component {
 
     handleChange (event) {       
         if (event.target.value.length > 4000) {
-            this.setState({error:true});
+            this.props.handleError(true);
         } else {
-            this.setState({error:false});
+            this.props.handleError(false);
         }
 
         if (event.target.value.length !== 0)
         {
-            this.setState({emptyError: false});
+            this.props.handleEmtpyError(false);
         }
 
-        this.setState({value: event.target.value});
-        this.setState({length: event.target.value.length});
+        this.props.handleChange(event.target.value);
+        this.props.setLength(event.target.value.length);
     }
 
     handleBlur () 
     {
-        if (this.state.length === 0)
+        if (this.props.length === 0)
         {
-            this.setState({emptyError: true});
+            this.props.handleEmtpyError(true);
         }
     }
 
@@ -57,15 +54,16 @@ class Details extends React.Component {
                     name="details" 
                     placeholder="Describe your project here..." 
                     rows="4"
-                    value={this.state.value}
+                    value={this.props.value}
                     onChange={this.handleChange}
                     onBlur={this.handleBlur}
-                    className={this.state.emptyError ? "BorderError" : null}
+                    className={this.props.emptyError ? "BorderError" : null}
                 />
                 <div className="ErrorAndCharsRem">
-                    { this.state.error ? <span className="detailsError error">Please enter atmost 4000 characters</span> : <span></span>}
-                    { this.state.emptyError ? <span className="detailsError error">Please enter a description</span> : <span></span>}
-                    <span className="CharactersRemaining">{this.characterLimit-this.state.length} characters remaining</span>
+                    { this.props.error }
+                    { this.props.error ? <span className="detailsError error">Please enter atmost 4000 characters</span> : <span></span>}
+                    { this.props.emptyError ? <span className="detailsError error">Please enter a description</span> : <span></span>}
+                    <span className="CharactersRemaining">{this.characterLimit-this.props.length} characters remaining</span>
                 </div>
             </React.Fragment>
         )
@@ -75,7 +73,10 @@ class Details extends React.Component {
 function mapStoreToProps (store)
 {
   return {
-
+      value: store.details.value,
+      error: store.details.error,
+      emptyError: store.details.emptyError,
+      length: store.details.length
   }
 }
 
@@ -83,10 +84,12 @@ function mapDispatchToProps (dispatch)
 {
   return {
     connect: (componentName) => dispatch({type:'connected', componentName}),
+    handleChange: (value) => dispatch({type: 'SET_DETAILS', value}),
+    setLength: (value) => dispatch({type: 'SET_DETAILS_LENGTH', value}),
+    handleError: (value) => dispatch({type: 'SET_DETAILS_ERROR', value}),
+    handleEmtpyError: (value) => dispatch({type: 'SET_DETAILS_EMPTY_ERROR', value}),
   }
 }
 
 
 export default connect(mapStoreToProps, mapDispatchToProps) (Details);
-
-// export default Details;
