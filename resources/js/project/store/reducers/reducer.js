@@ -16,9 +16,7 @@ const initialState = {
         isVisited: false
     },
     skills : {
-        value: [],
-        error: null,
-        isVisited: false
+        selectedSkills: []
     },
     payment : {
         hourly: false,
@@ -69,6 +67,9 @@ function reducer (state = initialState, action)
         break;
     case 'SET_DETAILS_EMPTY_ERROR':
         newState.details.emptyError = action.value;
+        break;
+    case 'SET_SELECTED_SKILLS':
+        newState.skills.selectedSkills = action.value;
         break;
     default:
         break;

@@ -11,7 +11,7 @@ class Skills extends React.Component {
         this.state = {
             value: '',
             searchResults: [],
-            selectedSkills: [],
+            // selectedSkills: [],
             showSkillsSearchResults: false,
             error: null
         }
@@ -57,11 +57,11 @@ class Skills extends React.Component {
             this.setState({showSkillsSearchResults: false});
 
             // error checking
-            if (this.state.selectedSkills.length === 0) 
+            if (this.props.selectedSkills.length === 0) 
             {
                 this.setState({error: 'Please enter atleast 1 skill'});
             }
-            else if (this.state.selectedSkills.length > 3)
+            else if (this.props.selectedSkills.length > 3)
             {
                 this.setState({error: 'Please enter atmost 3 skills'});
             }
@@ -73,9 +73,10 @@ class Skills extends React.Component {
 
     handleSearchResultSkillClicked (id, name)
     {   
-        let joined = [...this.state.selectedSkills];
+        let joined = [...this.props.selectedSkills];
         joined.push([id, name]);
-        this.setState({selectedSkills: joined});
+        // this.setState({selectedSkills: joined});
+        this.props.setSelectedSkills(joined);
 
         // error checking
         if (joined.length === 0) 
@@ -92,7 +93,7 @@ class Skills extends React.Component {
     }
 
     handleSelectedSkillCloseClicked (id) {
-        let joined = [...this.state.selectedSkills];
+        let joined = [...this.props.selectedSkills];
 
         for (let i = 0; i < joined.length; i++) 
         {
@@ -102,7 +103,8 @@ class Skills extends React.Component {
             }
         }
         
-        this.setState({selectedSkills: joined});
+        // this.setState({selectedSkills: joined});
+        this.props.setSelectedSkills(joined);
 
         // error checking
         if (joined.length === 0) 
@@ -124,8 +126,8 @@ class Skills extends React.Component {
         if (this.state.searchResults && this.state.value !== '') 
         {
             results = this.state.searchResults.map(result => {
-                for (let i = 0; i < this.state.selectedSkills.length; i++) {
-                    if (this.state.selectedSkills[i][0] === result[0]) return;
+                for (let i = 0; i < this.props.selectedSkills.length; i++) {
+                    if (this.props.selectedSkills[i][0] === result[0]) return;
                 }
                 return <span 
                             key={result[0]} 
@@ -138,9 +140,9 @@ class Skills extends React.Component {
 
         let selectedSkills = null;
         let selectedSkillsOptions = null;
-        if (this.state.selectedSkills)
+        if (this.props.selectedSkills)
         {
-            selectedSkills = this.state.selectedSkills.map(skill => {
+            selectedSkills = this.props.selectedSkills.map(skill => {
                 
                 return <span 
                             key={skill[0]} 
@@ -148,7 +150,7 @@ class Skills extends React.Component {
                             className="SelectedSkill"
                         >{skill[1]} <span onClick={this.handleSelectedSkillCloseClicked.bind(this, skill[0])} className="SelectedSkillClose">x</span></span>
             });
-            selectedSkillsOptions = this.state.selectedSkills.map(skill => {
+            selectedSkillsOptions = this.props.selectedSkills.map(skill => {
                 
                 return <option 
                             key={skill[0]} 
@@ -197,7 +199,7 @@ class Skills extends React.Component {
 function mapStoreToProps (store)
 {
     return {
-
+        selectedSkills: store.skills.selectedSkills
     }
 }
 
@@ -205,6 +207,7 @@ function mapDispatchToProps (dispatch)
 {
   return {
     connect: (componentName) => dispatch({type:'connected', componentName}),
+    setSelectedSkills: (value) => dispatch({type: 'SET_SELECTED_SKILLS', value})
   }
 }
 

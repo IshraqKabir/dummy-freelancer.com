@@ -36353,7 +36353,7 @@ var Skills = /*#__PURE__*/function (_React$Component) {
     _this.state = {
       value: '',
       searchResults: [],
-      selectedSkills: [],
+      // selectedSkills: [],
       showSkillsSearchResults: false,
       error: null
     };
@@ -36432,11 +36432,11 @@ var Skills = /*#__PURE__*/function (_React$Component) {
           showSkillsSearchResults: false
         }); // error checking
 
-        if (this.state.selectedSkills.length === 0) {
+        if (this.props.selectedSkills.length === 0) {
           this.setState({
             error: 'Please enter atleast 1 skill'
           });
-        } else if (this.state.selectedSkills.length > 3) {
+        } else if (this.props.selectedSkills.length > 3) {
           this.setState({
             error: 'Please enter atmost 3 skills'
           });
@@ -36450,12 +36450,11 @@ var Skills = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "handleSearchResultSkillClicked",
     value: function handleSearchResultSkillClicked(id, name) {
-      var joined = _toConsumableArray(this.state.selectedSkills);
+      var joined = _toConsumableArray(this.props.selectedSkills);
 
-      joined.push([id, name]);
-      this.setState({
-        selectedSkills: joined
-      }); // error checking
+      joined.push([id, name]); // this.setState({selectedSkills: joined});
+
+      this.props.setSelectedSkills(joined); // error checking
 
       if (joined.length === 0) {
         this.setState({
@@ -36474,18 +36473,17 @@ var Skills = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "handleSelectedSkillCloseClicked",
     value: function handleSelectedSkillCloseClicked(id) {
-      var joined = _toConsumableArray(this.state.selectedSkills);
+      var joined = _toConsumableArray(this.props.selectedSkills);
 
       for (var i = 0; i < joined.length; i++) {
         if (joined[i][0] === id) {
           joined.splice(i, 1);
           break;
         }
-      }
+      } // this.setState({selectedSkills: joined});
 
-      this.setState({
-        selectedSkills: joined
-      }); // error checking
+
+      this.props.setSelectedSkills(joined); // error checking
 
       if (joined.length === 0) {
         this.setState({
@@ -36510,8 +36508,8 @@ var Skills = /*#__PURE__*/function (_React$Component) {
 
       if (this.state.searchResults && this.state.value !== '') {
         results = this.state.searchResults.map(function (result) {
-          for (var i = 0; i < _this2.state.selectedSkills.length; i++) {
-            if (_this2.state.selectedSkills[i][0] === result[0]) return;
+          for (var i = 0; i < _this2.props.selectedSkills.length; i++) {
+            if (_this2.props.selectedSkills[i][0] === result[0]) return;
           }
 
           return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
@@ -36526,8 +36524,8 @@ var Skills = /*#__PURE__*/function (_React$Component) {
       var selectedSkills = null;
       var selectedSkillsOptions = null;
 
-      if (this.state.selectedSkills) {
-        selectedSkills = this.state.selectedSkills.map(function (skill) {
+      if (this.props.selectedSkills) {
+        selectedSkills = this.props.selectedSkills.map(function (skill) {
           return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
             key: skill[0],
             value: skill[0],
@@ -36537,7 +36535,7 @@ var Skills = /*#__PURE__*/function (_React$Component) {
             className: "SelectedSkillClose"
           }, "x"));
         });
-        selectedSkillsOptions = this.state.selectedSkills.map(function (skill) {
+        selectedSkillsOptions = this.props.selectedSkills.map(function (skill) {
           return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("option", {
             key: skill[0],
             value: skill[0],
@@ -36574,7 +36572,9 @@ var Skills = /*#__PURE__*/function (_React$Component) {
 }(react__WEBPACK_IMPORTED_MODULE_1___default.a.Component);
 
 function mapStoreToProps(store) {
-  return {};
+  return {
+    selectedSkills: store.skills.selectedSkills
+  };
 }
 
 function mapDispatchToProps(dispatch) {
@@ -36583,6 +36583,12 @@ function mapDispatchToProps(dispatch) {
       return dispatch({
         type: 'connected',
         componentName: componentName
+      });
+    },
+    setSelectedSkills: function setSelectedSkills(value) {
+      return dispatch({
+        type: 'SET_SELECTED_SKILLS',
+        value: value
       });
     }
   };
@@ -36889,9 +36895,7 @@ var initialState = {
     isVisited: false
   },
   skills: {
-    value: [],
-    error: null,
-    isVisited: false
+    selectedSkills: []
   },
   payment: {
     hourly: false,
@@ -36952,6 +36956,10 @@ function reducer() {
 
     case 'SET_DETAILS_EMPTY_ERROR':
       newState.details.emptyError = action.value;
+      break;
+
+    case 'SET_SELECTED_SKILLS':
+      newState.skills.selectedSkills = action.value;
       break;
 
     default:
