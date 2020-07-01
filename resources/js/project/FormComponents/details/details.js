@@ -1,6 +1,8 @@
 import React from 'react';
 import './details.css';
 
+import { connect } from 'react-redux';
+
 class Details extends React.Component {
     constructor(props) {
         super(props);
@@ -15,6 +17,11 @@ class Details extends React.Component {
 
         this.handleChange = this.handleChange.bind(this);
         this.handleBlur = this.handleBlur.bind(this);
+    }
+
+    componentDidMount () 
+    {
+        this.props.connect('details.js');
     }
 
     handleChange (event) {       
@@ -65,4 +72,21 @@ class Details extends React.Component {
     }
 }
 
-export default Details;
+function mapStoreToProps (store)
+{
+  return {
+
+  }
+}
+
+function mapDispatchToProps (dispatch)
+{
+  return {
+    connect: (componentName) => dispatch({type:'connected', componentName}),
+  }
+}
+
+
+export default connect(mapStoreToProps, mapDispatchToProps) (Details);
+
+// export default Details;

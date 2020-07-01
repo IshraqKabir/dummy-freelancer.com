@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import './mycomponent.css';
-'use strict';
+import PostProject from './project/'
 
 class LikeButton extends React.Component {
   constructor(props) {

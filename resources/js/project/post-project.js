@@ -1,38 +1,32 @@
 import React, {useState, useEffect} from 'react';
 import ReactDOM from 'react-dom';
 
-import './post-project.css';
-import logo from './freelancer-logo-light.svg';
+// import './post-project.css';
+// import logo from './freelancer-logo-light.svg';
 
-import Details from './FormComponents/details/details';
-import Name from './FormComponents/name/name';
-import Skills from './FormComponents/skills/skills';
+// import Details from './FormComponents/details/details';
+// import Name from './FormComponents/name/name';
+// import Skills from './FormComponents/skills/skills';
+// import Payment from './FormComponents/payment/payment';
 
+import App from './app';
+
+import reducer from './store/reducers/reducer';
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
+
+const store = createStore(reducer);
 
 class PostProject extends React.Component {
   render() {
     return(
-      <div className="Wrapper">
-          <div className="Background"></div>
-          <div className="Container">
-            <div className="Top">
-            <img src={logo} className="Logo"/>
-            <h1>Tell us what you need done</h1>
-            <p>Contact skilled freelancers within minutes. View profiles, ratings, portfolios and chat with them. Pay the freelancer only when you are 100% satisfied with their work. </p>
-            </div>
-            <div className="Form">
-                <div className="FormWrapper">                
-                  <Name />
-                  <Details />
-                  <Skills />
-                  <button type="submit" className="PostMyProjectButton">Yes, post my project</button>
-                </div>
-            </div>
-          </div>
-      </div>
+      <Provider store={store}>
+        <App />
+      </Provider>
     );
   }
 }
+
 
 // function PostProject() {
 

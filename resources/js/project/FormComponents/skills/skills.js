@@ -3,6 +3,8 @@ import './skills.css';
 
 const axios = require('axios');
 
+import { connect } from 'react-redux';
+
 class Skills extends React.Component {
     constructor(props) {
         super(props);
@@ -21,13 +23,18 @@ class Skills extends React.Component {
         this.handleSelectedSkillCloseClicked = this.handleSelectedSkillCloseClicked.bind(this);
     }
 
+    componentDidMount ()
+    {
+        this.props.connect('skills.js');
+    }
+
     async handleChange (event) {       
         this.setState({value: event.target.value});
         this.setState({showSkillsSearchResults: true});
         this.setState({error: null});
 
         let searchResults = [];
-        await axios.get(`http://localhost:8000/skills?q=${this.state.value}`)
+        await axios.get(`http://localhost:8000/skills?q=${event.target.value}`)
             .then(response => {
                 response.data.map(data => {
                         searchResults.push([data.id, data.name]);
@@ -187,4 +194,21 @@ class Skills extends React.Component {
     }
 }
 
-export default Skills;
+function mapStoreToProps (store)
+{
+    return {
+
+    }
+}
+
+function mapDispatchToProps (dispatch)
+{
+  return {
+    connect: (componentName) => dispatch({type:'connected', componentName}),
+  }
+}
+
+
+export default connect(mapStoreToProps, mapDispatchToProps) (Skills);
+
+// export default Skills;

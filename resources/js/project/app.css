@@ -8,6 +8,8 @@
     line-height: 1.5;
 }
 
+
+
 .Background {
     background: linear-gradient(to right, #1b61c0, #0967c6 50%,#0278e2 90%, #0279e3);
     width: 100vw;
@@ -25,9 +27,26 @@
 }
 
 .Container {
-    width: 800px;
+    width: 790px;
     margin: 0px auto;
-    
+}
+
+/* .Container {
+    width: 58.6%;
+    margin: 0px auto;
+} */
+
+@media only screen and (max-width: 790px) {
+    .Container {
+        width: 100%;
+    }
+
+    .Container .Top {
+        margin-left: 10px;
+    }
+    .Top p {
+        font-size: 14px;
+    }
 }
 
 .Container .Top {

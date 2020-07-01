@@ -1,0 +1,198 @@
+.PaymentH3 
+{
+    margin-top: 40px;
+}
+
+.PaymentOptionContainer {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+.PaymentOption {
+    box-sizing: border-box;
+    width: 350px;
+    cursor: pointer;
+}
+
+.box-shadow {
+    -webkit-box-shadow: 0px 0px 17px 0px rgba(0,0,0,0.41);
+    -moz-box-shadow: 0px 0px 17px 0px rgba(0,0,0,0.41);
+    box-shadow: 0px 0px 17px 0px rgba(0,0,0,0.41);
+}
+
+.flex-item-1 {
+    margin-right: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.flex-item-2 {
+    display: flex;
+    align-items: center;
+}
+
+.priceLogo {
+    width: 30%;
+    height: 80%;
+}
+
+@media only screen and (max-width: 790px) {
+    .priceLogo {
+        height: auto;
+    }
+}
+
+h4 {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.paymentDescription {
+    margin: 30px 40px 55px 25px ;
+}
+
+.blue-border {
+    border: 2px solid #139ff0;
+}
+
+@media only screen and (max-width: 790px) {
+    .PaymentOptionContainer {
+        flex-direction: column;
+        justify-content: stretch;
+    }    
+    .PaymentOption {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .flex-item-1 {
+        margin-bottom: 20px;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .priceLogo {
+        flex-shrink: 0;
+    }
+}
+
+.flex-item-2 .priceLogo {
+    margin-left: 10px;
+}
+
+.currency, .budget {
+    /* -webkit-appearance: none; */
+    border: 1px solid #bec0c2;
+    width: 45%;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.currency:focus {
+    border: 1px solid #61aedb;
+}
+
+.currencyAndBudgetContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+/****
+select styling
+*****/
+
+.select {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 15px;
+    width: 100%;
+}    .select select {
+        font-family: 'Arial';
+        font-size: 14px;
+        display: inline-block;
+        width: 100%;
+        cursor: pointer;
+        padding: 10px 12px;
+        outline: 0;
+        border: 1px solid #bec0c2;
+        border-radius: 0px;
+        background: #ffffff;
+        color: #000000;
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+    }
+        .select select::-ms-expand {
+            display: none;
+        }
+        .select select:hover,
+        .select select:focus {
+            color: #000000;
+            background: #ffffff;
+        }
+        .select select:disabled {
+            opacity: 0.5;
+            pointer-events: none;
+        }
+.select_arrow {
+    position: absolute;
+    top: 16px;
+    right: 17px;
+    width: 0px;
+    height: 0px;
+    border: solid #7b7b7b;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+.select select:hover ~ .select_arrow,
+.select select:focus ~ .select_arrow {
+    border-color: #000000;
+}
+.select select:disabled ~ .select_arrow {
+    border-top-color: #cccccc;
+}
+
+/***
+end of select styling
+***/
+
+.currencyAndBudgetContainer {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.currencySelect {
+    width: 100px;
+    margin-right: 25px;
+}
+
+.budgetSelect {
+    width: 350px;
+}
+
+@media only screen and (max-width: 790px) {
+    .currencyAndBudgetContainer {
+        flex-direction: column;
+        justify-content: stretch;
+    }
+
+    .currencySelect, 
+    .budgetSelect {
+        width: 100%;
+    }
+
+    .currencySelect {
+        margin-right: 0px;
+    }
+}
+
+
+
+
+

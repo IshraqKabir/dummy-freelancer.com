@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { connect } from 'react-redux';
 
 class Name extends React.Component {
     constructor(props) {
@@ -13,6 +14,11 @@ class Name extends React.Component {
 
         this.handleChange = this.handleChange.bind(this);
         this.handleBlur = this.handleBlur.bind(this);
+    }
+
+    componentDidMount ()
+    {
+        this.props.connect('name.js');
     }
 
     handleChange (event) {       
@@ -59,4 +65,20 @@ class Name extends React.Component {
     }
 }
 
-export default Name;
+function mapStoreToProps (store)
+{
+  return {
+    
+  }
+}
+
+function mapDispatchToProps (dispatch)
+{
+  return {
+    connect: (componentName) => dispatch({type:'connected', componentName}),
+  }
+}
+
+export default connect(mapStoreToProps, mapDispatchToProps) (Name);
+
+// export default Name;
