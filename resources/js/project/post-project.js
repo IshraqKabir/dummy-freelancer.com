@@ -22,6 +22,7 @@ class PostProject extends React.Component {
     return(
       <Provider store={store}>
         <App />
+  
       </Provider>
     );
   }

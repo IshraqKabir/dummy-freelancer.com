@@ -35732,12 +35732,7 @@ var Name = /*#__PURE__*/function (_React$Component) {
     _classCallCheck(this, Name);
 
     _this = _super.call(this, props);
-    _this.state = {
-      value: '',
-      length: 0,
-      error: false,
-      emptyError: false
-    };
+    _this.state = {};
     _this.handleChange = _this.handleChange.bind(_assertThisInitialized(_this));
     _this.handleBlur = _this.handleBlur.bind(_assertThisInitialized(_this));
     return _this;
@@ -35752,35 +35747,23 @@ var Name = /*#__PURE__*/function (_React$Component) {
     key: "handleChange",
     value: function handleChange(event) {
       if (event.target.value.length > 4000) {
-        this.setState({
-          error: true
-        });
+        this.props.handleError('Please enter atmost 255 characters');
       } else {
-        this.setState({
-          error: false
-        });
+        this.props.handleError(null);
       }
 
       if (event.target.value.length !== 0) {
-        this.setState({
-          emptyError: false
-        });
+        this.props.handleEmtpyError(false);
       }
 
-      this.setState({
-        value: event.target.value
-      });
-      this.setState({
-        length: event.target.value.length
-      });
+      this.props.handleChange(event.target.value);
+      this.props.setNameLength(event.target.value.length);
     }
   }, {
     key: "handleBlur",
     value: function handleBlur() {
-      if (this.state.length === 0) {
-        this.setState({
-          emptyError: true
-        });
+      if (this.props.length === 0) {
+        this.props.handleEmtpyError(true);
       }
     }
   }, {
@@ -35792,13 +35775,13 @@ var Name = /*#__PURE__*/function (_React$Component) {
         name: "name",
         type: "text",
         placeholder: "e.g. Build me a website",
-        value: this.state.value,
+        value: this.props.value,
         onChange: this.handleChange,
         onBlur: this.handleBlur,
-        className: this.state.emptyError ? "BorderError" : null
-      }), this.state.error ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        className: this.props.emptyError ? "BorderError" : null
+      }), this.props.error ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
         className: "error"
-      }, "Please enter atmost 255 characters") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null), this.state.emptyError ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+      }, this.props.error) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null), this.props.emptyError ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
         className: "error"
       }, "Please enter a name") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null));
     }
@@ -35808,7 +35791,12 @@ var Name = /*#__PURE__*/function (_React$Component) {
 }(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
 
 function mapStoreToProps(store) {
-  return {};
+  return {
+    value: store.name.value,
+    error: store.name.error,
+    emptyError: store.name.emptyError,
+    length: store.name.length
+  };
 }
 
 function mapDispatchToProps(dispatch) {
@@ -35818,11 +35806,35 @@ function mapDispatchToProps(dispatch) {
         type: 'connected',
         componentName: componentName
       });
+    },
+    handleChange: function handleChange(value) {
+      return dispatch({
+        type: 'SET_NAME',
+        value: value
+      });
+    },
+    setNameLength: function setNameLength(value) {
+      return dispatch({
+        type: 'SET_NAME_LENGTH',
+        value: value
+      });
+    },
+    handleError: function handleError(value) {
+      return dispatch({
+        type: 'SET_NAME_ERROR',
+        value: value
+      });
+    },
+    handleEmtpyError: function handleEmtpyError(value) {
+      return dispatch({
+        type: 'SET_NAME_EMPTY_ERROR',
+        value: value
+      });
     }
   };
 }
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStoreToProps, mapDispatchToProps)(Name)); // export default Name;
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStoreToProps, mapDispatchToProps)(Name));
 
 /***/ }),
 
@@ -36617,6 +36629,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _FormComponents_name_name__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./FormComponents/name/name */ "./resources/js/project/FormComponents/name/name.js");
 /* harmony import */ var _FormComponents_skills_skills__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./FormComponents/skills/skills */ "./resources/js/project/FormComponents/skills/skills.js");
 /* harmony import */ var _FormComponents_payment_payment__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./FormComponents/payment/payment */ "./resources/js/project/FormComponents/payment/payment.js");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -36647,6 +36660,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
 
 
+
 var App = /*#__PURE__*/function (_React$Component) {
   _inherits(App, _React$Component);
 
@@ -36663,6 +36677,11 @@ var App = /*#__PURE__*/function (_React$Component) {
   }
 
   _createClass(App, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      this.props.connect('app.js');
+    }
+  }, {
     key: "render",
     value: function render() {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -36690,7 +36709,22 @@ var App = /*#__PURE__*/function (_React$Component) {
   return App;
 }(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
 
-/* harmony default export */ __webpack_exports__["default"] = (App);
+function mapStoreToProps(store) {
+  return {};
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    connect: function connect(componentName) {
+      return dispatch({
+        type: 'connected',
+        componentName: componentName
+      });
+    }
+  };
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_7__["connect"])(mapStoreToProps, mapDispatchToProps)(App)); // export default App;
 
 /***/ }),
 
@@ -36831,6 +36865,8 @@ var initialState = {
   name: {
     value: '',
     error: null,
+    emptyError: null,
+    length: 0,
     isVisited: false
   },
   details: {
@@ -36870,6 +36906,22 @@ function reducer() {
     case 'SELECT_FIXED':
       newState.payment.fixed = true;
       newState.payment.hourly = false;
+      break;
+
+    case 'SET_NAME':
+      newState.name.value = action.value;
+      break;
+
+    case 'SET_NAME_LENGTH':
+      newState.name.length = action.value;
+      break;
+
+    case 'SET_NAME_ERROR':
+      newState.name.error = action.value;
+      break;
+
+    case 'SET_NAME_EMPTY_ERROR':
+      newState.name.emptyError = action.value;
       break;
 
     default:

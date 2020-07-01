@@ -4,6 +4,8 @@ const initialState = {
     name : {
         value: '',
         error: null,
+        emptyError: null,
+        length: 0,
         isVisited: false
     },
     details : {
@@ -41,6 +43,18 @@ function reducer (state = initialState, action)
     case 'SELECT_FIXED':
         newState.payment.fixed = true;
         newState.payment.hourly = false;
+        break;
+    case 'SET_NAME':
+        newState.name.value = action.value
+        break;
+    case 'SET_NAME_LENGTH':
+        newState.name.length = action.value;
+        break;
+    case 'SET_NAME_ERROR':
+        newState.name.error = action.value;
+        break;
+    case 'SET_NAME_EMPTY_ERROR':
+        newState.name.emptyError = action.value;
         break;
     default:
         break;
