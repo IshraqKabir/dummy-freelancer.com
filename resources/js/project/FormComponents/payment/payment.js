@@ -14,9 +14,9 @@ class Payment extends React.Component
         this.state = {
             // hourly: false,
             // fixed: true,
-            currencyType: 'USD',
-            minBudget: null,
-            maxBudget: null
+            // currencyType: 'USD',
+            // minBudget: null,
+            // maxBudget: null
         };
 
         this.handleSelectHourly = this.handleSelectHourly.bind(this);
@@ -43,13 +43,16 @@ class Payment extends React.Component
 
     handleSetCurrency (currency) 
     {
-        this.setState({currencyType: currency});
+        // this.setState({currencyType: currency});
+        this.props.selectCurrencyType(currency);
     }
 
     handleSetBudget (min, max) 
     {
-        this.setState({minBudget: min});
-        this.setState({maxBudget: max});
+        // this.setState({minBudget: min});
+        this.props.selectMinBudget(min);
+        this.props.selectMaxBudget(max);
+        // this.setState({maxBudget: max});
     }
 
 
@@ -58,7 +61,7 @@ class Payment extends React.Component
         let budgetOptions = null;
         
         // USD
-        if (this.state.currencyType === 'USD' && this.props.fixed)
+        if (this.props.currencyType === 'USD' && this.props.fixed)
         {
             budgetOptions = <React.Fragment>
                 <option onClick={() => this.handleSetBudget(10, 30)}>
@@ -81,7 +84,7 @@ class Payment extends React.Component
                 </option>
                 </React.Fragment>                            
         }
-        else if (this.state.currencyType === 'USD' && this.props.hourly)
+        else if (this.props.currencyType === 'USD' && this.props.hourly)
         {
             budgetOptions = <React.Fragment>
                 <option onClick={() => this.handleSetBudget(2, 8)}>
@@ -102,7 +105,7 @@ class Payment extends React.Component
                 </React.Fragment>
         }
         // GBP
-        else if (this.state.currencyType === 'GBP' && this.props.fixed)
+        else if (this.props.currencyType === 'GBP' && this.props.fixed)
         {
             budgetOptions = <React.Fragment>
                 <option onClick={() => this.handleSetBudget(10, 20)}>
@@ -125,7 +128,7 @@ class Payment extends React.Component
                 </option>
                 </React.Fragment>                            
         }
-        else if (this.state.currencyType === 'GBP' && this.props.hourly)
+        else if (this.props.currencyType === 'GBP' && this.props.hourly)
         {
             budgetOptions = <React.Fragment>
                 <option onClick={() => this.handleSetBudget(2, 5)}>
@@ -146,7 +149,7 @@ class Payment extends React.Component
                 </React.Fragment>
         }
         // EUR
-        if (this.state.currencyType === 'EUR' && this.props.fixed)
+        if (this.props.currencyType === 'EUR' && this.props.fixed)
         {
             budgetOptions = <React.Fragment>
                 <option onClick={() => this.handleSetBudget(8, 30)}>
@@ -169,7 +172,7 @@ class Payment extends React.Component
                 </option>
                 </React.Fragment>                            
         }
-        else if (this.state.currencyType === 'EUR' && this.props.hourly)
+        else if (this.props.currencyType === 'EUR' && this.props.hourly)
         {
             budgetOptions = <React.Fragment>
                 <option onClick={() => this.handleSetBudget(2, 8)}>
@@ -264,7 +267,11 @@ function mapStoreToProps (store)
 {
   return {
     hourly: store.payment.hourly,
-    fixed: store.payment.fixed
+    fixed: store.payment.fixed,
+    currencyType: store.payment.currencyType,
+    minBudget: store.payment.minBudget,
+    maxBudget: store.payment.maxBudget,
+    error: store.payment.error
   }
 }
 
@@ -274,11 +281,13 @@ function mapDispatchToProps (dispatch)
     connect: (componentName) => dispatch({type:'connected', componentName}),
     selectHourly: () => dispatch({type:'SELECT_HOURLY'}),
     selectFixed: () => dispatch({type:'SELECT_FIXED'}),
+    selectCurrencyType: (value) => dispatch({type: 'SELECT_CURRENCY_TYPE', value}),
+    selectMaxBudget: (value) => dispatch({type: 'SELECT_MAX_BUDGET', value}),
+    selectMinBudget: (value) => dispatch({type: 'SELECT_MIN_BUDGET', value}),
   }
 }
 
 
 export default connect(mapStoreToProps, mapDispatchToProps) (Payment);
 
-// export default Payment;
 

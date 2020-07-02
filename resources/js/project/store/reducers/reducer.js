@@ -21,6 +21,9 @@ const initialState = {
     payment : {
         hourly: false,
         fixed: true,
+        currencyType: 'USD',
+        minBudget: null,
+        maxBudget: null,
         error: null,
         isVisited: false
     }
@@ -70,6 +73,15 @@ function reducer (state = initialState, action)
         break;
     case 'SET_SELECTED_SKILLS':
         newState.skills.selectedSkills = action.value;
+        break;
+    case 'SELECT_CURRENCY_TYPE':
+        newState.payment.currencyType = action.value;
+        break;
+    case 'SELECT_MIN_BUDGET':
+        newState.payment.minBudget = action.value;
+        break;
+    case 'SELECT_MAX_BUDGET':
+        newState.payment.maxBudget = action.value;
         break;
     default:
         break;

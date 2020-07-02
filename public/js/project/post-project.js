@@ -35959,12 +35959,11 @@ var Payment = /*#__PURE__*/function (_React$Component) {
     _classCallCheck(this, Payment);
 
     _this = _super.call(this, props);
-    _this.state = {
-      // hourly: false,
+    _this.state = {// hourly: false,
       // fixed: true,
-      currencyType: 'USD',
-      minBudget: null,
-      maxBudget: null
+      // currencyType: 'USD',
+      // minBudget: null,
+      // maxBudget: null
     };
     _this.handleSelectHourly = _this.handleSelectHourly.bind(_assertThisInitialized(_this));
     _this.handleSelectFixed = _this.handleSelectFixed.bind(_assertThisInitialized(_this));
@@ -35990,19 +35989,15 @@ var Payment = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "handleSetCurrency",
     value: function handleSetCurrency(currency) {
-      this.setState({
-        currencyType: currency
-      });
+      // this.setState({currencyType: currency});
+      this.props.selectCurrencyType(currency);
     }
   }, {
     key: "handleSetBudget",
     value: function handleSetBudget(min, max) {
-      this.setState({
-        minBudget: min
-      });
-      this.setState({
-        maxBudget: max
-      });
+      // this.setState({minBudget: min});
+      this.props.selectMinBudget(min);
+      this.props.selectMaxBudget(max); // this.setState({maxBudget: max});
     }
   }, {
     key: "render",
@@ -36011,7 +36006,7 @@ var Payment = /*#__PURE__*/function (_React$Component) {
 
       var budgetOptions = null; // USD
 
-      if (this.state.currencyType === 'USD' && this.props.fixed) {
+      if (this.props.currencyType === 'USD' && this.props.fixed) {
         budgetOptions = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
           onClick: function onClick() {
             return _this2.handleSetBudget(10, 30);
@@ -36037,7 +36032,7 @@ var Payment = /*#__PURE__*/function (_React$Component) {
             return _this2.handleSetBudget(3000, 5000);
           }
         }, "Large Project ($3,000.00 - 5,000.00 USD)"));
-      } else if (this.state.currencyType === 'USD' && this.props.hourly) {
+      } else if (this.props.currencyType === 'USD' && this.props.hourly) {
         budgetOptions = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
           onClick: function onClick() {
             return _this2.handleSetBudget(2, 8);
@@ -36060,7 +36055,7 @@ var Payment = /*#__PURE__*/function (_React$Component) {
           }
         }, "Expert ($50.00+ USD per hour)"));
       } // GBP
-      else if (this.state.currencyType === 'GBP' && this.props.fixed) {
+      else if (this.props.currencyType === 'GBP' && this.props.fixed) {
           budgetOptions = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
             onClick: function onClick() {
               return _this2.handleSetBudget(10, 20);
@@ -36086,7 +36081,7 @@ var Payment = /*#__PURE__*/function (_React$Component) {
               return _this2.handleSetBudget(3000, 50000);
             }
           }, "Large Project (\xA33,000.00 - 5,000.00 GBP)"));
-        } else if (this.state.currencyType === 'GBP' && this.props.hourly) {
+        } else if (this.props.currencyType === 'GBP' && this.props.hourly) {
           budgetOptions = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
             onClick: function onClick() {
               return _this2.handleSetBudget(2, 5);
@@ -36111,7 +36106,7 @@ var Payment = /*#__PURE__*/function (_React$Component) {
         } // EUR
 
 
-      if (this.state.currencyType === 'EUR' && this.props.fixed) {
+      if (this.props.currencyType === 'EUR' && this.props.fixed) {
         budgetOptions = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
           onClick: function onClick() {
             return _this2.handleSetBudget(8, 30);
@@ -36137,7 +36132,7 @@ var Payment = /*#__PURE__*/function (_React$Component) {
             return _this2.handleSetBudget(3000, 5000);
           }
         }, "Large Project (\u20AC3,000.00 - 5,000.00 EUR)"));
-      } else if (this.state.currencyType === 'EUR' && this.props.hourly) {
+      } else if (this.props.currencyType === 'EUR' && this.props.hourly) {
         budgetOptions = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
           onClick: function onClick() {
             return _this2.handleSetBudget(2, 8);
@@ -36217,7 +36212,11 @@ var Payment = /*#__PURE__*/function (_React$Component) {
 function mapStoreToProps(store) {
   return {
     hourly: store.payment.hourly,
-    fixed: store.payment.fixed
+    fixed: store.payment.fixed,
+    currencyType: store.payment.currencyType,
+    minBudget: store.payment.minBudget,
+    maxBudget: store.payment.maxBudget,
+    error: store.payment.error
   };
 }
 
@@ -36238,11 +36237,29 @@ function mapDispatchToProps(dispatch) {
       return dispatch({
         type: 'SELECT_FIXED'
       });
+    },
+    selectCurrencyType: function selectCurrencyType(value) {
+      return dispatch({
+        type: 'SELECT_CURRENCY_TYPE',
+        value: value
+      });
+    },
+    selectMaxBudget: function selectMaxBudget(value) {
+      return dispatch({
+        type: 'SELECT_MAX_BUDGET',
+        value: value
+      });
+    },
+    selectMinBudget: function selectMinBudget(value) {
+      return dispatch({
+        type: 'SELECT_MIN_BUDGET',
+        value: value
+      });
     }
   };
 }
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_4__["connect"])(mapStoreToProps, mapDispatchToProps)(Payment)); // export default Payment;
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_4__["connect"])(mapStoreToProps, mapDispatchToProps)(Payment));
 
 /***/ }),
 
@@ -36900,6 +36917,9 @@ var initialState = {
   payment: {
     hourly: false,
     fixed: true,
+    currencyType: 'USD',
+    minBudget: null,
+    maxBudget: null,
     error: null,
     isVisited: false
   }
@@ -36960,6 +36980,18 @@ function reducer() {
 
     case 'SET_SELECTED_SKILLS':
       newState.skills.selectedSkills = action.value;
+      break;
+
+    case 'SELECT_CURRENCY_TYPE':
+      newState.payment.currencyType = action.value;
+      break;
+
+    case 'SELECT_MIN_BUDGET':
+      newState.payment.minBudget = action.value;
+      break;
+
+    case 'SELECT_MAX_BUDGET':
+      newState.payment.maxBudget = action.value;
       break;
 
     default:
