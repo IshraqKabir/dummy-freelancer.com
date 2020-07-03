@@ -6,17 +6,18 @@ const initialState = {
         error: null,
         emptyError: null,
         length: 0,
-        isVisited: false
+        visited: 0
     },
     details : {
         value: '',
         error: null,
         emptyError: null,
         length: 0,
-        isVisited: false
+        visited: 0
     },
     skills : {
-        selectedSkills: []
+        selectedSkills: [],
+        visited: 0
     },
     payment : {
         hourly: false,
@@ -25,8 +26,10 @@ const initialState = {
         minBudget: null,
         maxBudget: null,
         error: null,
-        isVisited: false
-    }
+        // visited: 0
+    },
+    nextButtonDisable: true,
+    nextClicked: 0
 };
 
 
@@ -82,6 +85,57 @@ function reducer (state = initialState, action)
         break;
     case 'SELECT_MAX_BUDGET':
         newState.payment.maxBudget = action.value;
+        break;
+    case 'VISIT_NAME':
+        newState.name.visited++;
+        break;
+    case 'VISIT_DETAILS':
+        newState.details.visited++;
+        break;
+    case 'VISIT_SKILLS':
+        newState.skills.visited++;
+        break;
+    case 'NEXT_BUTTON_CLICK':
+        newState.nextClicked++;
+        break;
+    case 'SET_NEXT_BUTTON_STATE':
+        if (newState.nextClicked === 0)
+        {
+            if (
+            newState.name.length === 0 ||
+            newState.name.length > 255 ||
+            newState.details.length === 0 ||
+            newState.details.length > 4000
+            ) {
+                newState.nextButtonDisable = true;
+                break;
+            }
+            else {
+                newState.nextButtonDisable = false;
+                break;
+            }
+        } 
+        else if (newState.nextClicked === 1)
+        {
+        if (
+            newState.name.length === 0 ||
+            newState.name.length > 255 ||
+            newState.details.length === 0 ||
+            newState.details.length > 4000 ||
+            newState.skills.selectedSkills.length === 0 ||
+            newState.skills.selectedSkills.length > 3 
+        ) {
+            newState.nextButtonDisable = true;
+            break;
+            }
+            else {
+                newState.nextButtonDisable = false;
+                break;
+            }
+        }
+        break;
+    case 'DISABLE_NEXT_BUTTON':
+        newState.nextButtonDisable = true;
         break;
     default:
         break;

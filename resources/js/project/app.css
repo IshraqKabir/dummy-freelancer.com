@@ -154,3 +154,28 @@
     border: 1px solid #eb3730!important;
 }
 
+
+.NextButtonContainer {
+    margin: 40px auto;
+}
+
+.NextButton {
+    color: white;
+    border: 1px solid #007fed;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 10px 15px;
+    background: linear-gradient(#129eef, #007fed);
+}
+
+.NextButton:hover {
+    background: #2082ea;
+    border: 1px solid #73b0f1;
+}
+
+.NextButtonDisable,
+.NextButtonDisable:hover {
+    color: #75787d;
+    background: #f0f0f0;
+    border: 1px solid #bec0c2;
+}

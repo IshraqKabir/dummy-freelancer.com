@@ -24,7 +24,8 @@ class Details extends React.Component {
     handleChange (event) {       
         if (event.target.value.length > 4000) {
             this.props.handleError(true);
-        } else {
+        }
+        else {
             this.props.handleError(false);
         }
 
@@ -35,6 +36,7 @@ class Details extends React.Component {
 
         this.props.handleChange(event.target.value);
         this.props.setLength(event.target.value.length);
+        this.props.handleNextButton();
     }
 
     handleBlur () 
@@ -42,8 +44,11 @@ class Details extends React.Component {
         if (this.props.length === 0)
         {
             this.props.handleEmtpyError(true);
+            this.props.handleNextButton();
         }
     }
+
+    
 
     render() {
         return (
@@ -88,6 +93,7 @@ function mapDispatchToProps (dispatch)
     setLength: (value) => dispatch({type: 'SET_DETAILS_LENGTH', value}),
     handleError: (value) => dispatch({type: 'SET_DETAILS_ERROR', value}),
     handleEmtpyError: (value) => dispatch({type: 'SET_DETAILS_EMPTY_ERROR', value}),
+    handleNextButton: () => dispatch({type: 'SET_NEXT_BUTTON_STATE'})
   }
 }
 

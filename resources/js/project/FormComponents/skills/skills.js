@@ -78,6 +78,7 @@ class Skills extends React.Component {
         // this.setState({selectedSkills: joined});
         this.props.setSelectedSkills(joined);
 
+
         // error checking
         if (joined.length === 0) 
         {
@@ -90,6 +91,7 @@ class Skills extends React.Component {
         else {
             this.setState({error: null});
         }
+        this.props.handleNextButton();
     }
 
     handleSelectedSkillCloseClicked (id) {
@@ -103,8 +105,8 @@ class Skills extends React.Component {
             }
         }
         
-        // this.setState({selectedSkills: joined});
         this.props.setSelectedSkills(joined);
+
 
         // error checking
         if (joined.length === 0) 
@@ -118,8 +120,9 @@ class Skills extends React.Component {
         else {
             this.setState({error: null});
         }
-
+        this.props.handleNextButton();
     }
+
 
     render() {
         let results = null;
@@ -181,7 +184,7 @@ class Skills extends React.Component {
                         value={this.state.value}
                         onChange={this.handleChange}
                         onBlur={this.handleBlur}
-                        />
+                    />
                 </div>
                 { this.state.error ? 
                         <span className="error">{this.state.error}</span>
@@ -207,11 +210,11 @@ function mapDispatchToProps (dispatch)
 {
   return {
     connect: (componentName) => dispatch({type:'connected', componentName}),
-    setSelectedSkills: (value) => dispatch({type: 'SET_SELECTED_SKILLS', value})
+    setSelectedSkills: (value) => dispatch({type: 'SET_SELECTED_SKILLS', value}),
+    handleNextButton: () => dispatch({type: 'SET_NEXT_BUTTON_STATE'})
   }
 }
 
 
 export default connect(mapStoreToProps, mapDispatchToProps) (Skills);
 
-// export default Skills;

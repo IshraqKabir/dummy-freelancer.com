@@ -12,11 +12,6 @@ class Payment extends React.Component
     {
         super(props);
         this.state = {
-            // hourly: false,
-            // fixed: true,
-            // currencyType: 'USD',
-            // minBudget: null,
-            // maxBudget: null
         };
 
         this.handleSelectHourly = this.handleSelectHourly.bind(this);
@@ -43,16 +38,13 @@ class Payment extends React.Component
 
     handleSetCurrency (currency) 
     {
-        // this.setState({currencyType: currency});
         this.props.selectCurrencyType(currency);
     }
 
     handleSetBudget (min, max) 
     {
-        // this.setState({minBudget: min});
         this.props.selectMinBudget(min);
         this.props.selectMaxBudget(max);
-        // this.setState({maxBudget: max});
     }
 
 

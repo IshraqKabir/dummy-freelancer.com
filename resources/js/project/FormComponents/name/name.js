@@ -19,12 +19,13 @@ class Name extends React.Component {
     }
 
     handleChange (event) {
-               
-        if (event.target.value.length > 4000) {
+        
+        if (event.target.value.length > 255) {
             this.props.handleError('Please enter atmost 255 characters');
         } else {
             this.props.handleError(null);
         }
+
 
         if (event.target.value.length !== 0)
         {
@@ -33,6 +34,7 @@ class Name extends React.Component {
 
         this.props.handleChange(event.target.value);
         this.props.setLength(event.target.value.length);
+        this.props.handleNextButton();
     }
 
     handleBlur () 
@@ -42,6 +44,8 @@ class Name extends React.Component {
             this.props.handleEmtpyError(true);
         }
     }
+
+ 
 
     render() {
         return (
@@ -69,7 +73,8 @@ function mapStoreToProps (store)
     value: store.name.value,
     error: store.name.error,
     emptyError: store.name.emptyError,
-    length: store.name.length
+    length: store.name.length,
+    nextButtonDisable: store.nextButtonDisable
   }
 }
 
@@ -81,7 +86,7 @@ function mapDispatchToProps (dispatch)
     setLength: (value) => dispatch({type: 'SET_NAME_LENGTH', value}),
     handleError: (value) => dispatch({type: 'SET_NAME_ERROR', value}),
     handleEmtpyError: (value) => dispatch({type: 'SET_NAME_EMPTY_ERROR', value}),
-
+    handleNextButton: () => dispatch({type: 'SET_NEXT_BUTTON_STATE'})
   }
 }
 

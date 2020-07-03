@@ -14,8 +14,9 @@ import App from './app';
 import reducer from './store/reducers/reducer';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
+import { composeWithDevTools } from 'redux-devtools-extension';
 
-const store = createStore(reducer);
+const store = createStore(reducer, composeWithDevTools( ));
 
 class PostProject extends React.Component {
   render() {

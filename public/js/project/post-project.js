@@ -2037,7 +2037,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".Wrapper {\r\n    height: 100%;\r\n    width: 100%;\r\n    background-color: white;\r\n    position: absolute;\r\n    z-index: -2;\r\n    font-family: 'Source Sans Pro', sans-serif;\r\n    line-height: 1.5;\r\n}\r\n\r\n\r\n\r\n.Background {\r\n    background: linear-gradient(to right, #1b61c0, #0967c6 50%,#0278e2 90%, #0279e3);\r\n    width: 100vw;\r\n    height: 450px;\r\n    position: absolute;\r\n    top: 0;\r\n    left: 0;\r\n    z-index: -1;\r\n}\r\n\r\n.Logo {\r\n    width: 169px;\r\n    height: 47px;\r\n    margin-bottom: 30px;\r\n}\r\n\r\n.Container {\r\n    width: 790px;\r\n    margin: 0px auto;\r\n}\r\n\r\n/* .Container {\r\n    width: 58.6%;\r\n    margin: 0px auto;\r\n} */\r\n\r\n@media only screen and (max-width: 790px) {\r\n    .Container {\r\n        width: 100%;\r\n    }\r\n\r\n    .Container .Top {\r\n        margin-left: 10px;\r\n    }\r\n    .Top p {\r\n        font-size: 14px;\r\n    }\r\n}\r\n\r\n.Container .Top {\r\n    color: white;\r\n}\r\n\r\n.Container h1 {\r\n    font-weight: bold;\r\n    font-size: 30px;\r\n    margin: 20px 0px 10px 0px;\r\n}\r\n\r\n.Top {\r\n    margin: 55px 0px 25px 0px;\r\n}\r\n\r\n.Form {\r\n    width: 100%;\r\n    margin: 0px auto;\r\n    background-color: white;\r\n    border: 1px solid rgb(222, 222, 222);\r\n    border-bottom: none;\r\n    border-radius: 4px;\r\n    margin-bottom: 100px;\r\n}\r\n\r\n.FormWrapper {\r\n    margin: 35px;\r\n    position: relative;\r\n}\r\n\r\n.Form input {\r\n    width: 98%;\r\n    padding: 10px 0px 15px 20px;\r\n    border: 1px solid #bec0c2;\r\n    margin-bottom: 5px;\r\n}\r\n\r\n.Form .Input {\r\n    margin-bottom: 35px\r\n}\r\n\r\n.Form input:focus {\r\n    border: 1px solid #2ea1ee;\r\n}\r\n\r\n.Form input:hover {\r\n    border: 1px solid #2ea1ee;\r\n}\r\n\r\n.Form h3 {\r\n    font-weight: bold;\r\n    font-size: 20px;\r\n    margin-bottom: 10px;\r\n}\r\n\r\n.Form p {\r\n    font-size: 15px;\r\n}\r\n\r\n.Form textarea {\r\n    width: 98%;\r\n    resize: vertical;\r\n    overflow: hidden;\r\n    border: 1px solid #bec0c2;\r\n    padding: 10px;\r\n    margin-top: 15px;\r\n    margin-bottom: 5px;\r\n}\r\n\r\n.Form textarea:focus {\r\n    border: 1px solid #2ea1ee;\r\n}\r\n\r\n.Form textarea:hover {\r\n    border: 1px solid #2ea1ee;\r\n}\r\n\r\n.Form textarea::-moz-placeholder {\r\n    font-size: 14px;\r\n}\r\n\r\n.Form textarea:-ms-input-placeholder {\r\n    font-size: 14px;\r\n}\r\n\r\n.Form textarea::-ms-input-placeholder {\r\n    font-size: 14px;\r\n}\r\n\r\n.Form textarea::placeholder {\r\n    font-size: 14px;\r\n}\r\n\r\n.PostMyProjectButton {\r\n    float: right;\r\n    margin-right: -10px;\r\n    padding: 10px 20px;\r\n    color: #fff;\r\n    font-weight: bold;\r\n    font-size: 20px;\r\n    background: linear-gradient(to right, #f8800f, #f8810f);\r\n    border: 1px solid #f69f61;\r\n    margin-top: 25px;\r\n}\r\n\r\n.PostMyProjectButton:hover {\r\n    background: #f27922;\r\n}\r\n\r\n.error {\r\n    color: red;\r\n    font-size: small;\r\n}\r\n\r\n.BorderError {\r\n    border: 1px solid #eb3730!important;\r\n}\r\n\r\n", ""]);
+exports.push([module.i, ".Wrapper {\r\n    height: 100%;\r\n    width: 100%;\r\n    background-color: white;\r\n    position: absolute;\r\n    z-index: -2;\r\n    font-family: 'Source Sans Pro', sans-serif;\r\n    line-height: 1.5;\r\n}\r\n\r\n\r\n\r\n.Background {\r\n    background: linear-gradient(to right, #1b61c0, #0967c6 50%,#0278e2 90%, #0279e3);\r\n    width: 100vw;\r\n    height: 450px;\r\n    position: absolute;\r\n    top: 0;\r\n    left: 0;\r\n    z-index: -1;\r\n}\r\n\r\n.Logo {\r\n    width: 169px;\r\n    height: 47px;\r\n    margin-bottom: 30px;\r\n}\r\n\r\n.Container {\r\n    width: 790px;\r\n    margin: 0px auto;\r\n}\r\n\r\n/* .Container {\r\n    width: 58.6%;\r\n    margin: 0px auto;\r\n} */\r\n\r\n@media only screen and (max-width: 790px) {\r\n    .Container {\r\n        width: 100%;\r\n    }\r\n\r\n    .Container .Top {\r\n        margin-left: 10px;\r\n    }\r\n    .Top p {\r\n        font-size: 14px;\r\n    }\r\n}\r\n\r\n.Container .Top {\r\n    color: white;\r\n}\r\n\r\n.Container h1 {\r\n    font-weight: bold;\r\n    font-size: 30px;\r\n    margin: 20px 0px 10px 0px;\r\n}\r\n\r\n.Top {\r\n    margin: 55px 0px 25px 0px;\r\n}\r\n\r\n.Form {\r\n    width: 100%;\r\n    margin: 0px auto;\r\n    background-color: white;\r\n    border: 1px solid rgb(222, 222, 222);\r\n    border-bottom: none;\r\n    border-radius: 4px;\r\n    margin-bottom: 100px;\r\n}\r\n\r\n.FormWrapper {\r\n    margin: 35px;\r\n    position: relative;\r\n}\r\n\r\n.Form input {\r\n    width: 98%;\r\n    padding: 10px 0px 15px 20px;\r\n    border: 1px solid #bec0c2;\r\n    margin-bottom: 5px;\r\n}\r\n\r\n.Form .Input {\r\n    margin-bottom: 35px\r\n}\r\n\r\n.Form input:focus {\r\n    border: 1px solid #2ea1ee;\r\n}\r\n\r\n.Form input:hover {\r\n    border: 1px solid #2ea1ee;\r\n}\r\n\r\n.Form h3 {\r\n    font-weight: bold;\r\n    font-size: 20px;\r\n    margin-bottom: 10px;\r\n}\r\n\r\n.Form p {\r\n    font-size: 15px;\r\n}\r\n\r\n.Form textarea {\r\n    width: 98%;\r\n    resize: vertical;\r\n    overflow: hidden;\r\n    border: 1px solid #bec0c2;\r\n    padding: 10px;\r\n    margin-top: 15px;\r\n    margin-bottom: 5px;\r\n}\r\n\r\n.Form textarea:focus {\r\n    border: 1px solid #2ea1ee;\r\n}\r\n\r\n.Form textarea:hover {\r\n    border: 1px solid #2ea1ee;\r\n}\r\n\r\n.Form textarea::-moz-placeholder {\r\n    font-size: 14px;\r\n}\r\n\r\n.Form textarea:-ms-input-placeholder {\r\n    font-size: 14px;\r\n}\r\n\r\n.Form textarea::-ms-input-placeholder {\r\n    font-size: 14px;\r\n}\r\n\r\n.Form textarea::placeholder {\r\n    font-size: 14px;\r\n}\r\n\r\n.PostMyProjectButton {\r\n    float: right;\r\n    margin-right: -10px;\r\n    padding: 10px 20px;\r\n    color: #fff;\r\n    font-weight: bold;\r\n    font-size: 20px;\r\n    background: linear-gradient(to right, #f8800f, #f8810f);\r\n    border: 1px solid #f69f61;\r\n    margin-top: 25px;\r\n}\r\n\r\n.PostMyProjectButton:hover {\r\n    background: #f27922;\r\n}\r\n\r\n.error {\r\n    color: red;\r\n    font-size: small;\r\n}\r\n\r\n.BorderError {\r\n    border: 1px solid #eb3730!important;\r\n}\r\n\r\n\r\n.NextButtonContainer {\r\n    margin: 40px auto;\r\n}\r\n\r\n.NextButton {\r\n    color: white;\r\n    border: 1px solid #007fed;\r\n    font-size: 14px;\r\n    font-weight: 700;\r\n    padding: 10px 15px;\r\n    background: linear-gradient(#129eef, #007fed);\r\n}\r\n\r\n.NextButton:hover {\r\n    background: #2082ea;\r\n    border: 1px solid #73b0f1;\r\n}\r\n\r\n.NextButtonDisable,\r\n.NextButtonDisable:hover {\r\n    color: #75787d;\r\n    background: #f0f0f0;\r\n    border: 1px solid #bec0c2;\r\n}\r\n", ""]);
 
 // exports
 
@@ -32180,6 +32180,38 @@ if (false) {} else {
 
 /***/ }),
 
+/***/ "./node_modules/redux-devtools-extension/index.js":
+/*!********************************************************!*\
+  !*** ./node_modules/redux-devtools-extension/index.js ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var compose = __webpack_require__(/*! redux */ "./node_modules/redux/es/redux.js").compose;
+
+exports.__esModule = true;
+exports.composeWithDevTools = (
+  typeof window !== 'undefined' && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ ?
+    window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ :
+    function() {
+      if (arguments.length === 0) return undefined;
+      if (typeof arguments[0] === 'object') return compose;
+      return compose.apply(null, arguments);
+    }
+);
+
+exports.devToolsEnhancer = (
+  typeof window !== 'undefined' && window.__REDUX_DEVTOOLS_EXTENSION__ ?
+    window.__REDUX_DEVTOOLS_EXTENSION__ :
+    function() { return function(noop) { return noop; } }
+);
+
+
+/***/ }),
+
 /***/ "./node_modules/redux/es/redux.js":
 /*!****************************************!*\
   !*** ./node_modules/redux/es/redux.js ***!
@@ -35614,12 +35646,14 @@ var Details = /*#__PURE__*/function (_React$Component) {
 
       this.props.handleChange(event.target.value);
       this.props.setLength(event.target.value.length);
+      this.props.handleNextButton();
     }
   }, {
     key: "handleBlur",
     value: function handleBlur() {
       if (this.props.length === 0) {
         this.props.handleEmtpyError(true);
+        this.props.handleNextButton();
       }
     }
   }, {
@@ -35687,6 +35721,11 @@ function mapDispatchToProps(dispatch) {
       return dispatch({
         type: 'SET_DETAILS_EMPTY_ERROR',
         value: value
+      });
+    },
+    handleNextButton: function handleNextButton() {
+      return dispatch({
+        type: 'SET_NEXT_BUTTON_STATE'
       });
     }
   };
@@ -35758,7 +35797,7 @@ var Name = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "handleChange",
     value: function handleChange(event) {
-      if (event.target.value.length > 4000) {
+      if (event.target.value.length > 255) {
         this.props.handleError('Please enter atmost 255 characters');
       } else {
         this.props.handleError(null);
@@ -35770,6 +35809,7 @@ var Name = /*#__PURE__*/function (_React$Component) {
 
       this.props.handleChange(event.target.value);
       this.props.setLength(event.target.value.length);
+      this.props.handleNextButton();
     }
   }, {
     key: "handleBlur",
@@ -35807,7 +35847,8 @@ function mapStoreToProps(store) {
     value: store.name.value,
     error: store.name.error,
     emptyError: store.name.emptyError,
-    length: store.name.length
+    length: store.name.length,
+    nextButtonDisable: store.nextButtonDisable
   };
 }
 
@@ -35841,6 +35882,11 @@ function mapDispatchToProps(dispatch) {
       return dispatch({
         type: 'SET_NAME_EMPTY_ERROR',
         value: value
+      });
+    },
+    handleNextButton: function handleNextButton() {
+      return dispatch({
+        type: 'SET_NEXT_BUTTON_STATE'
       });
     }
   };
@@ -35959,12 +36005,7 @@ var Payment = /*#__PURE__*/function (_React$Component) {
     _classCallCheck(this, Payment);
 
     _this = _super.call(this, props);
-    _this.state = {// hourly: false,
-      // fixed: true,
-      // currencyType: 'USD',
-      // minBudget: null,
-      // maxBudget: null
-    };
+    _this.state = {};
     _this.handleSelectHourly = _this.handleSelectHourly.bind(_assertThisInitialized(_this));
     _this.handleSelectFixed = _this.handleSelectFixed.bind(_assertThisInitialized(_this));
     _this.handleSetCurrency = _this.handleSetCurrency.bind(_assertThisInitialized(_this));
@@ -35989,15 +36030,13 @@ var Payment = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "handleSetCurrency",
     value: function handleSetCurrency(currency) {
-      // this.setState({currencyType: currency});
       this.props.selectCurrencyType(currency);
     }
   }, {
     key: "handleSetBudget",
     value: function handleSetBudget(min, max) {
-      // this.setState({minBudget: min});
       this.props.selectMinBudget(min);
-      this.props.selectMaxBudget(max); // this.setState({maxBudget: max});
+      this.props.selectMaxBudget(max);
     }
   }, {
     key: "render",
@@ -36486,6 +36525,8 @@ var Skills = /*#__PURE__*/function (_React$Component) {
           error: null
         });
       }
+
+      this.props.handleNextButton();
     }
   }, {
     key: "handleSelectedSkillCloseClicked",
@@ -36497,8 +36538,7 @@ var Skills = /*#__PURE__*/function (_React$Component) {
           joined.splice(i, 1);
           break;
         }
-      } // this.setState({selectedSkills: joined});
-
+      }
 
       this.props.setSelectedSkills(joined); // error checking
 
@@ -36515,6 +36555,8 @@ var Skills = /*#__PURE__*/function (_React$Component) {
           error: null
         });
       }
+
+      this.props.handleNextButton();
     }
   }, {
     key: "render",
@@ -36607,11 +36649,16 @@ function mapDispatchToProps(dispatch) {
         type: 'SET_SELECTED_SKILLS',
         value: value
       });
+    },
+    handleNextButton: function handleNextButton() {
+      return dispatch({
+        type: 'SET_NEXT_BUTTON_STATE'
+      });
     }
   };
 }
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_3__["connect"])(mapStoreToProps, mapDispatchToProps)(Skills)); // export default Skills;
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_3__["connect"])(mapStoreToProps, mapDispatchToProps)(Skills));
 
 /***/ }),
 
@@ -36708,6 +36755,7 @@ var App = /*#__PURE__*/function (_React$Component) {
 
     _this = _super.call(this, props);
     _this.state = {};
+    _this.progress = _this.progress.bind(_assertThisInitialized(_this));
     return _this;
   }
 
@@ -36717,8 +36765,49 @@ var App = /*#__PURE__*/function (_React$Component) {
       this.props.connect('app.js');
     }
   }, {
+    key: "progress",
+    value: function progress(e) {
+      e.preventDefault(); // progress validation logic
+
+      if (this.props.nextButtonDisable) {
+        return;
+      }
+
+      this.props.handleNextButtonDisable(true);
+      this.props.handleNextClick();
+      this.props.disableNextButton();
+    }
+  }, {
     key: "render",
     value: function render() {
+      var _this2 = this;
+
+      var afterDetailsNextButton,
+          afterSkillsNextButton = null;
+
+      if (this.props.nextClicked === 0) {
+        afterDetailsNextButton = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "NextButtonContainer"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+          className: "NextButton" + (this.props.nextButtonDisable === true ? ' NextButtonDisable' : ''),
+          onClick: function onClick(e) {
+            return _this2.progress(e);
+          }
+        }, "Next"));
+      }
+
+      if (this.props.nextClicked === 1) {
+        afterDetailsNextButton = null;
+        afterSkillsNextButton = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "NextButtonContainer"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+          onClick: function onClick(e) {
+            return _this2.progress(e);
+          },
+          className: "NextButton" + (this.props.nextButtonDisable ? ' NextButtonDisable' : '')
+        }, "Next"));
+      }
+
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "Wrapper"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -36734,10 +36823,10 @@ var App = /*#__PURE__*/function (_React$Component) {
         className: "Form"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "FormWrapper"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_FormComponents_name_name__WEBPACK_IMPORTED_MODULE_4__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_FormComponents_details_details__WEBPACK_IMPORTED_MODULE_3__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_FormComponents_skills_skills__WEBPACK_IMPORTED_MODULE_5__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_FormComponents_payment_payment__WEBPACK_IMPORTED_MODULE_6__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_FormComponents_name_name__WEBPACK_IMPORTED_MODULE_4__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_FormComponents_details_details__WEBPACK_IMPORTED_MODULE_3__["default"], null), afterDetailsNextButton, this.props.nextClicked > 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_FormComponents_skills_skills__WEBPACK_IMPORTED_MODULE_5__["default"], null) : null, afterSkillsNextButton, this.props.nextClicked > 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_FormComponents_payment_payment__WEBPACK_IMPORTED_MODULE_6__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         type: "submit",
         className: "PostMyProjectButton"
-      }, "Yes, post my project"))))));
+      }, "Yes, post my project")) : null)))));
     }
   }]);
 
@@ -36745,7 +36834,14 @@ var App = /*#__PURE__*/function (_React$Component) {
 }(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
 
 function mapStoreToProps(store) {
-  return {};
+  return {
+    name: store.name,
+    details: store.details,
+    skills: store.skills,
+    payment: store.payment,
+    nextButtonDisable: store.nextButtonDisable,
+    nextClicked: store.nextClicked
+  };
 }
 
 function mapDispatchToProps(dispatch) {
@@ -36755,11 +36851,27 @@ function mapDispatchToProps(dispatch) {
         type: 'connected',
         componentName: componentName
       });
+    },
+    handleNextButtonDisable: function handleNextButtonDisable(value) {
+      return dispatch({
+        type: 'SET_NEXT_BUTTON_STATE',
+        value: value
+      });
+    },
+    handleNextClick: function handleNextClick() {
+      return dispatch({
+        type: 'NEXT_BUTTON_CLICK'
+      });
+    },
+    disableNextButton: function disableNextButton() {
+      return dispatch({
+        type: 'DISABLE_NEXT_BUTTON'
+      });
     }
   };
 }
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_7__["connect"])(mapStoreToProps, mapDispatchToProps)(App)); // export default App;
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_7__["connect"])(mapStoreToProps, mapDispatchToProps)(App));
 
 /***/ }),
 
@@ -36791,6 +36903,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _store_reducers_reducer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./store/reducers/reducer */ "./resources/js/project/store/reducers/reducer.js");
 /* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/redux.js");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var redux_devtools_extension__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! redux-devtools-extension */ "./node_modules/redux-devtools-extension/index.js");
+/* harmony import */ var redux_devtools_extension__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(redux_devtools_extension__WEBPACK_IMPORTED_MODULE_6__);
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -36825,7 +36939,8 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
 
 
-var store = Object(redux__WEBPACK_IMPORTED_MODULE_4__["createStore"])(_store_reducers_reducer__WEBPACK_IMPORTED_MODULE_3__["default"]);
+
+var store = Object(redux__WEBPACK_IMPORTED_MODULE_4__["createStore"])(_store_reducers_reducer__WEBPACK_IMPORTED_MODULE_3__["default"], Object(redux_devtools_extension__WEBPACK_IMPORTED_MODULE_6__["composeWithDevTools"])());
 
 var PostProject = /*#__PURE__*/function (_React$Component) {
   _inherits(PostProject, _React$Component);
@@ -36902,17 +37017,18 @@ var initialState = {
     error: null,
     emptyError: null,
     length: 0,
-    isVisited: false
+    visited: 0
   },
   details: {
     value: '',
     error: null,
     emptyError: null,
     length: 0,
-    isVisited: false
+    visited: 0
   },
   skills: {
-    selectedSkills: []
+    selectedSkills: [],
+    visited: 0
   },
   payment: {
     hourly: false,
@@ -36920,9 +37036,11 @@ var initialState = {
     currencyType: 'USD',
     minBudget: null,
     maxBudget: null,
-    error: null,
-    isVisited: false
-  }
+    error: null // visited: 0
+
+  },
+  nextButtonDisable: true,
+  nextClicked: 0
 };
 
 function reducer() {
@@ -36992,6 +37110,47 @@ function reducer() {
 
     case 'SELECT_MAX_BUDGET':
       newState.payment.maxBudget = action.value;
+      break;
+
+    case 'VISIT_NAME':
+      newState.name.visited++;
+      break;
+
+    case 'VISIT_DETAILS':
+      newState.details.visited++;
+      break;
+
+    case 'VISIT_SKILLS':
+      newState.skills.visited++;
+      break;
+
+    case 'NEXT_BUTTON_CLICK':
+      newState.nextClicked++;
+      break;
+
+    case 'SET_NEXT_BUTTON_STATE':
+      if (newState.nextClicked === 0) {
+        if (newState.name.length === 0 || newState.name.length > 255 || newState.details.length === 0 || newState.details.length > 4000) {
+          newState.nextButtonDisable = true;
+          break;
+        } else {
+          newState.nextButtonDisable = false;
+          break;
+        }
+      } else if (newState.nextClicked === 1) {
+        if (newState.name.length === 0 || newState.name.length > 255 || newState.details.length === 0 || newState.details.length > 4000 || newState.skills.selectedSkills.length === 0 || newState.skills.selectedSkills.length > 3) {
+          newState.nextButtonDisable = true;
+          break;
+        } else {
+          newState.nextButtonDisable = false;
+          break;
+        }
+      }
+
+      break;
+
+    case 'DISABLE_NEXT_BUTTON':
+      newState.nextButtonDisable = true;
       break;
 
     default:
