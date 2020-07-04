@@ -170,6 +170,9 @@ class Skills extends React.Component {
                 <h3>What skills are required?</h3>
                 <p> We've detected the following skills to suit your project. Feel free to modify these choices to best suit your needs.</p>
                     
+                    { this.state.error ? 
+                            <span className="error">{this.state.error}</span>
+                        : null}
                 <div className="SkillsContainer">
                     <div className="SelectedSkills">
                         {selectedSkills}
@@ -186,9 +189,6 @@ class Skills extends React.Component {
                         onBlur={this.handleBlur}
                     />
                 </div>
-                { this.state.error ? 
-                        <span className="error">{this.state.error}</span>
-                    : null}
                 { this.state.showSkillsSearchResults ?
                     <div className="SkillsSearchResults">
                         {results}
