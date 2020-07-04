@@ -151,7 +151,9 @@ class Skills extends React.Component {
                             key={skill[0]} 
                             value={skill[0]}
                             className="SelectedSkill"
-                        >{skill[1]} <span onClick={this.handleSelectedSkillCloseClicked.bind(this, skill[0])} className="SelectedSkillClose">x</span></span>
+                        >
+                            {skill[1]} <span onClick={this.handleSelectedSkillCloseClicked.bind(this, skill[0])} className="SelectedSkillClose">x</span>
+                        </span>
             });
             selectedSkillsOptions = this.props.selectedSkills.map(skill => {
                 
