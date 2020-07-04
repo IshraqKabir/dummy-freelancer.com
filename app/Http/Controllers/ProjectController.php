@@ -36,16 +36,24 @@ class ProjectController extends Controller
     public function store(Request $request)
     {   
 
-        // dd($request->get('skills'));
+        // dd($request);
         $data = request()->validate([
             'name' => 'required|max:255',
             'details' => 'required|max:4000',
-            'skills' => 'required|max:5'
+            'skills' => 'required|max:5',
+            'minBudget' => 'required|min:2',
+            'maxBudget' => 'required',
+            'currencyType' => 'required',
+            'projectType' => 'required'
         ]);
 
         $project = Project::create([
             'name' => $data['name'],
-            'details' => $data['details']
+            'details' => $data['details'],
+            'currency_type' => $data['currencyType'],
+            'min_budget' => $data['minBudget'],
+            'max_budget' => $data['maxBudget'],
+            'project_type' => $data['projectType']
         ]);
 
         $project->skills()->attach($request->get('skills'));

@@ -17,6 +17,10 @@ class CreateProjectsTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('details');
+            $table->string('currency_type');
+            $table->string('project_type');
+            $table->double('min_budget');
+            $table->double('max_budget');
             $table->timestamps();
         });
     }

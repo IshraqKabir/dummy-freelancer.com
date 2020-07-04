@@ -23,8 +23,8 @@ const initialState = {
         hourly: false,
         fixed: true,
         currencyType: 'USD',
-        minBudget: null,
-        maxBudget: null,
+        minBudget: 10,
+        maxBudget: 100,
         error: null,
         // visited: 0
     },

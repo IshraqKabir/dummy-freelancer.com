@@ -36195,6 +36195,32 @@ var Payment = /*#__PURE__*/function (_React$Component) {
         }, "Expert (\u20AC50.00+ EUR per hour)"));
       }
 
+      var hiddenForm = null;
+
+      if (this.props.minBudget && this.props.maxBudget && this.props.currencyType) {
+        hiddenForm = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+          type: "number",
+          name: "minBudget",
+          defaultValue: this.props.minBudget,
+          hidden: true
+        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+          type: "number",
+          name: "maxBudget",
+          defaultValue: this.props.maxBudget,
+          hidden: true
+        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+          type: "text",
+          name: "currencyType",
+          defaultValue: this.props.currencyType,
+          hidden: true
+        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+          type: "text",
+          name: "projectType",
+          defaultValue: this.props.hourly ? 'hourly' : 'fixed',
+          hidden: true
+        }));
+      }
+
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
         className: "PaymentH3"
       }, "How would you like to get it done? "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -36241,7 +36267,7 @@ var Payment = /*#__PURE__*/function (_React$Component) {
         className: "select budgetSelect"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", null, budgetOptions), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "select_arrow"
-      }))));
+      }))), hiddenForm);
     }
   }]);
 
@@ -37034,8 +37060,8 @@ var initialState = {
     hourly: false,
     fixed: true,
     currencyType: 'USD',
-    minBudget: null,
-    maxBudget: null,
+    minBudget: 10,
+    maxBudget: 100,
     error: null // visited: 0
 
   },

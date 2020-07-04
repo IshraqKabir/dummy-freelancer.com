@@ -185,6 +185,38 @@ class Payment extends React.Component
                 </React.Fragment>
         }        
 
+        let hiddenForm = null;
+        if (this.props.minBudget && this.props.maxBudget && this.props.currencyType) 
+        {
+            hiddenForm = 
+            <React.Fragment>
+                <input 
+                    type="number" 
+                    name="minBudget" 
+                    defaultValue={this.props.minBudget}
+                    hidden
+                />
+                <input 
+                    type="number" 
+                    name="maxBudget" 
+                    defaultValue={this.props.maxBudget}
+                    hidden
+                />
+                <input
+                    type="text"
+                    name="currencyType"
+                    defaultValue={this.props.currencyType}
+                    hidden
+                />
+                <input
+                    type="text"
+                    name="projectType"
+                    defaultValue={this.props.hourly ? 'hourly' : 'fixed'}
+                    hidden
+                />
+            </React.Fragment>
+        }
+
         return (
             <React.Fragment>
                 <h3 className="PaymentH3">How would you like to get it done? </h3>
@@ -250,6 +282,7 @@ class Payment extends React.Component
                         </div>
                     </div>
                 </div>
+                {hiddenForm}
             </React.Fragment>
         );
     }

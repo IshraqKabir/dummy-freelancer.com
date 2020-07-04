@@ -70,6 +70,7 @@ class App extends React.Component
     }
     
 
+
     return (
       <React.Fragment>
           <div className="Wrapper">
@@ -92,7 +93,10 @@ class App extends React.Component
                       { this.props.nextClicked > 1 ?
                         <React.Fragment>
                           <Payment />
-                          <button type="submit" className="PostMyProjectButton">Yes, post my project</button>
+                          <button 
+                            type="submit" 
+                            className="PostMyProjectButton"
+                          >Yes, post my project</button>
                         </React.Fragment>
                       : null}
                   </div>
