@@ -41,7 +41,7 @@ class ProjectController extends Controller
             'name' => 'required|max:255',
             'details' => 'required|max:4000',
             'skills' => 'required|max:5',
-            'minBudget' => 'required|min:2',
+            'minBudget' => 'required',
             'maxBudget' => 'required',
             'currencyType' => 'required',
             'projectType' => 'required'
@@ -53,7 +53,8 @@ class ProjectController extends Controller
             'currency_type' => $data['currencyType'],
             'min_budget' => $data['minBudget'],
             'max_budget' => $data['maxBudget'],
-            'project_type' => $data['projectType']
+            'project_type' => $data['projectType'],
+            'user_id' => auth()->user()->id,
         ]);
 
         $project->skills()->attach($request->get('skills'));

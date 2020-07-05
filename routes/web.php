@@ -8,10 +8,10 @@ Route::get('/', function () {
     return view('welcome');
 })->name('home');
 
-// Auth::routes();
+Auth::routes();
 
 Route::get('/post-project', 'ProjectController@create')->name('create-project');
-Route::post('/post-project', 'ProjectController@store')->name('store-project');
+Route::post('/post-project', 'ProjectController@store')->name('store-project')->middleware('auth');
 
 Route::get('/skills', 'SkillController@index')->name('skill-index-api');
 

@@ -15,4 +15,9 @@ class Project extends Model
         return $this->belongsToMany(Skill::class);
     }
 
+    public function user ()
+    {
+        return $this->belongsTo('App\User', 'user_id');
+    }
+
 }

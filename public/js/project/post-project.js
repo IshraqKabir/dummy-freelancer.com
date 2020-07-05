@@ -36009,6 +36009,7 @@ var Payment = /*#__PURE__*/function (_React$Component) {
     _this.handleSelectHourly = _this.handleSelectHourly.bind(_assertThisInitialized(_this));
     _this.handleSelectFixed = _this.handleSelectFixed.bind(_assertThisInitialized(_this));
     _this.handleSetCurrency = _this.handleSetCurrency.bind(_assertThisInitialized(_this));
+    _this.handleSetBudget = _this.handleSetBudget.bind(_assertThisInitialized(_this));
     return _this;
   }
 
@@ -36029,14 +36030,15 @@ var Payment = /*#__PURE__*/function (_React$Component) {
     }
   }, {
     key: "handleSetCurrency",
-    value: function handleSetCurrency(currency) {
-      this.props.selectCurrencyType(currency);
+    value: function handleSetCurrency(e) {
+      this.props.selectCurrencyType(e.target.value);
     }
   }, {
     key: "handleSetBudget",
-    value: function handleSetBudget(min, max) {
-      this.props.selectMinBudget(min);
-      this.props.selectMaxBudget(max);
+    value: function handleSetBudget(e) {
+      var value = e.target.value.split(' ');
+      this.props.selectMinBudget(value[0]);
+      this.props.selectMaxBudget(value[1]);
     }
   }, {
     key: "render",
@@ -36047,151 +36049,85 @@ var Payment = /*#__PURE__*/function (_React$Component) {
 
       if (this.props.currencyType === 'USD' && this.props.fixed) {
         budgetOptions = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-          onClick: function onClick() {
-            return _this2.handleSetBudget(10, 30);
-          }
+          value: "10 30"
         }, "Micro Project ($10.00 - 30.00 USD)"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-          onClick: function onClick() {
-            return _this2.handleSetBudget(30, 250);
-          }
+          value: "30 250"
         }, "Simple Project ($30.00 - 250.00 USD)"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-          onClick: function onClick() {
-            return _this2.handleSetBudget(250, 750);
-          }
+          value: "250 750"
         }, "Very Small Project ($250.00 - 750.00 USD)"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-          onClick: function onClick() {
-            return _this2.handleSetBudget(750, 1500);
-          }
+          value: "750 1500"
         }, "Small Project ($750.00 - 1,500.00 USD)"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-          onClick: function onClick() {
-            return _this2.handleSetBudget(1500, 3000);
-          }
+          value: "1500 3000"
         }, "Medium Project ($1,500.00 - 3,000.00 USD)"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-          onClick: function onClick() {
-            return _this2.handleSetBudget(3000, 5000);
-          }
+          value: "3000 5000"
         }, "Large Project ($3,000.00 - 5,000.00 USD)"));
       } else if (this.props.currencyType === 'USD' && this.props.hourly) {
         budgetOptions = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-          onClick: function onClick() {
-            return _this2.handleSetBudget(2, 8);
-          }
+          value: "2 8"
         }, "Basic ($2.00 - 8.00 USD per hour)"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-          onClick: function onClick() {
-            return _this2.handleSetBudget(8, 15);
-          }
+          value: "8 15"
         }, "Moderate ($8.00 - 15.00 USD per hour)"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-          onClick: function onClick() {
-            return _this2.handleSetBudget(15, 25);
-          }
+          value: "15 25"
         }, "Standard ($15.00 - 25.00 USD per hour)"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-          onClick: function onClick() {
-            return _this2.handleSetBudget(25, 50);
-          }
+          value: "25 50"
         }, "Skilled ($25.00 - 50.00 USD per hour)"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-          onClick: function onClick() {
-            return _this2.handleSetBudget(50, 0);
-          }
+          value: "50 0"
         }, "Expert ($50.00+ USD per hour)"));
       } // GBP
       else if (this.props.currencyType === 'GBP' && this.props.fixed) {
           budgetOptions = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-            onClick: function onClick() {
-              return _this2.handleSetBudget(10, 20);
-            }
+            value: "10 20"
           }, "Micro Project (\xA310.00 - 20.00 GBP)"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-            onClick: function onClick() {
-              return _this2.handleSetBudget(20, 250);
-            }
+            value: "20 250"
           }, "Simple Project (\xA320.00 - 250.00 GBP)"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-            onClick: function onClick() {
-              return _this2.handleSetBudget(250, 750);
-            }
+            value: "250 750"
           }, "Very Small Project (\xA3250.00 - 750.00 GBP)"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-            onClick: function onClick() {
-              return _this2.handleSetBudget(750, 1500);
-            }
+            value: "750 1500"
           }, "Small Project (\xA3750.00 - 1,500.00 GBP)"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-            onClick: function onClick() {
-              return _this2.handleSetBudget(1500, 3000);
-            }
+            value: "1500 3000"
           }, "Medium Project (\xA31,500.00 - 3,000.00 GBP)"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-            onClick: function onClick() {
-              return _this2.handleSetBudget(3000, 50000);
-            }
+            value: "3000 5000"
           }, "Large Project (\xA33,000.00 - 5,000.00 GBP)"));
         } else if (this.props.currencyType === 'GBP' && this.props.hourly) {
           budgetOptions = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-            onClick: function onClick() {
-              return _this2.handleSetBudget(2, 5);
-            }
+            value: "2 5"
           }, "Basic (\xA32.00 - 5.00 GBP per hour)"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-            onClick: function onClick() {
-              return _this2.handleSetBudget(5, 10);
-            }
+            value: "5 10"
           }, "Moderate (\xA35.00 - 10.00 GBP per hour)"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-            onClick: function onClick() {
-              return _this2.handleSetBudget(10, 15);
-            }
+            value: "10 15"
           }, "Standard (\xA310.00 - 15.00 GBP per hour)"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-            onClick: function onClick() {
-              return _this2.handleSetBudget(18, 36);
-            }
+            value: "18 36"
           }, "Skilled (\xA318.00 - 36.00 GBP per hour)"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-            onClick: function onClick() {
-              return _this2.handleSetBudget(36, 0);
-            }
+            value: "36 0"
           }, "Expert (\xA336.00+ GBP per hour)"));
         } // EUR
 
 
       if (this.props.currencyType === 'EUR' && this.props.fixed) {
         budgetOptions = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-          onClick: function onClick() {
-            return _this2.handleSetBudget(8, 30);
-          }
+          value: "8 30"
         }, "Micro Project (\u20AC8.00 - 30.00 EUR)"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-          onClick: function onClick() {
-            return _this2.handleSetBudget(30, 250);
-          }
+          value: "30 250"
         }, "Simple Project (\u20AC30.00 - 250.00 EUR)"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-          onClick: function onClick() {
-            return _this2.handleSetBudget(250, 750);
-          }
+          value: "250 750"
         }, "Very Small Project (\u20AC250.00 - 750.00 EUR)"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-          onClick: function onClick() {
-            return _this2.handleSetBudget(750, 1500);
-          }
+          value: "750 1500"
         }, "Small Project (\u20AC750.00 - 1,500.00 EUR)"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-          onClick: function onClick() {
-            return _this2.handleSetBudget(1500, 3000);
-          }
+          value: "1500 3000"
         }, "Medium Project (\u20AC1,500.00 - 3,000.00 EUR)"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-          onClick: function onClick() {
-            return _this2.handleSetBudget(3000, 5000);
-          }
+          value: "3000 5000"
         }, "Large Project (\u20AC3,000.00 - 5,000.00 EUR)"));
       } else if (this.props.currencyType === 'EUR' && this.props.hourly) {
         budgetOptions = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-          onClick: function onClick() {
-            return _this2.handleSetBudget(2, 8);
-          }
+          value: "2 8"
         }, "Basic (\u20AC2.00 - 8.00 EUR per hour)"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-          onClick: function onClick() {
-            return _this2.handleSetBudget(8, 15);
-          }
+          value: "8 15"
         }, "Moderate (\u20AC8.00 - 15.00 EUR per hour)"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-          onClick: function onClick() {
-            return _this2.handleSetBudget(15, 25);
-          }
+          value: "15 25"
         }, "Standard (\u20AC15.00 - 25.00 EUR per hour)"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-          onClick: function onClick() {
-            return _this2.handleSetBudget(25, 50);
-          }
+          value: "25 50"
         }, "Skilled (\u20AC25.00 - 50.00 EUR per hour)"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-          onClick: function onClick() {
-            return _this2.handleSetBudget(50, 0);
-          }
+          value: "50 0"
         }, "Expert (\u20AC50.00+ EUR per hour)"));
       }
 
@@ -36201,22 +36137,22 @@ var Payment = /*#__PURE__*/function (_React$Component) {
         hiddenForm = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
           type: "number",
           name: "minBudget",
-          defaultValue: this.props.minBudget,
+          value: this.props.minBudget,
           hidden: true
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
           type: "number",
           name: "maxBudget",
-          defaultValue: this.props.maxBudget,
+          value: this.props.maxBudget,
           hidden: true
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
           type: "text",
           name: "currencyType",
-          defaultValue: this.props.currencyType,
+          value: this.props.currencyType,
           hidden: true
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
           type: "text",
           name: "projectType",
-          defaultValue: this.props.hourly ? 'hourly' : 'fixed',
+          value: this.props.hourly === true ? 'hourly' : 'fixed',
           hidden: true
         }));
       }
@@ -36249,23 +36185,25 @@ var Payment = /*#__PURE__*/function (_React$Component) {
         className: "currencyAndBudgetContainer"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "select currencySelect"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-        onClick: function onClick() {
-          return _this2.handleSetCurrency('USD');
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
+        onClick: function onClick(e) {
+          return _this2.handleSetCurrency(e);
         }
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+        value: "USD"
       }, "USD"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-        onClick: function onClick() {
-          return _this2.handleSetCurrency('GBP');
-        }
+        value: "GBP"
       }, "GBP"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-        onClick: function onClick() {
-          return _this2.handleSetCurrency('EUR');
-        }
+        value: "EUR"
       }, "EUR")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "select_arrow"
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "select budgetSelect"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", null, budgetOptions), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
+        onClick: function onClick(e) {
+          return _this2.handleSetBudget(e);
+        }
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", null, "--Select Budget--"), budgetOptions), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "select_arrow"
       }))), hiddenForm);
     }
@@ -37059,9 +36997,9 @@ var initialState = {
   payment: {
     hourly: false,
     fixed: true,
-    currencyType: 'USD',
-    minBudget: 10,
-    maxBudget: 100,
+    currencyType: null,
+    minBudget: null,
+    maxBudget: null,
     error: null // visited: 0
 
   },

@@ -17,6 +17,7 @@ class Payment extends React.Component
         this.handleSelectHourly = this.handleSelectHourly.bind(this);
         this.handleSelectFixed = this.handleSelectFixed.bind(this);
         this.handleSetCurrency = this.handleSetCurrency.bind(this);
+        this.handleSetBudget = this.handleSetBudget.bind(this);
     }
 
 
@@ -32,19 +33,21 @@ class Payment extends React.Component
     }
 
     handleSelectFixed ()
-    {
+    {   
+
         this.props.selectFixed();
     }
 
-    handleSetCurrency (currency) 
+    handleSetCurrency (e) 
     {
-        this.props.selectCurrencyType(currency);
+        this.props.selectCurrencyType(e.target.value);
     }
 
-    handleSetBudget (min, max) 
+    handleSetBudget (e) 
     {
-        this.props.selectMinBudget(min);
-        this.props.selectMaxBudget(max);
+        const value = e.target.value.split(' ');
+        this.props.selectMinBudget(value[0]);
+        this.props.selectMaxBudget(value[1]);
     }
 
 
@@ -56,22 +59,22 @@ class Payment extends React.Component
         if (this.props.currencyType === 'USD' && this.props.fixed)
         {
             budgetOptions = <React.Fragment>
-                <option onClick={() => this.handleSetBudget(10, 30)}>
+                <option value="10 30">
                     Micro Project ($10.00 - 30.00 USD)    
                 </option>
-                <option onClick={() => this.handleSetBudget(30, 250)}>
+                <option value="30 250">
                     Simple Project ($30.00 - 250.00 USD)    
                 </option>
-                <option onClick={() => this.handleSetBudget(250, 750)}>
+                <option value="250 750">
                     Very Small Project ($250.00 - 750.00 USD)    
                 </option>
-                <option onClick={() => this.handleSetBudget(750, 1500)}>
+                <option value="750 1500">
                     Small Project ($750.00 - 1,500.00 USD)    
                 </option>
-                <option onClick={() => this.handleSetBudget(1500, 3000)}>
+                <option value="1500 3000">
                     Medium Project ($1,500.00 - 3,000.00 USD)    
                 </option>
-                <option onClick={() => this.handleSetBudget(3000, 5000)}>
+                <option value="3000 5000">
                     Large Project ($3,000.00 - 5,000.00 USD)    
                 </option>
                 </React.Fragment>                            
@@ -79,19 +82,19 @@ class Payment extends React.Component
         else if (this.props.currencyType === 'USD' && this.props.hourly)
         {
             budgetOptions = <React.Fragment>
-                <option onClick={() => this.handleSetBudget(2, 8)}>
+                <option value="2 8">
                     Basic ($2.00 - 8.00 USD per hour)    
                 </option>
-                <option onClick={() => this.handleSetBudget(8, 15)}>
+                <option value="8 15">
                     Moderate ($8.00 - 15.00 USD per hour)    
                 </option>
-                <option onClick={() => this.handleSetBudget(15, 25)}>
+                <option value="15 25">
                     Standard ($15.00 - 25.00 USD per hour)    
                 </option>
-                <option onClick={() => this.handleSetBudget(25, 50)}>
+                <option value="25 50">
                     Skilled ($25.00 - 50.00 USD per hour)    
                 </option>
-                <option onClick={() => this.handleSetBudget(50, 0)}>
+                <option value="50 0">
                     Expert ($50.00+ USD per hour)    
                 </option>
                 </React.Fragment>
@@ -100,22 +103,22 @@ class Payment extends React.Component
         else if (this.props.currencyType === 'GBP' && this.props.fixed)
         {
             budgetOptions = <React.Fragment>
-                <option onClick={() => this.handleSetBudget(10, 20)}>
+                <option value="10 20">
                     Micro Project (£10.00 - 20.00 GBP)    
                 </option>
-                <option onClick={() => this.handleSetBudget(20, 250)}>
+                <option value="20 250">
                     Simple Project (£20.00 - 250.00 GBP)    
                 </option>
-                <option onClick={() => this.handleSetBudget(250, 750)}>
+                <option value="250 750">
                     Very Small Project (£250.00 - 750.00 GBP)    
                 </option>
-                <option onClick={() => this.handleSetBudget(750, 1500)}>
+                <option value="750 1500">
                     Small Project (£750.00 - 1,500.00 GBP)    
                 </option>
-                <option onClick={() => this.handleSetBudget(1500, 3000)}>
+                <option value="1500 3000">
                     Medium Project (£1,500.00 - 3,000.00 GBP)    
                 </option>
-                <option onClick={() => this.handleSetBudget(3000, 50000)}>
+                <option value="3000 5000">
                     Large Project (£3,000.00 - 5,000.00 GBP)    
                 </option>
                 </React.Fragment>                            
@@ -123,19 +126,19 @@ class Payment extends React.Component
         else if (this.props.currencyType === 'GBP' && this.props.hourly)
         {
             budgetOptions = <React.Fragment>
-                <option onClick={() => this.handleSetBudget(2, 5)}>
+                <option value="2 5">
                     Basic (£2.00 - 5.00 GBP per hour)    
                 </option>
-                <option onClick={() => this.handleSetBudget(5, 10)}>
+                <option value="5 10">
                     Moderate (£5.00 - 10.00 GBP per hour)    
                 </option>
-                <option onClick={() => this.handleSetBudget(10, 15)}>
+                <option value="10 15">
                     Standard (£10.00 - 15.00 GBP per hour)    
                 </option>
-                <option onClick={() => this.handleSetBudget(18, 36)}>
+                <option value="18 36">
                     Skilled (£18.00 - 36.00 GBP per hour)    
                 </option>
-                <option onClick={() => this.handleSetBudget(36, 0)}>
+                <option value="36 0">
                     Expert (£36.00+ GBP per hour)    
                 </option>
                 </React.Fragment>
@@ -144,22 +147,22 @@ class Payment extends React.Component
         if (this.props.currencyType === 'EUR' && this.props.fixed)
         {
             budgetOptions = <React.Fragment>
-                <option onClick={() => this.handleSetBudget(8, 30)}>
+                <option value="8 30">
                     Micro Project (€8.00 - 30.00 EUR)    
                 </option>
-                <option onClick={() => this.handleSetBudget(30, 250)}>
+                <option value="30 250">
                     Simple Project (€30.00 - 250.00 EUR)    
                 </option>
-                <option onClick={() => this.handleSetBudget(250, 750)}>
+                <option value="250 750">
                     Very Small Project (€250.00 - 750.00 EUR)    
                 </option>
-                <option onClick={() => this.handleSetBudget(750, 1500)}>
+                <option value="750 1500">
                     Small Project (€750.00 - 1,500.00 EUR)    
                 </option>
-                <option onClick={() => this.handleSetBudget(1500, 3000)}>
+                <option value="1500 3000">
                     Medium Project (€1,500.00 - 3,000.00 EUR)    
                 </option>
-                <option onClick={() => this.handleSetBudget(3000, 5000)}>
+                <option value="3000 5000">
                     Large Project (€3,000.00 - 5,000.00 EUR)    
                 </option>
                 </React.Fragment>                            
@@ -167,19 +170,19 @@ class Payment extends React.Component
         else if (this.props.currencyType === 'EUR' && this.props.hourly)
         {
             budgetOptions = <React.Fragment>
-                <option onClick={() => this.handleSetBudget(2, 8)}>
+                <option value="2 8">
                     Basic (€2.00 - 8.00 EUR per hour)    
                 </option>
-                <option onClick={() => this.handleSetBudget(8, 15)}>
+                <option value="8 15">
                     Moderate (€8.00 - 15.00 EUR per hour)    
                 </option>
-                <option onClick={() => this.handleSetBudget(15, 25)}>
+                <option value="15 25">
                     Standard (€15.00 - 25.00 EUR per hour)    
                 </option>
-                <option onClick={() => this.handleSetBudget(25, 50)}>
+                <option value="25 50">
                     Skilled (€25.00 - 50.00 EUR per hour)    
                 </option>
-                <option onClick={() => this.handleSetBudget(50, 0)}>
+                <option value="50 0">
                     Expert (€50.00+ EUR per hour)    
                 </option>
                 </React.Fragment>
@@ -193,25 +196,25 @@ class Payment extends React.Component
                 <input 
                     type="number" 
                     name="minBudget" 
-                    defaultValue={this.props.minBudget}
+                    value={this.props.minBudget}
                     hidden
                 />
                 <input 
                     type="number" 
                     name="maxBudget" 
-                    defaultValue={this.props.maxBudget}
+                    value={this.props.maxBudget}
                     hidden
                 />
                 <input
                     type="text"
                     name="currencyType"
-                    defaultValue={this.props.currencyType}
+                    value={this.props.currencyType}
                     hidden
                 />
                 <input
                     type="text"
                     name="projectType"
-                    defaultValue={this.props.hourly ? 'hourly' : 'fixed'}
+                    value={this.props.hourly===true ? 'hourly' : 'fixed'}
                     hidden
                 />
             </React.Fragment>
@@ -252,17 +255,17 @@ class Payment extends React.Component
                 </h3>
                 <div className="currencyAndBudgetContainer">
                     <div className="select currencySelect">
-                        <select>
-                            <option onClick={() => this.handleSetCurrency('USD')}>
+                        <select onClick={(e) => this.handleSetCurrency(e)}>
+                            <option value="USD">
                             USD
                             </option>
-                            <option onClick={() => this.handleSetCurrency('GBP')}>
+                            <option value="GBP">
                             GBP
                             </option>
                             {/* <option onClick={() => this.handleSetCurrency('CAD')}>
                             CAD
                             </option> */}
-                            <option onClick={() => this.handleSetCurrency('EUR')}>
+                            <option value="EUR">
                             EUR
                             </option>
                             {/* <option onClick={() => this.handleSetCurrency('NZD')}>
@@ -274,7 +277,8 @@ class Payment extends React.Component
                         </div>
                     </div>
                     <div className="select budgetSelect">
-                        <select>
+                        <select onClick={(e) => this.handleSetBudget(e)}>
+                            <option>--Select Budget--</option>
                             {budgetOptions}
                         </select>
                         <div className="select_arrow">
