@@ -1,0 +1,28 @@
+.project_header {
+    width: 100vw;
+    height: 116px;
+    background-color: #0069c7;
+    color: white;
+    font-family: Roboto;
+    font-size: 32px;
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+
+    @include media('<=700px') {
+        flex-direction: column;
+    }
+
+    .flex-item {
+        margin: auto;
+    }
+
+    .two {
+        @include media('<=550px') {
+            font-size: 20px;
+        }
+    }
+ 
+}

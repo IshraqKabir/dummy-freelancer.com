@@ -17,7 +17,7 @@ class CreateProjectsTable extends Migration
             $table->id();
             $table->string('name');
             $table->foreignId('user_id');
-            $table->string('details');
+            $table->text('details');
             $table->string('currency_type');
             $table->string('project_type');
             $table->double('min_budget');

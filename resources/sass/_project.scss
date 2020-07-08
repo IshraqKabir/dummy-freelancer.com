@@ -1,0 +1,42 @@
+.project {
+    width: 100vw;
+    height: 100vh;  
+    background-color: #f0f0f0;
+    padding-top: 40px;
+    font-family: Roboto;
+
+    .project_info {
+        width: 90%;
+        margin: auto;
+        background-color: white;
+
+        .container {
+            padding: 24px;
+
+            .details {
+                padding-top: 16px;
+                padding-bottom: 24px;
+                font-size: 16px;
+                line-height: 22.4px;
+            }
+
+            .skills {
+                font-size: 14px;
+                letter-spacing: 0.1em;
+
+                .bold {
+                    font-weight: 700;
+                }
+                
+                a {
+                    color: #007fee;
+                    text-decoration: none;
+                }
+
+                a:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}

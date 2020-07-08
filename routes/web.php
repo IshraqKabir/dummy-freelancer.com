@@ -12,6 +12,7 @@ Auth::routes();
 
 Route::get('/post-project', 'ProjectController@create')->name('create-project');
 Route::post('/post-project', 'ProjectController@store')->name('store-project')->middleware('auth');
+Route::get('/project/{project}', 'ProjectController@show')->name('project.show');
 
 Route::get('/skills', 'SkillController@index')->name('skill-index-api');
 

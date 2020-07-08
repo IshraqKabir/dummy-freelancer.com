@@ -59,7 +59,7 @@ class ProjectController extends Controller
 
         $project->skills()->attach($request->get('skills'));
 
-        return redirect()->route('home');
+        return redirect()->route('project.show', $project->id);
     }
 
     /**
@@ -70,7 +70,7 @@ class ProjectController extends Controller
      */
     public function show(Project $project)
     {
-        //
+        return view('project.show', ['project' => $project]);
     }
 
     /**
