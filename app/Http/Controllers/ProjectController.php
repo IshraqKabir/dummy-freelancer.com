@@ -7,6 +7,26 @@ use Illuminate\Http\Request;
 
 class ProjectController extends Controller
 {
+
+    // for jobs searching
+    public function searchAPI(Request $request)
+    {
+        if ($request->has('q')) {
+            $query = $request->input('q');
+        } else {
+            return;
+        }
+
+        $response = \App\Project::where('name', 'like', '%' . $query . '%')->limit(10)->get()->toJson();
+        $response = json_decode($response, true);
+        foreach($response as &$res) {
+            $project = Project::find($res['id']);
+            $skills = $project->skills;
+            $res['skills'] = $skills;
+        }
+        return $response;
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -14,7 +34,7 @@ class ProjectController extends Controller
      */
     public function index()
     {
-        //
+        return view('project.index');
     }
 
     /**

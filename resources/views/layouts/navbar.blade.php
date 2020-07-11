@@ -16,10 +16,10 @@
         <div class="link-set-2">
             @guest
                 <li class="three">
-                    <a href="#">Login</a>
+                    <a href="/login">Login</a>
                 </li>
                 <li class="four">
-                    <a href="#">Sign Up</a>
+                    <a href="/register">Sign Up</a>
                 </li>
             @endguest
             @auth     

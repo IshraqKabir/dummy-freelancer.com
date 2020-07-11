@@ -9,7 +9,7 @@
 <body>
     <form action="/post-project" method="POST">
     @csrf
-        <div id="post_project" hello='asdf'></div>
+        <div id="post_project"></div>
     </form>
     <script src="js/project/post-project.js" defer></script>
 </body>

@@ -8,6 +8,9 @@
         </div>    
         <div class="flex-item two">
             BUDGET {{ $project->min_budget}} - {{ $project->max_budget}} {{ $project->currency_type}}
+            @if ($project->project_type === 'hourly')
+                / hour
+            @endif
         </div>
     </div>
 

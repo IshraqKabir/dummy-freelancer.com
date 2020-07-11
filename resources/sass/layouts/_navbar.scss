@@ -13,6 +13,10 @@
         font-weight: 400;
     }
 
+    a:hover {
+        color: #348ceb;
+    }
+
     .first_section {
         display: flex;
         align-items: center;
@@ -72,7 +76,7 @@
                 justify-content: center;
                 align-items: center;
 
-                @include media('<=768px') {
+                @include media('<=350px') {
                     display: none;
                 }
     

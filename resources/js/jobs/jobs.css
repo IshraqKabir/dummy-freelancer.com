@@ -1,0 +1,39 @@
+.container {
+  width: 100vw;
+  height: 100%;
+  background-color: #f0f0f0;
+}
+
+.searchResultContainer {
+  padding: 0px 4%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.jobFilter {
+  background-color: white;
+  height: 50vh;
+  width: 28%;
+}
+
+.searchResults {
+  background-color: white;
+  height: 90vh;
+  width: 70%;
+  padding-bottom: 100px;
+}
+
+.box-shadow {
+  -webkit-box-shadow: rgba(0, 0, 0, 0.12) 0px 0px 6px 0px, rgba(0, 0, 0, 0.16) 0px 4px 10px 0px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.12) 0px 0px 6px 0px, rgba(0, 0, 0, 0.16) 0px 4px 10px 0px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 0px 6px 0px, rgba(0, 0, 0, 0.16) 0px 4px 10px 0px;
+}
+
+@media only screen and (max-width: 950px) {
+  .jobFilter {
+    display: none;
+  }
+  .searchResults {
+    width: 100%;
+  }
+}

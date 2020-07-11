@@ -19,10 +19,7 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 const store = createStore(reducer, composeWithDevTools( ));
 
 class PostProject extends React.Component {
-  componentDidMount ()
-  {
-    console.log(this.props.hello)
-  }
+  
   
   render() {
     return(

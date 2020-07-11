@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 1);
+/******/ 	return __webpack_require__(__webpack_require__.s = 2);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -140,18 +140,6 @@ function _objectWithoutPropertiesLoose(source, excluded) {
 
   return target;
 }
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime/regenerator/index.js":
-/*!**********************************************************!*\
-  !*** ./node_modules/@babel/runtime/regenerator/index.js ***!
-  \**********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(/*! regenerator-runtime */ "./node_modules/regenerator-runtime/runtime.js");
-
 
 /***/ }),
 
@@ -1968,10 +1956,10 @@ module.exports = {
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/project/FormComponents/details/details.css":
-/*!*************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader??ref--7-1!./node_modules/postcss-loader/src??ref--7-2!./resources/js/project/FormComponents/details/details.css ***!
-  \*************************************************************************************************************************************************/
+/***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/jobs/components/search/Search.css":
+/*!****************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--7-1!./node_modules/postcss-loader/src??ref--7-2!./resources/js/jobs/components/search/Search.css ***!
+  \****************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1980,17 +1968,17 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, ".CharactersRemaining {\r\n    font-size: small;\r\n    float: right;\r\n    margin-right: -6px;\r\n    color: #4d525b;\r\n}\r\n\r\n.ErrorAndCharsRem {\r\n    display: block;\r\n    margin-bottom: 25px;\r\n}\r\n\r\n\r\n", ""]);
+exports.push([module.i, "\r\n  \r\n  .box {\r\n    padding: 25px 4% ;\r\n  }\r\n  \r\n  .searchContainer {\r\n    background-color: white;\r\n    padding: 8px 5px;\r\n    display: flex;\r\n    justify-content: space-between;\r\n    align-items: center;\r\n    overflow: hidden;\r\n  }\r\n  \r\n  .inputField {\r\n    border: none;\r\n    width: 900px;\r\n  }\r\n  \r\n  .searchIcon {\r\n    height: 24px;\r\n    width: 24px;\r\n    margin-right: 10px;\r\n    flex-shrink: 0;\r\n  }\r\n  \r\n  .searchField {\r\n    padding: 0 6px;\r\n    display: flex;\r\n    overflow: hidden;\r\n    display: flex;\r\n    align-items: center;\r\n  }\r\n  \r\n  .bold {\r\n    font-family: Roboto;\r\n    font-size: 20px;\r\n    font-weight: 700;\r\n  }\r\n  \r\n  .searchButton {\r\n    height: 55px;\r\n    width: 120px;\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    border: 1px solid #007fed;\r\n    background: linear-gradient(#139ff0, #007fed);\r\n    color: white;\r\n    cursor: pointer;\r\n  }\r\n  \r\n  .box-shadow {\r\n    box-shadow: rgba(0, 0, 0, 0.12) 0px 0px 6px 0px, rgba(0, 0, 0, 0.16) 0px 4px 10px 0px;\r\n  }\r\n  \r\n  @media only screen and (max-width: 950px) {\r\n    .searchContainer {\r\n      flex-direction: column;\r\n    }\r\n  \r\n    .searchButton {\r\n      width: 100%;\r\n    }\r\n  \r\n    .searchField {\r\n      border: 1px solid #dedede;\r\n      align-self: stretch;\r\n      height: 58px; \r\n      margin-bottom: 10px;\r\n    }\r\n  }\r\n  \r\n  ", ""]);
 
 // exports
 
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/project/FormComponents/payment/payment.css":
-/*!*************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader??ref--7-1!./node_modules/postcss-loader/src??ref--7-2!./resources/js/project/FormComponents/payment/payment.css ***!
-  \*************************************************************************************************************************************************/
+/***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/jobs/components/searchResults/SearchResults.css":
+/*!******************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--7-1!./node_modules/postcss-loader/src??ref--7-2!./resources/js/jobs/components/searchResults/SearchResults.css ***!
+  \******************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1999,36 +1987,36 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, ".PaymentH3 \r\n{\r\n    margin-top: 40px;\r\n}\r\n\r\n.PaymentOptionContainer {\r\n    margin-top: 20px;\r\n    margin-bottom: 40px;\r\n    display: flex;\r\n    justify-content: space-between;\r\n    font-size: 14px;\r\n}\r\n\r\n.PaymentOption {\r\n    box-sizing: border-box;\r\n    width: 350px;\r\n    cursor: pointer;\r\n}\r\n\r\n.box-shadow {\r\n    box-shadow: 0px 0px 17px 0px rgba(0,0,0,0.41);\r\n}\r\n\r\n.flex-item-1 {\r\n    margin-right: 40px;\r\n    display: flex;\r\n    align-items: center;\r\n}\r\n\r\n.flex-item-2 {\r\n    display: flex;\r\n    align-items: center;\r\n}\r\n\r\n.priceLogo {\r\n    width: 30%;\r\n    height: 80%;\r\n}\r\n\r\n@media only screen and (max-width: 790px) {\r\n    .priceLogo {\r\n        height: auto;\r\n    }\r\n}\r\n\r\nh4 {\r\n    font-size: 16px;\r\n    font-weight: 700;\r\n}\r\n\r\n.paymentDescription {\r\n    margin: 30px 40px 55px 25px ;\r\n}\r\n\r\n.blue-border {\r\n    border: 2px solid #139ff0;\r\n}\r\n\r\n@media only screen and (max-width: 790px) {\r\n    .PaymentOptionContainer {\r\n        flex-direction: column;\r\n        justify-content: stretch;\r\n    }    \r\n    .PaymentOption {\r\n        width: 100%;\r\n        flex-direction: column;\r\n    }\r\n\r\n    .flex-item-1 {\r\n        margin-bottom: 20px;\r\n    }\r\n}\r\n\r\n@media only screen and (max-width: 550px) {\r\n    .priceLogo {\r\n        flex-shrink: 0;\r\n    }\r\n}\r\n\r\n.flex-item-2 .priceLogo {\r\n    margin-left: 10px;\r\n}\r\n\r\n.currency, .budget {\r\n    /* -webkit-appearance: none; */\r\n    border: 1px solid #bec0c2;\r\n    width: 45%;\r\n    padding: 10px;\r\n    font-size: 14px;\r\n}\r\n\r\n.currency:focus {\r\n    border: 1px solid #61aedb;\r\n}\r\n\r\n.currencyAndBudgetContainer {\r\n    display: flex;\r\n    justify-content: space-between;\r\n}\r\n\r\n/****\r\nselect styling\r\n*****/\r\n\r\n.select {\r\n    position: relative;\r\n    display: inline-block;\r\n    margin-bottom: 15px;\r\n    width: 100%;\r\n}    .select select {\r\n        font-family: 'Arial';\r\n        font-size: 14px;\r\n        display: inline-block;\r\n        width: 100%;\r\n        cursor: pointer;\r\n        padding: 10px 12px;\r\n        outline: 0;\r\n        border: 1px solid #bec0c2;\r\n        border-radius: 0px;\r\n        background: #ffffff;\r\n        color: #000000;\r\n        appearance: none;\r\n        -webkit-appearance: none;\r\n        -moz-appearance: none;\r\n    }\r\n        .select select::-ms-expand {\r\n            display: none;\r\n        }\r\n        .select select:hover,\r\n        .select select:focus {\r\n            color: #000000;\r\n            background: #ffffff;\r\n        }\r\n        .select select:disabled {\r\n            opacity: 0.5;\r\n            pointer-events: none;\r\n        }\r\n.select_arrow {\r\n    position: absolute;\r\n    top: 16px;\r\n    right: 17px;\r\n    width: 0px;\r\n    height: 0px;\r\n    border: solid #7b7b7b;\r\n    border-width: 0 2px 2px 0;\r\n    display: inline-block;\r\n    padding: 3px;\r\n    transform: rotate(45deg);\r\n    -webkit-transform: rotate(45deg);\r\n}\r\n.select select:hover ~ .select_arrow,\r\n.select select:focus ~ .select_arrow {\r\n    border-color: #000000;\r\n}\r\n.select select:disabled ~ .select_arrow {\r\n    border-top-color: #cccccc;\r\n}\r\n\r\n/***\r\nend of select styling\r\n***/\r\n\r\n.currencyAndBudgetContainer {\r\n    display: flex;\r\n    justify-content: flex-start;\r\n}\r\n\r\n.currencySelect {\r\n    width: 100px;\r\n    margin-right: 25px;\r\n}\r\n\r\n.budgetSelect {\r\n    width: 350px;\r\n}\r\n\r\n@media only screen and (max-width: 790px) {\r\n    .currencyAndBudgetContainer {\r\n        flex-direction: column;\r\n        justify-content: stretch;\r\n    }\r\n\r\n    .currencySelect, \r\n    .budgetSelect {\r\n        width: 100%;\r\n    }\r\n\r\n    .currencySelect {\r\n        margin-right: 0px;\r\n    }\r\n}\r\n\r\n\r\n\r\n\r\n\r\n", ""]);
+exports.push([module.i, "", ""]);
 
 // exports
 
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/project/FormComponents/skills/skills.css":
-/*!***********************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader??ref--7-1!./node_modules/postcss-loader/src??ref--7-2!./resources/js/project/FormComponents/skills/skills.css ***!
-  \***********************************************************************************************************************************************/
+/***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/jobs/components/searchResults/result/Result.css":
+/*!******************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--7-1!./node_modules/postcss-loader/src??ref--7-2!./resources/js/jobs/components/searchResults/result/Result.css ***!
+  \******************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+exports = module.exports = __webpack_require__(/*! ../../../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
 // imports
 
 
 // module
-exports.push([module.i, ".SkillsSearchField {\r\n    width: 90%;\r\n    font-size: 15px;\r\n    border: none!important;\r\n}\r\n\r\n.SkillsContainer {\r\n    border:1px solid #bec0c2;\r\n    overflow: hidden;\r\n}\r\n\r\n.SkillsContainer:hover {\r\n    border: 1px solid #2ea1ee;\r\n}\r\n\r\n.SelectedSkills {\r\n    width: 95%;\r\n    margin: 0 auto;\r\n    display: flex;\r\n    flex-wrap: wrap;\r\n}\r\n\r\n.SkillsSearchResults {\r\n    position: relative;\r\n    z-index: 10;\r\n    border: 1px solid #2ea1ee;\r\n    border-top: none;\r\n    max-height: 124px;\r\n    cursor: pointer;\r\n    overflow-y: scroll;\r\n    -ms-overflow-style: none;  /* Internet Explorer 10+ */\r\n    scrollbar-width: none;  /* Firefox */\r\n}\r\n\r\n.SkillsSearchResults::-webkit-scrollbar { \r\n    display: none;  /* Safari and Chrome */\r\n}\r\n\r\n.SelectedSkill {\r\n    margin: 2px 10px;\r\n    border: 1px solid #bec0c2;\r\n    padding: 2px;\r\n    font-size: 15px;\r\n}\r\n\r\n.SelectedSkill:hover {\r\n    border: 1px solid #2ea1ee;\r\n}\r\n\r\n.SelectedSkillClose {\r\n    cursor: pointer;\r\n}\r\n\r\n\r\n\r\n.SearchResult {\r\n    display: block;\r\n    border-bottom: 1px solid #bec0c2;\r\n    padding-left: 5px;\r\n    font-size: 15px;    \r\n}\r\n\r\n.SearchResult:hover {\r\n    background: #f0f0f0;\r\n}\r\n\r\n.error {\r\n    font-size: 13px;\r\n}", ""]);
+exports.push([module.i, "", ""]);
 
 // exports
 
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/project/app.css":
-/*!**********************************************************************************************************************!*\
-  !*** ./node_modules/css-loader??ref--7-1!./node_modules/postcss-loader/src??ref--7-2!./resources/js/project/app.css ***!
-  \**********************************************************************************************************************/
+/***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/jobs/jobs.css":
+/*!********************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--7-1!./node_modules/postcss-loader/src??ref--7-2!./resources/js/jobs/jobs.css ***!
+  \********************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2037,7 +2025,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".Wrapper {\r\n    height: 100%;\r\n    width: 100%;\r\n    background-color: white;\r\n    position: absolute;\r\n    z-index: -2;\r\n    font-family: 'Source Sans Pro', sans-serif;\r\n    line-height: 1.5;\r\n}\r\n\r\n\r\n\r\n.Background {\r\n    background: linear-gradient(to right, #1b61c0, #0967c6 50%,#0278e2 90%, #0279e3);\r\n    width: 100vw;\r\n    height: 450px;\r\n    position: absolute;\r\n    top: 0;\r\n    left: 0;\r\n    z-index: -1;\r\n}\r\n\r\n.Logo {\r\n    width: 169px;\r\n    height: 47px;\r\n    margin-bottom: 30px;\r\n}\r\n\r\n.Container {\r\n    width: 790px;\r\n    margin: 0px auto;\r\n}\r\n\r\n/* .Container {\r\n    width: 58.6%;\r\n    margin: 0px auto;\r\n} */\r\n\r\n@media only screen and (max-width: 790px) {\r\n    .Container {\r\n        width: 100%;\r\n    }\r\n\r\n    .Container .Top {\r\n        margin-left: 10px;\r\n    }\r\n    .Top p {\r\n        font-size: 14px;\r\n    }\r\n}\r\n\r\n.Container .Top {\r\n    color: white;\r\n}\r\n\r\n.Container h1 {\r\n    font-weight: bold;\r\n    font-size: 30px;\r\n    margin: 20px 0px 10px 0px;\r\n}\r\n\r\n.Top {\r\n    margin: 55px 0px 25px 0px;\r\n}\r\n\r\n.Form {\r\n    width: 100%;\r\n    margin: 0px auto;\r\n    background-color: white;\r\n    border: 1px solid rgb(222, 222, 222);\r\n    border-bottom: none;\r\n    border-radius: 4px;\r\n    margin-bottom: 100px;\r\n}\r\n\r\n.FormWrapper {\r\n    margin: 35px;\r\n    position: relative;\r\n}\r\n\r\n.Form input {\r\n    width: 98%;\r\n    padding: 10px 0px 15px 20px;\r\n    border: 1px solid #bec0c2;\r\n    margin-bottom: 5px;\r\n}\r\n\r\n.Form .Input {\r\n    margin-bottom: 35px\r\n}\r\n\r\n.Form input:focus {\r\n    border: 1px solid #2ea1ee;\r\n}\r\n\r\n.Form input:hover {\r\n    border: 1px solid #2ea1ee;\r\n}\r\n\r\n.Form h3 {\r\n    font-weight: bold;\r\n    font-size: 20px;\r\n    margin-bottom: 10px;\r\n}\r\n\r\n.Form p {\r\n    font-size: 15px;\r\n}\r\n\r\n.Form textarea {\r\n    width: 98%;\r\n    resize: vertical;\r\n    overflow: hidden;\r\n    border: 1px solid #bec0c2;\r\n    padding: 10px;\r\n    margin-top: 15px;\r\n    margin-bottom: 5px;\r\n}\r\n\r\n.Form textarea:focus {\r\n    border: 1px solid #2ea1ee;\r\n}\r\n\r\n.Form textarea:hover {\r\n    border: 1px solid #2ea1ee;\r\n}\r\n\r\n.Form textarea::-moz-placeholder {\r\n    font-size: 14px;\r\n}\r\n\r\n.Form textarea:-ms-input-placeholder {\r\n    font-size: 14px;\r\n}\r\n\r\n.Form textarea::-ms-input-placeholder {\r\n    font-size: 14px;\r\n}\r\n\r\n.Form textarea::placeholder {\r\n    font-size: 14px;\r\n}\r\n\r\n.PostMyProjectButton {\r\n    float: right;\r\n    margin-right: -10px;\r\n    padding: 10px 20px;\r\n    color: #fff;\r\n    font-weight: bold;\r\n    font-size: 20px;\r\n    background: linear-gradient(to right, #f8800f, #f8810f);\r\n    border: 1px solid #f69f61;\r\n    margin-top: 25px;\r\n}\r\n\r\n.PostMyProjectButton:hover {\r\n    background: #f27922;\r\n}\r\n\r\n.error {\r\n    color: red;\r\n    font-size: small;\r\n}\r\n\r\n.BorderError {\r\n    border: 1px solid #eb3730!important;\r\n}\r\n\r\n\r\n.NextButtonContainer {\r\n    margin: 40px auto;\r\n}\r\n\r\n.NextButton {\r\n    color: white;\r\n    border: 1px solid #007fed;\r\n    font-size: 14px;\r\n    font-weight: 700;\r\n    padding: 10px 15px;\r\n    background: linear-gradient(#129eef, #007fed);\r\n}\r\n\r\n.NextButton:hover {\r\n    background: #2082ea;\r\n    border: 1px solid #73b0f1;\r\n}\r\n\r\n.NextButtonDisable,\r\n.NextButtonDisable:hover {\r\n    color: #75787d;\r\n    background: #f0f0f0;\r\n    border: 1px solid #bec0c2;\r\n}\r\n", ""]);
+exports.push([module.i, ".container {\n  width: 100vw;\n  height: 100%;\n  background-color: #f0f0f0;\n}\n\n.searchResultContainer {\n  padding: 0px 4%;\n  display: flex;\n  justify-content: space-between;\n}\n\n.jobFilter {\n  background-color: white;\n  height: 50vh;\n  width: 28%;\n}\n\n.searchResults {\n  background-color: white;\n  height: 90vh;\n  width: 70%;\n  padding-bottom: 100px;\n}\n\n.box-shadow {\n  box-shadow: rgba(0, 0, 0, 0.12) 0px 0px 6px 0px, rgba(0, 0, 0, 0.16) 0px 4px 10px 0px;\n}\n\n@media only screen and (max-width: 950px) {\n  .jobFilter {\n    display: none;\n  }\n  .searchResults {\n    width: 100%;\n  }\n}", ""]);
 
 // exports
 
@@ -32895,746 +32883,6 @@ if ( true && typeof isCrushed.name === 'string' && isCrushed.name !== 'isCrushed
 
 /***/ }),
 
-/***/ "./node_modules/regenerator-runtime/runtime.js":
-/*!*****************************************************!*\
-  !*** ./node_modules/regenerator-runtime/runtime.js ***!
-  \*****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-/**
- * Copyright (c) 2014-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-
-var runtime = (function (exports) {
-  "use strict";
-
-  var Op = Object.prototype;
-  var hasOwn = Op.hasOwnProperty;
-  var undefined; // More compressible than void 0.
-  var $Symbol = typeof Symbol === "function" ? Symbol : {};
-  var iteratorSymbol = $Symbol.iterator || "@@iterator";
-  var asyncIteratorSymbol = $Symbol.asyncIterator || "@@asyncIterator";
-  var toStringTagSymbol = $Symbol.toStringTag || "@@toStringTag";
-
-  function wrap(innerFn, outerFn, self, tryLocsList) {
-    // If outerFn provided and outerFn.prototype is a Generator, then outerFn.prototype instanceof Generator.
-    var protoGenerator = outerFn && outerFn.prototype instanceof Generator ? outerFn : Generator;
-    var generator = Object.create(protoGenerator.prototype);
-    var context = new Context(tryLocsList || []);
-
-    // The ._invoke method unifies the implementations of the .next,
-    // .throw, and .return methods.
-    generator._invoke = makeInvokeMethod(innerFn, self, context);
-
-    return generator;
-  }
-  exports.wrap = wrap;
-
-  // Try/catch helper to minimize deoptimizations. Returns a completion
-  // record like context.tryEntries[i].completion. This interface could
-  // have been (and was previously) designed to take a closure to be
-  // invoked without arguments, but in all the cases we care about we
-  // already have an existing method we want to call, so there's no need
-  // to create a new function object. We can even get away with assuming
-  // the method takes exactly one argument, since that happens to be true
-  // in every case, so we don't have to touch the arguments object. The
-  // only additional allocation required is the completion record, which
-  // has a stable shape and so hopefully should be cheap to allocate.
-  function tryCatch(fn, obj, arg) {
-    try {
-      return { type: "normal", arg: fn.call(obj, arg) };
-    } catch (err) {
-      return { type: "throw", arg: err };
-    }
-  }
-
-  var GenStateSuspendedStart = "suspendedStart";
-  var GenStateSuspendedYield = "suspendedYield";
-  var GenStateExecuting = "executing";
-  var GenStateCompleted = "completed";
-
-  // Returning this object from the innerFn has the same effect as
-  // breaking out of the dispatch switch statement.
-  var ContinueSentinel = {};
-
-  // Dummy constructor functions that we use as the .constructor and
-  // .constructor.prototype properties for functions that return Generator
-  // objects. For full spec compliance, you may wish to configure your
-  // minifier not to mangle the names of these two functions.
-  function Generator() {}
-  function GeneratorFunction() {}
-  function GeneratorFunctionPrototype() {}
-
-  // This is a polyfill for %IteratorPrototype% for environments that
-  // don't natively support it.
-  var IteratorPrototype = {};
-  IteratorPrototype[iteratorSymbol] = function () {
-    return this;
-  };
-
-  var getProto = Object.getPrototypeOf;
-  var NativeIteratorPrototype = getProto && getProto(getProto(values([])));
-  if (NativeIteratorPrototype &&
-      NativeIteratorPrototype !== Op &&
-      hasOwn.call(NativeIteratorPrototype, iteratorSymbol)) {
-    // This environment has a native %IteratorPrototype%; use it instead
-    // of the polyfill.
-    IteratorPrototype = NativeIteratorPrototype;
-  }
-
-  var Gp = GeneratorFunctionPrototype.prototype =
-    Generator.prototype = Object.create(IteratorPrototype);
-  GeneratorFunction.prototype = Gp.constructor = GeneratorFunctionPrototype;
-  GeneratorFunctionPrototype.constructor = GeneratorFunction;
-  GeneratorFunctionPrototype[toStringTagSymbol] =
-    GeneratorFunction.displayName = "GeneratorFunction";
-
-  // Helper for defining the .next, .throw, and .return methods of the
-  // Iterator interface in terms of a single ._invoke method.
-  function defineIteratorMethods(prototype) {
-    ["next", "throw", "return"].forEach(function(method) {
-      prototype[method] = function(arg) {
-        return this._invoke(method, arg);
-      };
-    });
-  }
-
-  exports.isGeneratorFunction = function(genFun) {
-    var ctor = typeof genFun === "function" && genFun.constructor;
-    return ctor
-      ? ctor === GeneratorFunction ||
-        // For the native GeneratorFunction constructor, the best we can
-        // do is to check its .name property.
-        (ctor.displayName || ctor.name) === "GeneratorFunction"
-      : false;
-  };
-
-  exports.mark = function(genFun) {
-    if (Object.setPrototypeOf) {
-      Object.setPrototypeOf(genFun, GeneratorFunctionPrototype);
-    } else {
-      genFun.__proto__ = GeneratorFunctionPrototype;
-      if (!(toStringTagSymbol in genFun)) {
-        genFun[toStringTagSymbol] = "GeneratorFunction";
-      }
-    }
-    genFun.prototype = Object.create(Gp);
-    return genFun;
-  };
-
-  // Within the body of any async function, `await x` is transformed to
-  // `yield regeneratorRuntime.awrap(x)`, so that the runtime can test
-  // `hasOwn.call(value, "__await")` to determine if the yielded value is
-  // meant to be awaited.
-  exports.awrap = function(arg) {
-    return { __await: arg };
-  };
-
-  function AsyncIterator(generator, PromiseImpl) {
-    function invoke(method, arg, resolve, reject) {
-      var record = tryCatch(generator[method], generator, arg);
-      if (record.type === "throw") {
-        reject(record.arg);
-      } else {
-        var result = record.arg;
-        var value = result.value;
-        if (value &&
-            typeof value === "object" &&
-            hasOwn.call(value, "__await")) {
-          return PromiseImpl.resolve(value.__await).then(function(value) {
-            invoke("next", value, resolve, reject);
-          }, function(err) {
-            invoke("throw", err, resolve, reject);
-          });
-        }
-
-        return PromiseImpl.resolve(value).then(function(unwrapped) {
-          // When a yielded Promise is resolved, its final value becomes
-          // the .value of the Promise<{value,done}> result for the
-          // current iteration.
-          result.value = unwrapped;
-          resolve(result);
-        }, function(error) {
-          // If a rejected Promise was yielded, throw the rejection back
-          // into the async generator function so it can be handled there.
-          return invoke("throw", error, resolve, reject);
-        });
-      }
-    }
-
-    var previousPromise;
-
-    function enqueue(method, arg) {
-      function callInvokeWithMethodAndArg() {
-        return new PromiseImpl(function(resolve, reject) {
-          invoke(method, arg, resolve, reject);
-        });
-      }
-
-      return previousPromise =
-        // If enqueue has been called before, then we want to wait until
-        // all previous Promises have been resolved before calling invoke,
-        // so that results are always delivered in the correct order. If
-        // enqueue has not been called before, then it is important to
-        // call invoke immediately, without waiting on a callback to fire,
-        // so that the async generator function has the opportunity to do
-        // any necessary setup in a predictable way. This predictability
-        // is why the Promise constructor synchronously invokes its
-        // executor callback, and why async functions synchronously
-        // execute code before the first await. Since we implement simple
-        // async functions in terms of async generators, it is especially
-        // important to get this right, even though it requires care.
-        previousPromise ? previousPromise.then(
-          callInvokeWithMethodAndArg,
-          // Avoid propagating failures to Promises returned by later
-          // invocations of the iterator.
-          callInvokeWithMethodAndArg
-        ) : callInvokeWithMethodAndArg();
-    }
-
-    // Define the unified helper method that is used to implement .next,
-    // .throw, and .return (see defineIteratorMethods).
-    this._invoke = enqueue;
-  }
-
-  defineIteratorMethods(AsyncIterator.prototype);
-  AsyncIterator.prototype[asyncIteratorSymbol] = function () {
-    return this;
-  };
-  exports.AsyncIterator = AsyncIterator;
-
-  // Note that simple async functions are implemented on top of
-  // AsyncIterator objects; they just return a Promise for the value of
-  // the final result produced by the iterator.
-  exports.async = function(innerFn, outerFn, self, tryLocsList, PromiseImpl) {
-    if (PromiseImpl === void 0) PromiseImpl = Promise;
-
-    var iter = new AsyncIterator(
-      wrap(innerFn, outerFn, self, tryLocsList),
-      PromiseImpl
-    );
-
-    return exports.isGeneratorFunction(outerFn)
-      ? iter // If outerFn is a generator, return the full iterator.
-      : iter.next().then(function(result) {
-          return result.done ? result.value : iter.next();
-        });
-  };
-
-  function makeInvokeMethod(innerFn, self, context) {
-    var state = GenStateSuspendedStart;
-
-    return function invoke(method, arg) {
-      if (state === GenStateExecuting) {
-        throw new Error("Generator is already running");
-      }
-
-      if (state === GenStateCompleted) {
-        if (method === "throw") {
-          throw arg;
-        }
-
-        // Be forgiving, per 25.3.3.3.3 of the spec:
-        // https://people.mozilla.org/~jorendorff/es6-draft.html#sec-generatorresume
-        return doneResult();
-      }
-
-      context.method = method;
-      context.arg = arg;
-
-      while (true) {
-        var delegate = context.delegate;
-        if (delegate) {
-          var delegateResult = maybeInvokeDelegate(delegate, context);
-          if (delegateResult) {
-            if (delegateResult === ContinueSentinel) continue;
-            return delegateResult;
-          }
-        }
-
-        if (context.method === "next") {
-          // Setting context._sent for legacy support of Babel's
-          // function.sent implementation.
-          context.sent = context._sent = context.arg;
-
-        } else if (context.method === "throw") {
-          if (state === GenStateSuspendedStart) {
-            state = GenStateCompleted;
-            throw context.arg;
-          }
-
-          context.dispatchException(context.arg);
-
-        } else if (context.method === "return") {
-          context.abrupt("return", context.arg);
-        }
-
-        state = GenStateExecuting;
-
-        var record = tryCatch(innerFn, self, context);
-        if (record.type === "normal") {
-          // If an exception is thrown from innerFn, we leave state ===
-          // GenStateExecuting and loop back for another invocation.
-          state = context.done
-            ? GenStateCompleted
-            : GenStateSuspendedYield;
-
-          if (record.arg === ContinueSentinel) {
-            continue;
-          }
-
-          return {
-            value: record.arg,
-            done: context.done
-          };
-
-        } else if (record.type === "throw") {
-          state = GenStateCompleted;
-          // Dispatch the exception by looping back around to the
-          // context.dispatchException(context.arg) call above.
-          context.method = "throw";
-          context.arg = record.arg;
-        }
-      }
-    };
-  }
-
-  // Call delegate.iterator[context.method](context.arg) and handle the
-  // result, either by returning a { value, done } result from the
-  // delegate iterator, or by modifying context.method and context.arg,
-  // setting context.delegate to null, and returning the ContinueSentinel.
-  function maybeInvokeDelegate(delegate, context) {
-    var method = delegate.iterator[context.method];
-    if (method === undefined) {
-      // A .throw or .return when the delegate iterator has no .throw
-      // method always terminates the yield* loop.
-      context.delegate = null;
-
-      if (context.method === "throw") {
-        // Note: ["return"] must be used for ES3 parsing compatibility.
-        if (delegate.iterator["return"]) {
-          // If the delegate iterator has a return method, give it a
-          // chance to clean up.
-          context.method = "return";
-          context.arg = undefined;
-          maybeInvokeDelegate(delegate, context);
-
-          if (context.method === "throw") {
-            // If maybeInvokeDelegate(context) changed context.method from
-            // "return" to "throw", let that override the TypeError below.
-            return ContinueSentinel;
-          }
-        }
-
-        context.method = "throw";
-        context.arg = new TypeError(
-          "The iterator does not provide a 'throw' method");
-      }
-
-      return ContinueSentinel;
-    }
-
-    var record = tryCatch(method, delegate.iterator, context.arg);
-
-    if (record.type === "throw") {
-      context.method = "throw";
-      context.arg = record.arg;
-      context.delegate = null;
-      return ContinueSentinel;
-    }
-
-    var info = record.arg;
-
-    if (! info) {
-      context.method = "throw";
-      context.arg = new TypeError("iterator result is not an object");
-      context.delegate = null;
-      return ContinueSentinel;
-    }
-
-    if (info.done) {
-      // Assign the result of the finished delegate to the temporary
-      // variable specified by delegate.resultName (see delegateYield).
-      context[delegate.resultName] = info.value;
-
-      // Resume execution at the desired location (see delegateYield).
-      context.next = delegate.nextLoc;
-
-      // If context.method was "throw" but the delegate handled the
-      // exception, let the outer generator proceed normally. If
-      // context.method was "next", forget context.arg since it has been
-      // "consumed" by the delegate iterator. If context.method was
-      // "return", allow the original .return call to continue in the
-      // outer generator.
-      if (context.method !== "return") {
-        context.method = "next";
-        context.arg = undefined;
-      }
-
-    } else {
-      // Re-yield the result returned by the delegate method.
-      return info;
-    }
-
-    // The delegate iterator is finished, so forget it and continue with
-    // the outer generator.
-    context.delegate = null;
-    return ContinueSentinel;
-  }
-
-  // Define Generator.prototype.{next,throw,return} in terms of the
-  // unified ._invoke helper method.
-  defineIteratorMethods(Gp);
-
-  Gp[toStringTagSymbol] = "Generator";
-
-  // A Generator should always return itself as the iterator object when the
-  // @@iterator function is called on it. Some browsers' implementations of the
-  // iterator prototype chain incorrectly implement this, causing the Generator
-  // object to not be returned from this call. This ensures that doesn't happen.
-  // See https://github.com/facebook/regenerator/issues/274 for more details.
-  Gp[iteratorSymbol] = function() {
-    return this;
-  };
-
-  Gp.toString = function() {
-    return "[object Generator]";
-  };
-
-  function pushTryEntry(locs) {
-    var entry = { tryLoc: locs[0] };
-
-    if (1 in locs) {
-      entry.catchLoc = locs[1];
-    }
-
-    if (2 in locs) {
-      entry.finallyLoc = locs[2];
-      entry.afterLoc = locs[3];
-    }
-
-    this.tryEntries.push(entry);
-  }
-
-  function resetTryEntry(entry) {
-    var record = entry.completion || {};
-    record.type = "normal";
-    delete record.arg;
-    entry.completion = record;
-  }
-
-  function Context(tryLocsList) {
-    // The root entry object (effectively a try statement without a catch
-    // or a finally block) gives us a place to store values thrown from
-    // locations where there is no enclosing try statement.
-    this.tryEntries = [{ tryLoc: "root" }];
-    tryLocsList.forEach(pushTryEntry, this);
-    this.reset(true);
-  }
-
-  exports.keys = function(object) {
-    var keys = [];
-    for (var key in object) {
-      keys.push(key);
-    }
-    keys.reverse();
-
-    // Rather than returning an object with a next method, we keep
-    // things simple and return the next function itself.
-    return function next() {
-      while (keys.length) {
-        var key = keys.pop();
-        if (key in object) {
-          next.value = key;
-          next.done = false;
-          return next;
-        }
-      }
-
-      // To avoid creating an additional object, we just hang the .value
-      // and .done properties off the next function object itself. This
-      // also ensures that the minifier will not anonymize the function.
-      next.done = true;
-      return next;
-    };
-  };
-
-  function values(iterable) {
-    if (iterable) {
-      var iteratorMethod = iterable[iteratorSymbol];
-      if (iteratorMethod) {
-        return iteratorMethod.call(iterable);
-      }
-
-      if (typeof iterable.next === "function") {
-        return iterable;
-      }
-
-      if (!isNaN(iterable.length)) {
-        var i = -1, next = function next() {
-          while (++i < iterable.length) {
-            if (hasOwn.call(iterable, i)) {
-              next.value = iterable[i];
-              next.done = false;
-              return next;
-            }
-          }
-
-          next.value = undefined;
-          next.done = true;
-
-          return next;
-        };
-
-        return next.next = next;
-      }
-    }
-
-    // Return an iterator with no values.
-    return { next: doneResult };
-  }
-  exports.values = values;
-
-  function doneResult() {
-    return { value: undefined, done: true };
-  }
-
-  Context.prototype = {
-    constructor: Context,
-
-    reset: function(skipTempReset) {
-      this.prev = 0;
-      this.next = 0;
-      // Resetting context._sent for legacy support of Babel's
-      // function.sent implementation.
-      this.sent = this._sent = undefined;
-      this.done = false;
-      this.delegate = null;
-
-      this.method = "next";
-      this.arg = undefined;
-
-      this.tryEntries.forEach(resetTryEntry);
-
-      if (!skipTempReset) {
-        for (var name in this) {
-          // Not sure about the optimal order of these conditions:
-          if (name.charAt(0) === "t" &&
-              hasOwn.call(this, name) &&
-              !isNaN(+name.slice(1))) {
-            this[name] = undefined;
-          }
-        }
-      }
-    },
-
-    stop: function() {
-      this.done = true;
-
-      var rootEntry = this.tryEntries[0];
-      var rootRecord = rootEntry.completion;
-      if (rootRecord.type === "throw") {
-        throw rootRecord.arg;
-      }
-
-      return this.rval;
-    },
-
-    dispatchException: function(exception) {
-      if (this.done) {
-        throw exception;
-      }
-
-      var context = this;
-      function handle(loc, caught) {
-        record.type = "throw";
-        record.arg = exception;
-        context.next = loc;
-
-        if (caught) {
-          // If the dispatched exception was caught by a catch block,
-          // then let that catch block handle the exception normally.
-          context.method = "next";
-          context.arg = undefined;
-        }
-
-        return !! caught;
-      }
-
-      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
-        var entry = this.tryEntries[i];
-        var record = entry.completion;
-
-        if (entry.tryLoc === "root") {
-          // Exception thrown outside of any try block that could handle
-          // it, so set the completion value of the entire function to
-          // throw the exception.
-          return handle("end");
-        }
-
-        if (entry.tryLoc <= this.prev) {
-          var hasCatch = hasOwn.call(entry, "catchLoc");
-          var hasFinally = hasOwn.call(entry, "finallyLoc");
-
-          if (hasCatch && hasFinally) {
-            if (this.prev < entry.catchLoc) {
-              return handle(entry.catchLoc, true);
-            } else if (this.prev < entry.finallyLoc) {
-              return handle(entry.finallyLoc);
-            }
-
-          } else if (hasCatch) {
-            if (this.prev < entry.catchLoc) {
-              return handle(entry.catchLoc, true);
-            }
-
-          } else if (hasFinally) {
-            if (this.prev < entry.finallyLoc) {
-              return handle(entry.finallyLoc);
-            }
-
-          } else {
-            throw new Error("try statement without catch or finally");
-          }
-        }
-      }
-    },
-
-    abrupt: function(type, arg) {
-      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
-        var entry = this.tryEntries[i];
-        if (entry.tryLoc <= this.prev &&
-            hasOwn.call(entry, "finallyLoc") &&
-            this.prev < entry.finallyLoc) {
-          var finallyEntry = entry;
-          break;
-        }
-      }
-
-      if (finallyEntry &&
-          (type === "break" ||
-           type === "continue") &&
-          finallyEntry.tryLoc <= arg &&
-          arg <= finallyEntry.finallyLoc) {
-        // Ignore the finally entry if control is not jumping to a
-        // location outside the try/catch block.
-        finallyEntry = null;
-      }
-
-      var record = finallyEntry ? finallyEntry.completion : {};
-      record.type = type;
-      record.arg = arg;
-
-      if (finallyEntry) {
-        this.method = "next";
-        this.next = finallyEntry.finallyLoc;
-        return ContinueSentinel;
-      }
-
-      return this.complete(record);
-    },
-
-    complete: function(record, afterLoc) {
-      if (record.type === "throw") {
-        throw record.arg;
-      }
-
-      if (record.type === "break" ||
-          record.type === "continue") {
-        this.next = record.arg;
-      } else if (record.type === "return") {
-        this.rval = this.arg = record.arg;
-        this.method = "return";
-        this.next = "end";
-      } else if (record.type === "normal" && afterLoc) {
-        this.next = afterLoc;
-      }
-
-      return ContinueSentinel;
-    },
-
-    finish: function(finallyLoc) {
-      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
-        var entry = this.tryEntries[i];
-        if (entry.finallyLoc === finallyLoc) {
-          this.complete(entry.completion, entry.afterLoc);
-          resetTryEntry(entry);
-          return ContinueSentinel;
-        }
-      }
-    },
-
-    "catch": function(tryLoc) {
-      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
-        var entry = this.tryEntries[i];
-        if (entry.tryLoc === tryLoc) {
-          var record = entry.completion;
-          if (record.type === "throw") {
-            var thrown = record.arg;
-            resetTryEntry(entry);
-          }
-          return thrown;
-        }
-      }
-
-      // The context.catch method must only be called with a location
-      // argument that corresponds to a known catch block.
-      throw new Error("illegal catch attempt");
-    },
-
-    delegateYield: function(iterable, resultName, nextLoc) {
-      this.delegate = {
-        iterator: values(iterable),
-        resultName: resultName,
-        nextLoc: nextLoc
-      };
-
-      if (this.method === "next") {
-        // Deliberately forget the last sent value so that we don't
-        // accidentally pass it on to the delegate.
-        this.arg = undefined;
-      }
-
-      return ContinueSentinel;
-    }
-  };
-
-  // Regardless of whether this script is executing as a CommonJS module
-  // or not, return the runtime object so that we can declare the variable
-  // regeneratorRuntime in the outer scope, which allows this module to be
-  // injected easily by `bin/regenerator --include-runtime script.js`.
-  return exports;
-
-}(
-  // If this script is executing as a CommonJS module, use module.exports
-  // as the regeneratorRuntime namespace. Otherwise create a new empty
-  // object. Either way, the resulting object will be used to initialize
-  // the regeneratorRuntime variable at the top of this file.
-   true ? module.exports : undefined
-));
-
-try {
-  regeneratorRuntime = runtime;
-} catch (accidentalStrictMode) {
-  // This module should not be running in strict mode, so the above
-  // assignment should always work unless something is misconfigured. Just
-  // in case runtime.js accidentally runs in strict mode, we can escape
-  // strict mode using a global Function call. This could conceivably fail
-  // if a Content Security Policy forbids using Function, but in that case
-  // the proper solution is to fix the accidental strict mode problem. If
-  // you've misconfigured your bundler to force strict mode and applied a
-  // CSP to forbid Function, and you're not willing to fix either of those
-  // problems, please detail your unique predicament in a GitHub issue.
-  Function("r", "regeneratorRuntime = r")(runtime);
-}
-
-
-/***/ }),
-
 /***/ "./node_modules/scheduler/cjs/scheduler-tracing.development.js":
 /*!*********************************************************************!*\
   !*** ./node_modules/scheduler/cjs/scheduler-tracing.development.js ***!
@@ -35538,15 +34786,93 @@ module.exports = function(originalModule) {
 
 /***/ }),
 
-/***/ "./resources/js/project/FormComponents/details/details.css":
-/*!*****************************************************************!*\
-  !*** ./resources/js/project/FormComponents/details/details.css ***!
-  \*****************************************************************/
+/***/ "./resources/js/jobs/app.js":
+/*!**********************************!*\
+  !*** ./resources/js/jobs/app.js ***!
+  \**********************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _jobs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./jobs */ "./resources/js/jobs/jobs.js");
+/* harmony import */ var _store_reducer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./store/reducer */ "./resources/js/jobs/store/reducer.js");
+/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/redux.js");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var redux_devtools_extension__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! redux-devtools-extension */ "./node_modules/redux-devtools-extension/index.js");
+/* harmony import */ var redux_devtools_extension__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(redux_devtools_extension__WEBPACK_IMPORTED_MODULE_6__);
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+
+
+
+
+
+
+
+var store = Object(redux__WEBPACK_IMPORTED_MODULE_4__["createStore"])(_store_reducer__WEBPACK_IMPORTED_MODULE_3__["default"], Object(redux_devtools_extension__WEBPACK_IMPORTED_MODULE_6__["composeWithDevTools"])());
+
+var App = /*#__PURE__*/function (_React$Component) {
+  _inherits(App, _React$Component);
+
+  var _super = _createSuper(App);
+
+  function App() {
+    _classCallCheck(this, App);
+
+    return _super.apply(this, arguments);
+  }
+
+  _createClass(App, [{
+    key: "render",
+    value: function render() {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_redux__WEBPACK_IMPORTED_MODULE_5__["Provider"], {
+        store: store
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_jobs__WEBPACK_IMPORTED_MODULE_2__["default"], null));
+    }
+  }]);
+
+  return App;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+
+var domContainer = document.querySelector('#jobs');
+react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(App, null), domContainer);
+
+/***/ }),
+
+/***/ "./resources/js/jobs/components/search/Search.css":
+/*!********************************************************!*\
+  !*** ./resources/js/jobs/components/search/Search.css ***!
+  \********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(/*! !../../../../../node_modules/css-loader??ref--7-1!../../../../../node_modules/postcss-loader/src??ref--7-2!./details.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/project/FormComponents/details/details.css");
+var content = __webpack_require__(/*! !../../../../../node_modules/css-loader??ref--7-1!../../../../../node_modules/postcss-loader/src??ref--7-2!./Search.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/jobs/components/search/Search.css");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -35568,10 +34894,10 @@ if(false) {}
 
 /***/ }),
 
-/***/ "./resources/js/project/FormComponents/details/details.js":
-/*!****************************************************************!*\
-  !*** ./resources/js/project/FormComponents/details/details.js ***!
-  \****************************************************************/
+/***/ "./resources/js/jobs/components/search/search.js":
+/*!*******************************************************!*\
+  !*** ./resources/js/jobs/components/search/search.js ***!
+  \*******************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -35579,9 +34905,11 @@ if(false) {}
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _details_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./details.css */ "./resources/js/project/FormComponents/details/details.css");
-/* harmony import */ var _details_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_details_css__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _Search_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Search.css */ "./resources/js/jobs/components/search/Search.css");
+/* harmony import */ var _Search_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_Search_css__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _search_svg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./search.svg */ "./resources/js/jobs/components/search/search.svg");
+/* harmony import */ var _search_svg__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_search_svg__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -35608,618 +34936,82 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
 
 
-var Details = /*#__PURE__*/function (_React$Component) {
-  _inherits(Details, _React$Component);
+var axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 
-  var _super = _createSuper(Details);
 
-  function Details(props) {
+
+var Search = /*#__PURE__*/function (_React$Component) {
+  _inherits(Search, _React$Component);
+
+  var _super = _createSuper(Search);
+
+  function Search(props) {
     var _this;
 
-    _classCallCheck(this, Details);
-
-    _this = _super.call(this, props);
-    _this.state = {};
-    _this.characterLimit = 4000;
-    _this.handleChange = _this.handleChange.bind(_assertThisInitialized(_this));
-    _this.handleBlur = _this.handleBlur.bind(_assertThisInitialized(_this));
-    return _this;
-  }
-
-  _createClass(Details, [{
-    key: "componentDidMount",
-    value: function componentDidMount() {
-      this.props.connect('details.js');
-    }
-  }, {
-    key: "handleChange",
-    value: function handleChange(event) {
-      if (event.target.value.length > 4000) {
-        this.props.handleError(true);
-      } else {
-        this.props.handleError(false);
-      }
-
-      if (event.target.value.length !== 0) {
-        this.props.handleEmtpyError(false);
-      }
-
-      this.props.handleChange(event.target.value);
-      this.props.setLength(event.target.value.length);
-      this.props.handleNextButton();
-    }
-  }, {
-    key: "handleBlur",
-    value: function handleBlur() {
-      if (this.props.length === 0) {
-        this.props.handleEmtpyError(true);
-        this.props.handleNextButton();
-      }
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Tell us more about your project"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Start with a bit about yourself or your business, and include an overview of what you need done."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("textarea", {
-        name: "details",
-        placeholder: "Describe your project here...",
-        rows: "4",
-        value: this.props.value,
-        onChange: this.handleChange,
-        onBlur: this.handleBlur,
-        className: this.props.emptyError ? "BorderError" : null
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "ErrorAndCharsRem"
-      }, this.props.error, this.props.error ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-        className: "detailsError error"
-      }, "Please enter atmost 4000 characters") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null), this.props.emptyError ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-        className: "detailsError error"
-      }, "Please enter a description") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-        className: "CharactersRemaining"
-      }, this.characterLimit - this.props.length, " characters remaining")));
-    }
-  }]);
-
-  return Details;
-}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
-
-function mapStoreToProps(store) {
-  return {
-    value: store.details.value,
-    error: store.details.error,
-    emptyError: store.details.emptyError,
-    length: store.details.length
-  };
-}
-
-function mapDispatchToProps(dispatch) {
-  return {
-    connect: function connect(componentName) {
-      return dispatch({
-        type: 'connected',
-        componentName: componentName
-      });
-    },
-    handleChange: function handleChange(value) {
-      return dispatch({
-        type: 'SET_DETAILS',
-        value: value
-      });
-    },
-    setLength: function setLength(value) {
-      return dispatch({
-        type: 'SET_DETAILS_LENGTH',
-        value: value
-      });
-    },
-    handleError: function handleError(value) {
-      return dispatch({
-        type: 'SET_DETAILS_ERROR',
-        value: value
-      });
-    },
-    handleEmtpyError: function handleEmtpyError(value) {
-      return dispatch({
-        type: 'SET_DETAILS_EMPTY_ERROR',
-        value: value
-      });
-    },
-    handleNextButton: function handleNextButton() {
-      return dispatch({
-        type: 'SET_NEXT_BUTTON_STATE'
-      });
-    }
-  };
-}
-
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["connect"])(mapStoreToProps, mapDispatchToProps)(Details));
-
-/***/ }),
-
-/***/ "./resources/js/project/FormComponents/name/name.js":
-/*!**********************************************************!*\
-  !*** ./resources/js/project/FormComponents/name/name.js ***!
-  \**********************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-
-
-
-var Name = /*#__PURE__*/function (_React$Component) {
-  _inherits(Name, _React$Component);
-
-  var _super = _createSuper(Name);
-
-  function Name(props) {
-    var _this;
-
-    _classCallCheck(this, Name);
+    _classCallCheck(this, Search);
 
     _this = _super.call(this, props);
     _this.state = {};
     _this.handleChange = _this.handleChange.bind(_assertThisInitialized(_this));
-    _this.handleBlur = _this.handleBlur.bind(_assertThisInitialized(_this));
+    _this.handleSearch = _this.handleSearch.bind(_assertThisInitialized(_this));
     return _this;
   }
 
-  _createClass(Name, [{
+  _createClass(Search, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-      this.props.connect('name.js');
+      this.props.connect('Search');
     }
   }, {
-    key: "handleChange",
-    value: function handleChange(event) {
-      if (event.target.value.length > 255) {
-        this.props.handleError('Please enter atmost 255 characters');
-      } else {
-        this.props.handleError(null);
-      }
-
-      if (event.target.value.length !== 0) {
-        this.props.handleEmtpyError(false);
-      }
-
-      this.props.handleChange(event.target.value);
-      this.props.setLength(event.target.value.length);
-      this.props.handleNextButton();
-    }
-  }, {
-    key: "handleBlur",
-    value: function handleBlur() {
-      if (this.props.length === 0) {
-        this.props.handleEmtpyError(true);
-      }
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "Input"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Choose a name for your project"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        name: "name",
-        type: "text",
-        placeholder: "e.g. Build me a website",
-        value: this.props.value,
-        onChange: this.handleChange,
-        onBlur: this.handleBlur,
-        className: this.props.emptyError ? "BorderError" : null
-      }), this.props.error ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-        className: "error"
-      }, this.props.error) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null), this.props.emptyError ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-        className: "error"
-      }, "Please enter a name") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null));
-    }
-  }]);
-
-  return Name;
-}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
-
-function mapStoreToProps(store) {
-  return {
-    value: store.name.value,
-    error: store.name.error,
-    emptyError: store.name.emptyError,
-    length: store.name.length,
-    nextButtonDisable: store.nextButtonDisable
-  };
-}
-
-function mapDispatchToProps(dispatch) {
-  return {
-    connect: function connect(componentName) {
-      return dispatch({
-        type: 'connected',
-        componentName: componentName
-      });
-    },
-    handleChange: function handleChange(value) {
-      return dispatch({
-        type: 'SET_NAME',
-        value: value
-      });
-    },
-    setLength: function setLength(value) {
-      return dispatch({
-        type: 'SET_NAME_LENGTH',
-        value: value
-      });
-    },
-    handleError: function handleError(value) {
-      return dispatch({
-        type: 'SET_NAME_ERROR',
-        value: value
-      });
-    },
-    handleEmtpyError: function handleEmtpyError(value) {
-      return dispatch({
-        type: 'SET_NAME_EMPTY_ERROR',
-        value: value
-      });
-    },
-    handleNextButton: function handleNextButton() {
-      return dispatch({
-        type: 'SET_NEXT_BUTTON_STATE'
-      });
-    }
-  };
-}
-
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStoreToProps, mapDispatchToProps)(Name));
-
-/***/ }),
-
-/***/ "./resources/js/project/FormComponents/payment/fixed-price-logo.svg":
-/*!**************************************************************************!*\
-  !*** ./resources/js/project/FormComponents/payment/fixed-price-logo.svg ***!
-  \**************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "/images/fixed-price-logo.svg?43fb99b62cabc2218a16b1a92d7fb917";
-
-/***/ }),
-
-/***/ "./resources/js/project/FormComponents/payment/hourly-price-logo.svg":
-/*!***************************************************************************!*\
-  !*** ./resources/js/project/FormComponents/payment/hourly-price-logo.svg ***!
-  \***************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "/images/hourly-price-logo.svg?5e1a2721b212e9c46b9bfbc2b83d6b51";
-
-/***/ }),
-
-/***/ "./resources/js/project/FormComponents/payment/payment.css":
-/*!*****************************************************************!*\
-  !*** ./resources/js/project/FormComponents/payment/payment.css ***!
-  \*****************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-
-var content = __webpack_require__(/*! !../../../../../node_modules/css-loader??ref--7-1!../../../../../node_modules/postcss-loader/src??ref--7-2!./payment.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/project/FormComponents/payment/payment.css");
-
-if(typeof content === 'string') content = [[module.i, content, '']];
-
-var transform;
-var insertInto;
-
-
-
-var options = {"hmr":true}
-
-options.transform = transform
-options.insertInto = undefined;
-
-var update = __webpack_require__(/*! ../../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
-
-if(content.locals) module.exports = content.locals;
-
-if(false) {}
-
-/***/ }),
-
-/***/ "./resources/js/project/FormComponents/payment/payment.js":
-/*!****************************************************************!*\
-  !*** ./resources/js/project/FormComponents/payment/payment.js ***!
-  \****************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _payment_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./payment.css */ "./resources/js/project/FormComponents/payment/payment.css");
-/* harmony import */ var _payment_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_payment_css__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _fixed_price_logo_svg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./fixed-price-logo.svg */ "./resources/js/project/FormComponents/payment/fixed-price-logo.svg");
-/* harmony import */ var _fixed_price_logo_svg__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_fixed_price_logo_svg__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _hourly_price_logo_svg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./hourly-price-logo.svg */ "./resources/js/project/FormComponents/payment/hourly-price-logo.svg");
-/* harmony import */ var _hourly_price_logo_svg__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_hourly_price_logo_svg__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-
-
-
-
-
-
-var Payment = /*#__PURE__*/function (_React$Component) {
-  _inherits(Payment, _React$Component);
-
-  var _super = _createSuper(Payment);
-
-  function Payment(props) {
-    var _this;
-
-    _classCallCheck(this, Payment);
-
-    _this = _super.call(this, props);
-    _this.state = {};
-    _this.handleSelectHourly = _this.handleSelectHourly.bind(_assertThisInitialized(_this));
-    _this.handleSelectFixed = _this.handleSelectFixed.bind(_assertThisInitialized(_this));
-    _this.handleSetCurrency = _this.handleSetCurrency.bind(_assertThisInitialized(_this));
-    _this.handleSetBudget = _this.handleSetBudget.bind(_assertThisInitialized(_this));
-    return _this;
-  }
-
-  _createClass(Payment, [{
-    key: "componentDidMount",
-    value: function componentDidMount() {
-      this.props.connect('payment.js');
-    }
-  }, {
-    key: "handleSelectHourly",
-    value: function handleSelectHourly() {
-      this.props.selectHourly();
-    }
-  }, {
-    key: "handleSelectFixed",
-    value: function handleSelectFixed() {
-      this.props.selectFixed();
-    }
-  }, {
-    key: "handleSetCurrency",
-    value: function handleSetCurrency(e) {
-      this.props.selectCurrencyType(e.target.value);
-    }
-  }, {
-    key: "handleSetBudget",
-    value: function handleSetBudget(e) {
-      var value = e.target.value.split(' ');
-      this.props.selectMinBudget(value[0]);
-      this.props.selectMaxBudget(value[1]);
-    }
-  }, {
-    key: "render",
-    value: function render() {
+    key: "handleSearch",
+    value: function handleSearch() {
       var _this2 = this;
 
-      var budgetOptions = null; // USD
+      axios.get("http://localhost:8000/jobs?q=".concat(this.props.name)).then(function (response) {
+        return _this2.props.setSearchResults(response.data);
+      });
+    }
+  }, {
+    key: "handleChange",
+    value: function handleChange(e) {
+      this.props.setName(e.target.value);
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this3 = this;
 
-      if (this.props.currencyType === 'USD' && this.props.fixed) {
-        budgetOptions = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-          value: "10 30"
-        }, "Micro Project ($10.00 - 30.00 USD)"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-          value: "30 250"
-        }, "Simple Project ($30.00 - 250.00 USD)"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-          value: "250 750"
-        }, "Very Small Project ($250.00 - 750.00 USD)"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-          value: "750 1500"
-        }, "Small Project ($750.00 - 1,500.00 USD)"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-          value: "1500 3000"
-        }, "Medium Project ($1,500.00 - 3,000.00 USD)"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-          value: "3000 5000"
-        }, "Large Project ($3,000.00 - 5,000.00 USD)"));
-      } else if (this.props.currencyType === 'USD' && this.props.hourly) {
-        budgetOptions = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-          value: "2 8"
-        }, "Basic ($2.00 - 8.00 USD per hour)"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-          value: "8 15"
-        }, "Moderate ($8.00 - 15.00 USD per hour)"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-          value: "15 25"
-        }, "Standard ($15.00 - 25.00 USD per hour)"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-          value: "25 50"
-        }, "Skilled ($25.00 - 50.00 USD per hour)"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-          value: "50 0"
-        }, "Expert ($50.00+ USD per hour)"));
-      } // GBP
-      else if (this.props.currencyType === 'GBP' && this.props.fixed) {
-          budgetOptions = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-            value: "10 20"
-          }, "Micro Project (\xA310.00 - 20.00 GBP)"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-            value: "20 250"
-          }, "Simple Project (\xA320.00 - 250.00 GBP)"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-            value: "250 750"
-          }, "Very Small Project (\xA3250.00 - 750.00 GBP)"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-            value: "750 1500"
-          }, "Small Project (\xA3750.00 - 1,500.00 GBP)"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-            value: "1500 3000"
-          }, "Medium Project (\xA31,500.00 - 3,000.00 GBP)"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-            value: "3000 5000"
-          }, "Large Project (\xA33,000.00 - 5,000.00 GBP)"));
-        } else if (this.props.currencyType === 'GBP' && this.props.hourly) {
-          budgetOptions = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-            value: "2 5"
-          }, "Basic (\xA32.00 - 5.00 GBP per hour)"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-            value: "5 10"
-          }, "Moderate (\xA35.00 - 10.00 GBP per hour)"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-            value: "10 15"
-          }, "Standard (\xA310.00 - 15.00 GBP per hour)"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-            value: "18 36"
-          }, "Skilled (\xA318.00 - 36.00 GBP per hour)"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-            value: "36 0"
-          }, "Expert (\xA336.00+ GBP per hour)"));
-        } // EUR
-
-
-      if (this.props.currencyType === 'EUR' && this.props.fixed) {
-        budgetOptions = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-          value: "8 30"
-        }, "Micro Project (\u20AC8.00 - 30.00 EUR)"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-          value: "30 250"
-        }, "Simple Project (\u20AC30.00 - 250.00 EUR)"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-          value: "250 750"
-        }, "Very Small Project (\u20AC250.00 - 750.00 EUR)"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-          value: "750 1500"
-        }, "Small Project (\u20AC750.00 - 1,500.00 EUR)"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-          value: "1500 3000"
-        }, "Medium Project (\u20AC1,500.00 - 3,000.00 EUR)"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-          value: "3000 5000"
-        }, "Large Project (\u20AC3,000.00 - 5,000.00 EUR)"));
-      } else if (this.props.currencyType === 'EUR' && this.props.hourly) {
-        budgetOptions = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-          value: "2 8"
-        }, "Basic (\u20AC2.00 - 8.00 EUR per hour)"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-          value: "8 15"
-        }, "Moderate (\u20AC8.00 - 15.00 EUR per hour)"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-          value: "15 25"
-        }, "Standard (\u20AC15.00 - 25.00 EUR per hour)"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-          value: "25 50"
-        }, "Skilled (\u20AC25.00 - 50.00 EUR per hour)"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-          value: "50 0"
-        }, "Expert (\u20AC50.00+ EUR per hour)"));
-      }
-
-      var hiddenForm = null;
-
-      if (this.props.minBudget && this.props.maxBudget && this.props.currencyType) {
-        hiddenForm = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-          type: "number",
-          name: "minBudget",
-          value: this.props.minBudget,
-          hidden: true
-        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-          type: "number",
-          name: "maxBudget",
-          value: this.props.maxBudget,
-          hidden: true
-        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-          type: "text",
-          name: "currencyType",
-          value: this.props.currencyType,
-          hidden: true
-        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-          type: "text",
-          name: "projectType",
-          value: this.props.hourly === true ? 'hourly' : 'fixed',
-          hidden: true
-        }));
-      }
-
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
-        className: "PaymentH3"
-      }, "How would you like to get it done? "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "PaymentOptionContainer"
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "box"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "PaymentOption box-shadow flex-item-1" + (this.props.fixed ? ' blue-border' : ''),
-        onClick: this.handleSelectFixed
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        src: _fixed_price_logo_svg__WEBPACK_IMPORTED_MODULE_2___default.a,
-        className: "priceLogo"
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "paymentDescription"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, "Pay Fixed Price"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Agree on a price and release payment when the job is done. Best for one-off tasks. "))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "PaymentOption box-shadow flex-item-2" + (this.props.hourly ? ' blue-border' : ''),
-        onClick: this.handleSelectHourly
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        src: _hourly_price_logo_svg__WEBPACK_IMPORTED_MODULE_3___default.a,
-        className: "priceLogo"
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "paymentDescription"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, "Pay by the hour"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-        className: ""
-      }, "Crowdsource ideas. Post a prize and get competing entries which you can iterate on with feedback. Great for visual designs.")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
-        className: ""
-      }, "What is your estimated budget?"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "currencyAndBudgetContainer"
+        className: "searchContainer box-shadow"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "select currencySelect"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
-        onClick: function onClick(e) {
-          return _this2.handleSetCurrency(e);
-        }
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-        value: "USD"
-      }, "USD"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-        value: "GBP"
-      }, "GBP"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-        value: "EUR"
-      }, "EUR")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "select_arrow"
+        className: "searchField"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: _search_svg__WEBPACK_IMPORTED_MODULE_2___default.a,
+        className: "searchIcon"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "text",
+        name: "name",
+        value: this.props.name,
+        onChange: function onChange(e) {
+          return _this3.handleChange(e);
+        },
+        className: "inputField",
+        placeholder: "Search Keyword"
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "select budgetSelect"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
-        onClick: function onClick(e) {
-          return _this2.handleSetBudget(e);
-        }
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", null, "--Select Budget--"), budgetOptions), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "select_arrow"
-      }))), hiddenForm);
+        className: "searchButton bold",
+        onClick: this.handleSearch
+      }, "Search"))));
     }
   }]);
 
-  return Payment;
+  return Search;
 }(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
 
 function mapStoreToProps(store) {
   return {
-    hourly: store.payment.hourly,
-    fixed: store.payment.fixed,
-    currencyType: store.payment.currencyType,
-    minBudget: store.payment.minBudget,
-    maxBudget: store.payment.maxBudget,
-    error: store.payment.error
+    name: store.name
   };
 }
 
@@ -36231,50 +35023,45 @@ function mapDispatchToProps(dispatch) {
         componentName: componentName
       });
     },
-    selectHourly: function selectHourly() {
+    setName: function setName(name) {
       return dispatch({
-        type: 'SELECT_HOURLY'
+        type: 'SET_NAME',
+        name: name
       });
     },
-    selectFixed: function selectFixed() {
+    setSearchResults: function setSearchResults(searchResults) {
       return dispatch({
-        type: 'SELECT_FIXED'
-      });
-    },
-    selectCurrencyType: function selectCurrencyType(value) {
-      return dispatch({
-        type: 'SELECT_CURRENCY_TYPE',
-        value: value
-      });
-    },
-    selectMaxBudget: function selectMaxBudget(value) {
-      return dispatch({
-        type: 'SELECT_MAX_BUDGET',
-        value: value
-      });
-    },
-    selectMinBudget: function selectMinBudget(value) {
-      return dispatch({
-        type: 'SELECT_MIN_BUDGET',
-        value: value
+        type: 'SET_SEARCH_RESULTS',
+        searchResults: searchResults
       });
     }
   };
 }
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_4__["connect"])(mapStoreToProps, mapDispatchToProps)(Payment));
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_3__["connect"])(mapStoreToProps, mapDispatchToProps)(Search));
 
 /***/ }),
 
-/***/ "./resources/js/project/FormComponents/skills/skills.css":
-/*!***************************************************************!*\
-  !*** ./resources/js/project/FormComponents/skills/skills.css ***!
-  \***************************************************************/
+/***/ "./resources/js/jobs/components/search/search.svg":
+/*!********************************************************!*\
+  !*** ./resources/js/jobs/components/search/search.svg ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/search.svg?5fe3f039f56c87ac49fd5b6c80c1be07";
+
+/***/ }),
+
+/***/ "./resources/js/jobs/components/searchResults/SearchResults.css":
+/*!**********************************************************************!*\
+  !*** ./resources/js/jobs/components/searchResults/SearchResults.css ***!
+  \**********************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(/*! !../../../../../node_modules/css-loader??ref--7-1!../../../../../node_modules/postcss-loader/src??ref--7-2!./skills.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/project/FormComponents/skills/skills.css");
+var content = __webpack_require__(/*! !../../../../../node_modules/css-loader??ref--7-1!../../../../../node_modules/postcss-loader/src??ref--7-2!./SearchResults.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/jobs/components/searchResults/SearchResults.css");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -36296,41 +35083,268 @@ if(false) {}
 
 /***/ }),
 
-/***/ "./resources/js/project/FormComponents/skills/skills.js":
-/*!**************************************************************!*\
-  !*** ./resources/js/project/FormComponents/skills/skills.js ***!
-  \**************************************************************/
+/***/ "./resources/js/jobs/components/searchResults/result/Result.css":
+/*!**********************************************************************!*\
+  !*** ./resources/js/jobs/components/searchResults/result/Result.css ***!
+  \**********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../../../node_modules/css-loader??ref--7-1!../../../../../../node_modules/postcss-loader/src??ref--7-2!./Result.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/jobs/components/searchResults/result/Result.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./resources/js/jobs/components/searchResults/result/result.js":
+/*!*********************************************************************!*\
+  !*** ./resources/js/jobs/components/searchResults/result/result.js ***!
+  \*********************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _skills_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./skills.css */ "./resources/js/project/FormComponents/skills/skills.css");
-/* harmony import */ var _skills_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_skills_css__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-
-
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _Result_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Result.css */ "./resources/js/jobs/components/searchResults/result/Result.css");
+/* harmony import */ var _Result_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_Result_css__WEBPACK_IMPORTED_MODULE_1__);
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
-function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
-function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter); }
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
-function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
-function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+
+
+
+var Result = /*#__PURE__*/function (_React$Component) {
+  _inherits(Result, _React$Component);
+
+  var _super = _createSuper(Result);
+
+  function Result(props) {
+    var _this;
+
+    _classCallCheck(this, Result);
+
+    _this = _super.call(this, props);
+    _this.state = {};
+    return _this;
+  }
+
+  _createClass(Result, [{
+    key: "render",
+    value: function render() {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null);
+    }
+  }]);
+
+  return Result;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+
+/* harmony default export */ __webpack_exports__["default"] = (Result);
+
+/***/ }),
+
+/***/ "./resources/js/jobs/components/searchResults/searchResults.js":
+/*!*********************************************************************!*\
+  !*** ./resources/js/jobs/components/searchResults/searchResults.js ***!
+  \*********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _SearchResults_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./SearchResults.css */ "./resources/js/jobs/components/searchResults/SearchResults.css");
+/* harmony import */ var _SearchResults_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_SearchResults_css__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _result_result__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./result/result */ "./resources/js/jobs/components/searchResults/result/result.js");
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+
+
+
+
+
+var SearchResults = /*#__PURE__*/function (_React$Component) {
+  _inherits(SearchResults, _React$Component);
+
+  var _super = _createSuper(SearchResults);
+
+  function SearchResults(props) {
+    var _this;
+
+    _classCallCheck(this, SearchResults);
+
+    _this = _super.call(this, props);
+    _this.state = {};
+    return _this;
+  }
+
+  _createClass(SearchResults, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      this.props.connect('SearchResults');
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var searchedJobs = null;
+
+      if (this.props.searchResults) {
+        searchedJobs = Object.entries(this.props.searchResults).map(function (result) {
+          var project = _objectSpread({}, result[1]);
+
+          return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+            className: "searchedJobCard",
+            key: project['id']
+          }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+            className: "searchedJobCard-item"
+          }, project['name']));
+        });
+      }
+
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "searchedJobCard"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "searchedJobCard-item"
+      }, searchedJobs)));
+    }
+  }]);
+
+  return SearchResults;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+
+function mapStoreToProps(store) {
+  return {
+    searchResults: store.searchResults
+  };
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    connect: function connect(componentName) {
+      return dispatch({
+        type: 'connected',
+        componentName: componentName
+      });
+    }
+  };
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["connect"])(mapStoreToProps, mapDispatchToProps)(SearchResults));
+
+/***/ }),
+
+/***/ "./resources/js/jobs/jobs.css":
+/*!************************************!*\
+  !*** ./resources/js/jobs/jobs.css ***!
+  \************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--7-1!../../../node_modules/postcss-loader/src??ref--7-2!./jobs.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/jobs/jobs.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./resources/js/jobs/jobs.js":
+/*!***********************************!*\
+  !*** ./resources/js/jobs/jobs.js ***!
+  \***********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _jobs_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./jobs.css */ "./resources/js/jobs/jobs.css");
+/* harmony import */ var _jobs_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_jobs_css__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _components_search_search__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/search/search */ "./resources/js/jobs/components/search/search.js");
+/* harmony import */ var _components_searchResults_searchResults__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/searchResults/searchResults */ "./resources/js/jobs/components/searchResults/searchResults.js");
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -36359,453 +35373,55 @@ var axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 
 
 
-var Skills = /*#__PURE__*/function (_React$Component) {
-  _inherits(Skills, _React$Component);
 
-  var _super = _createSuper(Skills);
 
-  function Skills(props) {
+var Jobs = /*#__PURE__*/function (_React$Component) {
+  _inherits(Jobs, _React$Component);
+
+  var _super = _createSuper(Jobs);
+
+  function Jobs(props) {
     var _this;
 
-    _classCallCheck(this, Skills);
-
-    _this = _super.call(this, props);
-    _this.state = {
-      value: '',
-      searchResults: [],
-      // selectedSkills: [],
-      showSkillsSearchResults: false,
-      error: null
-    };
-    _this.handleChange = _this.handleChange.bind(_assertThisInitialized(_this));
-    _this.handleBlur = _this.handleBlur.bind(_assertThisInitialized(_this));
-    _this.handleSearchResultSkillClicked = _this.handleSearchResultSkillClicked.bind(_assertThisInitialized(_this));
-    _this.handleSelectedSkillCloseClicked = _this.handleSelectedSkillCloseClicked.bind(_assertThisInitialized(_this));
-    return _this;
-  }
-
-  _createClass(Skills, [{
-    key: "componentDidMount",
-    value: function componentDidMount() {
-      this.props.connect('skills.js');
-    }
-  }, {
-    key: "handleChange",
-    value: function () {
-      var _handleChange = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee(event) {
-        var searchResults;
-        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
-          while (1) {
-            switch (_context.prev = _context.next) {
-              case 0:
-                this.setState({
-                  value: event.target.value
-                });
-                this.setState({
-                  showSkillsSearchResults: true
-                });
-                this.setState({
-                  error: null
-                });
-                searchResults = [];
-                _context.next = 6;
-                return axios.get("http://localhost:8000/skills?q=".concat(event.target.value)).then(function (response) {
-                  response.data.map(function (data) {
-                    searchResults.push([data.id, data.name]);
-                  });
-                })["catch"](function (err) {
-                  return console.log(err);
-                });
-
-              case 6:
-                this.setState({
-                  searchResults: searchResults
-                });
-
-              case 7:
-              case "end":
-                return _context.stop();
-            }
-          }
-        }, _callee, this);
-      }));
-
-      function handleChange(_x) {
-        return _handleChange.apply(this, arguments);
-      }
-
-      return handleChange;
-    }()
-  }, {
-    key: "handleBlur",
-    value: function handleBlur() {
-      // setTimeout may seem redundant here
-      // but it is here to prevent the searchsuggestions closing too early
-      // which will cause in the searchsuggestions onclick not working
-      // because the searchsuggestions will be immediately closed if the settimeout is not implemented
-      // as soon as handleBlur activates
-      setTimeout(function () {
-        this.setState({
-          value: ''
-        });
-        this.setState({
-          showSkillsSearchResults: false
-        }); // error checking
-
-        if (this.props.selectedSkills.length === 0) {
-          this.setState({
-            error: 'Please enter atleast 1 skill'
-          });
-        } else if (this.props.selectedSkills.length > 3) {
-          this.setState({
-            error: 'Please enter atmost 3 skills'
-          });
-        } else {
-          this.setState({
-            error: null
-          });
-        }
-      }.bind(this), 100);
-    }
-  }, {
-    key: "handleSearchResultSkillClicked",
-    value: function handleSearchResultSkillClicked(id, name) {
-      var joined = _toConsumableArray(this.props.selectedSkills);
-
-      joined.push([id, name]); // this.setState({selectedSkills: joined});
-
-      this.props.setSelectedSkills(joined); // error checking
-
-      if (joined.length === 0) {
-        this.setState({
-          error: 'Please enter atleast 1 skill'
-        });
-      } else if (joined.length > 3) {
-        this.setState({
-          error: 'Please enter atmost 3 skills'
-        });
-      } else {
-        this.setState({
-          error: null
-        });
-      }
-
-      this.props.handleNextButton();
-    }
-  }, {
-    key: "handleSelectedSkillCloseClicked",
-    value: function handleSelectedSkillCloseClicked(id) {
-      var joined = _toConsumableArray(this.props.selectedSkills);
-
-      for (var i = 0; i < joined.length; i++) {
-        if (joined[i][0] === id) {
-          joined.splice(i, 1);
-          break;
-        }
-      }
-
-      this.props.setSelectedSkills(joined); // error checking
-
-      if (joined.length === 0) {
-        this.setState({
-          error: 'Please enter atleast 1 skill'
-        });
-      } else if (joined.length > 3) {
-        this.setState({
-          error: 'Please enter atmost 3 skills'
-        });
-      } else {
-        this.setState({
-          error: null
-        });
-      }
-
-      this.props.handleNextButton();
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      var _this2 = this;
-
-      var results = null;
-
-      if (this.state.searchResults && this.state.value !== '') {
-        results = this.state.searchResults.map(function (result) {
-          for (var i = 0; i < _this2.props.selectedSkills.length; i++) {
-            if (_this2.props.selectedSkills[i][0] === result[0]) return;
-          }
-
-          return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
-            key: result[0],
-            result_id: result[0],
-            className: "SearchResult",
-            onClick: _this2.handleSearchResultSkillClicked.bind(_this2, result[0], result[1])
-          }, result[1]);
-        });
-      }
-
-      var selectedSkills = null;
-      var selectedSkillsOptions = null;
-
-      if (this.props.selectedSkills) {
-        selectedSkills = this.props.selectedSkills.map(function (skill) {
-          return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
-            key: skill[0],
-            value: skill[0],
-            className: "SelectedSkill"
-          }, skill[1], " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
-            onClick: _this2.handleSelectedSkillCloseClicked.bind(_this2, skill[0]),
-            className: "SelectedSkillClose"
-          }, "x"));
-        });
-        selectedSkillsOptions = this.props.selectedSkills.map(function (skill) {
-          return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("option", {
-            key: skill[0],
-            value: skill[0],
-            selected: true,
-            hidden: true
-          }, skill[1]);
-        });
-      }
-
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", null, "What skills are required?"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, " We've detected the following skills to suit your project. Feel free to modify these choices to best suit your needs."), this.state.error ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
-        className: "error"
-      }, this.state.error) : null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-        className: "SkillsContainer"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-        className: "SelectedSkills"
-      }, selectedSkills, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("select", {
-        name: "skills[]",
-        multiple: true,
-        hidden: true
-      }, selectedSkillsOptions)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
-        type: "text",
-        className: "SkillsSearchField",
-        placeholder: "Enter skills here...",
-        value: this.state.value,
-        onChange: this.handleChange,
-        onBlur: this.handleBlur
-      })), this.state.showSkillsSearchResults ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-        className: "SkillsSearchResults"
-      }, results) : null);
-    }
-  }]);
-
-  return Skills;
-}(react__WEBPACK_IMPORTED_MODULE_1___default.a.Component);
-
-function mapStoreToProps(store) {
-  return {
-    selectedSkills: store.skills.selectedSkills
-  };
-}
-
-function mapDispatchToProps(dispatch) {
-  return {
-    connect: function connect(componentName) {
-      return dispatch({
-        type: 'connected',
-        componentName: componentName
-      });
-    },
-    setSelectedSkills: function setSelectedSkills(value) {
-      return dispatch({
-        type: 'SET_SELECTED_SKILLS',
-        value: value
-      });
-    },
-    handleNextButton: function handleNextButton() {
-      return dispatch({
-        type: 'SET_NEXT_BUTTON_STATE'
-      });
-    }
-  };
-}
-
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_3__["connect"])(mapStoreToProps, mapDispatchToProps)(Skills));
-
-/***/ }),
-
-/***/ "./resources/js/project/app.css":
-/*!**************************************!*\
-  !*** ./resources/js/project/app.css ***!
-  \**************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-
-var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--7-1!../../../node_modules/postcss-loader/src??ref--7-2!./app.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/project/app.css");
-
-if(typeof content === 'string') content = [[module.i, content, '']];
-
-var transform;
-var insertInto;
-
-
-
-var options = {"hmr":true}
-
-options.transform = transform
-options.insertInto = undefined;
-
-var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
-
-if(content.locals) module.exports = content.locals;
-
-if(false) {}
-
-/***/ }),
-
-/***/ "./resources/js/project/app.js":
-/*!*************************************!*\
-  !*** ./resources/js/project/app.js ***!
-  \*************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _app_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./app.css */ "./resources/js/project/app.css");
-/* harmony import */ var _app_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_app_css__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _freelancer_logo_light_svg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./freelancer-logo-light.svg */ "./resources/js/project/freelancer-logo-light.svg");
-/* harmony import */ var _freelancer_logo_light_svg__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_freelancer_logo_light_svg__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _FormComponents_details_details__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./FormComponents/details/details */ "./resources/js/project/FormComponents/details/details.js");
-/* harmony import */ var _FormComponents_name_name__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./FormComponents/name/name */ "./resources/js/project/FormComponents/name/name.js");
-/* harmony import */ var _FormComponents_skills_skills__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./FormComponents/skills/skills */ "./resources/js/project/FormComponents/skills/skills.js");
-/* harmony import */ var _FormComponents_payment_payment__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./FormComponents/payment/payment */ "./resources/js/project/FormComponents/payment/payment.js");
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-
-
-
-
-
-
-
-
-
-var App = /*#__PURE__*/function (_React$Component) {
-  _inherits(App, _React$Component);
-
-  var _super = _createSuper(App);
-
-  function App(props) {
-    var _this;
-
-    _classCallCheck(this, App);
+    _classCallCheck(this, Jobs);
 
     _this = _super.call(this, props);
     _this.state = {};
-    _this.progress = _this.progress.bind(_assertThisInitialized(_this));
     return _this;
   }
 
-  _createClass(App, [{
+  _createClass(Jobs, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-      this.props.connect('app.js');
-    }
-  }, {
-    key: "progress",
-    value: function progress(e) {
-      e.preventDefault(); // progress validation logic
+      var _this2 = this;
 
-      if (this.props.nextButtonDisable) {
-        return;
-      }
-
-      this.props.handleNextButtonDisable(true);
-      this.props.handleNextClick();
-      this.props.disableNextButton();
+      this.props.connect('Jobs');
+      axios.get("http://localhost:8000/jobsapi?q=").then(function (response) {
+        _this2.props.setSearchResults(response.data);
+      })["catch"](function (err) {
+        return console.log(err);
+      });
     }
   }, {
     key: "render",
     value: function render() {
-      var _this2 = this;
-
-      var afterDetailsNextButton,
-          afterSkillsNextButton = null;
-
-      if (this.props.nextClicked === 0) {
-        afterDetailsNextButton = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-          className: "NextButtonContainer"
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-          className: "NextButton" + (this.props.nextButtonDisable === true ? ' NextButtonDisable' : ''),
-          onClick: function onClick(e) {
-            return _this2.progress(e);
-          }
-        }, "Next"));
-      }
-
-      if (this.props.nextClicked === 1) {
-        afterDetailsNextButton = null;
-        afterSkillsNextButton = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-          className: "NextButtonContainer"
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-          onClick: function onClick(e) {
-            return _this2.progress(e);
-          },
-          className: "NextButton" + (this.props.nextButtonDisable ? ' NextButtonDisable' : '')
-        }, "Next"));
-      }
-
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "Wrapper"
+        className: "container"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_search_search__WEBPACK_IMPORTED_MODULE_3__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "searchResultContainer"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "Background"
+        className: "jobFilter box-shadow"
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "Container"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "Top"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        src: _freelancer_logo_light_svg__WEBPACK_IMPORTED_MODULE_2___default.a,
-        className: "Logo"
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Tell us what you need done"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Contact skilled freelancers within minutes. View profiles, ratings, portfolios and chat with them. Pay the freelancer only when you are 100% satisfied with their work. ")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "Form"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "FormWrapper"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_FormComponents_name_name__WEBPACK_IMPORTED_MODULE_4__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_FormComponents_details_details__WEBPACK_IMPORTED_MODULE_3__["default"], null), afterDetailsNextButton, this.props.nextClicked > 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_FormComponents_skills_skills__WEBPACK_IMPORTED_MODULE_5__["default"], null) : null, afterSkillsNextButton, this.props.nextClicked > 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_FormComponents_payment_payment__WEBPACK_IMPORTED_MODULE_6__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        type: "submit",
-        className: "PostMyProjectButton"
-      }, "Yes, post my project")) : null)))));
+        className: "searchResults box-shadow"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_searchResults_searchResults__WEBPACK_IMPORTED_MODULE_4__["default"], null)))));
     }
   }]);
 
-  return App;
+  return Jobs;
 }(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
 
 function mapStoreToProps(store) {
-  return {
-    name: store.name,
-    details: store.details,
-    skills: store.skills,
-    payment: store.payment,
-    nextButtonDisable: store.nextButtonDisable,
-    nextClicked: store.nextClicked
-  };
+  return {};
 }
 
 function mapDispatchToProps(dispatch) {
@@ -36816,154 +35432,23 @@ function mapDispatchToProps(dispatch) {
         componentName: componentName
       });
     },
-    handleNextButtonDisable: function handleNextButtonDisable(value) {
+    setSearchResults: function setSearchResults(searchResults) {
       return dispatch({
-        type: 'SET_NEXT_BUTTON_STATE',
-        value: value
-      });
-    },
-    handleNextClick: function handleNextClick() {
-      return dispatch({
-        type: 'NEXT_BUTTON_CLICK'
-      });
-    },
-    disableNextButton: function disableNextButton() {
-      return dispatch({
-        type: 'DISABLE_NEXT_BUTTON'
+        type: 'SET_SEARCH_RESULTS',
+        searchResults: searchResults
       });
     }
   };
 }
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_7__["connect"])(mapStoreToProps, mapDispatchToProps)(App));
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["connect"])(mapStoreToProps, mapDispatchToProps)(Jobs));
 
 /***/ }),
 
-/***/ "./resources/js/project/freelancer-logo-light.svg":
-/*!********************************************************!*\
-  !*** ./resources/js/project/freelancer-logo-light.svg ***!
-  \********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "/images/freelancer-logo-light.svg?03df440b589cc2d7dea551c6b268dd7e";
-
-/***/ }),
-
-/***/ "./resources/js/project/post-project.js":
-/*!**********************************************!*\
-  !*** ./resources/js/project/post-project.js ***!
-  \**********************************************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _app__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./app */ "./resources/js/project/app.js");
-/* harmony import */ var _store_reducers_reducer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./store/reducers/reducer */ "./resources/js/project/store/reducers/reducer.js");
-/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/redux.js");
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var redux_devtools_extension__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! redux-devtools-extension */ "./node_modules/redux-devtools-extension/index.js");
-/* harmony import */ var redux_devtools_extension__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(redux_devtools_extension__WEBPACK_IMPORTED_MODULE_6__);
-function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-
- // import './post-project.css';
-// import logo from './freelancer-logo-light.svg';
-// import Details from './FormComponents/details/details';
-// import Name from './FormComponents/name/name';
-// import Skills from './FormComponents/skills/skills';
-// import Payment from './FormComponents/payment/payment';
-
-
-
-
-
-
-var store = Object(redux__WEBPACK_IMPORTED_MODULE_4__["createStore"])(_store_reducers_reducer__WEBPACK_IMPORTED_MODULE_3__["default"], Object(redux_devtools_extension__WEBPACK_IMPORTED_MODULE_6__["composeWithDevTools"])());
-
-var PostProject = /*#__PURE__*/function (_React$Component) {
-  _inherits(PostProject, _React$Component);
-
-  var _super = _createSuper(PostProject);
-
-  function PostProject() {
-    _classCallCheck(this, PostProject);
-
-    return _super.apply(this, arguments);
-  }
-
-  _createClass(PostProject, [{
-    key: "render",
-    value: function render() {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_redux__WEBPACK_IMPORTED_MODULE_5__["Provider"], {
-        store: store
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_app__WEBPACK_IMPORTED_MODULE_2__["default"], null));
-    }
-  }]);
-
-  return PostProject;
-}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component); // function PostProject() {
-//   const details = [
-//   ]
-//     return (
-//       <div className="Wrapper">
-//           <div className="Background"></div>
-//           <div className="Container">
-//             <div className="Top">
-//             <img src={logo} className="Logo"/>
-//             <h1>Tell us what you need done</h1>
-//             <p>Contact skilled freelancers within minutes. View profiles, ratings, portfolios and chat with them. Pay the freelancer only when you are 100% satisfied with their work. </p>
-//             </div>
-//             <div className="Form">
-//                 <div className="FormWrapper">                
-//                   <h3>Choose a name for your project</h3>
-//                   <input name="name" type="text" placeholder="e.g. Build me a website" />
-//                   <h3>Tell us more about your project</h3>
-//                   <p>Start with a bit about yourself or your business, and include an overview of what you need done.</p>
-//                   <textarea name="details" placeholder="Describe your project here..." rows="4"></textarea>
-//                   <button type="submit" class="PostMyProjectButton">Yes, post my project</button>
-//                 </div>
-//             </div>
-//           </div>
-//       </div>
-//     );
-//   }
-
-
-var domContainer = document.querySelector('#post_project');
-react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(PostProject, null), domContainer);
-
-/***/ }),
-
-/***/ "./resources/js/project/store/reducers/reducer.js":
-/*!********************************************************!*\
-  !*** ./resources/js/project/store/reducers/reducer.js ***!
-  \********************************************************/
+/***/ "./resources/js/jobs/store/reducer.js":
+/*!********************************************!*\
+  !*** ./resources/js/jobs/store/reducer.js ***!
+  \********************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -36976,35 +35461,8 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 var initialState = {
-  name: {
-    value: '',
-    error: null,
-    emptyError: null,
-    length: 0,
-    visited: 0
-  },
-  details: {
-    value: '',
-    error: null,
-    emptyError: null,
-    length: 0,
-    visited: 0
-  },
-  skills: {
-    selectedSkills: [],
-    visited: 0
-  },
-  payment: {
-    hourly: false,
-    fixed: true,
-    currencyType: null,
-    minBudget: null,
-    maxBudget: null,
-    error: null // visited: 0
-
-  },
-  nextButtonDisable: true,
-  nextClicked: 0
+  name: '',
+  searchResults: []
 };
 
 function reducer() {
@@ -37015,106 +35473,15 @@ function reducer() {
 
   switch (action.type) {
     case 'connected':
-      console.log('connected from ' + action.componentName);
-      break;
-
-    case 'SELECT_HOURLY':
-      newState.payment.hourly = true;
-      newState.payment.fixed = false;
-      break;
-
-    case 'SELECT_FIXED':
-      newState.payment.fixed = true;
-      newState.payment.hourly = false;
+      console.log(action.componentName + ' connected');
       break;
 
     case 'SET_NAME':
-      newState.name.value = action.value;
+      newState.name = action.name;
       break;
 
-    case 'SET_NAME_LENGTH':
-      newState.name.length = action.value;
-      break;
-
-    case 'SET_NAME_ERROR':
-      newState.name.error = action.value;
-      break;
-
-    case 'SET_NAME_EMPTY_ERROR':
-      newState.name.emptyError = action.value;
-      break;
-
-    case 'SET_DETAILS':
-      newState.details.value = action.value;
-      break;
-
-    case 'SET_DETAILS_LENGTH':
-      newState.details.length = action.value;
-      break;
-
-    case 'SET_DETAILS_ERROR':
-      newState.details.error = action.value;
-      break;
-
-    case 'SET_DETAILS_EMPTY_ERROR':
-      newState.details.emptyError = action.value;
-      break;
-
-    case 'SET_SELECTED_SKILLS':
-      newState.skills.selectedSkills = action.value;
-      break;
-
-    case 'SELECT_CURRENCY_TYPE':
-      newState.payment.currencyType = action.value;
-      break;
-
-    case 'SELECT_MIN_BUDGET':
-      newState.payment.minBudget = action.value;
-      break;
-
-    case 'SELECT_MAX_BUDGET':
-      newState.payment.maxBudget = action.value;
-      break;
-
-    case 'VISIT_NAME':
-      newState.name.visited++;
-      break;
-
-    case 'VISIT_DETAILS':
-      newState.details.visited++;
-      break;
-
-    case 'VISIT_SKILLS':
-      newState.skills.visited++;
-      break;
-
-    case 'NEXT_BUTTON_CLICK':
-      newState.nextClicked++;
-      break;
-
-    case 'SET_NEXT_BUTTON_STATE':
-      if (newState.nextClicked === 0) {
-        if (newState.name.length === 0 || newState.name.length > 255 || newState.details.length === 0 || newState.details.length > 4000) {
-          newState.nextButtonDisable = true;
-          break;
-        } else {
-          newState.nextButtonDisable = false;
-          break;
-        }
-      } else if (newState.nextClicked === 1) {
-        if (newState.name.length === 0 || newState.name.length > 255 || newState.details.length === 0 || newState.details.length > 4000 || newState.skills.selectedSkills.length === 0 || newState.skills.selectedSkills.length > 3) {
-          newState.nextButtonDisable = true;
-          break;
-        } else {
-          newState.nextButtonDisable = false;
-          break;
-        }
-      }
-
-      break;
-
-    case 'DISABLE_NEXT_BUTTON':
-      newState.nextButtonDisable = true;
+    case 'SET_SEARCH_RESULTS':
+      newState.searchResults = _objectSpread({}, action.searchResults);
       break;
 
     default:
@@ -37128,14 +35495,14 @@ function reducer() {
 
 /***/ }),
 
-/***/ 1:
-/*!****************************************************!*\
-  !*** multi ./resources/js/project/post-project.js ***!
-  \****************************************************/
+/***/ 2:
+/*!****************************************!*\
+  !*** multi ./resources/js/jobs/app.js ***!
+  \****************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! D:\coding\workspace\freelancerDotCom\resources\js\project\post-project.js */"./resources/js/project/post-project.js");
+module.exports = __webpack_require__(/*! D:\coding\workspace\freelancerDotCom\resources\js\jobs\app.js */"./resources/js/jobs/app.js");
 
 
 /***/ })
