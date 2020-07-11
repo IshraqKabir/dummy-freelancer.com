@@ -34,7 +34,6 @@ class ProjectController extends Controller
      */
     public function index()
     {
-        header("Set-Cookie", "HttpOnly;Secure;SameSite=Strict");
         return view('project.index');
     }
 

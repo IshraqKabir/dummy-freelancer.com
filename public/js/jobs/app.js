@@ -1968,7 +1968,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, ".jobFilterContainer {\r\n    padding: 24px 0px;\r\n    border-bottom: 1px solid #dedede;\r\n}\r\n\r\n.recentSearchesHeading {\r\n    font-family: Roboto;\r\n    font-size: 20px;\r\n    font-weight: 400;\r\n    line-height: 28px;\r\n}", ""]);
+exports.push([module.i, ".jobFilterContainer {\r\n    padding: 24px 0px;\r\n    border-bottom: 1px solid #dedede;\r\n}\r\n\r\n.recentSearchesHeading {\r\n    font-family: Roboto;\r\n    font-size: 20px;\r\n    font-weight: 400;\r\n    line-height: 28px;\r\n    margin-bottom: 16px;\r\n}", ""]);
 
 // exports
 
@@ -34957,11 +34957,24 @@ var JobFilter = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
+      var recentSearches = null;
+
+      if (this.props.recentSearches) {
+        recentSearches = this.props.recentSearches.map(function (search) {
+          if (search === '') return;
+          return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+            key: search
+          }, search);
+        });
+      }
+
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "jobFilterContainer"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
         className: "recentSearchesHeading"
-      }, "My Recent Searches"));
+      }, "My Recent Searches"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "recentSearches"
+      }, recentSearches));
     }
   }]);
 
@@ -34969,7 +34982,9 @@ var JobFilter = /*#__PURE__*/function (_React$Component) {
 }(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
 
 function mapStoreToProps(store) {
-  return {};
+  return {
+    recentSearches: store.recentSearches
+  };
 }
 
 function mapDispatchToProps(dispatch) {
@@ -35033,7 +35048,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _search_svg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./search.svg */ "./resources/js/jobs/components/search/search.svg");
 /* harmony import */ var _search_svg__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_search_svg__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var _cookie__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../cookie */ "./resources/js/jobs/cookie.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -35064,7 +35078,6 @@ var axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 
 
 
-
 var Search = /*#__PURE__*/function (_React$Component) {
   _inherits(Search, _React$Component);
 
@@ -35086,26 +35099,18 @@ var Search = /*#__PURE__*/function (_React$Component) {
     key: "componentDidMount",
     value: function componentDidMount() {
       this.props.connect('Search');
+      this.props.setRecentSearchesFromCookies();
     }
   }, {
     key: "handleSearch",
     value: function handleSearch() {
       var _this2 = this;
 
+      console.log('handlesearch');
+      this.props.setRecentSearches(this.props.name);
       axios.get("http://localhost:8000/jobsapi?q=".concat(this.props.name)).then(function (response) {
         _this2.props.setSearchResults(response.data);
-      }); // get recentSearches
-
-      var recentSearches = Object(_cookie__WEBPACK_IMPORTED_MODULE_4__["getCookie"])('recentSearches');
-      recentSearches = recentSearches.split('|'); // set new recentSearches
-
-      if (!recentSearches.includes(this.props.name) && this.props.name !== '') {
-        recentSearches.unshift(this.props.name);
-        recentSearches = recentSearches.join('|');
-        Object(_cookie__WEBPACK_IMPORTED_MODULE_4__["setCookie"])('recentSearches', recentSearches, 1);
-      }
-
-      console.log(Object(_cookie__WEBPACK_IMPORTED_MODULE_4__["getCookie"])('recentSearches'));
+      });
     }
   }, {
     key: "handleChange",
@@ -35169,6 +35174,17 @@ function mapDispatchToProps(dispatch) {
       return dispatch({
         type: 'SET_SEARCH_RESULTS',
         searchResults: searchResults
+      });
+    },
+    setRecentSearches: function setRecentSearches(name) {
+      return dispatch({
+        type: 'SET_RECENT_SEARCHES',
+        name: name
+      });
+    },
+    setRecentSearchesFromCookies: function setRecentSearchesFromCookies() {
+      return dispatch({
+        type: 'SET_RECENT_SEARCHES_FROM_COOKIES'
       });
     }
   };
@@ -35552,15 +35568,30 @@ function mapDispatchToProps(dispatch) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _cookie__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../cookie */ "./resources/js/jobs/cookie.js");
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
+
 var initialState = {
   name: '',
-  searchResults: []
+  searchResults: [],
+  recentSearches: []
 };
 
 function reducer() {
@@ -35580,6 +35611,31 @@ function reducer() {
 
     case 'SET_SEARCH_RESULTS':
       newState.searchResults = _objectSpread({}, action.searchResults);
+      break;
+
+    case 'SET_RECENT_SEARCHES':
+      // get recentSearches
+      var recentSearches = Object(_cookie__WEBPACK_IMPORTED_MODULE_0__["getCookie"])('recentSearches');
+      recentSearches = recentSearches.split('|'); // set new recentSearches
+
+      if (!newState.recentSearches.includes(action.name) && action.name !== '') {
+        recentSearches.unshift(action.name);
+        recentSearches = recentSearches.join('|');
+        Object(_cookie__WEBPACK_IMPORTED_MODULE_0__["setCookie"])('recentSearches', recentSearches, 1);
+      } // set recent searches
+
+
+      newState.recentSearches = [action.name].concat(_toConsumableArray(newState.recentSearches.filter(function (item) {
+        return item !== action.name;
+      })));
+      break;
+
+    case 'SET_RECENT_SEARCHES_FROM_COOKIES':
+      if (Object(_cookie__WEBPACK_IMPORTED_MODULE_0__["getCookie"])('recentSearches') !== '') {
+        newState.recentSearches = Object(_cookie__WEBPACK_IMPORTED_MODULE_0__["getCookie"])('recentSearches').split('|');
+        console.log(newState.recentSearches = Object(_cookie__WEBPACK_IMPORTED_MODULE_0__["getCookie"])('recentSearches').split('|'));
+      }
+
       break;
 
     default:

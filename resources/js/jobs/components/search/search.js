@@ -8,7 +8,6 @@ const axios = require('axios');
 
 import { connect } from 'react-redux';
 
-import { getCookie, setCookie } from '../../cookie';
 
 class Search extends React.Component
 {
@@ -26,27 +25,19 @@ class Search extends React.Component
   componentDidMount ()
   {
     this.props.connect('Search');
+    this.props.setRecentSearchesFromCookies();
   }
 
   handleSearch ()
   {
+    console.log('handlesearch');
+    this.props.setRecentSearches(this.props.name);
     axios.get(`http://localhost:8000/jobsapi?q=${this.props.name}`)
       .then(response => {
-        this.props.setSearchResults(response.data) 
+        this.props.setSearchResults(response.data); 
     })
 
-    // get recentSearches
-    let recentSearches = getCookie('recentSearches');
-    recentSearches = recentSearches.split('|');
-
-    // set new recentSearches
-    if (!recentSearches.includes(this.props.name) && this.props.name !== '')
-    {
-      recentSearches.unshift(this.props.name);
-      recentSearches = recentSearches.join('|')
-      setCookie('recentSearches', recentSearches, 1);
-    }
-    console.log(getCookie('recentSearches'));
+    
   }
 
   handleChange (e)
@@ -98,6 +89,8 @@ function mapDispatchToProps (dispatch)
     connect: (componentName) => dispatch({type:'connected', componentName}),
     setName: (name) => dispatch({type: 'SET_NAME', name}),
     setSearchResults: (searchResults) => dispatch({type: 'SET_SEARCH_RESULTS', searchResults}),
+    setRecentSearches: (name) => dispatch({type: 'SET_RECENT_SEARCHES', name}),
+    setRecentSearchesFromCookies: () => dispatch({type: 'SET_RECENT_SEARCHES_FROM_COOKIES'}),
 
   }
 }

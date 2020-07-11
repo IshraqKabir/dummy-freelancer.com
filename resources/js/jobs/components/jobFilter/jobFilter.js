@@ -21,11 +21,22 @@ class JobFilter extends React.Component
 
   render ()
   {
+    let recentSearches = null;
+    if (this.props.recentSearches)
+    {
+      recentSearches = this.props.recentSearches.map(search => {
+        if (search === '') return;
+        return <p key={search}>{search}</p>
+      })
+    }
     return (
       <div className="jobFilterContainer">
         <h5 className="recentSearchesHeading">
           My Recent Searches
         </h5>
+        <div className="recentSearches">
+          {recentSearches}
+        </div>
       </div>
     );
   }
@@ -34,7 +45,7 @@ class JobFilter extends React.Component
 function mapStoreToProps (store)
 {
   return {
-
+    recentSearches: store.recentSearches
   }
 }
 
