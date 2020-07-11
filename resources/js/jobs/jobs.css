@@ -21,6 +21,7 @@
   height: 90vh;
   width: 70%;
   padding-bottom: 100px;
+  overflow: hidden;
 }
 
 .box-shadow {
@@ -36,4 +37,9 @@
   .searchResults {
     width: 100%;
   }
+}
+
+.jobFilter {
+  box-sizing: border-box;
+  padding: 24px;
 }

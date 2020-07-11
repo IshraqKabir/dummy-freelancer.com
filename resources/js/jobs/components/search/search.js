@@ -1,4 +1,4 @@
-import React from 'react';
+  import React from 'react';
 
 import './Search.css';
 
@@ -7,6 +7,8 @@ import searchIcon from './search.svg';
 const axios = require('axios');
 
 import { connect } from 'react-redux';
+
+import { getCookie, setCookie } from '../../cookie';
 
 class Search extends React.Component
 {
@@ -28,8 +30,23 @@ class Search extends React.Component
 
   handleSearch ()
   {
-    axios.get(`http://localhost:8000/jobs?q=${this.props.name}`)
-      .then(response => this.props.setSearchResults(response.data))
+    axios.get(`http://localhost:8000/jobsapi?q=${this.props.name}`)
+      .then(response => {
+        this.props.setSearchResults(response.data) 
+    })
+
+    // get recentSearches
+    let recentSearches = getCookie('recentSearches');
+    recentSearches = recentSearches.split('|');
+
+    // set new recentSearches
+    if (!recentSearches.includes(this.props.name) && this.props.name !== '')
+    {
+      recentSearches.unshift(this.props.name);
+      recentSearches = recentSearches.join('|')
+      setCookie('recentSearches', recentSearches, 1);
+    }
+    console.log(getCookie('recentSearches'));
   }
 
   handleChange (e)

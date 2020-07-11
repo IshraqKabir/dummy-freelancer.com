@@ -1,0 +1,85 @@
+.searchedJobCard {
+    width: 100%;
+    padding: 0px 24px;
+    color: black;
+    overflow: hidden;
+    box-sizing: border-box;
+    display: flex;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+.searchedJobCard:hover {
+    background-color: #f7f7f7;
+}
+
+.searchedJobCard-item {
+    box-sizing: border-box;
+    padding: 24px 0;
+    border-bottom: 1px solid #dedede;
+    display: flex;
+}
+
+.projectName {
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.projectName:hover {
+    color: rgb(19, 159, 240);
+    text-decoration: underline;
+}
+
+.projectDetails {
+    margin: 14px 0px 16px 0px;
+    font-family: Roboto;
+    font-size: 14px;
+    line-height: 19.6px;
+    -webkit-line-clamp: 3;
+    letter-spacing: 0.5px;
+}
+
+.skills {
+    display: flex;
+    padding-right: 24px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.skill {
+    margin-right: 8px;
+    font-family: Roboto;
+    font-size: 16px;
+    color: rgb(0, 127, 237);
+    line-height: 19.6px;
+    letter-spacing: 0.5px;
+}
+
+.jobContainer {
+    width: 80%;
+}
+
+.budget {
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+}
+
+@media only screen and (max-width: 950px) {
+    .searchedJobCard-item {
+        flex-direction: column;
+    }
+
+    .budget {
+        font-size: 14px;
+    }
+
+    .jobContainer {
+        padding-bottom: 8px;
+    }
+}

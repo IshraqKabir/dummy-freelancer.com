@@ -60,6 +60,10 @@
 
         .three, .four {
             margin-right: 40px;
+
+            @include media('<=400px') {
+                display: none;
+            }
         }
 
         .link-set-2 {

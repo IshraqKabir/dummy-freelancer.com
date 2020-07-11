@@ -8,6 +8,7 @@ import { connect } from 'react-redux';
 
 import Search from './components/search/search';
 import SearchResults from './components/searchResults/searchResults';
+import JobFilter from './components/jobFilter/jobFilter';
 
 class Jobs extends React.Component
 {
@@ -37,7 +38,7 @@ class Jobs extends React.Component
           <Search />
           <div className="searchResultContainer">
             <div className="jobFilter box-shadow">
-              
+              <JobFilter />
             </div>
             <div className="searchResults box-shadow">
               <SearchResults />

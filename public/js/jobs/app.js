@@ -1956,6 +1956,25 @@ module.exports = {
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/jobs/components/jobFilter/JobFilter.css":
+/*!**********************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--7-1!./node_modules/postcss-loader/src??ref--7-2!./resources/js/jobs/components/jobFilter/JobFilter.css ***!
+  \**********************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".jobFilterContainer {\r\n    padding: 24px 0px;\r\n    border-bottom: 1px solid #dedede;\r\n}\r\n\r\n.recentSearchesHeading {\r\n    font-family: Roboto;\r\n    font-size: 20px;\r\n    font-weight: 400;\r\n    line-height: 28px;\r\n}", ""]);
+
+// exports
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/jobs/components/search/Search.css":
 /*!****************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader??ref--7-1!./node_modules/postcss-loader/src??ref--7-2!./resources/js/jobs/components/search/Search.css ***!
@@ -1987,26 +2006,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, "", ""]);
-
-// exports
-
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/jobs/components/searchResults/result/Result.css":
-/*!******************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader??ref--7-1!./node_modules/postcss-loader/src??ref--7-2!./resources/js/jobs/components/searchResults/result/Result.css ***!
-  \******************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(/*! ../../../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "", ""]);
+exports.push([module.i, ".searchedJobCard {\r\n    width: 100%;\r\n    padding: 0px 24px;\r\n    color: black;\r\n    overflow: hidden;\r\n    box-sizing: border-box;\r\n    display: flex;\r\n}\r\n\r\na {\r\n    color: black;\r\n    text-decoration: none;\r\n}\r\n\r\n.searchedJobCard:hover {\r\n    background-color: #f7f7f7;\r\n}\r\n\r\n.searchedJobCard-item {\r\n    box-sizing: border-box;\r\n    padding: 24px 0;\r\n    border-bottom: 1px solid #dedede;\r\n    display: flex;\r\n}\r\n\r\n.projectName {\r\n    text-decoration: none;\r\n    font-size: 16px;\r\n    line-height: 24px;\r\n}\r\n\r\n.projectName:hover {\r\n    color: rgb(19, 159, 240);\r\n    text-decoration: underline;\r\n}\r\n\r\n.projectDetails {\r\n    margin: 14px 0px 16px 0px;\r\n    font-family: Roboto;\r\n    font-size: 14px;\r\n    line-height: 19.6px;\r\n    -webkit-line-clamp: 3;\r\n    letter-spacing: 0.5px;\r\n}\r\n\r\n.skills {\r\n    display: flex;\r\n    padding-right: 24px;\r\n    display: flex;\r\n    flex-wrap: wrap;\r\n}\r\n\r\n.skill {\r\n    margin-right: 8px;\r\n    font-family: Roboto;\r\n    font-size: 16px;\r\n    color: rgb(0, 127, 237);\r\n    line-height: 19.6px;\r\n    letter-spacing: 0.5px;\r\n}\r\n\r\n.jobContainer {\r\n    width: 80%;\r\n}\r\n\r\n.budget {\r\n    font-family: Roboto;\r\n    font-size: 16px;\r\n    font-weight: 700;\r\n    line-height: 24px;\r\n}\r\n\r\n@media only screen and (max-width: 950px) {\r\n    .searchedJobCard-item {\r\n        flex-direction: column;\r\n    }\r\n\r\n    .budget {\r\n        font-size: 14px;\r\n    }\r\n\r\n    .jobContainer {\r\n        padding-bottom: 8px;\r\n    }\r\n}", ""]);
 
 // exports
 
@@ -2025,7 +2025,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".container {\n  width: 100vw;\n  height: 100%;\n  background-color: #f0f0f0;\n}\n\n.searchResultContainer {\n  padding: 0px 4%;\n  display: flex;\n  justify-content: space-between;\n}\n\n.jobFilter {\n  background-color: white;\n  height: 50vh;\n  width: 28%;\n}\n\n.searchResults {\n  background-color: white;\n  height: 90vh;\n  width: 70%;\n  padding-bottom: 100px;\n}\n\n.box-shadow {\n  box-shadow: rgba(0, 0, 0, 0.12) 0px 0px 6px 0px, rgba(0, 0, 0, 0.16) 0px 4px 10px 0px;\n}\n\n@media only screen and (max-width: 950px) {\n  .jobFilter {\n    display: none;\n  }\n  .searchResults {\n    width: 100%;\n  }\n}", ""]);
+exports.push([module.i, ".container {\n  width: 100vw;\n  height: 100%;\n  background-color: #f0f0f0;\n}\n\n.searchResultContainer {\n  padding: 0px 4%;\n  display: flex;\n  justify-content: space-between;\n}\n\n.jobFilter {\n  background-color: white;\n  height: 50vh;\n  width: 28%;\n}\n\n.searchResults {\n  background-color: white;\n  height: 90vh;\n  width: 70%;\n  padding-bottom: 100px;\n  overflow: hidden;\n}\n\n.box-shadow {\n  box-shadow: rgba(0, 0, 0, 0.12) 0px 0px 6px 0px, rgba(0, 0, 0, 0.16) 0px 4px 10px 0px;\n}\n\n@media only screen and (max-width: 950px) {\n  .jobFilter {\n    display: none;\n  }\n  .searchResults {\n    width: 100%;\n  }\n}\n\n.jobFilter {\n  box-sizing: border-box;\n  padding: 24px;\n}\n", ""]);
 
 // exports
 
@@ -34864,6 +34864,129 @@ react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render( /*#__PURE__*/react__WEB
 
 /***/ }),
 
+/***/ "./resources/js/jobs/components/jobFilter/JobFilter.css":
+/*!**************************************************************!*\
+  !*** ./resources/js/jobs/components/jobFilter/JobFilter.css ***!
+  \**************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../../node_modules/css-loader??ref--7-1!../../../../../node_modules/postcss-loader/src??ref--7-2!./JobFilter.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/jobs/components/jobFilter/JobFilter.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./resources/js/jobs/components/jobFilter/jobFilter.js":
+/*!*************************************************************!*\
+  !*** ./resources/js/jobs/components/jobFilter/jobFilter.js ***!
+  \*************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _JobFilter_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./JobFilter.css */ "./resources/js/jobs/components/jobFilter/JobFilter.css");
+/* harmony import */ var _JobFilter_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_JobFilter_css__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+
+
+
+
+var JobFilter = /*#__PURE__*/function (_React$Component) {
+  _inherits(JobFilter, _React$Component);
+
+  var _super = _createSuper(JobFilter);
+
+  function JobFilter(props) {
+    var _this;
+
+    _classCallCheck(this, JobFilter);
+
+    _this = _super.call(this, props);
+    _this.state = {};
+    return _this;
+  }
+
+  _createClass(JobFilter, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      this.props.connect('JobFilter');
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "jobFilterContainer"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
+        className: "recentSearchesHeading"
+      }, "My Recent Searches"));
+    }
+  }]);
+
+  return JobFilter;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+
+function mapStoreToProps(store) {
+  return {};
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    connect: function connect(componentName) {
+      return dispatch({
+        type: 'connected',
+        componentName: componentName
+      });
+    }
+  };
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["connect"])(mapStoreToProps, mapDispatchToProps)(JobFilter));
+
+/***/ }),
+
 /***/ "./resources/js/jobs/components/search/Search.css":
 /*!********************************************************!*\
   !*** ./resources/js/jobs/components/search/Search.css ***!
@@ -34910,6 +35033,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _search_svg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./search.svg */ "./resources/js/jobs/components/search/search.svg");
 /* harmony import */ var _search_svg__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_search_svg__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _cookie__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../cookie */ "./resources/js/jobs/cookie.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -34940,6 +35064,7 @@ var axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 
 
 
+
 var Search = /*#__PURE__*/function (_React$Component) {
   _inherits(Search, _React$Component);
 
@@ -34967,9 +35092,20 @@ var Search = /*#__PURE__*/function (_React$Component) {
     value: function handleSearch() {
       var _this2 = this;
 
-      axios.get("http://localhost:8000/jobs?q=".concat(this.props.name)).then(function (response) {
-        return _this2.props.setSearchResults(response.data);
-      });
+      axios.get("http://localhost:8000/jobsapi?q=".concat(this.props.name)).then(function (response) {
+        _this2.props.setSearchResults(response.data);
+      }); // get recentSearches
+
+      var recentSearches = Object(_cookie__WEBPACK_IMPORTED_MODULE_4__["getCookie"])('recentSearches');
+      recentSearches = recentSearches.split('|'); // set new recentSearches
+
+      if (!recentSearches.includes(this.props.name) && this.props.name !== '') {
+        recentSearches.unshift(this.props.name);
+        recentSearches = recentSearches.join('|');
+        Object(_cookie__WEBPACK_IMPORTED_MODULE_4__["setCookie"])('recentSearches', recentSearches, 1);
+      }
+
+      console.log(Object(_cookie__WEBPACK_IMPORTED_MODULE_4__["getCookie"])('recentSearches'));
     }
   }, {
     key: "handleChange",
@@ -35083,103 +35219,6 @@ if(false) {}
 
 /***/ }),
 
-/***/ "./resources/js/jobs/components/searchResults/result/Result.css":
-/*!**********************************************************************!*\
-  !*** ./resources/js/jobs/components/searchResults/result/Result.css ***!
-  \**********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-
-var content = __webpack_require__(/*! !../../../../../../node_modules/css-loader??ref--7-1!../../../../../../node_modules/postcss-loader/src??ref--7-2!./Result.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/jobs/components/searchResults/result/Result.css");
-
-if(typeof content === 'string') content = [[module.i, content, '']];
-
-var transform;
-var insertInto;
-
-
-
-var options = {"hmr":true}
-
-options.transform = transform
-options.insertInto = undefined;
-
-var update = __webpack_require__(/*! ../../../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
-
-if(content.locals) module.exports = content.locals;
-
-if(false) {}
-
-/***/ }),
-
-/***/ "./resources/js/jobs/components/searchResults/result/result.js":
-/*!*********************************************************************!*\
-  !*** ./resources/js/jobs/components/searchResults/result/result.js ***!
-  \*********************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _Result_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Result.css */ "./resources/js/jobs/components/searchResults/result/Result.css");
-/* harmony import */ var _Result_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_Result_css__WEBPACK_IMPORTED_MODULE_1__);
-function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-
-
-
-var Result = /*#__PURE__*/function (_React$Component) {
-  _inherits(Result, _React$Component);
-
-  var _super = _createSuper(Result);
-
-  function Result(props) {
-    var _this;
-
-    _classCallCheck(this, Result);
-
-    _this = _super.call(this, props);
-    _this.state = {};
-    return _this;
-  }
-
-  _createClass(Result, [{
-    key: "render",
-    value: function render() {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null);
-    }
-  }]);
-
-  return Result;
-}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
-
-/* harmony default export */ __webpack_exports__["default"] = (Result);
-
-/***/ }),
-
 /***/ "./resources/js/jobs/components/searchResults/searchResults.js":
 /*!*********************************************************************!*\
   !*** ./resources/js/jobs/components/searchResults/searchResults.js ***!
@@ -35194,7 +35233,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _SearchResults_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./SearchResults.css */ "./resources/js/jobs/components/searchResults/SearchResults.css");
 /* harmony import */ var _SearchResults_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_SearchResults_css__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var _result_result__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./result/result */ "./resources/js/jobs/components/searchResults/result/result.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
@@ -35227,7 +35265,6 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
 
 
-
 var SearchResults = /*#__PURE__*/function (_React$Component) {
   _inherits(SearchResults, _React$Component);
 
@@ -35240,6 +35277,7 @@ var SearchResults = /*#__PURE__*/function (_React$Component) {
 
     _this = _super.call(this, props);
     _this.state = {};
+    _this.handleClick = _this.handleClick.bind(_assertThisInitialized(_this));
     return _this;
   }
 
@@ -35249,6 +35287,9 @@ var SearchResults = /*#__PURE__*/function (_React$Component) {
       this.props.connect('SearchResults');
     }
   }, {
+    key: "handleClick",
+    value: function handleClick(id) {}
+  }, {
     key: "render",
     value: function render() {
       var searchedJobs = null;
@@ -35257,20 +35298,36 @@ var SearchResults = /*#__PURE__*/function (_React$Component) {
         searchedJobs = Object.entries(this.props.searchResults).map(function (result) {
           var project = _objectSpread({}, result[1]);
 
+          var skills = project['skills'].map(function (skill) {
+            return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+              className: "skill",
+              href: "#",
+              key: skill.pivot['skill_id']
+            }, skill['name']);
+          });
           return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
             className: "searchedJobCard",
             key: project['id']
           }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
             className: "searchedJobCard-item"
-          }, project['name']));
+          }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+            className: "jobContainer"
+          }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+            className: "projectName bold",
+            href: "/project/".concat(project['id'])
+          }, project['name']), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+            className: "projectDetails"
+          }, project['details']), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+            className: "skills"
+          }, skills)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+            className: "budgetContainer"
+          }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+            className: "budget"
+          }, project['min_budget'], " - ", project['max_budget'], " ", project['currency_type'], project['project_type'] === 'hourly' ? ' / hour' : null))));
         });
       }
 
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "searchedJobCard"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "searchedJobCard-item"
-      }, searchedJobs)));
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, searchedJobs);
     }
   }]);
 
@@ -35295,6 +35352,45 @@ function mapDispatchToProps(dispatch) {
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["connect"])(mapStoreToProps, mapDispatchToProps)(SearchResults));
+
+/***/ }),
+
+/***/ "./resources/js/jobs/cookie.js":
+/*!*************************************!*\
+  !*** ./resources/js/jobs/cookie.js ***!
+  \*************************************/
+/*! exports provided: getCookie, setCookie */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getCookie", function() { return getCookie; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setCookie", function() { return setCookie; });
+function getCookie(cname) {
+  var name = cname + "=";
+  var decodedCookie = decodeURIComponent(document.cookie);
+  var ca = decodedCookie.split(';');
+
+  for (var i = 0; i < ca.length; i++) {
+    var c = ca[i];
+
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+
+  return "";
+}
+function setCookie(cname, cvalue, exdays) {
+  var d = new Date();
+  d.setTime(d.getTime() + exdays * 24 * 60 * 60 * 1000);
+  var expires = "expires=" + d.toUTCString();
+  document.cookie = cname + "=" + cvalue + ";" + expires;
+}
 
 /***/ }),
 
@@ -35344,6 +35440,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var _components_search_search__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/search/search */ "./resources/js/jobs/components/search/search.js");
 /* harmony import */ var _components_searchResults_searchResults__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/searchResults/searchResults */ "./resources/js/jobs/components/searchResults/searchResults.js");
+/* harmony import */ var _components_jobFilter_jobFilter__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/jobFilter/jobFilter */ "./resources/js/jobs/components/jobFilter/jobFilter.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -35370,6 +35467,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
 
 var axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+
 
 
 
@@ -35411,7 +35509,7 @@ var Jobs = /*#__PURE__*/function (_React$Component) {
         className: "searchResultContainer"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "jobFilter box-shadow"
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_jobFilter_jobFilter__WEBPACK_IMPORTED_MODULE_5__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "searchResults box-shadow"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_searchResults_searchResults__WEBPACK_IMPORTED_MODULE_4__["default"], null)))));
     }

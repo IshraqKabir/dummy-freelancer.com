@@ -70,6 +70,13 @@
   margin-right: 40px;
 }
 
+@media (max-width: 400px) {
+  .navbar .second_section .three,
+  .navbar .second_section .four {
+    display: none;
+  }
+}
+
 .navbar .second_section .link-set-2 {
   display: flex;
   align-items: center;
