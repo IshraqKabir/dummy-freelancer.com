@@ -2025,7 +2025,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".container {\n  width: 100vw;\n  height: 100%;\n  background-color: #f0f0f0;\n}\n\n.searchResultContainer {\n  padding: 0px 4%;\n  display: flex;\n  justify-content: space-between;\n}\n\n.jobFilter {\n  background-color: white;\n  height: 50vh;\n  width: 28%;\n}\n\n.searchResults {\n  background-color: white;\n  height: 90vh;\n  width: 70%;\n  padding-bottom: 100px;\n  overflow: hidden;\n}\n\n.box-shadow {\n  box-shadow: rgba(0, 0, 0, 0.12) 0px 0px 6px 0px, rgba(0, 0, 0, 0.16) 0px 4px 10px 0px;\n}\n\n@media only screen and (max-width: 950px) {\n  .jobFilter {\n    display: none;\n  }\n  .searchResults {\n    width: 100%;\n  }\n}\n\n.jobFilter {\n  box-sizing: border-box;\n  padding: 24px;\n}\n", ""]);
+exports.push([module.i, ".container {\n  width: 100vw;\n  height: 100%;\n  background-color: #f0f0f0;\n  display: flex;\n  flex-direction: column;\n  align-content: center;\n  box-sizing: border-box;\n}\n\n.searchResultContainer {\n  padding: 0px 4%;  \n  display: flex;\n  justify-content: space-between;\n}\n\n@media only screen and (max-width: 700px) {\n  .container {\n    padding: 0px 15px;\n  }\n}\n\n.jobFilter {\n  background-color: white;\n  height: 50vh;\n  width: 22%;\n}\n\n.searchResults {\n  background-color: white;\n  height: 90vh;\n  width: 75%;\n  padding-bottom: 100px;\n  overflow: hidden;\n}\n\n.box-shadow {\n  box-shadow: rgba(0, 0, 0, 0.12) 0px 0px 6px 0px, rgba(0, 0, 0, 0.16) 0px 4px 10px 0px;\n}\n\n@media only screen and (max-width: 950px) {\n  .jobFilter {\n    display: none;\n  }\n  .searchResults {\n    width: 100%;\n  }\n}\n\n.jobFilter {\n  box-sizing: border-box;\n  padding: 24px;\n}\n", ""]);
 
 // exports
 
@@ -35626,7 +35626,7 @@ function reducer() {
 
 
       newState.recentSearches = [action.name].concat(_toConsumableArray(newState.recentSearches.filter(function (item) {
-        return item !== action.name;
+        return item != action.name;
       })));
       break;
 

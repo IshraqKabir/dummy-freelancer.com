@@ -34,7 +34,7 @@ function reducer(state = initialState, action) {
             }
 
             // set recent searches
-            newState.recentSearches = [action.name, ...newState.recentSearches.filter(item => item !== action.name)];            
+            newState.recentSearches = [action.name, ...newState.recentSearches.filter(item => item != action.name)];            
             break;
         case 'SET_RECENT_SEARCHES_FROM_COOKIES':
             if (getCookie('recentSearches') !== '') {
