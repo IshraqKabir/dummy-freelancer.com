@@ -4,6 +4,8 @@ import './JobFilter.css';
 
 import { connect } from 'react-redux';
 
+const axios = require('axios');
+
 class JobFilter extends React.Component
 {
   constructor (props)
@@ -12,11 +14,23 @@ class JobFilter extends React.Component
     this.state = {
            
     };
+    this.handleRecentSearchClicked = this.handleRecentSearchClicked.bind(this);
   }
 
   componentDidMount ()
   {
     this.props.connect('JobFilter');
+  }
+
+  handleRecentSearchClicked (search)
+  {
+    this.props.handleRecentSearchClicked(search);
+    this.props.setRecentSearches(search);
+
+    axios.get(`http://localhost:8000/jobsapi?q=${search}`)
+      .then(response => {
+        this.props.setSearchResults(response.data); 
+    })
   }
 
   render ()
@@ -26,7 +40,11 @@ class JobFilter extends React.Component
     {
       recentSearches = this.props.recentSearches.map(search => {
         if (search === '') return;
-        return <p key={search}>{search}</p>
+        return <div 
+                key={search}
+                className="recentSearch"
+                onClick={() => this.handleRecentSearchClicked(search)}
+              >{search}</div>
       })
     }
     return (
@@ -53,6 +71,9 @@ function mapDispatchToProps (dispatch)
 {
   return {
     connect: (componentName) => dispatch({type:'connected', componentName}),
+    handleRecentSearchClicked: (search) => dispatch({type: 'HANDLE_RECENT_SEARCH_CLICKED', search}),
+    setRecentSearches: (name) => dispatch({type: 'SET_RECENT_SEARCHES', name}),
+    setSearchResults: (searchResults) => dispatch({type: 'SET_SEARCH_RESULTS', searchResults}),
   }
 }
 

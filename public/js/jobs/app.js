@@ -1968,7 +1968,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, ".jobFilterContainer {\r\n    padding: 24px 0px;\r\n    border-bottom: 1px solid #dedede;\r\n}\r\n\r\n.recentSearchesHeading {\r\n    font-family: Roboto;\r\n    font-size: 20px;\r\n    font-weight: 400;\r\n    line-height: 28px;\r\n    margin-bottom: 16px;\r\n}", ""]);
+exports.push([module.i, ".jobFilterContainer {\r\n    padding: 24px 0px;\r\n    border-bottom: 1px solid #dedede;\r\n}\r\n\r\n.recentSearchesHeading {\r\n    font-family: Roboto;\r\n    font-size: 20px;\r\n    font-weight: 400;\r\n    line-height: 28px;\r\n    margin-bottom: 16px;\r\n}\r\n\r\n.recentSearch {\r\n    box-sizing: border-box;\r\n    cursor: pointer;\r\n    margin-bottom: 8px;\r\n    line-height: 19.6px;\r\n    font-family: Roboto;\r\n    font-size: 14px;\r\n}", ""]);
 
 // exports
 
@@ -34934,6 +34934,8 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
 
 
+var axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+
 var JobFilter = /*#__PURE__*/function (_React$Component) {
   _inherits(JobFilter, _React$Component);
 
@@ -34946,6 +34948,7 @@ var JobFilter = /*#__PURE__*/function (_React$Component) {
 
     _this = _super.call(this, props);
     _this.state = {};
+    _this.handleRecentSearchClicked = _this.handleRecentSearchClicked.bind(_assertThisInitialized(_this));
     return _this;
   }
 
@@ -34955,15 +34958,32 @@ var JobFilter = /*#__PURE__*/function (_React$Component) {
       this.props.connect('JobFilter');
     }
   }, {
+    key: "handleRecentSearchClicked",
+    value: function handleRecentSearchClicked(search) {
+      var _this2 = this;
+
+      this.props.handleRecentSearchClicked(search);
+      this.props.setRecentSearches(search);
+      axios.get("http://localhost:8000/jobsapi?q=".concat(search)).then(function (response) {
+        _this2.props.setSearchResults(response.data);
+      });
+    }
+  }, {
     key: "render",
     value: function render() {
+      var _this3 = this;
+
       var recentSearches = null;
 
       if (this.props.recentSearches) {
         recentSearches = this.props.recentSearches.map(function (search) {
           if (search === '') return;
-          return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-            key: search
+          return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+            key: search,
+            className: "recentSearch",
+            onClick: function onClick() {
+              return _this3.handleRecentSearchClicked(search);
+            }
           }, search);
         });
       }
@@ -34993,6 +35013,24 @@ function mapDispatchToProps(dispatch) {
       return dispatch({
         type: 'connected',
         componentName: componentName
+      });
+    },
+    handleRecentSearchClicked: function handleRecentSearchClicked(search) {
+      return dispatch({
+        type: 'HANDLE_RECENT_SEARCH_CLICKED',
+        search: search
+      });
+    },
+    setRecentSearches: function setRecentSearches(name) {
+      return dispatch({
+        type: 'SET_RECENT_SEARCHES',
+        name: name
+      });
+    },
+    setSearchResults: function setSearchResults(searchResults) {
+      return dispatch({
+        type: 'SET_SEARCH_RESULTS',
+        searchResults: searchResults
       });
     }
   };
@@ -35636,6 +35674,10 @@ function reducer() {
         console.log(newState.recentSearches = Object(_cookie__WEBPACK_IMPORTED_MODULE_0__["getCookie"])('recentSearches').split('|'));
       }
 
+      break;
+
+    case 'HANDLE_RECENT_SEARCH_CLICKED':
+      newState.name = action.search;
       break;
 
     default:

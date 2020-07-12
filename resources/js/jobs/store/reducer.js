@@ -42,6 +42,9 @@ function reducer(state = initialState, action) {
                 console.log(newState.recentSearches = getCookie('recentSearches').split('|'));
             }
             break;
+        case 'HANDLE_RECENT_SEARCH_CLICKED':
+            newState.name = action.search;
+            break;
         default:
             break;
     }
