@@ -52165,6 +52165,8 @@ var JobFilter = /*#__PURE__*/function (_React$Component) {
       this.props.setRecentSearches(search);
       axios.get("http://localhost:8000/jobsapi?q=".concat(search)).then(function (response) {
         _this2.props.setSearchResults(response.data);
+
+        _this2.props.handleFilterChange();
       });
     }
   }, {
@@ -52377,6 +52379,8 @@ var Search = /*#__PURE__*/function (_React$Component) {
       this.props.setRecentSearches(this.props.name);
       axios.get("http://localhost:8000/jobsapi?q=".concat(this.props.name)).then(function (response) {
         _this2.props.setSearchResults(response.data);
+
+        _this2.props.handleFilterChange();
       });
     }
   }, {
@@ -52452,6 +52456,11 @@ function mapDispatchToProps(dispatch) {
     setRecentSearchesFromCookies: function setRecentSearchesFromCookies() {
       return dispatch({
         type: 'SET_RECENT_SEARCHES_FROM_COOKIES'
+      });
+    },
+    handleFilterChange: function handleFilterChange() {
+      return dispatch({
+        type: 'HANDLE_FILTER_CHANGE'
       });
     }
   };
@@ -52951,10 +52960,24 @@ function reducer() {
       break;
 
     case 'HANDLE_SHOW_FIXED_CHANGE':
-      newState.filters.showFixed = true;
+      console.log('handleshowfixedchange');
+      newState.filters.showFixed = !newState.filters.showFixed;
       break;
 
     case 'HANDLE_FILTER_CHANGE':
+      var temp = [];
+
+      if (newState.filters.showFixed) {
+        temp = newState.unMutableSearchResults.filter(function (result) {
+          return result['project_type'] === 'fixed';
+        });
+      } else {
+        temp = newState.unMutableSearchResults.filter(function (result) {
+          return result['project_type'] !== 'fixed';
+        });
+      }
+
+      newState.searchResults = _toConsumableArray(temp);
       break;
 
     default:

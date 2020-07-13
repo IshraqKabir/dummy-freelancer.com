@@ -51,10 +51,17 @@ function reducer(state = initialState, action) {
             newState.name = action.search;
             break;
         case 'HANDLE_SHOW_FIXED_CHANGE':
-            newState.filters.showFixed = true;
+            console.log('handleshowfixedchange');
+            newState.filters.showFixed = !newState.filters.showFixed;
             break;
         case 'HANDLE_FILTER_CHANGE':
-           
+            let temp = [];
+            if (newState.filters.showFixed) {
+                temp = newState.unMutableSearchResults.filter(result => result['project_type'] === 'fixed');
+            } else {
+                temp = newState.unMutableSearchResults.filter(result => result['project_type'] !== 'fixed');
+            }
+            newState.searchResults = [...temp];
             break;
         default:
             break;

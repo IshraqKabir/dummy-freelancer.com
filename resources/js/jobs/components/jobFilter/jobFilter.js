@@ -30,7 +30,8 @@ class JobFilter extends React.Component
 
     axios.get(`http://localhost:8000/jobsapi?q=${search}`)
       .then(response => {
-        this.props.setSearchResults(response.data); 
+        this.props.setSearchResults(response.data);
+        this.props.handleFilterChange(); 
     })
   }
 

@@ -34,7 +34,8 @@ class Search extends React.Component
     this.props.setRecentSearches(this.props.name);
     axios.get(`http://localhost:8000/jobsapi?q=${this.props.name}`)
       .then(response => {
-        this.props.setSearchResults(response.data); 
+        this.props.setSearchResults(response.data);
+        this.props.handleFilterChange();
     })
 
     
@@ -91,6 +92,7 @@ function mapDispatchToProps (dispatch)
     setSearchResults: (searchResults) => dispatch({type: 'SET_SEARCH_RESULTS', searchResults}),
     setRecentSearches: (name) => dispatch({type: 'SET_RECENT_SEARCHES', name}),
     setRecentSearchesFromCookies: () => dispatch({type: 'SET_RECENT_SEARCHES_FROM_COOKIES'}),
+    handleFilterChange: () => dispatch({type: 'HANDLE_FILTER_CHANGE'}),
 
   }
 }
