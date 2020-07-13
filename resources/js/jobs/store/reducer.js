@@ -19,6 +19,24 @@ const initialState = {
     }
 };
 
+function fixedOrHourlyFilter(filters, unMutableSearchResults)
+{
+    let temp = [];
+    if (!filters.showFixed && !filters.showHourly) {
+        temp = unMutableSearchResults;
+    }
+    else if (filters.showFixed && filters.showHourly) {
+        temp = unMutableSearchResults;
+    }
+    else if (filters.showHourly) {
+        temp = unMutableSearchResults.filter(result => result['project_type'] === 'hourly');
+    }
+    else if (filters.showFixed) {
+        temp = unMutableSearchResults.filter(result => result['project_type'] === 'fixed');
+    }
+    return temp;
+}
+
 function reducer(state = initialState, action) {
     const newState = {...state};
 
@@ -65,27 +83,14 @@ function reducer(state = initialState, action) {
             break;
         // for handling hourly and fixed state change
         case 'HANDLE_FILTER_CHANGE':
-            let temp = [];
-            if (!newState.filters.showFixed && !newState.filters.showHourly) {
-                temp = newState.unMutableSearchResults;
-            }
-            else if (newState.filters.showFixed && newState.filters.showHourly) {
-                temp = newState.unMutableSearchResults;
-            }
-            else if (newState.filters.showHourly) {
-                temp = newState.unMutableSearchResults.filter(result => result['project_type'] === 'hourly');
-            }
-            else if (newState.filters.showFixed) {
-                temp = newState.unMutableSearchResults.filter(result => result['project_type'] === 'fixed');
-            }
-            newState.searchResults = [...temp];
+            newState.searchResults = fixedOrHourlyFilter(newState.filters, newState.unMutableSearchResults);
             break;
         case 'HANDLE_SKILL_FILTER_CHANGE':
             newState.filters.skills[action.skill] = !newState.filters.skills[action.skill];
             break;
         // for handling skill filter change
         case 'HANDLE_SKILL_FILTER_STATE':
-            temp = [];
+            let temp = [];
             // checking if all skill filters are unchecked
             let trueCounter = 0;
             Object.values(newState.filters.skills).map(skillState => {
@@ -94,20 +99,9 @@ function reducer(state = initialState, action) {
                     trueCounter++;
                 }
             });
+            // logic if all filters are unchecked
             if (trueCounter === 0) {
-                if (!newState.filters.showFixed && !newState.filters.showHourly) {
-                    temp = newState.unMutableSearchResults;
-                }
-                else if (newState.filters.showFixed && newState.filters.showHourly) {
-                    temp = newState.unMutableSearchResults;
-                }
-                else if (newState.filters.showHourly) {
-                    temp = newState.unMutableSearchResults.filter(result => result['project_type'] === 'hourly');
-                }
-                else if (newState.filters.showFixed) {
-                    temp = newState.unMutableSearchResults.filter(result => result['project_type'] === 'fixed');
-                }
-                newState.searchResults = [...temp];
+                newState.searchResults = fixedOrHourlyFilter(newState.filters, newState.unMutableSearchResults);
                 break;
             }
             // logic to change state according to skill filter

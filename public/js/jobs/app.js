@@ -52977,6 +52977,26 @@ var initialState = {
   }
 };
 
+function fixedOrHourlyFilter(filters, unMutableSearchResults) {
+  var temp = [];
+
+  if (!filters.showFixed && !filters.showHourly) {
+    temp = unMutableSearchResults;
+  } else if (filters.showFixed && filters.showHourly) {
+    temp = unMutableSearchResults;
+  } else if (filters.showHourly) {
+    temp = unMutableSearchResults.filter(function (result) {
+      return result['project_type'] === 'hourly';
+    });
+  } else if (filters.showFixed) {
+    temp = unMutableSearchResults.filter(function (result) {
+      return result['project_type'] === 'fixed';
+    });
+  }
+
+  return temp;
+}
+
 function reducer() {
   var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
   var action = arguments.length > 1 ? arguments[1] : undefined;
@@ -53035,23 +53055,7 @@ function reducer() {
     // for handling hourly and fixed state change
 
     case 'HANDLE_FILTER_CHANGE':
-      var temp = [];
-
-      if (!newState.filters.showFixed && !newState.filters.showHourly) {
-        temp = newState.unMutableSearchResults;
-      } else if (newState.filters.showFixed && newState.filters.showHourly) {
-        temp = newState.unMutableSearchResults;
-      } else if (newState.filters.showHourly) {
-        temp = newState.unMutableSearchResults.filter(function (result) {
-          return result['project_type'] === 'hourly';
-        });
-      } else if (newState.filters.showFixed) {
-        temp = newState.unMutableSearchResults.filter(function (result) {
-          return result['project_type'] === 'fixed';
-        });
-      }
-
-      newState.searchResults = _toConsumableArray(temp);
+      newState.searchResults = fixedOrHourlyFilter(newState.filters, newState.unMutableSearchResults);
       break;
 
     case 'HANDLE_SKILL_FILTER_CHANGE':
@@ -53060,31 +53064,17 @@ function reducer() {
     // for handling skill filter change
 
     case 'HANDLE_SKILL_FILTER_STATE':
-      temp = []; // checking if all skill filters are unchecked
+      var temp = []; // checking if all skill filters are unchecked
 
       var trueCounter = 0;
       Object.values(newState.filters.skills).map(function (skillState) {
         if (skillState) {
           trueCounter++;
         }
-      });
+      }); // logic if all filters are unchecked
 
       if (trueCounter === 0) {
-        if (!newState.filters.showFixed && !newState.filters.showHourly) {
-          temp = newState.unMutableSearchResults;
-        } else if (newState.filters.showFixed && newState.filters.showHourly) {
-          temp = newState.unMutableSearchResults;
-        } else if (newState.filters.showHourly) {
-          temp = newState.unMutableSearchResults.filter(function (result) {
-            return result['project_type'] === 'hourly';
-          });
-        } else if (newState.filters.showFixed) {
-          temp = newState.unMutableSearchResults.filter(function (result) {
-            return result['project_type'] === 'fixed';
-          });
-        }
-
-        newState.searchResults = _toConsumableArray(temp);
+        newState.searchResults = fixedOrHourlyFilter(newState.filters, newState.unMutableSearchResults);
         break;
       } // logic to change state according to skill filter
 
@@ -53103,7 +53093,7 @@ function reducer() {
           });
         }
       });
-      newState.searchResults = _toConsumableArray(temp);
+      newState.searchResults = [].concat(temp);
       break;
 
     default:
