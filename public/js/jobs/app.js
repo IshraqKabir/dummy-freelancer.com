@@ -1968,7 +1968,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, ".jobFilterContainer {\r\n    padding: 24px 0px;\r\n    border-bottom: 1px solid #dedede;\r\n}\r\n\r\n.recentSearchesHeading {\r\n    font-family: Roboto;\r\n    font-size: 20px;\r\n    font-weight: 400;\r\n    line-height: 28px;\r\n    margin-bottom: 16px;\r\n}\r\n\r\n.recentSearch {\r\n    box-sizing: border-box;\r\n    cursor: pointer;\r\n    margin-bottom: 8px;\r\n    line-height: 19.6px;\r\n    font-family: Roboto;\r\n    font-size: 14px;\r\n}\r\n\r\n.typeFilterSection {\r\n    padding: 24px 0;\r\n    border-bottom: 1px solid rgb(222, 222, 222);\r\n}\r\n\r\n.typeFilterSection-mainheading {\r\n    font-family: Roboto;\r\n    font-size: 20px;\r\n    font-weight: 400;\r\n    line-height: 28px;\r\n    margin-bottom: 16px;\r\n}\r\n\r\n.typeFilterSection-heading {\r\n    font-family: Roboto;\r\n    font-size: 16px;\r\n    font-weight: 700;\r\n    line-height: 24px;\r\n    margin-bottom: 16px;\r\n}\r\n\r\n/***********\r\nCheckbox styling\r\n**************/\r\n\r\n.b-contain *, .b-contain *::before, .b-contain *::after {\r\n\tbox-sizing: content-box !important;\r\n}\r\n\r\n.b-contain input {\r\n\tposition: absolute;\r\n\tz-index: -1;\r\n\topacity: 0;\r\n}\r\n\r\n.b-contain span {\r\n\tline-height: 1;\r\n\tfont-size: 1rem;\r\n\tfont-family: inherit;\r\n}\r\n\r\n.b-contain {\r\n\tdisplay: table;\r\n\tposition: relative;\r\n\tpadding-left: 1.8rem;\r\n\tcursor: pointer;\r\n\tmargin-bottom: .5rem;\r\n}\r\n\r\n.b-contain input[type=\"checkbox\"] ~ .b-input {\r\n\tposition: absolute;\r\n\ttop: 0;\r\n\tleft: 0;\r\n\theight: 1rem;\r\n\twidth: 1rem;\r\n\tbackground: rgba(255, 255, 255, 1);\r\n\ttransition: background 250ms;\r\n\tborder: 1px solid rgba(41, 178, 254, 1);\r\n\tborder-radius: 0.125rem;\r\n}\r\n\r\n.b-contain input[type=\"radio\"] ~ .b-input {\r\n\tposition: absolute;\r\n\ttop: 0;\r\n\tleft: 0;\r\n\theight: 1rem;\r\n\twidth: 1rem;\r\n\tbackground: rgba(255, 255, 255, 1);\r\n\ttransition: background 250ms;\r\n\tborder: 1px solid rgba(41, 178, 254, 1);\r\n\tborder-radius: 2.0rem;\r\n}\r\n\r\n.b-contain input[type=\"checkbox\"] ~ .b-input::after {\r\n\tcontent: '';\r\n\tposition: absolute;\r\n\tdisplay: none;\r\n\tleft: 0.32rem;\r\n\ttop: 0rem;\r\n\twidth: 0.32rem;\r\n\theight: 0.66rem;\r\n\tborder: solid rgba(255, 255, 255, 1);\r\n\tborder-width: 0 2px 2px 0;\r\n\ttransition: background 250ms;\r\n\ttransform: rotate(45deg);\r\n}\r\n\r\n.b-contain input[type=\"radio\"] ~ .b-input::after {\r\n\tcontent: '';\r\n\tposition: absolute;\r\n\tdisplay: none;\r\n\tleft: .25rem;\r\n\ttop: .25rem;\r\n\twidth: .75rem;\r\n\theight: .75rem;\r\n\tborder-radius: 2.0rem;\r\n\tbackground: rgba(255, 255, 255, 1);\r\n\ttransition: background 250ms;\r\n}\r\n\r\n.b-contain input:disabled ~ .b-input::after {\r\n\tborder-color: rgba(135, 149, 161, 1);\r\n}\r\n\r\n.b-contain input:checked ~ .b-input::after {\r\n\tdisplay: block;\r\n}\r\n\r\n.b-contain:hover input ~ .b-input,\r\n.b-contain input:focus ~ .b-input {\r\n\tbackground: rgb(231, 238, 243);\r\n}\r\n\r\n.b-contain input:focus ~ .b-input {\r\n\tbox-shadow: 0 0 0 2px rgba(255, 255, 255, 1);\r\n}\r\n\r\n.b-contain input:checked ~ .b-input {\r\n\tbackground: rgba(41, 178, 254, 1);\r\n\tborder-color: rgba(41, 178, 254, 1);\r\n}\r\n\r\n.b-contain input[type=\"checkbox\"]:disabled ~ .b-input {\r\n\tbackground: rgba(241, 245, 248, 1);\r\n\tborder-color: rgba(184, 194, 204, 1);\r\n\topacity: 0.6;\r\n\tcursor: not-allowed;\r\n}\r\n\r\n.b-contain input[type=\"radio\"]:disabled ~ .b-input {\r\n\tbackground: rgba(241, 245, 248, 1);\r\n\tborder-color: rgba(184, 194, 204, 1);\r\n\topacity: 0.6;\r\n\tcursor: not-allowed;\r\n}\r\n\r\n.b-contain input[type=\"radio\"]:disabled ~ .b-input::after {\r\n\tbackground: rgba(135, 149, 161, 1);\r\n}\r\n\r\n.b-contain input:checked:focus ~ .b-input, .b-contain:hover input:not([disabled]):checked ~ .b-input {\r\n\tbackground: rgba(41, 178, 254, 1);\r\n\tborder-color: rgba(41, 178, 254, 1);\r\n}\r\n\r\n.b-contain .b-input::before {\r\n\tcontent: '';\r\n\tdisplay: block;\r\n\tposition: absolute;\r\n\tleft: 0;\r\n\ttop: 0;\r\n\twidth: 3.08rem;\r\n\theight: 3rem;\r\n\tmargin-left: -0.85rem;\r\n\tmargin-top: -0.85rem;\r\n\tbackground: rgba(0, 130, 243, 1);\r\n\tborder-radius: 2rem;\r\n\topacity: .6;\r\n\tz-index: 99999;\r\n\ttransform: scale(0);\r\n}\r\n\r\n@-webkit-keyframes b-ripple {\r\n\t0% {\r\n\t\ttransform: scale(0);\r\n\t}\r\n\r\n\t20% {\r\n\t\ttransform: scale(1);\r\n\t}\r\n\r\n\t100% {\r\n\t\topacity: 0;\r\n\t\ttransform: scale(1);\r\n  \t}\r\n}\r\n\r\n@keyframes b-ripple {\r\n\t0% {\r\n\t\ttransform: scale(0);\r\n\t}\r\n\r\n\t20% {\r\n\t\ttransform: scale(1);\r\n\t}\r\n\r\n\t100% {\r\n\t\topacity: 0;\r\n\t\ttransform: scale(1);\r\n  \t}\r\n}\r\n\r\n@-webkit-keyframes b-ripple-duplicate {\r\n\t0% {\r\n\t\ttransform: scale(0);\r\n\t}\r\n\r\n\t30% {\r\n\t\ttransform: scale(1);\r\n\t}\r\n\r\n\t60% {\r\n\t\ttransform: scale(1);\r\n\t}\r\n\r\n\t100% {\r\n\t\topacity: 0;\r\n\t\ttransform: scale(1);\r\n  \t}\r\n}\r\n\r\n@keyframes b-ripple-duplicate {\r\n\t0% {\r\n\t\ttransform: scale(0);\r\n\t}\r\n\r\n\t30% {\r\n\t\ttransform: scale(1);\r\n\t}\r\n\r\n\t60% {\r\n\t\ttransform: scale(1);\r\n\t}\r\n\r\n\t100% {\r\n\t\topacity: 0;\r\n\t\ttransform: scale(1);\r\n  \t}\r\n}\r\n\r\n.b-contain input + .b-input::before {\r\n\t-webkit-animation: b-ripple 250ms ease-out;\r\n\t        animation: b-ripple 250ms ease-out;\r\n}\r\n\r\n.b-contain input:checked + .b-input::before {\r\n\t-webkit-animation-name: b-ripple-duplicate;\r\n\t        animation-name: b-ripple-duplicate;\r\n}\r\n\r\n.b-contain .b-input::before {\r\n\tvisibility: hidden;\r\n}\r\n\r\n.b-contain input:focus + .b-input::before {\r\n\tvisibility: visible;\r\n}\r\n\r\n.b-contain:first-child .b-input::before {\r\n\tvisibility: hidden;\r\n}\r\n\r\n.b-contain {\r\n    display: block;\r\n    font-family: Roboto;\r\n    font-size: 14px;\r\n    font-weight: 400;\r\n    line-height: 14px;\r\n}\r\n\r\n", ""]);
+exports.push([module.i, ".jobFilterContainer {\r\n    padding: 24px 0px;\r\n    border-bottom: 1px solid #dedede;\r\n}\r\n\r\n.recentSearchesHeading {\r\n    font-family: Roboto;\r\n    font-size: 20px;\r\n    font-weight: 400;\r\n    line-height: 28px;\r\n    margin-bottom: 16px;\r\n}\r\n\r\n.recentSearch {\r\n    box-sizing: border-box;\r\n    cursor: pointer;\r\n    margin-bottom: 8px;\r\n    line-height: 19.6px;\r\n    font-family: Roboto;\r\n    font-size: 14px;\r\n}\r\n\r\n.typeFilterSection {\r\n    padding: 24px 0;\r\n    border-bottom: 1px solid rgb(222, 222, 222);\r\n}\r\n\r\n.typeFilterSection-mainheading {\r\n    font-family: Roboto;\r\n    font-size: 20px;\r\n    font-weight: 400;\r\n    line-height: 28px;\r\n    margin-bottom: 16px;\r\n}\r\n\r\n\r\n\r\n/***********\r\nCheckbox styling\r\n**************/\r\n\r\n.b-contain *, .b-contain *::before, .b-contain *::after {\r\n\tbox-sizing: content-box !important;\r\n}\r\n\r\n.b-contain input {\r\n\tposition: absolute;\r\n\tz-index: -1;\r\n\topacity: 0;\r\n}\r\n\r\n.b-contain span {\r\n\tline-height: 1;\r\n\tfont-size: 1rem;\r\n\tfont-family: inherit;\r\n}\r\n\r\n.b-contain {\r\n\tdisplay: table;\r\n\tposition: relative;\r\n\tpadding-left: 1.8rem;\r\n\tcursor: pointer;\r\n\tmargin-bottom: .5rem;\r\n}\r\n\r\n.b-contain input[type=\"checkbox\"] ~ .b-input {\r\n\tposition: absolute;\r\n\ttop: 0;\r\n\tleft: 0;\r\n\theight: 1rem;\r\n\twidth: 1rem;\r\n\tbackground: rgba(255, 255, 255, 1);\r\n\ttransition: background 250ms;\r\n\tborder: 1px solid rgba(41, 178, 254, 1);\r\n\tborder-radius: 0.125rem;\r\n}\r\n\r\n.b-contain input[type=\"radio\"] ~ .b-input {\r\n\tposition: absolute;\r\n\ttop: 0;\r\n\tleft: 0;\r\n\theight: 1rem;\r\n\twidth: 1rem;\r\n\tbackground: rgba(255, 255, 255, 1);\r\n\ttransition: background 250ms;\r\n\tborder: 1px solid rgba(41, 178, 254, 1);\r\n\tborder-radius: 2.0rem;\r\n}\r\n\r\n.b-contain input[type=\"checkbox\"] ~ .b-input::after {\r\n\tcontent: '';\r\n\tposition: absolute;\r\n\tdisplay: none;\r\n\tleft: 0.32rem;\r\n\ttop: 0rem;\r\n\twidth: 0.32rem;\r\n\theight: 0.66rem;\r\n\tborder: solid rgba(255, 255, 255, 1);\r\n\tborder-width: 0 2px 2px 0;\r\n\ttransition: background 250ms;\r\n\ttransform: rotate(45deg);\r\n}\r\n\r\n.b-contain input[type=\"radio\"] ~ .b-input::after {\r\n\tcontent: '';\r\n\tposition: absolute;\r\n\tdisplay: none;\r\n\tleft: .25rem;\r\n\ttop: .25rem;\r\n\twidth: .75rem;\r\n\theight: .75rem;\r\n\tborder-radius: 2.0rem;\r\n\tbackground: rgba(255, 255, 255, 1);\r\n\ttransition: background 250ms;\r\n}\r\n\r\n.b-contain input:disabled ~ .b-input::after {\r\n\tborder-color: rgba(135, 149, 161, 1);\r\n}\r\n\r\n.b-contain input:checked ~ .b-input::after {\r\n\tdisplay: block;\r\n}\r\n\r\n.b-contain:hover input ~ .b-input,\r\n.b-contain input:focus ~ .b-input {\r\n\tbackground: rgb(231, 238, 243);\r\n}\r\n\r\n.b-contain input:focus ~ .b-input {\r\n\tbox-shadow: 0 0 0 2px rgba(255, 255, 255, 1);\r\n}\r\n\r\n.b-contain input:checked ~ .b-input {\r\n\tbackground: rgba(41, 178, 254, 1);\r\n\tborder-color: rgba(41, 178, 254, 1);\r\n}\r\n\r\n.b-contain input[type=\"checkbox\"]:disabled ~ .b-input {\r\n\tbackground: rgba(241, 245, 248, 1);\r\n\tborder-color: rgba(184, 194, 204, 1);\r\n\topacity: 0.6;\r\n\tcursor: not-allowed;\r\n}\r\n\r\n.b-contain input[type=\"radio\"]:disabled ~ .b-input {\r\n\tbackground: rgba(241, 245, 248, 1);\r\n\tborder-color: rgba(184, 194, 204, 1);\r\n\topacity: 0.6;\r\n\tcursor: not-allowed;\r\n}\r\n\r\n.b-contain input[type=\"radio\"]:disabled ~ .b-input::after {\r\n\tbackground: rgba(135, 149, 161, 1);\r\n}\r\n\r\n.b-contain input:checked:focus ~ .b-input, .b-contain:hover input:not([disabled]):checked ~ .b-input {\r\n\tbackground: rgba(41, 178, 254, 1);\r\n\tborder-color: rgba(41, 178, 254, 1);\r\n}\r\n\r\n.b-contain .b-input::before {\r\n\tcontent: '';\r\n\tdisplay: block;\r\n\tposition: absolute;\r\n\tleft: 0;\r\n\ttop: 0;\r\n\twidth: 3.08rem;\r\n\theight: 3rem;\r\n\tmargin-left: -0.85rem;\r\n\tmargin-top: -0.85rem;\r\n\tbackground: rgba(0, 130, 243, 1);\r\n\tborder-radius: 2rem;\r\n\topacity: .6;\r\n\tz-index: 99999;\r\n\ttransform: scale(0);\r\n}\r\n\r\n@-webkit-keyframes b-ripple {\r\n\t0% {\r\n\t\ttransform: scale(0);\r\n\t}\r\n\r\n\t20% {\r\n\t\ttransform: scale(1);\r\n\t}\r\n\r\n\t100% {\r\n\t\topacity: 0;\r\n\t\ttransform: scale(1);\r\n  \t}\r\n}\r\n\r\n@keyframes b-ripple {\r\n\t0% {\r\n\t\ttransform: scale(0);\r\n\t}\r\n\r\n\t20% {\r\n\t\ttransform: scale(1);\r\n\t}\r\n\r\n\t100% {\r\n\t\topacity: 0;\r\n\t\ttransform: scale(1);\r\n  \t}\r\n}\r\n\r\n@-webkit-keyframes b-ripple-duplicate {\r\n\t0% {\r\n\t\ttransform: scale(0);\r\n\t}\r\n\r\n\t30% {\r\n\t\ttransform: scale(1);\r\n\t}\r\n\r\n\t60% {\r\n\t\ttransform: scale(1);\r\n\t}\r\n\r\n\t100% {\r\n\t\topacity: 0;\r\n\t\ttransform: scale(1);\r\n  \t}\r\n}\r\n\r\n@keyframes b-ripple-duplicate {\r\n\t0% {\r\n\t\ttransform: scale(0);\r\n\t}\r\n\r\n\t30% {\r\n\t\ttransform: scale(1);\r\n\t}\r\n\r\n\t60% {\r\n\t\ttransform: scale(1);\r\n\t}\r\n\r\n\t100% {\r\n\t\topacity: 0;\r\n\t\ttransform: scale(1);\r\n  \t}\r\n}\r\n\r\n.b-contain input + .b-input::before {\r\n\t-webkit-animation: b-ripple 250ms ease-out;\r\n\t        animation: b-ripple 250ms ease-out;\r\n}\r\n\r\n.b-contain input:checked + .b-input::before {\r\n\t-webkit-animation-name: b-ripple-duplicate;\r\n\t        animation-name: b-ripple-duplicate;\r\n}\r\n\r\n.b-contain .b-input::before {\r\n\tvisibility: hidden;\r\n}\r\n\r\n.b-contain input:focus + .b-input::before {\r\n\tvisibility: visible;\r\n}\r\n\r\n.b-contain:first-child .b-input::before {\r\n\tvisibility: hidden;\r\n}\r\n\r\n.b-contain {\r\n    display: block;\r\n    font-family: Roboto;\r\n    font-size: 14px;\r\n    font-weight: 400;\r\n    line-height: 14px;\r\n}\r\n\r\n", ""]);
 
 // exports
 
@@ -52148,6 +52148,7 @@ var JobFilter = /*#__PURE__*/function (_React$Component) {
     _this.state = {};
     _this.handleRecentSearchClicked = _this.handleRecentSearchClicked.bind(_assertThisInitialized(_this));
     _this.handleShowFixedChange = _this.handleShowFixedChange.bind(_assertThisInitialized(_this));
+    _this.handleShowHourlyChange = _this.handleShowHourlyChange.bind(_assertThisInitialized(_this));
     return _this;
   }
 
@@ -52173,6 +52174,12 @@ var JobFilter = /*#__PURE__*/function (_React$Component) {
     key: "handleShowFixedChange",
     value: function handleShowFixedChange() {
       this.props.handleShowFixedChange();
+      this.props.handleFilterChange();
+    }
+  }, {
+    key: "handleShowHourlyChange",
+    value: function handleShowHourlyChange() {
+      this.props.handleShowHourlyChange();
       this.props.handleFilterChange();
     }
   }, {
@@ -52205,14 +52212,20 @@ var JobFilter = /*#__PURE__*/function (_React$Component) {
         className: "typeFilterSection"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
         className: "typeFilterSection-mainheading"
-      }, "Filter By:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
-        className: "typeFilterSection-heading"
-      }, "Budget"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+      }, "Filter By:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
         className: "b-contain"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Fixed Price"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "checkbox",
         defaultChecked: true,
         onChange: this.handleShowFixedChange
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "b-input"
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        className: "b-contain"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Hourly Projects"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "checkbox",
+        defaultChecked: true,
+        onChange: this.handleShowHourlyChange
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "b-input"
       }))));
@@ -52257,6 +52270,11 @@ function mapDispatchToProps(dispatch) {
     handleShowFixedChange: function handleShowFixedChange() {
       return dispatch({
         type: 'HANDLE_SHOW_FIXED_CHANGE'
+      });
+    },
+    handleShowHourlyChange: function handleShowHourlyChange() {
+      return dispatch({
+        type: 'HANDLE_SHOW_HOURLY_CHANGE'
       });
     },
     handleFilterChange: function handleFilterChange() {
@@ -52907,7 +52925,7 @@ var initialState = {
   recentSearches: [],
   filters: {
     showFixed: true,
-    visited: 0
+    showHourly: true
   }
 };
 
@@ -52960,20 +52978,25 @@ function reducer() {
       break;
 
     case 'HANDLE_SHOW_FIXED_CHANGE':
-      console.log('handleshowfixedchange');
       newState.filters.showFixed = !newState.filters.showFixed;
+      break;
+
+    case 'HANDLE_SHOW_HOURLY_CHANGE':
+      newState.filters.showHourly = !newState.filters.showHourly;
       break;
 
     case 'HANDLE_FILTER_CHANGE':
       var temp = [];
 
-      if (newState.filters.showFixed) {
+      if (newState.filters.showFixed && newState.filters.showHourly) {
+        temp = newState.unMutableSearchResults;
+      } else if (newState.filters.showHourly) {
+        temp = newState.unMutableSearchResults.filter(function (result) {
+          return result['project_type'] === 'hourly';
+        });
+      } else if (newState.filters.showFixed) {
         temp = newState.unMutableSearchResults.filter(function (result) {
           return result['project_type'] === 'fixed';
-        });
-      } else {
-        temp = newState.unMutableSearchResults.filter(function (result) {
-          return result['project_type'] !== 'fixed';
         });
       }
 

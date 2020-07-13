@@ -8,7 +8,7 @@ const initialState = {
     recentSearches: [],
     filters: {
         showFixed: true,
-        visited: 0,
+        showHourly: true,
     }
 };
 
@@ -51,15 +51,21 @@ function reducer(state = initialState, action) {
             newState.name = action.search;
             break;
         case 'HANDLE_SHOW_FIXED_CHANGE':
-            console.log('handleshowfixedchange');
             newState.filters.showFixed = !newState.filters.showFixed;
+            break;
+        case 'HANDLE_SHOW_HOURLY_CHANGE':
+            newState.filters.showHourly = !newState.filters.showHourly;
             break;
         case 'HANDLE_FILTER_CHANGE':
             let temp = [];
-            if (newState.filters.showFixed) {
+            if (newState.filters.showFixed && newState.filters.showHourly) {
+                temp = newState.unMutableSearchResults;
+            }
+            else if (newState.filters.showHourly) {
+                temp = newState.unMutableSearchResults.filter(result => result['project_type'] === 'hourly');
+            }
+            else if (newState.filters.showFixed) {
                 temp = newState.unMutableSearchResults.filter(result => result['project_type'] === 'fixed');
-            } else {
-                temp = newState.unMutableSearchResults.filter(result => result['project_type'] !== 'fixed');
             }
             newState.searchResults = [...temp];
             break;

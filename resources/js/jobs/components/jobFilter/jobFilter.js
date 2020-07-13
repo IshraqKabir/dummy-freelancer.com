@@ -16,6 +16,7 @@ class JobFilter extends React.Component
     };
     this.handleRecentSearchClicked = this.handleRecentSearchClicked.bind(this);
     this.handleShowFixedChange = this.handleShowFixedChange.bind(this);
+    this.handleShowHourlyChange = this.handleShowHourlyChange.bind(this);
   }
 
   componentDidMount ()
@@ -35,8 +36,15 @@ class JobFilter extends React.Component
     })
   }
 
-  handleShowFixedChange () {
+  handleShowFixedChange () 
+  {
     this.props.handleShowFixedChange();
+    this.props.handleFilterChange();
+  }
+  
+  handleShowHourlyChange () 
+  {
+    this.props.handleShowHourlyChange();
     this.props.handleFilterChange();
   }
 
@@ -68,15 +76,21 @@ class JobFilter extends React.Component
           <h5 className="typeFilterSection-mainheading">
             Filter By:
           </h5>
-          <h5 className="typeFilterSection-heading">
-            Budget
-          </h5>
           <label className="b-contain">
             <span>Fixed Price</span>
             <input 
               type="checkbox"
               defaultChecked={true} 
               onChange={this.handleShowFixedChange}
+            />
+            <div className="b-input"></div>
+          </label>
+          <label className="b-contain">
+            <span>Hourly Projects</span>
+            <input 
+              type="checkbox"
+              defaultChecked={true} 
+              onChange={this.handleShowHourlyChange}
             />
             <div className="b-input"></div>
           </label>
@@ -103,6 +117,7 @@ function mapDispatchToProps (dispatch)
     setRecentSearches: (name) => dispatch({type: 'SET_RECENT_SEARCHES', name}),
     setSearchResults: (searchResults) => dispatch({type: 'SET_SEARCH_RESULTS', searchResults}),
     handleShowFixedChange: () => dispatch({type: 'HANDLE_SHOW_FIXED_CHANGE'}),
+    handleShowHourlyChange: () => dispatch({type: 'HANDLE_SHOW_HOURLY_CHANGE'}),
     handleFilterChange: () => dispatch({type: 'HANDLE_FILTER_CHANGE'}),
   }
 }
