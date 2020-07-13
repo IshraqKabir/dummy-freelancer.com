@@ -31,45 +31,88 @@ class SearchResults extends React.Component
     let searchedJobs = null;
     if (this.props.searchResults) 
     {
-        searchedJobs = Object.entries(this.props.searchResults).map(result => {
-            const project = {...result[1]};
-            let skills = project['skills'].map(skill => {
-                return (
-                    <a
-                        className="skill"
-                        href="#"
-                        key={skill.pivot['skill_id']}
-                    >{skill['name']}</a>
-                );
-            })
-            return (
-                <div 
-                    className="searchedJobCard" 
-                    key={project['id']}
-                    
-                >
-                    <div className="searchedJobCard-item">
-                        <div className="jobContainer">
-                            <a className="projectName bold" href={`/project/${project['id']}`}>
-                                {project['name']}
-                            </a>
-                            <div className="projectDetails">
-                                {project['details']}
-                            </div>
-                            <div className="skills">
-                                {skills}
-                            </div>
-                        </div>
-                        <div className="budgetContainer">
-                          <div className="budget">
-                            {project['min_budget']} - {project['max_budget']} {project['currency_type']}
-                            {project['project_type'] === 'hourly' ? ' / hour' : null}
-                          </div>
-                        </div>
+      searchedJobs = this.props.searchResults.map(result => {
+        let skills = null;
+        skills = result['skills'].map(skill => {
+          return (
+              <a
+                  className="skill"
+                  href="#"
+                  key={skill.pivot['skill_id']}
+              >{skill['name']}</a>
+          );
+        });
+
+        return (
+          <div 
+              className="searchedJobCard" 
+              key={result['id']}
+              
+          >
+              <div className="searchedJobCard-item">
+                  <div className="jobContainer">
+                      <a className="projectName bold" href={`/project/${result['id']}`}>
+                          {result['name']}
+                      </a>
+                      <div className="projectDetails">
+                          {result['details']}
+                      </div>
+                      <div className="skills">
+                          {skills}
+                      </div>
+                  </div>
+                  <div className="budgetContainer">
+                    <div className="budget">
+                      {result['min_budget']} - {result['max_budget']} {result['currency_type']}
+                      {result['project_type'] === 'hourly' ? ' / hour' : null}
                     </div>
-                </div>
-            );
-        })
+                  </div>
+              </div>
+          </div>
+        );
+      });
+        // searchedJobs = Object.entries(this.props.searchResults).map(result => {
+        //     const project = {...result[1]};
+            
+        //     let skills = null;
+        //     skills = project['skills'].map(skill => {
+        //         return (
+        //             <a
+        //                 className="skill"
+        //                 href="#"
+        //                 key={skill.pivot['skill_id']}
+        //             >{skill['name']}</a>
+        //         );
+        //     })
+
+        //     return (
+        //       <div 
+        //           className="searchedJobCard" 
+        //           key={project['id']}
+                  
+        //       >
+        //           <div className="searchedJobCard-item">
+        //               <div className="jobContainer">
+        //                   <a className="projectName bold" href={`/project/${project['id']}`}>
+        //                       {project['name']}
+        //                   </a>
+        //                   <div className="projectDetails">
+        //                       {project['details']}
+        //                   </div>
+        //                   <div className="skills">
+        //                       {skills}
+        //                   </div>
+        //               </div>
+        //               <div className="budgetContainer">
+        //                 <div className="budget">
+        //                   {project['min_budget']} - {project['max_budget']} {project['currency_type']}
+        //                   {project['project_type'] === 'hourly' ? ' / hour' : null}
+        //                 </div>
+        //               </div>
+        //           </div>
+        //       </div>
+        //   );
+        // })
     }
 
     return (
@@ -83,7 +126,9 @@ class SearchResults extends React.Component
 function mapStoreToProps (store)
 {
   return {
-      searchResults: store.searchResults
+      searchResults: store.searchResults,
+      recentSearches: store.recentSearches,
+      filters: store.filters
   }
 }
 

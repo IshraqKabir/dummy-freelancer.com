@@ -1,10 +1,15 @@
 import { getCookie, setCookie } from '../cookie';
+import { slice } from 'lodash';
 
 const initialState = {
     name: '',
     searchResults: [],
+    unMutableSearchResults: [],
     recentSearches: [],
-
+    filters: {
+        showFixed: true,
+        visited: 0,
+    }
 };
 
 function reducer(state = initialState, action) {
@@ -18,7 +23,8 @@ function reducer(state = initialState, action) {
             newState.name = action.name;
             break;
         case 'SET_SEARCH_RESULTS':
-            newState.searchResults = {...action.searchResults};
+            newState.searchResults = [...action.searchResults];
+            newState.unMutableSearchResults = [...action.searchResults];
             break;
         case 'SET_RECENT_SEARCHES':
             // get recentSearches
@@ -39,11 +45,16 @@ function reducer(state = initialState, action) {
         case 'SET_RECENT_SEARCHES_FROM_COOKIES':
             if (getCookie('recentSearches') !== '') {
                 newState.recentSearches = getCookie('recentSearches').split('|');
-                console.log(newState.recentSearches = getCookie('recentSearches').split('|'));
             }
             break;
         case 'HANDLE_RECENT_SEARCH_CLICKED':
             newState.name = action.search;
+            break;
+        case 'HANDLE_SHOW_FIXED_CHANGE':
+            newState.filters.showFixed = true;
+            break;
+        case 'HANDLE_FILTER_CHANGE':
+           
             break;
         default:
             break;

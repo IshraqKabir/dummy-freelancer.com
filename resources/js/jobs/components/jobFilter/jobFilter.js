@@ -15,6 +15,7 @@ class JobFilter extends React.Component
            
     };
     this.handleRecentSearchClicked = this.handleRecentSearchClicked.bind(this);
+    this.handleShowFixedChange = this.handleShowFixedChange.bind(this);
   }
 
   componentDidMount ()
@@ -33,6 +34,11 @@ class JobFilter extends React.Component
     })
   }
 
+  handleShowFixedChange () {
+    this.props.handleShowFixedChange();
+    this.props.handleFilterChange();
+  }
+
   render ()
   {
     let recentSearches = null;
@@ -48,14 +54,35 @@ class JobFilter extends React.Component
       })
     }
     return (
-      <div className="jobFilterContainer">
-        <h5 className="recentSearchesHeading">
-          My Recent Searches
-        </h5>
-        <div className="recentSearches">
-          {recentSearches}
+      <React.Fragment>
+        <div className="jobFilterContainer">
+          <h5 className="recentSearchesHeading">
+            My Recent Searches
+          </h5>
+          <div className="recentSearches">
+            {recentSearches}
+          </div>
         </div>
-      </div>
+        <div className="typeFilterSection">
+          <h5 className="typeFilterSection-mainheading">
+            Filter By:
+          </h5>
+          <h5 className="typeFilterSection-heading">
+            Budget
+          </h5>
+          <label className="b-contain">
+            <span>Fixed Price</span>
+            <input 
+              type="checkbox"
+              defaultChecked={true} 
+              onChange={this.handleShowFixedChange}
+            />
+            <div className="b-input"></div>
+          </label>
+          
+
+        </div>
+      </React.Fragment>
     );
   }
 }
@@ -63,7 +90,7 @@ class JobFilter extends React.Component
 function mapStoreToProps (store)
 {
   return {
-    recentSearches: store.recentSearches
+    recentSearches: store.recentSearches,
   }
 }
 
@@ -74,6 +101,8 @@ function mapDispatchToProps (dispatch)
     handleRecentSearchClicked: (search) => dispatch({type: 'HANDLE_RECENT_SEARCH_CLICKED', search}),
     setRecentSearches: (name) => dispatch({type: 'SET_RECENT_SEARCHES', name}),
     setSearchResults: (searchResults) => dispatch({type: 'SET_SEARCH_RESULTS', searchResults}),
+    handleShowFixedChange: () => dispatch({type: 'HANDLE_SHOW_FIXED_CHANGE'}),
+    handleFilterChange: () => dispatch({type: 'HANDLE_FILTER_CHANGE'}),
   }
 }
 
