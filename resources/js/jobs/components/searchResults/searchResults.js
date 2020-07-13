@@ -42,7 +42,6 @@ class SearchResults extends React.Component
               >{skill['name']}</a>
           );
         });
-
         return (
           <div 
               className="searchedJobCard" 

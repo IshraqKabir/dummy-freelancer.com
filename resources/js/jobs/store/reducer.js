@@ -9,6 +9,13 @@ const initialState = {
     filters: {
         showFixed: true,
         showHourly: true,
+        skills: {
+            'laravel': false,
+            'react': false,
+            'web development': false,
+
+        },
+
     }
 };
 
@@ -56,9 +63,13 @@ function reducer(state = initialState, action) {
         case 'HANDLE_SHOW_HOURLY_CHANGE':
             newState.filters.showHourly = !newState.filters.showHourly;
             break;
+        // for handling hourly and fixed state change
         case 'HANDLE_FILTER_CHANGE':
             let temp = [];
-            if (newState.filters.showFixed && newState.filters.showHourly) {
+            if (!newState.filters.showFixed && !newState.filters.showHourly) {
+                temp = newState.unMutableSearchResults;
+            }
+            else if (newState.filters.showFixed && newState.filters.showHourly) {
                 temp = newState.unMutableSearchResults;
             }
             else if (newState.filters.showHourly) {
@@ -67,6 +78,55 @@ function reducer(state = initialState, action) {
             else if (newState.filters.showFixed) {
                 temp = newState.unMutableSearchResults.filter(result => result['project_type'] === 'fixed');
             }
+            newState.searchResults = [...temp];
+            break;
+        case 'HANDLE_SKILL_FILTER_CHANGE':
+            newState.filters.skills[action.skill] = !newState.filters.skills[action.skill];
+            break;
+        // for handling skill filter change
+        case 'HANDLE_SKILL_FILTER_STATE':
+            temp = [];
+            // checking if all skill filters are unchecked
+            let trueCounter = 0;
+            Object.values(newState.filters.skills).map(skillState => {
+                if (skillState)
+                {
+                    trueCounter++;
+                }
+            });
+            if (trueCounter === 0) {
+                if (!newState.filters.showFixed && !newState.filters.showHourly) {
+                    temp = newState.unMutableSearchResults;
+                }
+                else if (newState.filters.showFixed && newState.filters.showHourly) {
+                    temp = newState.unMutableSearchResults;
+                }
+                else if (newState.filters.showHourly) {
+                    temp = newState.unMutableSearchResults.filter(result => result['project_type'] === 'hourly');
+                }
+                else if (newState.filters.showFixed) {
+                    temp = newState.unMutableSearchResults.filter(result => result['project_type'] === 'fixed');
+                }
+                newState.searchResults = [...temp];
+                break;
+            }
+            // logic to change state according to skill filter
+            Object.entries(newState.filters.skills).map(skill => {
+               const skillName = skill[0];
+               const state = skill[1];
+                if (state)
+                {
+                    newState.searchResults.map(result => {
+                        result['skills'].map(resultSkill => {
+                            if (resultSkill['name'] === skillName)
+                            {
+                                if (!temp.includes(result))
+                                temp.unshift(result);
+                            }          
+                        })
+                    });
+                }
+            });
             newState.searchResults = [...temp];
             break;
         default:

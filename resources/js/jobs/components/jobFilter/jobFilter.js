@@ -17,6 +17,7 @@ class JobFilter extends React.Component
     this.handleRecentSearchClicked = this.handleRecentSearchClicked.bind(this);
     this.handleShowFixedChange = this.handleShowFixedChange.bind(this);
     this.handleShowHourlyChange = this.handleShowHourlyChange.bind(this);
+    this.handleSkillFilterChange = this.handleSkillFilterChange.bind(this);
   }
 
   componentDidMount ()
@@ -48,6 +49,12 @@ class JobFilter extends React.Component
     this.props.handleFilterChange();
   }
 
+  handleSkillFilterChange (skill)
+  {
+    this.props.handleSkillFilterChange(skill);
+    this.props.handleSkillFilterState();
+  }
+
   render ()
   {
     let recentSearches = null;
@@ -59,9 +66,29 @@ class JobFilter extends React.Component
                 key={search}
                 className="recentSearch"
                 onClick={() => this.handleRecentSearchClicked(search)}
-              >{search}</div>
+              >{search}</div> 
       })
     }
+
+    let skills = null;
+
+    if (this.props.skills) 
+    {
+      skills = Object.keys(this.props.skills).map(skill => {
+        return (
+          <label className="b-contain" key={skill}>
+            <span>{skill}</span>
+            <input 
+              type="checkbox"
+              defaultChecked={false} 
+              onChange={() => this.handleSkillFilterChange(skill)}
+            />
+            <div className="b-input"></div>
+          </label>
+        );
+      });
+    }
+
     return (
       <React.Fragment>
         <div className="jobFilterContainer">
@@ -94,8 +121,12 @@ class JobFilter extends React.Component
             />
             <div className="b-input"></div>
           </label>
-          
-
+        </div>
+        <div className="skillFilterSection">
+          <h5 className="skillFilterSection-heading">
+            Skills
+          </h5>
+          {skills}
         </div>
       </React.Fragment>
     );
@@ -106,6 +137,8 @@ function mapStoreToProps (store)
 {
   return {
     recentSearches: store.recentSearches,
+    skills: store.filters.skills,
+
   }
 }
 
@@ -119,6 +152,9 @@ function mapDispatchToProps (dispatch)
     handleShowFixedChange: () => dispatch({type: 'HANDLE_SHOW_FIXED_CHANGE'}),
     handleShowHourlyChange: () => dispatch({type: 'HANDLE_SHOW_HOURLY_CHANGE'}),
     handleFilterChange: () => dispatch({type: 'HANDLE_FILTER_CHANGE'}),
+    handleSkillFilterChange: (skill) => dispatch({type: 'HANDLE_SKILL_FILTER_CHANGE', skill}),
+    handleSkillFilterState: () => dispatch({type: 'HANDLE_SKILL_FILTER_STATE'}),
+
   }
 }
 

@@ -17,7 +17,7 @@ class ProjectController extends Controller
             return;
         }
 
-        $response = \App\Project::where('name', 'like', '%' . $query . '%')->limit(10)->get()->toJson();
+        $response = \App\Project::where('name', 'like', '%' . $query . '%')->orderBy('created_at', 'DESC')->limit(10)->get()->toJson();
         $response = json_decode($response, true);
         foreach($response as &$res) {
             $project = Project::find($res['id']);
