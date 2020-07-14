@@ -35820,6 +35820,9 @@ var JobFilter = /*#__PURE__*/function (_React$Component) {
       this.setState({
         showSkillsSuggestions: false
       });
+      this.setState({
+        enterSkills: ''
+      });
     }
   }, {
     key: "render",

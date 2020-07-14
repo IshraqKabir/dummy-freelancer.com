@@ -92,6 +92,7 @@ class JobFilter extends React.Component
     this.props.handleSkillFilterState();
 
     this.setState({showSkillsSuggestions: false});
+    this.setState({enterSkills: ''});
   }
 
   render ()
