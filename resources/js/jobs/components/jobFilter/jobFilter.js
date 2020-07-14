@@ -39,6 +39,7 @@ class JobFilter extends React.Component
       .then(response => {
         this.props.setSearchResults(response.data);
         this.props.handleFilterChange(); 
+        this.props.handleSkillFilterState();
     })
   }
 

@@ -55,7 +55,7 @@ class SearchResults extends React.Component
                       </a>
                       <div className="projectDetails">
                           {result['details']}
-                      </div>
+                    </div>
                       <div className="skills">
                           {skills}
                       </div>

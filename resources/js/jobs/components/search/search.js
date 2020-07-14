@@ -36,6 +36,7 @@ class Search extends React.Component
       .then(response => {
         this.props.setSearchResults(response.data);
         this.props.handleFilterChange();
+        this.props.handleSkillFilterState();
     })
 
     
@@ -93,6 +94,7 @@ function mapDispatchToProps (dispatch)
     setRecentSearches: (name) => dispatch({type: 'SET_RECENT_SEARCHES', name}),
     setRecentSearchesFromCookies: () => dispatch({type: 'SET_RECENT_SEARCHES_FROM_COOKIES'}),
     handleFilterChange: () => dispatch({type: 'HANDLE_FILTER_CHANGE'}),
+    handleSkillFilterState: () => dispatch({type: 'HANDLE_SKILL_FILTER_STATE'}),
 
   }
 }

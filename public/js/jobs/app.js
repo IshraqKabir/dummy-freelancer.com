@@ -35737,6 +35737,8 @@ var JobFilter = /*#__PURE__*/function (_React$Component) {
         _this2.props.setSearchResults(response.data);
 
         _this2.props.handleFilterChange();
+
+        _this2.props.handleSkillFilterState();
       });
     }
   }, {
@@ -36103,6 +36105,8 @@ var Search = /*#__PURE__*/function (_React$Component) {
         _this2.props.setSearchResults(response.data);
 
         _this2.props.handleFilterChange();
+
+        _this2.props.handleSkillFilterState();
       });
     }
   }, {
@@ -36183,6 +36187,11 @@ function mapDispatchToProps(dispatch) {
     handleFilterChange: function handleFilterChange() {
       return dispatch({
         type: 'HANDLE_FILTER_CHANGE'
+      });
+    },
+    handleSkillFilterState: function handleSkillFilterState() {
+      return dispatch({
+        type: 'HANDLE_SKILL_FILTER_STATE'
       });
     }
   };
@@ -36643,12 +36652,15 @@ function reducer() {
       var recentSearches = Object(_cookie__WEBPACK_IMPORTED_MODULE_0__["getCookie"])('recentSearches');
       recentSearches = recentSearches.split('|'); // set new recentSearches
 
-      if (!newState.recentSearches.includes(action.name) && action.name !== '') {
-        recentSearches.unshift(action.name);
-        recentSearches = recentSearches.join('|');
-        Object(_cookie__WEBPACK_IMPORTED_MODULE_0__["setCookie"])('recentSearches', recentSearches, 1);
-      } // set recent searches
+      if (action.name !== '') {
+        recentSearches = recentSearches.filter(function (item) {
+          return item !== action.name;
+        });
+        recentSearches = [action.name].concat(_toConsumableArray(recentSearches));
+      }
 
+      recentSearches = recentSearches.join('|');
+      Object(_cookie__WEBPACK_IMPORTED_MODULE_0__["setCookie"])('recentSearches', recentSearches, 1); // set recent searches
 
       newState.recentSearches = [action.name].concat(_toConsumableArray(newState.recentSearches.filter(function (item) {
         return item != action.name;

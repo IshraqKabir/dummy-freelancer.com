@@ -54,13 +54,15 @@ function reducer(state = initialState, action) {
             recentSearches = recentSearches.split('|');
 
             // set new recentSearches
-            if (!newState.recentSearches.includes(action.name) && action.name !== '')
+            if (action.name !== '')
             {
-                recentSearches.unshift(action.name);
-                recentSearches = recentSearches.join('|')
-                setCookie('recentSearches', recentSearches, 1);
+                recentSearches = recentSearches.filter(item => item !== action.name);
+                recentSearches = [action.name, ...recentSearches];
             }
 
+            recentSearches = recentSearches.join('|')
+            setCookie('recentSearches', recentSearches, 1);
+            
             // set recent searches
             newState.recentSearches = [action.name, ...newState.recentSearches.filter(item => item != action.name)];            
             break;
