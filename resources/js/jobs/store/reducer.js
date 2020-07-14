@@ -121,7 +121,7 @@ function reducer(state = initialState, action) {
             });
             newState.searchResults = [...temp];
             break;
-        case 'HANDLE_SKILLS_SUGGESTION_CLICK':
+        case 'ADD_SKILL_FILTER':
             console.log(action.suggestion);
             temp = {
                 [action.suggestion]: true,

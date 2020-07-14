@@ -35758,6 +35758,7 @@ var JobFilter = /*#__PURE__*/function (_React$Component) {
     value: function handleSkillFilterChange(skill) {
       this.props.handleSkillFilterChange(skill);
       this.props.handleSkillFilterState();
+      this.props.handleFilterChange();
     }
   }, {
     key: "handleEnterSkillsChange",
@@ -35987,7 +35988,7 @@ function mapDispatchToProps(dispatch) {
     },
     handleSkillsSuggesionClick: function handleSkillsSuggesionClick(suggestion) {
       return dispatch({
-        type: 'HANDLE_SKILLS_SUGGESTION_CLICK',
+        type: 'ADD_SKILL_FILTER',
         suggestion: suggestion
       });
     }
@@ -36732,7 +36733,7 @@ function reducer() {
       newState.searchResults = _toConsumableArray(temp);
       break;
 
-    case 'HANDLE_SKILLS_SUGGESTION_CLICK':
+    case 'ADD_SKILL_FILTER':
       console.log(action.suggestion);
       temp = _objectSpread(_defineProperty({}, action.suggestion, true), newState.filters.skills);
       temp[action.suggestion] = true;
