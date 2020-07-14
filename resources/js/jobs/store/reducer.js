@@ -1,5 +1,4 @@
 import { getCookie, setCookie } from '../cookie';
-import { slice } from 'lodash';
 
 const initialState = {
     name: '',
@@ -13,9 +12,7 @@ const initialState = {
             'laravel': false,
             'react': false,
             'web development': false,
-
         },
-
     }
 };
 
@@ -112,16 +109,24 @@ function reducer(state = initialState, action) {
                 {
                     newState.searchResults.map(result => {
                         result['skills'].map(resultSkill => {
-                            if (resultSkill['name'] === skillName)
+                            if (resultSkill['name'] === skillName && !temp.includes(result))
                             {
-                                if (!temp.includes(result))
-                                temp.unshift(result);
+                                temp.push(result);
                             }          
                         })
                     });
                 }
             });
             newState.searchResults = [...temp];
+            break;
+        case 'HANDLE_SKILLS_SUGGESTION_CLICK':
+            console.log(action.suggestion);
+            temp = {
+                [action.suggestion]: true,
+                ...newState.filters.skills
+            }
+            temp[action.suggestion] = true; 
+            newState.filters.skills = {...temp}
             break;
         default:
             break;

@@ -12,12 +12,17 @@ class JobFilter extends React.Component
   {
     super(props);
     this.state = {
-           
+      enterSkills: '',
+      skillsSuggestions: [],
+      showSkillsSuggestions: false,
+      
     };
     this.handleRecentSearchClicked = this.handleRecentSearchClicked.bind(this);
     this.handleShowFixedChange = this.handleShowFixedChange.bind(this);
     this.handleShowHourlyChange = this.handleShowHourlyChange.bind(this);
     this.handleSkillFilterChange = this.handleSkillFilterChange.bind(this);
+    this.handleEnterSkillsChange = this.handleEnterSkillsChange.bind(this);
+    this.handleSkillsSuggesionClick = this.handleSkillsSuggesionClick.bind(this);
   }
 
   componentDidMount ()
@@ -55,6 +60,39 @@ class JobFilter extends React.Component
     this.props.handleSkillFilterState();
   }
 
+  async handleEnterSkillsChange (event)
+  {
+    this.setState({enterSkills: event.target.value})
+    this.setState({showSkillsSuggestions: true});
+
+    if (event.target.value === '')
+    {
+      this.setState({showSkillsSuggestions: false});
+    }
+
+    let skillsSuggestions = [];
+
+    await axios.get(`http://localhost:8000/skills?q=${event.target.value}`)
+    .then(response => {
+      console.log(response.data);
+        response.data.map(data => {
+                skillsSuggestions.push(data.name);
+        });
+    })
+    .catch(err => console.log(err));
+
+    this.setState({skillsSuggestions: skillsSuggestions});
+  }
+
+  handleSkillsSuggesionClick (suggestion)
+  {
+    this.props.handleSkillsSuggesionClick(suggestion);
+    this.props.handleFilterChange(suggestion);
+    this.props.handleSkillFilterState();
+
+    this.setState({showSkillsSuggestions: false});
+  }
+
   render ()
   {
     let recentSearches = null;
@@ -80,13 +118,33 @@ class JobFilter extends React.Component
             <span>{skill}</span>
             <input 
               type="checkbox"
-              defaultChecked={false} 
+              defaultChecked={this.props.skills[skill]} 
               onChange={() => this.handleSkillFilterChange(skill)}
             />
             <div className="b-input"></div>
           </label>
         );
       });
+    }
+
+    let skillsSuggestions = null;
+    if (this.state.skillsSuggestions)
+    {
+      skillsSuggestions = this.state.skillsSuggestions.map(suggestion => {
+        if (Object.keys(this.props.skills).includes(suggestion))
+        {
+          return;
+        }
+        return (
+          <div 
+            className="skillsSuggestion"
+            key={suggestion}
+            onClick={() => this.handleSkillsSuggesionClick(suggestion)}
+          >
+            {suggestion}
+          </div>
+        )
+      })
     }
 
     return (
@@ -128,6 +186,16 @@ class JobFilter extends React.Component
           </h5>
           {skills}
         </div>
+        <input 
+          type="text"
+          className="enterSkills"
+          placeholder="Or enter skills"
+          value={this.state.enterSkills}
+          onChange={this.handleEnterSkillsChange}
+        />
+        <div className="skillsSuggestions box-shadow">
+          {this.state.showSkillsSuggestions ? skillsSuggestions : null}
+        </div>
       </React.Fragment>
     );
   }
@@ -154,6 +222,7 @@ function mapDispatchToProps (dispatch)
     handleFilterChange: () => dispatch({type: 'HANDLE_FILTER_CHANGE'}),
     handleSkillFilterChange: (skill) => dispatch({type: 'HANDLE_SKILL_FILTER_CHANGE', skill}),
     handleSkillFilterState: () => dispatch({type: 'HANDLE_SKILL_FILTER_STATE'}),
+    handleSkillsSuggesionClick: (suggestion) => dispatch({type: 'HANDLE_SKILLS_SUGGESTION_CLICK', suggestion}),
 
   }
 }
