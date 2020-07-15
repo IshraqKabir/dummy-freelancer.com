@@ -47,12 +47,14 @@ class JobFilter extends React.Component
   {
     this.props.handleShowFixedChange();
     this.props.handleFilterChange();
+    this.props.handleSkillFilterState();
   }
   
   handleShowHourlyChange () 
   {
     this.props.handleShowHourlyChange();
     this.props.handleFilterChange();
+    this.props.handleSkillFilterState();
   }
 
   handleSkillFilterChange (skill)

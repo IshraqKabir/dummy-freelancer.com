@@ -25,6 +25,7 @@ class Jobs extends React.Component
     this.props.connect('Jobs');
     axios.get(`http://localhost:8000/jobsapi?q=`)
       .then(response => {
+        // console.log(response.data);
         this.props.setSearchResults(response.data);
       })
       .catch(err => console.log(err));

@@ -17,6 +17,8 @@ class ProjectController extends Controller
             return;
         }
 
+        // $response = \App\Project::where('name', 'like', '%' . $query . '%')->orderBy('created_at', 'DESC')->paginate(2);
+        // $response = \json_encode($response);
         $response = \App\Project::where('name', 'like', '%' . $query . '%')->orderBy('created_at', 'DESC')->limit(10)->get()->toJson();
         $response = json_decode($response, true);
         foreach($response as &$res) {
@@ -24,6 +26,7 @@ class ProjectController extends Controller
             $skills = $project->skills;
             $res['skills'] = $skills;
         }
+        // dd($response);
         return $response;
     }
 

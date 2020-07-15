@@ -35746,12 +35746,14 @@ var JobFilter = /*#__PURE__*/function (_React$Component) {
     value: function handleShowFixedChange() {
       this.props.handleShowFixedChange();
       this.props.handleFilterChange();
+      this.props.handleSkillFilterState();
     }
   }, {
     key: "handleShowHourlyChange",
     value: function handleShowHourlyChange() {
       this.props.handleShowHourlyChange();
       this.props.handleFilterChange();
+      this.props.handleSkillFilterState();
     }
   }, {
     key: "handleSkillFilterChange",
@@ -36517,6 +36519,7 @@ var Jobs = /*#__PURE__*/function (_React$Component) {
 
       this.props.connect('Jobs');
       axios.get("http://localhost:8000/jobsapi?q=").then(function (response) {
+        // console.log(response.data);
         _this2.props.setSearchResults(response.data);
       })["catch"](function (err) {
         return console.log(err);
