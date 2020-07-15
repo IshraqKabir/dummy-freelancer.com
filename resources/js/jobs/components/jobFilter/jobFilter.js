@@ -61,6 +61,7 @@ class JobFilter extends React.Component
   {
     this.props.handleSkillFilterChange(skill);
     this.props.handleSkillFilterState();
+    this.props.handleFilterChange();
   }
 
   async handleEnterSkillsChange (event)
@@ -226,10 +227,11 @@ function mapDispatchToProps (dispatch)
     handleFilterChange: () => dispatch({type: 'HANDLE_FILTER_CHANGE'}),
     handleSkillFilterChange: (skill) => dispatch({type: 'HANDLE_SKILL_FILTER_CHANGE', skill}),
     handleSkillFilterState: () => dispatch({type: 'HANDLE_SKILL_FILTER_STATE'}),
-    handleSkillsSuggesionClick: (suggestion) => dispatch({type: 'HANDLE_SKILLS_SUGGESTION_CLICK', suggestion}),
+    handleSkillsSuggesionClick: (suggestion) => dispatch({type: 'ADD_SKILL_FILTER', suggestion}),
 
   }
 }
 
 
 export default connect(mapStoreToProps, mapDispatchToProps) (JobFilter);
+
