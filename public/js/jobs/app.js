@@ -35759,8 +35759,8 @@ var JobFilter = /*#__PURE__*/function (_React$Component) {
     key: "handleSkillFilterChange",
     value: function handleSkillFilterChange(skill) {
       this.props.handleSkillFilterChange(skill);
-      this.props.handleSkillFilterState();
       this.props.handleFilterChange();
+      this.props.handleSkillFilterState();
     }
   }, {
     key: "handleEnterSkillsChange",

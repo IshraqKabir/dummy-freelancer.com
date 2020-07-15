@@ -60,8 +60,8 @@ class JobFilter extends React.Component
   handleSkillFilterChange (skill)
   {
     this.props.handleSkillFilterChange(skill);
-    this.props.handleSkillFilterState();
     this.props.handleFilterChange();
+    this.props.handleSkillFilterState();
   }
 
   async handleEnterSkillsChange (event)
