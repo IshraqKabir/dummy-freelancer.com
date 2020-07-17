@@ -36341,8 +36341,8 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 function Paginator() {
-  var searchResults = Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["useSelector"])(function (state) {
-    return state.searchResults;
+  var unMutableSearchResults = Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["useSelector"])(function (state) {
+    return state.unMutableSearchResults;
   });
   var dispatch = Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["useDispatch"])();
 
@@ -36375,50 +36375,56 @@ function Paginator() {
     };
   }, []);
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
-    if (searchResults.length % _store_reducer__WEBPACK_IMPORTED_MODULE_3__["jobsPerPage"] === 0) {
-      setTotalPages(searchResults.length / _store_reducer__WEBPACK_IMPORTED_MODULE_3__["jobsPerPage"]);
+    if (unMutableSearchResults.length % _store_reducer__WEBPACK_IMPORTED_MODULE_3__["jobsPerPage"] === 0) {
+      setTotalPages(unMutableSearchResults.length / _store_reducer__WEBPACK_IMPORTED_MODULE_3__["jobsPerPage"]);
     } else {
-      setTotalPages(1 + searchResults.length / _store_reducer__WEBPACK_IMPORTED_MODULE_3__["jobsPerPage"]);
+      setTotalPages(1 + unMutableSearchResults.length / _store_reducer__WEBPACK_IMPORTED_MODULE_3__["jobsPerPage"]);
     }
-  }, [searchResults]);
+  }, [unMutableSearchResults]);
   var paginatorButtons = [];
-  var buttonCountLimit = currentPage + 3; // if (currentPage + 2 > totalPages) {
-  //     buttonCountLimit = currentPage + 1;
-  // }
-  // else if (currentPage + 3 > totalPages) {
-  //     buttonCountLimit = currentPage + 2;
-  // }
+  var i = currentPage;
+  console.log('current page  ' + currentPage);
 
-  var _loop = function _loop(i) {
+  var _loop = function _loop(_i2) {
+    console.log(_i2);
+
     if (currentPage === 1) {
-      paginatorButtons.push( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "paginator-button " + (currentPage === i ? 'current' : ''),
-        key: i,
+      if (_i2 <= totalPages) paginatorButtons.push( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "paginator-button " + (currentPage === _i2 ? 'current' : ''),
+        key: _i2,
         onClick: function onClick() {
-          return paginate(i);
+          return paginate(_i2);
         }
-      }, i));
+      }, _i2));
     } else {
-      paginatorButtons.push( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "paginator-button " + (currentPage === i - 1 ? 'current' : ''),
-        key: i - 1,
+      if (_i2 < totalPages + 2) paginatorButtons.push( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "paginator-button " + (currentPage === _i2 - 1 ? 'current' : ''),
+        key: _i2 - 1,
         onClick: function onClick() {
-          return paginate(i - 1);
+          return paginate(_i2 - 1);
         }
-      }, i - 1));
+      }, _i2 - 1));
     }
   };
 
-  for (var i = currentPage; i < buttonCountLimit; i++) {
-    _loop(i);
+  for (var _i2 = currentPage; _i2 < currentPage + 3; _i2++) {
+    _loop(_i2);
   }
 
   var paginate = function paginate(i) {
+    console.log(i);
+    if (i < 1) return;
     setCurrentPage(i);
     dispatch({
       type: 'PAGINATE',
       pageNumber: i
     });
+  };
+
+  var next = function next(i) {
+    if (i <= totalPages && currentPage !== totalPages) {
+      paginate(i);
+    }
   };
 
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -36429,12 +36435,20 @@ function Paginator() {
       return paginate(1);
     }
   }, "First"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "paginator-button previous" // onClick={}
-
+    className: "paginator-button previous",
+    onClick: function onClick() {
+      return paginate(currentPage - 1);
+    }
   }, "Prev"), paginatorButtons, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "paginator-button"
+    className: "paginator-button",
+    onClick: function onClick() {
+      return next(currentPage + 1);
+    }
   }, "Next"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "paginator-button last"
+    className: "paginator-button last",
+    onClick: function onClick() {
+      return paginate(totalPages);
+    }
   }, "Last"));
 }
 
@@ -36735,7 +36749,6 @@ var Jobs = /*#__PURE__*/function (_React$Component) {
 
       this.props.connect('Jobs');
       axios.get("http://localhost:8000/jobsapi?q=").then(function (response) {
-        // console.log(response.data);
         _this2.props.setSearchResults(response.data);
 
         _this2.props.paginate();
@@ -36822,7 +36835,7 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
-var jobsPerPage = 2;
+var jobsPerPage = 1;
 var initialState = {
   name: '',
   searchResults: [],

@@ -7,7 +7,7 @@ import { jobsPerPage } from '../../../store/reducer';
 
 function Paginator ()
 {
-    const searchResults = useSelector(state => state.searchResults);
+    const unMutableSearchResults = useSelector(state => state.unMutableSearchResults);
     const dispatch = useDispatch();
     const [totalPages, setTotalPages] = useState(0);
     const [currentPage, setCurrentPage] = useState(1);
@@ -27,27 +27,25 @@ function Paginator ()
     }, []);
 
     useEffect(() => {
-        if (searchResults.length%jobsPerPage === 0) {
-            setTotalPages(searchResults.length / jobsPerPage);
+        if (unMutableSearchResults.length%jobsPerPage === 0) {
+            setTotalPages(unMutableSearchResults.length / jobsPerPage);
         }
         else {
-            setTotalPages(1 + searchResults.length / jobsPerPage);
+            setTotalPages(1 + unMutableSearchResults.length / jobsPerPage);
         }
-    }, [searchResults]);
+    }, [unMutableSearchResults]);
 
     let paginatorButtons = [];
-    
-    let buttonCountLimit = currentPage + 3;
 
-    // if (currentPage + 2 > totalPages) {
-    //     buttonCountLimit = currentPage + 1;
-    // }
-    // else if (currentPage + 3 > totalPages) {
-    //     buttonCountLimit = currentPage + 2;
-    // }
+    let i = currentPage;
+
+    console.log('current page  ' + currentPage);
     
-    for (let i = currentPage; i < buttonCountLimit; i++) {
+    
+    for (let i = currentPage; i < currentPage + 3; i++) {
+        console.log(i);
         if (currentPage === 1) {
+            if (i <= totalPages)
             paginatorButtons.push(
                 <div 
                     className={"paginator-button " + (currentPage === i ? 'current' : '')}
@@ -57,7 +55,9 @@ function Paginator ()
                   {i}
                 </div>
             );
-        } else{
+        }
+        else {
+            if (i < totalPages + 2)
             paginatorButtons.push(
                 <div 
                     className={"paginator-button " + (currentPage === i-1 ? 'current' : '')}
@@ -71,8 +71,17 @@ function Paginator ()
     }
 
     const paginate = (i) => {
+        console.log(i);
+        if (i < 1) return;
         setCurrentPage(i);
         dispatch({type: 'PAGINATE', pageNumber: i});
+
+    }
+
+    const next = (i) => {
+        if (i <= totalPages && currentPage !== totalPages) {
+            paginate(i);
+        }
     }
 
 
@@ -86,17 +95,20 @@ function Paginator ()
         </div>
         <div 
             className="paginator-button previous"
-            // onClick={}
+            onClick={() => paginate(currentPage-1)}
         >
             Prev
         </div>
         {paginatorButtons}
-        <div className="paginator-button">
+        <div 
+            className="paginator-button"
+            onClick={() => next(currentPage+1)}
+        >
             Next
         </div>
         <div 
             className="paginator-button last"
-            
+            onClick={() => paginate(totalPages)}
         >
             Last
         </div>
