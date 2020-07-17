@@ -2018,7 +2018,26 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, ".searchedJobCard {\r\n    width: 100%;\r\n    padding: 0px 24px;\r\n    color: black;\r\n    overflow: hidden;\r\n    box-sizing: border-box;\r\n    display: flex;\r\n}\r\n\r\na {\r\n    color: black;\r\n    text-decoration: none;\r\n}\r\n\r\n.searchedJobCard:hover {\r\n    background-color: #f7f7f7;\r\n}\r\n\r\n.searchedJobCard-item {\r\n    box-sizing: border-box;\r\n    padding: 24px 0;\r\n    border-bottom: 1px solid #dedede;\r\n    display: flex;\r\n}\r\n\r\n.projectName {\r\n    text-decoration: none;\r\n    font-size: 16px;\r\n    line-height: 24px;\r\n}\r\n\r\n.projectName:hover {\r\n    color: rgb(19, 159, 240);\r\n    text-decoration: underline;\r\n}\r\n\r\n.projectDetails {\r\n    margin: 14px 0px 16px 0px;\r\n    font-family: Roboto;\r\n    font-size: 14px;\r\n    line-height: 19.6px;\r\n    -webkit-line-clamp: 3;\r\n    letter-spacing: 0.5px;\r\n}\r\n\r\n.skills {\r\n    display: flex;\r\n    padding-right: 24px;\r\n    display: flex;\r\n    flex-wrap: wrap;\r\n}\r\n\r\n.skill {\r\n    margin-right: 8px;\r\n    font-family: Roboto;\r\n    font-size: 16px;\r\n    color: rgb(0, 127, 237);\r\n    line-height: 19.6px;\r\n    letter-spacing: 0.5px;\r\n}\r\n\r\n.jobContainer {\r\n    width: 80%;\r\n}\r\n\r\n.budget {\r\n    font-family: Roboto;\r\n    font-size: 16px;\r\n    font-weight: 700;\r\n    line-height: 24px;\r\n}\r\n\r\n@media only screen and (max-width: 950px) {\r\n    .searchedJobCard-item {\r\n        flex-direction: column;\r\n    }\r\n\r\n    .budget {\r\n        font-size: 14px;\r\n    }\r\n\r\n    .jobContainer {\r\n        padding-bottom: 8px;\r\n    }\r\n}", ""]);
+exports.push([module.i, ".searchedJobCard {\r\n    width: 100%;\r\n    padding: 0px 24px;\r\n    color: black;\r\n    overflow: hidden;\r\n    box-sizing: border-box;\r\n    display: flex;\r\n}\r\n\r\na {\r\n    color: black;\r\n    text-decoration: none;\r\n}\r\n\r\n.searchedJobCard:hover {\r\n    background-color: #f7f7f7;\r\n}\r\n\r\n.searchedJobCard-item {\r\n    box-sizing: border-box;\r\n    padding: 24px 0;\r\n    border-bottom: 1px solid #dedede;\r\n    display: flex;\r\n}\r\n\r\n.projectName {\r\n    text-decoration: none;\r\n    font-size: 16px;\r\n    line-height: 24px;\r\n}\r\n\r\n.projectName:hover {\r\n    color: rgb(19, 159, 240);\r\n    text-decoration: underline;\r\n}\r\n\r\n.projectDetails {\r\n    margin: 14px 0px 16px 0px;\r\n    font-family: Roboto;\r\n    font-size: 14px;\r\n    line-height: 19.6px;\r\n    -webkit-line-clamp: 3;\r\n    letter-spacing: 0.5px;\r\n}\r\n\r\n.skills {\r\n    display: flex;\r\n    padding-right: 24px;\r\n    display: flex;\r\n    flex-wrap: wrap;\r\n}\r\n\r\n.skill {\r\n    margin-right: 8px;\r\n    font-family: Roboto;\r\n    font-size: 16px;\r\n    color: rgb(0, 127, 237);\r\n    line-height: 19.6px;\r\n    letter-spacing: 0.5px;\r\n}\r\n\r\n.jobContainer {\r\n    width: 80%;\r\n}\r\n\r\n.budget {\r\n    font-family: Roboto;\r\n    font-size: 16px;\r\n    font-weight: 700;\r\n    line-height: 24px;\r\n}\r\n\r\n@media only screen and (max-width: 950px) {\r\n    .searchedJobCard-item {\r\n        flex-direction: column;\r\n    }\r\n\r\n    .budget {\r\n        font-size: 14px;\r\n    }\r\n\r\n    .jobContainer {\r\n        padding-bottom: 8px;\r\n    }\r\n}\r\n\r\n.searchResults-header-Container {\r\n    box-sizing: border-box;\r\n    display: flex;\r\n    padding: 24px;\r\n    width: 100%;\r\n    height: 100px;\r\n    border-bottom: 1px solid #dedede;\r\n    justify-content: center;\r\n    align-items: center;\r\n}\r\n\r\n.searchResults-header {\r\n    box-sizing: border-box;\r\n    display: flex;\r\n    justify-content: space-between;\r\n    width: 100%;\r\n}", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/jobs/components/searchResults/paginator/paginator.css":
+/*!************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--7-1!./node_modules/postcss-loader/src??ref--7-2!./resources/js/jobs/components/searchResults/paginator/paginator.css ***!
+  \************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
 
 // exports
 
@@ -2037,7 +2056,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".container {\n  width: 100vw;\n  height: 100%;\n  background-color: #f0f0f0;\n  display: flex;\n  flex-direction: column;\n  align-content: center;\n  box-sizing: border-box;\n}\n\n.searchResultContainer {\n  padding: 0px 4%;  \n  display: flex;\n  justify-content: space-between;\n}\n\n@media only screen and (max-width: 700px) {\n  .container {\n    padding: 0px 15px;\n  }\n}\n\n.jobFilter {\n  background-color: white;\n  width: 22%;\n}\n\n.searchResults {\n  background-color: white;\n  height: 90vh;\n  width: 75%;\n  padding-bottom: 100px;\n  overflow: hidden;\n}\n\n.box-shadow {\n  box-shadow: rgba(0, 0, 0, 0.12) 0px 0px 6px 0px, rgba(0, 0, 0, 0.16) 0px 4px 10px 0px;\n}\n\n@media only screen and (max-width: 950px) {\n  .jobFilter {\n    display: none;\n  }\n  .searchResults {\n    width: 100%;\n  }\n}\n\n.jobFilter {\n  box-sizing: border-box;\n  padding: 24px;\n}\n", ""]);
+exports.push([module.i, ".container {\n  width: 100vw;\n  height: 100%;\n  background-color: #f0f0f0;\n  display: flex;\n  flex-direction: column;\n  align-content: center;\n  box-sizing: border-box;\n}\n\n.searchResultContainer {\n  padding: 0px 4%;  \n  display: flex;\n  justify-content: space-between;\n  align-items: flex-start;\n  margin-bottom: 100px;\n}\n\n@media only screen and (max-width: 700px) {\n  .container {\n    padding: 0px 15px;\n  }\n}\n\n.jobFilter {\n  background-color: white;\n  width: 22%;\n}\n\n.searchResults {\n  background-color: white;\n  width: 75%;\n  overflow: hidden;\n}\n\n.box-shadow {\n  box-shadow: rgba(0, 0, 0, 0.12) 0px 0px 6px 0px, rgba(0, 0, 0, 0.16) 0px 4px 10px 0px;\n}\n\n@media only screen and (max-width: 950px) {\n  .jobFilter {\n    display: none;\n  }\n  .searchResults {\n    width: 100%;\n  }\n}\n\n.jobFilter {\n  box-sizing: border-box;\n  padding: 24px;\n}\n", ""]);
 
 // exports
 
@@ -36248,6 +36267,72 @@ if(false) {}
 
 /***/ }),
 
+/***/ "./resources/js/jobs/components/searchResults/paginator/paginator.css":
+/*!****************************************************************************!*\
+  !*** ./resources/js/jobs/components/searchResults/paginator/paginator.css ***!
+  \****************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../../../node_modules/css-loader??ref--7-1!../../../../../../node_modules/postcss-loader/src??ref--7-2!./paginator.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/jobs/components/searchResults/paginator/paginator.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./resources/js/jobs/components/searchResults/paginator/paginator.js":
+/*!***************************************************************************!*\
+  !*** ./resources/js/jobs/components/searchResults/paginator/paginator.js ***!
+  \***************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _paginator_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./paginator.css */ "./resources/js/jobs/components/searchResults/paginator/paginator.css");
+/* harmony import */ var _paginator_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_paginator_css__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+
+
+
+
+function Paginator() {
+  var searchResults = Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["useSelector"])(function (state) {
+    return state.searchResults;
+  });
+  var dispatch = Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["useDispatch"])();
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
+    dispatch({
+      type: 'connected',
+      componentName: 'paginator'
+    });
+  }, []);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null);
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (Paginator);
+
+/***/ }),
+
 /***/ "./resources/js/jobs/components/searchResults/searchResults.js":
 /*!*********************************************************************!*\
   !*** ./resources/js/jobs/components/searchResults/searchResults.js ***!
@@ -36262,6 +36347,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _SearchResults_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./SearchResults.css */ "./resources/js/jobs/components/searchResults/SearchResults.css");
 /* harmony import */ var _SearchResults_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_SearchResults_css__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _paginator_paginator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./paginator/paginator */ "./resources/js/jobs/components/searchResults/paginator/paginator.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -36283,6 +36369,7 @@ function _assertThisInitialized(self) { if (self === void 0) { throw new Referen
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
 
 
 
@@ -36315,6 +36402,16 @@ var SearchResults = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
+      var jobCount = 'No Jobs Found';
+
+      if (this.props.searchResults) {
+        if (this.props.searchResults.length === 1) {
+          jobCount = '1 Job Found';
+        } else {
+          jobCount = "".concat(this.props.searchResults.length, " Jobs Found");
+        }
+      }
+
       var searchedJobs = null;
 
       if (this.props.searchResults) {
@@ -36349,7 +36446,15 @@ var SearchResults = /*#__PURE__*/function (_React$Component) {
         });
       }
 
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, searchedJobs);
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "searchResults-header-Container"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "searchResults-header"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "jobCount"
+      }, jobCount), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "paginator"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_paginator_paginator__WEBPACK_IMPORTED_MODULE_3__["default"], null)))), searchedJobs);
     }
   }]);
 

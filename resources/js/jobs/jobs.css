@@ -12,6 +12,8 @@
   padding: 0px 4%;  
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 100px;
 }
 
 @media only screen and (max-width: 700px) {
@@ -27,9 +29,7 @@
 
 .searchResults {
   background-color: white;
-  height: 90vh;
   width: 75%;
-  padding-bottom: 100px;
   overflow: hidden;
 }
 

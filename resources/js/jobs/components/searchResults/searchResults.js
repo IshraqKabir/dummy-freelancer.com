@@ -4,6 +4,8 @@ import './SearchResults.css';
 
 import { connect } from 'react-redux';
 
+import Paginator from './paginator/paginator';
+
 class SearchResults extends React.Component
 {
   constructor (props)
@@ -28,6 +30,16 @@ class SearchResults extends React.Component
 
   render ()
   {
+    let jobCount = 'No Jobs Found';
+
+    if (this.props.searchResults)
+    {
+      if (this.props.searchResults.length === 1) {
+        jobCount = '1 Job Found';
+      } else {
+        jobCount = `${this.props.searchResults.length} Jobs Found`;
+      }
+    }
     let searchedJobs = null;
     if (this.props.searchResults) 
     {
@@ -74,6 +86,16 @@ class SearchResults extends React.Component
 
     return (
       <React.Fragment>
+        <div className="searchResults-header-Container">
+          <div className="searchResults-header">
+            <div className="jobCount">
+              {jobCount}
+            </div>
+            <div className="paginator">
+              <Paginator />
+            </div>
+          </div>
+        </div>
         {searchedJobs}
       </React.Fragment>
     );
