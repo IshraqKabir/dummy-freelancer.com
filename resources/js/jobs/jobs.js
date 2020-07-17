@@ -24,11 +24,12 @@ class Jobs extends React.Component
   {
     this.props.connect('Jobs');
     axios.get(`http://localhost:8000/jobsapi?q=`)
-      .then(response => {
-        // console.log(response.data);
-        this.props.setSearchResults(response.data);
-      })
-      .catch(err => console.log(err));
+    .then(response => {
+      // console.log(response.data);
+      this.props.setSearchResults(response.data);
+      this.props.paginate();
+    })
+    .catch(err => console.log(err));
   }
 
   render ()
@@ -64,6 +65,8 @@ function mapDispatchToProps (dispatch)
   return {
     connect: (componentName) => dispatch({type:'connected', componentName}),
     setSearchResults: (searchResults) => dispatch({type: 'SET_SEARCH_RESULTS', searchResults}),
+    paginate: () => dispatch({type: 'PAGINATE', pageNumber: 1}),
+
   }
 }
 

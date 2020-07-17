@@ -35,9 +35,18 @@ function Paginator ()
         }
     }, [searchResults]);
 
-    let paginatorButtons = [];    
+    let paginatorButtons = [];
     
-    for (let i = currentPage; i < currentPage + 3; i++) {
+    let buttonCountLimit = currentPage + 3;
+
+    // if (currentPage + 2 > totalPages) {
+    //     buttonCountLimit = currentPage + 1;
+    // }
+    // else if (currentPage + 3 > totalPages) {
+    //     buttonCountLimit = currentPage + 2;
+    // }
+    
+    for (let i = currentPage; i < buttonCountLimit; i++) {
         if (currentPage === 1) {
             paginatorButtons.push(
                 <div 
@@ -75,7 +84,10 @@ function Paginator ()
         >
             First
         </div>
-        <div className="paginator-button previous">
+        <div 
+            className="paginator-button previous"
+            // onClick={}
+        >
             Prev
         </div>
         {paginatorButtons}

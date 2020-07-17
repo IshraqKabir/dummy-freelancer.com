@@ -15,7 +15,8 @@ const initialState = {
             'react': false,
             'web development': false,
         },
-    }
+    },
+
 };
 
 function handleSkillFilterState (filters, searchResults) 

@@ -34,6 +34,7 @@ class JobFilter extends React.Component
   {
     this.props.handleRecentSearchClicked(search);
     this.props.setRecentSearches(search);
+    this.props.paginate();  
 
     axios.get(`http://localhost:8000/jobsapi?q=${search}`)
       .then(response => {
@@ -48,6 +49,7 @@ class JobFilter extends React.Component
     this.props.handleShowFixedChange();
     this.props.handleFilterChange();
     this.props.handleSkillFilterState();
+    this.props.paginate();
   }
   
   handleShowHourlyChange () 
@@ -55,6 +57,7 @@ class JobFilter extends React.Component
     this.props.handleShowHourlyChange();
     this.props.handleFilterChange();
     this.props.handleSkillFilterState();
+    this.props.paginate();
   }
 
   handleSkillFilterChange (skill)
@@ -62,6 +65,7 @@ class JobFilter extends React.Component
     this.props.handleSkillFilterChange(skill);
     this.props.handleFilterChange();
     this.props.handleSkillFilterState();
+    this.props.paginate();
   }
 
   async handleEnterSkillsChange (event)
@@ -93,6 +97,7 @@ class JobFilter extends React.Component
     this.props.handleSkillsSuggesionClick(suggestion);
     this.props.handleFilterChange(suggestion);
     this.props.handleSkillFilterState();
+    this.props.paginate();
 
     this.setState({showSkillsSuggestions: false});
     this.setState({enterSkills: ''});
@@ -228,6 +233,7 @@ function mapDispatchToProps (dispatch)
     handleSkillFilterChange: (skill) => dispatch({type: 'HANDLE_SKILL_FILTER_CHANGE', skill}),
     handleSkillFilterState: () => dispatch({type: 'HANDLE_SKILL_FILTER_STATE'}),
     handleSkillsSuggesionClick: (suggestion) => dispatch({type: 'ADD_SKILL_FILTER', suggestion}),
+    paginate: () => dispatch({type: 'PAGINATE', pageNumber: 1}),
 
   }
 }

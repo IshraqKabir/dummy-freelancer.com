@@ -35752,6 +35752,7 @@ var JobFilter = /*#__PURE__*/function (_React$Component) {
 
       this.props.handleRecentSearchClicked(search);
       this.props.setRecentSearches(search);
+      this.props.paginate();
       axios.get("http://localhost:8000/jobsapi?q=".concat(search)).then(function (response) {
         _this2.props.setSearchResults(response.data);
 
@@ -35766,6 +35767,7 @@ var JobFilter = /*#__PURE__*/function (_React$Component) {
       this.props.handleShowFixedChange();
       this.props.handleFilterChange();
       this.props.handleSkillFilterState();
+      this.props.paginate();
     }
   }, {
     key: "handleShowHourlyChange",
@@ -35773,6 +35775,7 @@ var JobFilter = /*#__PURE__*/function (_React$Component) {
       this.props.handleShowHourlyChange();
       this.props.handleFilterChange();
       this.props.handleSkillFilterState();
+      this.props.paginate();
     }
   }, {
     key: "handleSkillFilterChange",
@@ -35780,6 +35783,7 @@ var JobFilter = /*#__PURE__*/function (_React$Component) {
       this.props.handleSkillFilterChange(skill);
       this.props.handleFilterChange();
       this.props.handleSkillFilterState();
+      this.props.paginate();
     }
   }, {
     key: "handleEnterSkillsChange",
@@ -35839,6 +35843,7 @@ var JobFilter = /*#__PURE__*/function (_React$Component) {
       this.props.handleSkillsSuggesionClick(suggestion);
       this.props.handleFilterChange(suggestion);
       this.props.handleSkillFilterState();
+      this.props.paginate();
       this.setState({
         showSkillsSuggestions: false
       });
@@ -36011,6 +36016,12 @@ function mapDispatchToProps(dispatch) {
       return dispatch({
         type: 'ADD_SKILL_FILTER',
         suggestion: suggestion
+      });
+    },
+    paginate: function paginate() {
+      return dispatch({
+        type: 'PAGINATE',
+        pageNumber: 1
       });
     }
   };
@@ -36371,6 +36382,12 @@ function Paginator() {
     }
   }, [searchResults]);
   var paginatorButtons = [];
+  var buttonCountLimit = currentPage + 3; // if (currentPage + 2 > totalPages) {
+  //     buttonCountLimit = currentPage + 1;
+  // }
+  // else if (currentPage + 3 > totalPages) {
+  //     buttonCountLimit = currentPage + 2;
+  // }
 
   var _loop = function _loop(i) {
     if (currentPage === 1) {
@@ -36392,7 +36409,7 @@ function Paginator() {
     }
   };
 
-  for (var i = currentPage; i < currentPage + 3; i++) {
+  for (var i = currentPage; i < buttonCountLimit; i++) {
     _loop(i);
   }
 
@@ -36412,7 +36429,8 @@ function Paginator() {
       return paginate(1);
     }
   }, "First"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "paginator-button previous"
+    className: "paginator-button previous" // onClick={}
+
   }, "Prev"), paginatorButtons, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "paginator-button"
   }, "Next"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -36719,6 +36737,8 @@ var Jobs = /*#__PURE__*/function (_React$Component) {
       axios.get("http://localhost:8000/jobsapi?q=").then(function (response) {
         // console.log(response.data);
         _this2.props.setSearchResults(response.data);
+
+        _this2.props.paginate();
       })["catch"](function (err) {
         return console.log(err);
       });
@@ -36757,6 +36777,12 @@ function mapDispatchToProps(dispatch) {
       return dispatch({
         type: 'SET_SEARCH_RESULTS',
         searchResults: searchResults
+      });
+    },
+    paginate: function paginate() {
+      return dispatch({
+        type: 'PAGINATE',
+        pageNumber: 1
       });
     }
   };
