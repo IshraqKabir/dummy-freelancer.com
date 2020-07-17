@@ -15,8 +15,15 @@ function Paginator ()
 
     
     useEffect(() => {
-        dispatch({type: 'connected', componentName: 'paginator'});
-        dispatch({type: 'PAGINATE', pageNumber: currentPage});
+        let stateCheck = 1;
+        if (stateCheck) {
+            dispatch({type: 'connected', componentName: 'paginator'});
+            dispatch({type: 'PAGINATE', pageNumber: currentPage});
+        }
+
+        return () => {
+            stateCheck = 0;
+        }
     }, []);
 
     useEffect(() => {
@@ -28,21 +35,34 @@ function Paginator ()
         }
     }, [searchResults]);
 
-    let paginatorButtons = [];
-
+    let paginatorButtons = [];    
+    
     for (let i = currentPage; i < currentPage + 3; i++) {
-        paginatorButtons.push(
-            <div 
-                className="paginator-button"
-                key={i}
-                onClick={() => paginate(i)}
-            >
-              {i}
-            </div>
-        );
+        if (currentPage === 1) {
+            paginatorButtons.push(
+                <div 
+                    className={"paginator-button " + (currentPage === i ? 'current' : '')}
+                    key={i}
+                    onClick={() => paginate(i)}
+                >
+                  {i}
+                </div>
+            );
+        } else{
+            paginatorButtons.push(
+                <div 
+                    className={"paginator-button " + (currentPage === i-1 ? 'current' : '')}
+                    key={i-1}
+                    onClick={() => paginate(i-1)}
+                >
+                    {i-1}
+                </div>
+            );            
+        }
     }
 
     const paginate = (i) => {
+        setCurrentPage(i);
         dispatch({type: 'PAGINATE', pageNumber: i});
     }
 

@@ -2037,7 +2037,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../../node_module
 
 
 // module
-exports.push([module.i, ".paginator-Container {\r\n    display: flex;\r\n}\r\n\r\n.paginator-button {\r\n    box-sizing: border-box;\r\n    padding: 8px 16px;\r\n    border: 1px solid #bec0c2;\r\n    border-right: none;\r\n    background: #f9f9f9;\r\n    color: #0e1724;\r\n    font-size: 14px;\r\n    font-weight: 700;\r\n    cursor: pointer;\r\n}\r\n\r\n.paginator-button:hover {\r\n    background: #f0f0f0;\r\n}\r\n\r\n.last {\r\n    border-right: 1px solid #bec0c2;\r\n}\r\n\r\n", ""]);
+exports.push([module.i, ".paginator-Container {\r\n    display: flex;\r\n}\r\n\r\n.paginator-button {\r\n    box-sizing: border-box;\r\n    padding: 8px 16px;\r\n    border: 1px solid #bec0c2;\r\n    border-right: none;\r\n    background: #f9f9f9;\r\n    color: #0e1724;\r\n    font-size: 14px;\r\n    font-weight: 700;\r\n    cursor: pointer;\r\n}\r\n\r\n.paginator-button:hover {\r\n    background: #f0f0f0;\r\n}\r\n\r\n.last {\r\n    border-right: 1px solid #bec0c2;\r\n}\r\n\r\n.current {\r\n    background: #139ff0;\r\n    color: white;\r\n    border: 1px solid #1293de;\r\n}\r\n\r\n.current:hover {\r\n    background: #139ff0;\r\n}\r\n\r\n", ""]);
 
 // exports
 
@@ -36346,14 +36346,22 @@ function Paginator() {
       setCurrentPage = _useState4[1];
 
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
-    dispatch({
-      type: 'connected',
-      componentName: 'paginator'
-    });
-    dispatch({
-      type: 'PAGINATE',
-      pageNumber: currentPage
-    });
+    var stateCheck = 1;
+
+    if (stateCheck) {
+      dispatch({
+        type: 'connected',
+        componentName: 'paginator'
+      });
+      dispatch({
+        type: 'PAGINATE',
+        pageNumber: currentPage
+      });
+    }
+
+    return function () {
+      stateCheck = 0;
+    };
   }, []);
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
     if (searchResults.length % _store_reducer__WEBPACK_IMPORTED_MODULE_3__["jobsPerPage"] === 0) {
@@ -36365,13 +36373,23 @@ function Paginator() {
   var paginatorButtons = [];
 
   var _loop = function _loop(i) {
-    paginatorButtons.push( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      className: "paginator-button",
-      key: i,
-      onClick: function onClick() {
-        return paginate(i);
-      }
-    }, i));
+    if (currentPage === 1) {
+      paginatorButtons.push( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "paginator-button " + (currentPage === i ? 'current' : ''),
+        key: i,
+        onClick: function onClick() {
+          return paginate(i);
+        }
+      }, i));
+    } else {
+      paginatorButtons.push( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "paginator-button " + (currentPage === i - 1 ? 'current' : ''),
+        key: i - 1,
+        onClick: function onClick() {
+          return paginate(i - 1);
+        }
+      }, i - 1));
+    }
   };
 
   for (var i = currentPage; i < currentPage + 3; i++) {
@@ -36379,6 +36397,7 @@ function Paginator() {
   }
 
   var paginate = function paginate(i) {
+    setCurrentPage(i);
     dispatch({
       type: 'PAGINATE',
       pageNumber: i

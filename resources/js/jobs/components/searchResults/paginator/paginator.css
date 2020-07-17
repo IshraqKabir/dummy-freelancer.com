@@ -22,3 +22,13 @@
     border-right: 1px solid #bec0c2;
 }
 
+.current {
+    background: #139ff0;
+    color: white;
+    border: 1px solid #1293de;
+}
+
+.current:hover {
+    background: #139ff0;
+}
+
