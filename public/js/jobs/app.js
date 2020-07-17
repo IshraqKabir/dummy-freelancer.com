@@ -2037,7 +2037,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../../node_module
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, ".paginator-Container {\r\n    display: flex;\r\n}\r\n\r\n.paginator-button {\r\n    box-sizing: border-box;\r\n    padding: 8px 16px;\r\n    border: 1px solid #bec0c2;\r\n    border-right: none;\r\n    background: #f9f9f9;\r\n    color: #0e1724;\r\n    font-size: 14px;\r\n    font-weight: 700;\r\n    cursor: pointer;\r\n}\r\n\r\n.paginator-button:hover {\r\n    background: #f0f0f0;\r\n}\r\n\r\n.last {\r\n    border-right: 1px solid #bec0c2;\r\n}\r\n\r\n", ""]);
 
 // exports
 
@@ -36311,6 +36311,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _paginator_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./paginator.css */ "./resources/js/jobs/components/searchResults/paginator/paginator.css");
 /* harmony import */ var _paginator_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_paginator_css__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _store_reducer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../store/reducer */ "./resources/js/jobs/store/reducer.js");
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
 
 
 
@@ -36320,13 +36334,71 @@ function Paginator() {
     return state.searchResults;
   });
   var dispatch = Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["useDispatch"])();
+
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(0),
+      _useState2 = _slicedToArray(_useState, 2),
+      totalPages = _useState2[0],
+      setTotalPages = _useState2[1];
+
+  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(1),
+      _useState4 = _slicedToArray(_useState3, 2),
+      currentPage = _useState4[0],
+      setCurrentPage = _useState4[1];
+
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
     dispatch({
       type: 'connected',
       componentName: 'paginator'
     });
+    dispatch({
+      type: 'PAGINATE',
+      pageNumber: currentPage
+    });
   }, []);
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null);
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
+    if (searchResults.length % _store_reducer__WEBPACK_IMPORTED_MODULE_3__["jobsPerPage"] === 0) {
+      setTotalPages(searchResults.length / _store_reducer__WEBPACK_IMPORTED_MODULE_3__["jobsPerPage"]);
+    } else {
+      setTotalPages(1 + searchResults.length / _store_reducer__WEBPACK_IMPORTED_MODULE_3__["jobsPerPage"]);
+    }
+  }, [searchResults]);
+  var paginatorButtons = [];
+
+  var _loop = function _loop(i) {
+    paginatorButtons.push( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "paginator-button",
+      key: i,
+      onClick: function onClick() {
+        return paginate(i);
+      }
+    }, i));
+  };
+
+  for (var i = currentPage; i < currentPage + 3; i++) {
+    _loop(i);
+  }
+
+  var paginate = function paginate(i) {
+    dispatch({
+      type: 'PAGINATE',
+      pageNumber: i
+    });
+  };
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "paginator-Container"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "paginator-button first",
+    onClick: function onClick() {
+      return paginate(1);
+    }
+  }, "First"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "paginator-button previous"
+  }, "Prev"), paginatorButtons, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "paginator-button"
+  }, "Next"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "paginator-button last"
+  }, "Last"));
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (Paginator);
@@ -36404,11 +36476,11 @@ var SearchResults = /*#__PURE__*/function (_React$Component) {
     value: function render() {
       var jobCount = 'No Jobs Found';
 
-      if (this.props.searchResults) {
-        if (this.props.searchResults.length === 1) {
+      if (this.props.unMutableSearchResults) {
+        if (this.props.unMutableSearchResults.length === 1) {
           jobCount = '1 Job Found';
         } else {
-          jobCount = "".concat(this.props.searchResults.length, " Jobs Found");
+          jobCount = "".concat(this.props.unMutableSearchResults.length, " Jobs Found");
         }
       }
 
@@ -36464,6 +36536,7 @@ var SearchResults = /*#__PURE__*/function (_React$Component) {
 function mapStoreToProps(store) {
   return {
     searchResults: store.searchResults,
+    unMutableSearchResults: store.unMutableSearchResults,
     recentSearches: store.recentSearches,
     filters: store.filters
   };
@@ -36678,11 +36751,12 @@ function mapDispatchToProps(dispatch) {
 /*!********************************************!*\
   !*** ./resources/js/jobs/store/reducer.js ***!
   \********************************************/
-/*! exports provided: default */
+/*! exports provided: jobsPerPage, default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "jobsPerPage", function() { return jobsPerPage; });
 /* harmony import */ var _cookie__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../cookie */ "./resources/js/jobs/cookie.js");
 function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
 
@@ -36703,6 +36777,7 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
+var jobsPerPage = 2;
 var initialState = {
   name: '',
   searchResults: [],
@@ -36718,6 +36793,39 @@ var initialState = {
     }
   }
 };
+
+function handleSkillFilterState(filters, searchResults) {
+  var temp = []; // checking if all skill filters are unchecked
+  // let trueCounter = 0;
+  // Object.values(filters.skills).map(skillState => {
+  //     if (skillState)
+  //     {
+  //         trueCounter++;
+  //     }
+  // });
+  // // logic if all filters are unchecked
+  // if (trueCounter === 0) {
+  //     searchResults = fixedOrHourlyFilter(filters, newState.unMutableSearchResults);
+  //     break;
+  // }
+  // logic to change state according to skill filter
+
+  Object.entries(filters.skills).map(function (skill) {
+    var skillName = skill[0];
+    var state = skill[1];
+
+    if (state) {
+      searchResults.map(function (result) {
+        result['skills'].map(function (resultSkill) {
+          if (resultSkill['name'] === skillName && !temp.includes(result)) {
+            temp.push(result);
+          }
+        });
+      });
+    }
+  });
+  return [].concat(temp);
+}
 
 function fixedOrHourlyFilter(filters, unMutableSearchResults) {
   var temp = [];
@@ -36809,8 +36917,8 @@ function reducer() {
     // for handling skill filter change
 
     case 'HANDLE_SKILL_FILTER_STATE':
-      var temp = []; // checking if all skill filters are unchecked
-
+      // let temp = [];
+      // checking if all skill filters are unchecked
       var trueCounter = 0;
       Object.values(newState.filters.skills).map(function (skillState) {
         if (skillState) {
@@ -36822,22 +36930,24 @@ function reducer() {
         newState.searchResults = fixedOrHourlyFilter(newState.filters, newState.unMutableSearchResults);
         break;
       } // logic to change state according to skill filter
+      // Object.entries(newState.filters.skills).map(skill => {
+      //    const skillName = skill[0];
+      //    const state = skill[1];
+      //     if (state)
+      //     {
+      //         newState.searchResults.map(result => {
+      //             result['skills'].map(resultSkill => {
+      //                 if (resultSkill['name'] === skillName && !temp.includes(result))
+      //                 {
+      //                     temp.push(result);
+      //                 }          
+      //             })
+      //         });
+      //     }
+      // });
 
 
-      Object.entries(newState.filters.skills).map(function (skill) {
-        var skillName = skill[0];
-        var state = skill[1];
-
-        if (state) {
-          newState.searchResults.map(function (result) {
-            result['skills'].map(function (resultSkill) {
-              if (resultSkill['name'] === skillName && !temp.includes(result)) {
-                temp.push(result);
-              }
-            });
-          });
-        }
-      });
+      var temp = handleSkillFilterState(newState.filters, newState.unMutableSearchResults);
       newState.searchResults = _toConsumableArray(temp);
       break;
 
@@ -36846,6 +36956,28 @@ function reducer() {
       temp = _objectSpread(_defineProperty({}, action.suggestion, true), newState.filters.skills);
       temp[action.suggestion] = true;
       newState.filters.skills = _objectSpread({}, temp);
+      break;
+
+    case 'PAGINATE':
+      var endingPosition = jobsPerPage * action.pageNumber;
+      var startingPosition = endingPosition - jobsPerPage;
+      var filteredSearchedResults = []; // checking if all skill filters are unchecked
+
+      trueCounter = 0;
+      Object.values(newState.filters.skills).map(function (skillState) {
+        if (skillState) {
+          trueCounter++;
+        }
+      }); // logic if all filters are unchecked
+
+      if (trueCounter === 0) {
+        filteredSearchedResults = fixedOrHourlyFilter(newState.filters, newState.unMutableSearchResults);
+      } else {
+        filteredSearchedResults = handleSkillFilterState(newState.filters, newState.unMutableSearchResults);
+      }
+
+      temp = filteredSearchedResults.slice(startingPosition, endingPosition);
+      newState.searchResults = _toConsumableArray(temp);
       break;
 
     default:

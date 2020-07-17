@@ -1,5 +1,7 @@
 import { getCookie, setCookie } from '../cookie';
 
+export const jobsPerPage = 2;
+
 const initialState = {
     name: '',
     searchResults: [],
@@ -15,6 +17,42 @@ const initialState = {
         },
     }
 };
+
+function handleSkillFilterState (filters, searchResults) 
+{
+    let temp = [];
+            // checking if all skill filters are unchecked
+            // let trueCounter = 0;
+            // Object.values(filters.skills).map(skillState => {
+            //     if (skillState)
+            //     {
+            //         trueCounter++;
+            //     }
+            // });
+            // // logic if all filters are unchecked
+            // if (trueCounter === 0) {
+            //     searchResults = fixedOrHourlyFilter(filters, newState.unMutableSearchResults);
+            //     break;
+            // }
+            // logic to change state according to skill filter
+            Object.entries(filters.skills).map(skill => {
+               const skillName = skill[0];
+               const state = skill[1];
+                if (state)
+                {
+                    searchResults.map(result => {
+                        result['skills'].map(resultSkill => {
+                            if (resultSkill['name'] === skillName && !temp.includes(result))
+                            {
+                                temp.push(result);
+                            }          
+                        })
+                    });
+                }
+            });
+
+            return [...temp];
+}
 
 function fixedOrHourlyFilter(filters, unMutableSearchResults)
 {
@@ -89,7 +127,7 @@ function reducer(state = initialState, action) {
             break;
         // for handling skill filter change
         case 'HANDLE_SKILL_FILTER_STATE':
-            let temp = [];
+            // let temp = [];
             // checking if all skill filters are unchecked
             let trueCounter = 0;
             Object.values(newState.filters.skills).map(skillState => {
@@ -104,21 +142,22 @@ function reducer(state = initialState, action) {
                 break;
             }
             // logic to change state according to skill filter
-            Object.entries(newState.filters.skills).map(skill => {
-               const skillName = skill[0];
-               const state = skill[1];
-                if (state)
-                {
-                    newState.searchResults.map(result => {
-                        result['skills'].map(resultSkill => {
-                            if (resultSkill['name'] === skillName && !temp.includes(result))
-                            {
-                                temp.push(result);
-                            }          
-                        })
-                    });
-                }
-            });
+            // Object.entries(newState.filters.skills).map(skill => {
+            //    const skillName = skill[0];
+            //    const state = skill[1];
+            //     if (state)
+            //     {
+            //         newState.searchResults.map(result => {
+            //             result['skills'].map(resultSkill => {
+            //                 if (resultSkill['name'] === skillName && !temp.includes(result))
+            //                 {
+            //                     temp.push(result);
+            //                 }          
+            //             })
+            //         });
+            //     }
+            // });
+            let temp = handleSkillFilterState(newState.filters, newState.unMutableSearchResults);
             newState.searchResults = [...temp];
             break;
         case 'ADD_SKILL_FILTER':
@@ -129,6 +168,29 @@ function reducer(state = initialState, action) {
             }
             temp[action.suggestion] = true; 
             newState.filters.skills = {...temp}
+            break;
+        case 'PAGINATE':
+            const endingPosition = jobsPerPage * action.pageNumber;
+            const startingPosition = endingPosition - jobsPerPage;
+
+            let filteredSearchedResults = [];
+            // checking if all skill filters are unchecked
+            trueCounter = 0;
+            Object.values(newState.filters.skills).map(skillState => {
+                if (skillState)
+                {
+                    trueCounter++;
+                }
+            });
+            // logic if all filters are unchecked
+            if (trueCounter === 0) {
+                filteredSearchedResults = fixedOrHourlyFilter(newState.filters, newState.unMutableSearchResults);
+            } else {
+                filteredSearchedResults = handleSkillFilterState(newState.filters, newState.unMutableSearchResults);
+            }
+
+            temp = filteredSearchedResults.slice(startingPosition, endingPosition);
+            newState.searchResults = [...temp];
             break;
         default:
             break;

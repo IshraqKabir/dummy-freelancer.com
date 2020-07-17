@@ -32,12 +32,12 @@ class SearchResults extends React.Component
   {
     let jobCount = 'No Jobs Found';
 
-    if (this.props.searchResults)
+    if (this.props.unMutableSearchResults)
     {
-      if (this.props.searchResults.length === 1) {
+      if (this.props.unMutableSearchResults.length === 1) {
         jobCount = '1 Job Found';
       } else {
-        jobCount = `${this.props.searchResults.length} Jobs Found`;
+        jobCount = `${this.props.unMutableSearchResults.length} Jobs Found`;
       }
     }
     let searchedJobs = null;
@@ -106,6 +106,7 @@ function mapStoreToProps (store)
 {
   return {
       searchResults: store.searchResults,
+      unMutableSearchResults: store.unMutableSearchResults, 
       recentSearches: store.recentSearches,
       filters: store.filters
   }
