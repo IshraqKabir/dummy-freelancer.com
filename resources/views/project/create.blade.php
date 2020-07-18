@@ -8,7 +8,7 @@
 </head>
 <body>
     <form action="/post-project" method="POST">
-    @csrf
+        @csrf
         <div id="post_project"></div>
     </form>
     <script src="js/project/post-project.js" defer></script>
