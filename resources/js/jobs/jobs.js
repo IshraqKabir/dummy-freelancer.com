@@ -10,7 +10,7 @@ import Search from './components/search/search';
 import SearchResults from './components/searchResults/searchResults';
 import JobFilter from './components/jobFilter/jobFilter';
 
-import url from '../url';
+import {url} from '../url';
 
 class Jobs extends React.Component
 {
