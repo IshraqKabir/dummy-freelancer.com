@@ -37070,7 +37070,8 @@ function reducer() {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "url", function() { return url; });
-var url = "http://dummy-freelancer.herokuapp.com";
+// export const url = `http://dummy-freelancer.herokuapp.com`;
+var url = "";
 
 /***/ }),
 
