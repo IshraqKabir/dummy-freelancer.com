@@ -36147,6 +36147,8 @@ var Search = /*#__PURE__*/function (_React$Component) {
         _this2.props.handleFilterChange();
 
         _this2.props.handleSkillFilterState();
+
+        _this2.props.paginate();
       });
     }
   }, {
@@ -36232,6 +36234,12 @@ function mapDispatchToProps(dispatch) {
     handleSkillFilterState: function handleSkillFilterState() {
       return dispatch({
         type: 'HANDLE_SKILL_FILTER_STATE'
+      });
+    },
+    paginate: function paginate() {
+      return dispatch({
+        type: 'PAGINATE',
+        pageNumber: 1
       });
     }
   };
