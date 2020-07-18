@@ -37071,7 +37071,7 @@ function reducer() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "url", function() { return url; });
 var url = "https://dummy-freelancer.herokuapp.com"; // export const url = `/`;
-// export const url = 'http://localhost:8000'
+// export const url = 'http://localhost:8000';
 
 /***/ }),
 
