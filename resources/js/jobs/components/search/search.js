@@ -8,6 +8,8 @@ const axios = require('axios');
 
 import { connect } from 'react-redux';
 
+import {url} from '../../../url';
+
 
 class Search extends React.Component
 {
@@ -32,7 +34,7 @@ class Search extends React.Component
   {
     console.log('handlesearch');
     this.props.setRecentSearches(this.props.name);
-    axios.get(`http://localhost:8000/jobsapi?q=${this.props.name}`)
+    axios.get(`${url}/jobsapi?q=${this.props.name}`)
       .then(response => {
         this.props.setSearchResults(response.data);
         this.props.handleFilterChange();

@@ -25,7 +25,7 @@ class Jobs extends React.Component
   componentDidMount ()
   {
     this.props.connect('Jobs');
-    axios.get(`https://morning-escarpment-49906.herokuapp.com/jobsapi?q=`)
+    axios.get(`${url}/jobsapi?q=`)
     .then(response => {
       this.props.setSearchResults(response.data);
       this.props.paginate();
@@ -37,7 +37,6 @@ class Jobs extends React.Component
   {
     return (
       <React.Fragment>
-        asdfasdf
         <div className="container">
           <Search />
           <div className="searchResultContainer">

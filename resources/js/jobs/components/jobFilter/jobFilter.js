@@ -4,6 +4,8 @@ import './JobFilter.css';
 
 import { connect } from 'react-redux';
 
+import {url} from '../../../url';
+
 const axios = require('axios');
 
 class JobFilter extends React.Component
@@ -36,7 +38,7 @@ class JobFilter extends React.Component
     this.props.setRecentSearches(search);
     this.props.paginate();  
 
-    axios.get(`http://localhost:8000/jobsapi?q=${search}`)
+    axios.get(`${url}/jobsapi?q=${search}`)
       .then(response => {
         this.props.setSearchResults(response.data);
         this.props.handleFilterChange(); 
