@@ -10,6 +10,8 @@ import Search from './components/search/search';
 import SearchResults from './components/searchResults/searchResults';
 import JobFilter from './components/jobFilter/jobFilter';
 
+import url from '../url';
+
 class Jobs extends React.Component
 {
   constructor (props)
@@ -23,7 +25,7 @@ class Jobs extends React.Component
   componentDidMount ()
   {
     this.props.connect('Jobs');
-    axios.get(`http://localhost:8000/jobsapi?q=`)
+    axios.get(`${url}?q=`)
     .then(response => {
       this.props.setSearchResults(response.data);
       this.props.paginate();
