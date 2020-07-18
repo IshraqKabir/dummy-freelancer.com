@@ -21,6 +21,7 @@ a {
     padding: 24px 0;
     border-bottom: 1px solid #dedede;
     display: flex;
+    justify-content: space-between;
 }
 
 .projectName {
