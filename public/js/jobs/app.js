@@ -36413,7 +36413,6 @@ function Paginator() {
 
   var paginate = function paginate(i) {
     console.log(i);
-    if (i < 1) return;
     setCurrentPage(i);
     dispatch({
       type: 'PAGINATE',
@@ -36423,6 +36422,12 @@ function Paginator() {
 
   var next = function next(i) {
     if (i <= totalPages && currentPage !== totalPages) {
+      paginate(i);
+    }
+  };
+
+  var prev = function prev(i) {
+    if (i > 0) {
       paginate(i);
     }
   };
@@ -36437,7 +36442,7 @@ function Paginator() {
   }, "First"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "paginator-button previous",
     onClick: function onClick() {
-      return paginate(currentPage - 1);
+      return prev(currentPage - 1);
     }
   }, "Prev"), paginatorButtons, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "paginator-button",

@@ -72,7 +72,6 @@ function Paginator ()
 
     const paginate = (i) => {
         console.log(i);
-        if (i < 1) return;
         setCurrentPage(i);
         dispatch({type: 'PAGINATE', pageNumber: i});
 
@@ -80,6 +79,12 @@ function Paginator ()
 
     const next = (i) => {
         if (i <= totalPages && currentPage !== totalPages) {
+            paginate(i);
+        }
+    }
+
+    const prev = (i) => {
+        if (i > 0) {
             paginate(i);
         }
     }
@@ -95,7 +100,7 @@ function Paginator ()
         </div>
         <div 
             className="paginator-button previous"
-            onClick={() => paginate(currentPage-1)}
+            onClick={() => prev(currentPage-1)}
         >
             Prev
         </div>
