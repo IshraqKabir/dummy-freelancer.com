@@ -25,7 +25,7 @@ class Jobs extends React.Component
   componentDidMount ()
   {
     this.props.connect('Jobs');
-    axios.get(`${url}/jobsapi?q=`)
+    axios.get(`https://morning-escarpment-49906.herokuapp.com/jobsapi?q=`)
     .then(response => {
       this.props.setSearchResults(response.data);
       this.props.paginate();
