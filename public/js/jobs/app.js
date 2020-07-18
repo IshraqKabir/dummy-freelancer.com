@@ -35681,6 +35681,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _JobFilter_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./JobFilter.css */ "./resources/js/jobs/components/jobFilter/JobFilter.css");
 /* harmony import */ var _JobFilter_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_JobFilter_css__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _url__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../url */ "./resources/js/url.js");
 
 
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -35708,6 +35709,7 @@ function _assertThisInitialized(self) { if (self === void 0) { throw new Referen
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
 
 
 
@@ -35753,7 +35755,7 @@ var JobFilter = /*#__PURE__*/function (_React$Component) {
       this.props.handleRecentSearchClicked(search);
       this.props.setRecentSearches(search);
       this.props.paginate();
-      axios.get("http://localhost:8000/jobsapi?q=".concat(search)).then(function (response) {
+      axios.get("".concat(_url__WEBPACK_IMPORTED_MODULE_4__["url"], "/jobsapi?q=").concat(search)).then(function (response) {
         _this2.props.setSearchResults(response.data);
 
         _this2.props.handleFilterChange();
@@ -36077,6 +36079,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _search_svg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./search.svg */ "./resources/js/jobs/components/search/search.svg");
 /* harmony import */ var _search_svg__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_search_svg__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _url__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../url */ "./resources/js/url.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -36104,6 +36107,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
 
 var axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+
 
 
 
@@ -36137,7 +36141,7 @@ var Search = /*#__PURE__*/function (_React$Component) {
 
       console.log('handlesearch');
       this.props.setRecentSearches(this.props.name);
-      axios.get("http://localhost:8000/jobsapi?q=".concat(this.props.name)).then(function (response) {
+      axios.get("".concat(_url__WEBPACK_IMPORTED_MODULE_4__["url"], "/jobsapi?q=").concat(this.props.name)).then(function (response) {
         _this2.props.setSearchResults(response.data);
 
         _this2.props.handleFilterChange();
@@ -36700,6 +36704,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_search_search__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/search/search */ "./resources/js/jobs/components/search/search.js");
 /* harmony import */ var _components_searchResults_searchResults__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/searchResults/searchResults */ "./resources/js/jobs/components/searchResults/searchResults.js");
 /* harmony import */ var _components_jobFilter_jobFilter__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/jobFilter/jobFilter */ "./resources/js/jobs/components/jobFilter/jobFilter.js");
+/* harmony import */ var _url__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../url */ "./resources/js/url.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -36732,6 +36737,7 @@ var axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 
 
 
+
 var Jobs = /*#__PURE__*/function (_React$Component) {
   _inherits(Jobs, _React$Component);
 
@@ -36753,7 +36759,7 @@ var Jobs = /*#__PURE__*/function (_React$Component) {
       var _this2 = this;
 
       this.props.connect('Jobs');
-      axios.get("http://localhost:8000/jobsapi?q=").then(function (response) {
+      axios.get("".concat(_url__WEBPACK_IMPORTED_MODULE_6__["url"], "/jobsapi?q=")).then(function (response) {
         _this2.props.setSearchResults(response.data);
 
         _this2.props.paginate();
@@ -37051,6 +37057,20 @@ function reducer() {
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (reducer);
+
+/***/ }),
+
+/***/ "./resources/js/url.js":
+/*!*****************************!*\
+  !*** ./resources/js/url.js ***!
+  \*****************************/
+/*! exports provided: url */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "url", function() { return url; });
+var url = "hhttps://dummy-freelancer.herokuapp.com";
 
 /***/ }),
 

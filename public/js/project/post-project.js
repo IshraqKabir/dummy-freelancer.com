@@ -36312,6 +36312,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _skills_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./skills.css */ "./resources/js/project/FormComponents/skills/skills.css");
 /* harmony import */ var _skills_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_skills_css__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _url__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../url */ "./resources/js/url.js");
 
 
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -36356,6 +36357,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
 
 var axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+
 
 
 
@@ -36409,7 +36411,7 @@ var Skills = /*#__PURE__*/function (_React$Component) {
                 });
                 searchResults = [];
                 _context.next = 6;
-                return axios.get("http://localhost:8000/skills?q=".concat(event.target.value)).then(function (response) {
+                return axios.get("".concat(_url__WEBPACK_IMPORTED_MODULE_4__["url"], "/skills?q=").concat(event.target.value)).then(function (response) {
                   response.data.map(function (data) {
                     searchResults.push([data.id, data.name]);
                   });
@@ -37125,6 +37127,20 @@ function reducer() {
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (reducer);
+
+/***/ }),
+
+/***/ "./resources/js/url.js":
+/*!*****************************!*\
+  !*** ./resources/js/url.js ***!
+  \*****************************/
+/*! exports provided: url */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "url", function() { return url; });
+var url = "hhttps://dummy-freelancer.herokuapp.com";
 
 /***/ }),
 

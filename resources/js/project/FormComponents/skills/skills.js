@@ -5,6 +5,8 @@ const axios = require('axios');
 
 import { connect } from 'react-redux';
 
+import {url} from '../../../url';
+
 class Skills extends React.Component {
     constructor(props) {
         super(props);
@@ -24,7 +26,7 @@ class Skills extends React.Component {
     }
 
     componentDidMount ()
-    {
+{
         this.props.connect('skills.js');
     }
 
@@ -34,7 +36,7 @@ class Skills extends React.Component {
         this.setState({error: null});
 
         let searchResults = [];
-        await axios.get(`http://localhost:8000/skills?q=${event.target.value}`)
+        await axios.get(`${url}/skills?q=${event.target.value}`)
             .then(response => {
                 response.data.map(data => {
                         searchResults.push([data.id, data.name]);
