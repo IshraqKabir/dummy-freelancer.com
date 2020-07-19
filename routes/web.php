@@ -5,8 +5,6 @@ use App\Http\Resources\Skill as SkillResource;
 use App\Skill;
 
 
-\URL::forceSchema("https");
-
 Route::get('/', function () {
     return view('welcome');
 })->name('home');
