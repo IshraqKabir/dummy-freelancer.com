@@ -22,9 +22,9 @@ const initialState = {
     payment : {
         hourly: false,
         fixed: true,
-        currencyType: null,
-        minBudget: null,
-        maxBudget: null,
+        currencyType: 'USD',
+        minBudget: -1,
+        maxBudget: -1,
         error: null,
         // visited: 0
     },

@@ -7,6 +7,7 @@ import Details from './FormComponents/details/details';
 import Name from './FormComponents/name/name';
 import Skills from './FormComponents/skills/skills';
 import Payment from './FormComponents/payment/payment';
+import PostButton from './FormComponents/PostButton/PostButton';
 
 import { connect } from 'react-redux';
 
@@ -93,10 +94,7 @@ class App extends React.Component
                       { this.props.nextClicked > 1 ?
                         <React.Fragment>
                           <Payment />
-                          <button 
-                            type="submit" 
-                            className="PostMyProjectButton"
-                          >Yes, post my project</button>
+                          <PostButton />
                         </React.Fragment>
                       : null}
                   </div>

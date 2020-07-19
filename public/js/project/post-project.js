@@ -1968,6 +1968,25 @@ module.exports = {
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/project/FormComponents/PostButton/PostButton.css":
+/*!*******************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--7-1!./node_modules/postcss-loader/src??ref--7-2!./resources/js/project/FormComponents/PostButton/PostButton.css ***!
+  \*******************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/project/FormComponents/details/details.css":
 /*!*************************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader??ref--7-1!./node_modules/postcss-loader/src??ref--7-2!./resources/js/project/FormComponents/details/details.css ***!
@@ -35538,6 +35557,107 @@ module.exports = function(originalModule) {
 
 /***/ }),
 
+/***/ "./resources/js/project/FormComponents/PostButton/PostButton.css":
+/*!***********************************************************************!*\
+  !*** ./resources/js/project/FormComponents/PostButton/PostButton.css ***!
+  \***********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../../node_modules/css-loader??ref--7-1!../../../../../node_modules/postcss-loader/src??ref--7-2!./PostButton.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/project/FormComponents/PostButton/PostButton.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./resources/js/project/FormComponents/PostButton/PostButton.js":
+/*!**********************************************************************!*\
+  !*** ./resources/js/project/FormComponents/PostButton/PostButton.js ***!
+  \**********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _PostButton_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./PostButton.css */ "./resources/js/project/FormComponents/PostButton/PostButton.css");
+/* harmony import */ var _PostButton_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_PostButton_css__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+
+
+var PostButton = function PostButton() {
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false),
+      _useState2 = _slicedToArray(_useState, 2),
+      visible = _useState2[0],
+      setVisible = _useState2[1];
+
+  var name = Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["useSelector"])(function (state) {
+    return state.name.value;
+  });
+  var details = Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["useSelector"])(function (state) {
+    return state.details.value;
+  });
+  var skillsCount = Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["useSelector"])(function (state) {
+    return state.skills.selectedSkills.length;
+  });
+  var minBudget = Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["useSelector"])(function (state) {
+    return state.payment.minBudget;
+  });
+  var maxBudget = Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["useSelector"])(function (state) {
+    return state.payment.maxBudget;
+  });
+  var currencyType = Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["useSelector"])(function (state) {
+    return state.payment.currencyType;
+  });
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
+    if (name !== '' && details !== '' && skillsCount !== 0 && skillsCount < 4 && minBudget > 0 && maxBudget >= 0 && currencyType !== 'Currency') {
+      setVisible(true);
+    } else {
+      setVisible(false);
+    }
+  }, [name, details, skillsCount, minBudget, maxBudget, currencyType]);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, visible ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    type: "submit",
+    className: "PostMyProjectButton"
+  }, "Yes, post my project") : null);
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (PostButton);
+
+/***/ }),
+
 /***/ "./resources/js/project/FormComponents/details/details.css":
 /*!*****************************************************************!*\
   !*** ./resources/js/project/FormComponents/details/details.css ***!
@@ -36189,7 +36309,7 @@ var Payment = /*#__PURE__*/function (_React$Component) {
         onClick: function onClick(e) {
           return _this2.handleSetCurrency(e);
         }
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", null, "Currency"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
         value: "USD"
       }, "USD"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
         value: "GBP"
@@ -36677,7 +36797,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _FormComponents_name_name__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./FormComponents/name/name */ "./resources/js/project/FormComponents/name/name.js");
 /* harmony import */ var _FormComponents_skills_skills__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./FormComponents/skills/skills */ "./resources/js/project/FormComponents/skills/skills.js");
 /* harmony import */ var _FormComponents_payment_payment__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./FormComponents/payment/payment */ "./resources/js/project/FormComponents/payment/payment.js");
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _FormComponents_PostButton_PostButton__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./FormComponents/PostButton/PostButton */ "./resources/js/project/FormComponents/PostButton/PostButton.js");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -36699,6 +36820,7 @@ function _assertThisInitialized(self) { if (self === void 0) { throw new Referen
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
 
 
 
@@ -36789,10 +36911,7 @@ var App = /*#__PURE__*/function (_React$Component) {
         className: "Form"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "FormWrapper"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_FormComponents_name_name__WEBPACK_IMPORTED_MODULE_4__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_FormComponents_details_details__WEBPACK_IMPORTED_MODULE_3__["default"], null), afterDetailsNextButton, this.props.nextClicked > 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_FormComponents_skills_skills__WEBPACK_IMPORTED_MODULE_5__["default"], null) : null, afterSkillsNextButton, this.props.nextClicked > 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_FormComponents_payment_payment__WEBPACK_IMPORTED_MODULE_6__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        type: "submit",
-        className: "PostMyProjectButton"
-      }, "Yes, post my project")) : null)))));
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_FormComponents_name_name__WEBPACK_IMPORTED_MODULE_4__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_FormComponents_details_details__WEBPACK_IMPORTED_MODULE_3__["default"], null), afterDetailsNextButton, this.props.nextClicked > 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_FormComponents_skills_skills__WEBPACK_IMPORTED_MODULE_5__["default"], null) : null, afterSkillsNextButton, this.props.nextClicked > 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_FormComponents_payment_payment__WEBPACK_IMPORTED_MODULE_6__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_FormComponents_PostButton_PostButton__WEBPACK_IMPORTED_MODULE_7__["default"], null)) : null)))));
     }
   }]);
 
@@ -36837,7 +36956,7 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_7__["connect"])(mapStoreToProps, mapDispatchToProps)(App));
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_8__["connect"])(mapStoreToProps, mapDispatchToProps)(App));
 
 /***/ }),
 
@@ -36999,9 +37118,9 @@ var initialState = {
   payment: {
     hourly: false,
     fixed: true,
-    currencyType: null,
-    minBudget: null,
-    maxBudget: null,
+    currencyType: 'USD',
+    minBudget: -1,
+    maxBudget: -1,
     error: null // visited: 0
 
   },
@@ -37140,8 +37259,7 @@ function reducer() {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "url", function() { return url; });
-var url = "https://dummy-freelancer.herokuapp.com"; // export const url = `/`;
-// export const url = 'http://localhost:8000';
+var url = 'http://localhost:8000';
 
 /***/ }),
 

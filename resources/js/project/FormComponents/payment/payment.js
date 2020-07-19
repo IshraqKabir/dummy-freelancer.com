@@ -256,6 +256,7 @@ class Payment extends React.Component
                 <div className="currencyAndBudgetContainer">
                     <div className="select currencySelect">
                         <select onClick={(e) => this.handleSetCurrency(e)}>
+                            <option>Currency</option>
                             <option value="USD">
                             USD
                             </option>
