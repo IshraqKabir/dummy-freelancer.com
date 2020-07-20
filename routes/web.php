@@ -4,13 +4,6 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Resources\Skill as SkillResource;
 use App\Skill;
 
-if (env('APP_ENV') === 'production') {
-    \URL::forceScheme('https');
-} else {
-    \URL::forceScheme('http');
-}
-
-
 Route::get('/', function () {
     return view('welcome');
 })->name('home');
