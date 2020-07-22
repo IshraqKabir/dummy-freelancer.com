@@ -5,6 +5,7 @@ import './SearchResults.css';
 import { connect } from 'react-redux';
 
 import Paginator from './paginator/paginator';
+import ResponsiveIcon from './responsive-icon.svg';
 
 class SearchResults extends React.Component
 {
@@ -94,6 +95,11 @@ class SearchResults extends React.Component
             <div className="paginator">
               <Paginator />
             </div>
+            <img
+              src={ResponsiveIcon}
+              className="responsive-icon"
+              onClick={() => this.props.showJobFilter(true)}
+            />
           </div>
         </div>
         {searchedJobs}
@@ -116,6 +122,8 @@ function mapDispatchToProps (dispatch)
 {
   return {
     connect: (componentName) => dispatch({type:'connected', componentName}),
+    showJobFilter: (show) => dispatch({type: 'SHOW_JOB_FILTER', show}),
+
   }
 }
 

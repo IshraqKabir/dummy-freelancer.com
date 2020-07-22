@@ -40,10 +40,10 @@ class Jobs extends React.Component
         <div className="container">
           <Search />
           <div className="searchResultContainer">
-            <div className="jobFilter box-shadow">
+            <div className={"jobFilter box-shadow" + (this.props.showJobFilter ? ' popped': '')}>
               <JobFilter />
             </div>
-            <div className="searchResults box-shadow">
+            <div className={"searchResults box-shadow"}>
               <SearchResults />
             </div>
           </div>          
@@ -57,7 +57,7 @@ class Jobs extends React.Component
 function mapStoreToProps (store)
 {
   return {
-
+    showJobFilter: store.showJobFilter
   }
 }
 

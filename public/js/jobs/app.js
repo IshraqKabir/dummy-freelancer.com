@@ -1980,7 +1980,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, ".jobFilterContainer {\r\n    padding: 24px 0px;\r\n    border-bottom: 1px solid #dedede;\r\n}\r\n\r\n.recentSearchesHeading {\r\n    font-family: Roboto;\r\n    font-size: 20px;\r\n    font-weight: 400;\r\n    line-height: 28px;\r\n    margin-bottom: 16px;\r\n}\r\n\r\n.recentSearch {\r\n    box-sizing: border-box;\r\n    cursor: pointer;\r\n    margin-bottom: 8px;\r\n    line-height: 19.6px;\r\n    font-family: Roboto;\r\n    font-size: 14px;\r\n}\r\n\r\n.typeFilterSection {\r\n    padding: 24px 0;\r\n    border-bottom: 1px solid rgb(222, 222, 222);\r\n}\r\n\r\n\r\n.typeFilterSection-mainheading {\r\n\tfont-family: Roboto;\r\n    font-size: 20px;\r\n    font-weight: 400;\r\n    line-height: 28px;\r\n    margin-bottom: 16px;\r\n}\r\n\r\n\r\n.skillFilterSection {\r\n\tpadding: 24px 0;\r\n\tborder-bottom: 1px solid rgb(222, 222, 222);\r\n}\r\n\r\n.skillFilterSection-heading {\r\n\tfont-family: Roboto;\r\n    font-size: 16px;\r\n    font-weight: 700;\r\n    line-height: 24px;\r\n    margin-bottom: 16px;\r\n}\r\n\r\n/***********\r\nCheckbox styling\r\n**************/\r\n\r\n.b-contain *, .b-contain *::before, .b-contain *::after {\r\n\tbox-sizing: content-box !important;\r\n}\r\n\r\n.b-contain input {\r\n\tposition: absolute;\r\n\tz-index: -1;\r\n\topacity: 0;\r\n}\r\n\r\n.b-contain span {\r\n\tline-height: 1;\r\n\tfont-size: 1rem;\r\n\tfont-family: inherit;\r\n}\r\n\r\n.b-contain {\r\n\tdisplay: table;\r\n\tposition: relative;\r\n\tpadding-left: 1.8rem;\r\n\tcursor: pointer;\r\n\tmargin-bottom: .5rem;\r\n}\r\n\r\n.b-contain input[type=\"checkbox\"] ~ .b-input {\r\n\tposition: absolute;\r\n\ttop: 0;\r\n\tleft: 0;\r\n\theight: 1rem;\r\n\twidth: 1rem;\r\n\tbackground: rgba(255, 255, 255, 1);\r\n\ttransition: background 250ms;\r\n\tborder: 1px solid rgba(41, 178, 254, 1);\r\n\tborder-radius: 0.125rem;\r\n}\r\n\r\n.b-contain input[type=\"radio\"] ~ .b-input {\r\n\tposition: absolute;\r\n\ttop: 0;\r\n\tleft: 0;\r\n\theight: 1rem;\r\n\twidth: 1rem;\r\n\tbackground: rgba(255, 255, 255, 1);\r\n\ttransition: background 250ms;\r\n\tborder: 1px solid rgba(41, 178, 254, 1);\r\n\tborder-radius: 2.0rem;\r\n}\r\n\r\n.b-contain input[type=\"checkbox\"] ~ .b-input::after {\r\n\tcontent: '';\r\n\tposition: absolute;\r\n\tdisplay: none;\r\n\tleft: 0.32rem;\r\n\ttop: 0rem;\r\n\twidth: 0.32rem;\r\n\theight: 0.66rem;\r\n\tborder: solid rgba(255, 255, 255, 1);\r\n\tborder-width: 0 2px 2px 0;\r\n\ttransition: background 250ms;\r\n\ttransform: rotate(45deg);\r\n}\r\n\r\n.b-contain input[type=\"radio\"] ~ .b-input::after {\r\n\tcontent: '';\r\n\tposition: absolute;\r\n\tdisplay: none;\r\n\tleft: .25rem;\r\n\ttop: .25rem;\r\n\twidth: .75rem;\r\n\theight: .75rem;\r\n\tborder-radius: 2.0rem;\r\n\tbackground: rgba(255, 255, 255, 1);\r\n\ttransition: background 250ms;\r\n}\r\n\r\n.b-contain input:disabled ~ .b-input::after {\r\n\tborder-color: rgba(135, 149, 161, 1);\r\n}\r\n\r\n.b-contain input:checked ~ .b-input::after {\r\n\tdisplay: block;\r\n}\r\n\r\n.b-contain:hover input ~ .b-input,\r\n.b-contain input:focus ~ .b-input {\r\n\tbackground: rgb(231, 238, 243);\r\n}\r\n\r\n.b-contain input:focus ~ .b-input {\r\n\tbox-shadow: 0 0 0 2px rgba(255, 255, 255, 1);\r\n}\r\n\r\n.b-contain input:checked ~ .b-input {\r\n\tbackground: rgba(41, 178, 254, 1);\r\n\tborder-color: rgba(41, 178, 254, 1);\r\n}\r\n\r\n.b-contain input[type=\"checkbox\"]:disabled ~ .b-input {\r\n\tbackground: rgba(241, 245, 248, 1);\r\n\tborder-color: rgba(184, 194, 204, 1);\r\n\topacity: 0.6;\r\n\tcursor: not-allowed;\r\n}\r\n\r\n.b-contain input[type=\"radio\"]:disabled ~ .b-input {\r\n\tbackground: rgba(241, 245, 248, 1);\r\n\tborder-color: rgba(184, 194, 204, 1);\r\n\topacity: 0.6;\r\n\tcursor: not-allowed;\r\n}\r\n\r\n.b-contain input[type=\"radio\"]:disabled ~ .b-input::after {\r\n\tbackground: rgba(135, 149, 161, 1);\r\n}\r\n\r\n.b-contain input:checked:focus ~ .b-input, .b-contain:hover input:not([disabled]):checked ~ .b-input {\r\n\tbackground: rgba(41, 178, 254, 1);\r\n\tborder-color: rgba(41, 178, 254, 1);\r\n}\r\n\r\n.b-contain .b-input::before {\r\n\tcontent: '';\r\n\tdisplay: block;\r\n\tposition: absolute;\r\n\tleft: 0;\r\n\ttop: 0;\r\n\twidth: 3.08rem;\r\n\theight: 3rem;\r\n\tmargin-left: -0.85rem;\r\n\tmargin-top: -0.85rem;\r\n\tbackground: rgba(0, 130, 243, 1);\r\n\tborder-radius: 2rem;\r\n\topacity: .6;\r\n\tz-index: 99999;\r\n\ttransform: scale(0);\r\n}\r\n\r\n@-webkit-keyframes b-ripple {\r\n\t0% {\r\n\t\ttransform: scale(0);\r\n\t}\r\n\r\n\t20% {\r\n\t\ttransform: scale(1);\r\n\t}\r\n\r\n\t100% {\r\n\t\topacity: 0;\r\n\t\ttransform: scale(1);\r\n  \t}\r\n}\r\n\r\n@keyframes b-ripple {\r\n\t0% {\r\n\t\ttransform: scale(0);\r\n\t}\r\n\r\n\t20% {\r\n\t\ttransform: scale(1);\r\n\t}\r\n\r\n\t100% {\r\n\t\topacity: 0;\r\n\t\ttransform: scale(1);\r\n  \t}\r\n}\r\n\r\n@-webkit-keyframes b-ripple-duplicate {\r\n\t0% {\r\n\t\ttransform: scale(0);\r\n\t}\r\n\r\n\t30% {\r\n\t\ttransform: scale(1);\r\n\t}\r\n\r\n\t60% {\r\n\t\ttransform: scale(1);\r\n\t}\r\n\r\n\t100% {\r\n\t\topacity: 0;\r\n\t\ttransform: scale(1);\r\n  \t}\r\n}\r\n\r\n@keyframes b-ripple-duplicate {\r\n\t0% {\r\n\t\ttransform: scale(0);\r\n\t}\r\n\r\n\t30% {\r\n\t\ttransform: scale(1);\r\n\t}\r\n\r\n\t60% {\r\n\t\ttransform: scale(1);\r\n\t}\r\n\r\n\t100% {\r\n\t\topacity: 0;\r\n\t\ttransform: scale(1);\r\n  \t}\r\n}\r\n\r\n.b-contain input + .b-input::before {\r\n\t-webkit-animation: b-ripple 250ms ease-out;\r\n\t        animation: b-ripple 250ms ease-out;\r\n}\r\n\r\n.b-contain input:checked + .b-input::before {\r\n\t-webkit-animation-name: b-ripple-duplicate;\r\n\t        animation-name: b-ripple-duplicate;\r\n}\r\n\r\n.b-contain .b-input::before {\r\n\tvisibility: hidden;\r\n}\r\n\r\n.b-contain input:focus + .b-input::before {\r\n\tvisibility: visible;\r\n}\r\n\r\n.b-contain:first-child .b-input::before {\r\n\tvisibility: hidden;\r\n}\r\n\r\n.b-contain {\r\n    display: block;\r\n    font-family: Roboto;\r\n    font-size: 14px;\r\n    font-weight: 400;\r\n    line-height: 14px;\r\n}\r\n\r\n/********\r\nend of checkbox styling\r\n***********/\r\n\r\n.enterSkills {\r\n\tbox-sizing: border-box;\r\n\tfont-size: 14px;\r\n\tmargin-top: 16px;\r\n\tpadding: 0px 12px;\r\n\theight: 36px;\r\n\tline-height: 20.0167px;\r\n\tborder: 1px solid #bec0c2;\r\n\twidth: 100%;\r\n}\r\n\r\n.enterSkills:focus, .enterSkills:hover {\r\n\tborder: 2px solid #47a9e2;\r\n}\r\n\r\n.skillsSuggestions {\r\n\tdisplay: flex;\r\n\tflex-direction: column;\r\n}\r\n\r\n.skillsSuggestion {\r\n\tbox-sizing: border-box;\r\n\tpadding: 8px 16px;\r\n\tfont-size: 14px;\r\n\tline-height: 19.6px;\r\n\tcursor: pointer;\r\n}\r\n\r\n.skillsSuggestion:hover {\r\n\tcolor: white;\r\n\tbackground-color: rgb(0, 127, 237);\r\n}", ""]);
+exports.push([module.i, ".jobFilterContainer {\r\n    padding: 24px 0px;\r\n    border-bottom: 1px solid #dedede;\r\n}\r\n\r\n.recentSearchesHeading {\r\n    font-family: Roboto;\r\n    font-size: 20px;\r\n    font-weight: 400;\r\n    line-height: 28px;\r\n    margin-bottom: 16px;\r\n}\r\n\r\n.recentSearch {\r\n    box-sizing: border-box;\r\n    cursor: pointer;\r\n    margin-bottom: 8px;\r\n    line-height: 19.6px;\r\n    font-family: Roboto;\r\n    font-size: 14px;\r\n}\r\n\r\n.typeFilterSection {\r\n    padding: 24px 0;\r\n    border-bottom: 1px solid rgb(222, 222, 222);\r\n}\r\n\r\n\r\n.typeFilterSection-mainheading {\r\n\tfont-family: Roboto;\r\n    font-size: 20px;\r\n    font-weight: 400;\r\n    line-height: 28px;\r\n    margin-bottom: 16px;\r\n}\r\n\r\n\r\n.skillFilterSection {\r\n\tpadding: 24px 0;\r\n\tborder-bottom: 1px solid rgb(222, 222, 222);\r\n}\r\n\r\n.skillFilterSection-heading {\r\n\tfont-family: Roboto;\r\n    font-size: 16px;\r\n    font-weight: 700;\r\n    line-height: 24px;\r\n    margin-bottom: 16px;\r\n}\r\n\r\n/***********\r\nCheckbox styling\r\n**************/\r\n\r\n.b-contain *, .b-contain *::before, .b-contain *::after {\r\n\tbox-sizing: content-box !important;\r\n}\r\n\r\n.b-contain input {\r\n\tposition: absolute;\r\n\tz-index: -1;\r\n\topacity: 0;\r\n}\r\n\r\n.b-contain span {\r\n\tline-height: 1;\r\n\tfont-size: 1rem;\r\n\tfont-family: inherit;\r\n}\r\n\r\n.b-contain {\r\n\tdisplay: table;\r\n\tposition: relative;\r\n\tpadding-left: 1.8rem;\r\n\tcursor: pointer;\r\n\tmargin-bottom: .5rem;\r\n}\r\n\r\n.b-contain input[type=\"checkbox\"] ~ .b-input {\r\n\tposition: absolute;\r\n\ttop: 0;\r\n\tleft: 0;\r\n\theight: 1rem;\r\n\twidth: 1rem;\r\n\tbackground: rgba(255, 255, 255, 1);\r\n\ttransition: background 250ms;\r\n\tborder: 1px solid rgba(41, 178, 254, 1);\r\n\tborder-radius: 0.125rem;\r\n}\r\n\r\n.b-contain input[type=\"radio\"] ~ .b-input {\r\n\tposition: absolute;\r\n\ttop: 0;\r\n\tleft: 0;\r\n\theight: 1rem;\r\n\twidth: 1rem;\r\n\tbackground: rgba(255, 255, 255, 1);\r\n\ttransition: background 250ms;\r\n\tborder: 1px solid rgba(41, 178, 254, 1);\r\n\tborder-radius: 2.0rem;\r\n}\r\n\r\n.b-contain input[type=\"checkbox\"] ~ .b-input::after {\r\n\tcontent: '';\r\n\tposition: absolute;\r\n\tdisplay: none;\r\n\tleft: 0.32rem;\r\n\ttop: 0rem;\r\n\twidth: 0.32rem;\r\n\theight: 0.66rem;\r\n\tborder: solid rgba(255, 255, 255, 1);\r\n\tborder-width: 0 2px 2px 0;\r\n\ttransition: background 250ms;\r\n\ttransform: rotate(45deg);\r\n}\r\n\r\n.b-contain input[type=\"radio\"] ~ .b-input::after {\r\n\tcontent: '';\r\n\tposition: absolute;\r\n\tdisplay: none;\r\n\tleft: .25rem;\r\n\ttop: .25rem;\r\n\twidth: .75rem;\r\n\theight: .75rem;\r\n\tborder-radius: 2.0rem;\r\n\tbackground: rgba(255, 255, 255, 1);\r\n\ttransition: background 250ms;\r\n}\r\n\r\n.b-contain input:disabled ~ .b-input::after {\r\n\tborder-color: rgba(135, 149, 161, 1);\r\n}\r\n\r\n.b-contain input:checked ~ .b-input::after {\r\n\tdisplay: block;\r\n}\r\n\r\n.b-contain:hover input ~ .b-input,\r\n.b-contain input:focus ~ .b-input {\r\n\tbackground: rgb(231, 238, 243);\r\n}\r\n\r\n.b-contain input:focus ~ .b-input {\r\n\tbox-shadow: 0 0 0 2px rgba(255, 255, 255, 1);\r\n}\r\n\r\n.b-contain input:checked ~ .b-input {\r\n\tbackground: rgba(41, 178, 254, 1);\r\n\tborder-color: rgba(41, 178, 254, 1);\r\n}\r\n\r\n.b-contain input[type=\"checkbox\"]:disabled ~ .b-input {\r\n\tbackground: rgba(241, 245, 248, 1);\r\n\tborder-color: rgba(184, 194, 204, 1);\r\n\topacity: 0.6;\r\n\tcursor: not-allowed;\r\n}\r\n\r\n.b-contain input[type=\"radio\"]:disabled ~ .b-input {\r\n\tbackground: rgba(241, 245, 248, 1);\r\n\tborder-color: rgba(184, 194, 204, 1);\r\n\topacity: 0.6;\r\n\tcursor: not-allowed;\r\n}\r\n\r\n.b-contain input[type=\"radio\"]:disabled ~ .b-input::after {\r\n\tbackground: rgba(135, 149, 161, 1);\r\n}\r\n\r\n.b-contain input:checked:focus ~ .b-input, .b-contain:hover input:not([disabled]):checked ~ .b-input {\r\n\tbackground: rgba(41, 178, 254, 1);\r\n\tborder-color: rgba(41, 178, 254, 1);\r\n}\r\n\r\n.b-contain .b-input::before {\r\n\tcontent: '';\r\n\tdisplay: block;\r\n\tposition: absolute;\r\n\tleft: 0;\r\n\ttop: 0;\r\n\twidth: 3.08rem;\r\n\theight: 3rem;\r\n\tmargin-left: -0.85rem;\r\n\tmargin-top: -0.85rem;\r\n\tbackground: rgba(0, 130, 243, 1);\r\n\tborder-radius: 2rem;\r\n\topacity: .6;\r\n\tz-index: 99999;\r\n\ttransform: scale(0);\r\n}\r\n\r\n@-webkit-keyframes b-ripple {\r\n\t0% {\r\n\t\ttransform: scale(0);\r\n\t}\r\n\r\n\t20% {\r\n\t\ttransform: scale(1);\r\n\t}\r\n\r\n\t100% {\r\n\t\topacity: 0;\r\n\t\ttransform: scale(1);\r\n  \t}\r\n}\r\n\r\n@keyframes b-ripple {\r\n\t0% {\r\n\t\ttransform: scale(0);\r\n\t}\r\n\r\n\t20% {\r\n\t\ttransform: scale(1);\r\n\t}\r\n\r\n\t100% {\r\n\t\topacity: 0;\r\n\t\ttransform: scale(1);\r\n  \t}\r\n}\r\n\r\n@-webkit-keyframes b-ripple-duplicate {\r\n\t0% {\r\n\t\ttransform: scale(0);\r\n\t}\r\n\r\n\t30% {\r\n\t\ttransform: scale(1);\r\n\t}\r\n\r\n\t60% {\r\n\t\ttransform: scale(1);\r\n\t}\r\n\r\n\t100% {\r\n\t\topacity: 0;\r\n\t\ttransform: scale(1);\r\n  \t}\r\n}\r\n\r\n@keyframes b-ripple-duplicate {\r\n\t0% {\r\n\t\ttransform: scale(0);\r\n\t}\r\n\r\n\t30% {\r\n\t\ttransform: scale(1);\r\n\t}\r\n\r\n\t60% {\r\n\t\ttransform: scale(1);\r\n\t}\r\n\r\n\t100% {\r\n\t\topacity: 0;\r\n\t\ttransform: scale(1);\r\n  \t}\r\n}\r\n\r\n.b-contain input + .b-input::before {\r\n\t-webkit-animation: b-ripple 250ms ease-out;\r\n\t        animation: b-ripple 250ms ease-out;\r\n}\r\n\r\n.b-contain input:checked + .b-input::before {\r\n\t-webkit-animation-name: b-ripple-duplicate;\r\n\t        animation-name: b-ripple-duplicate;\r\n}\r\n\r\n.b-contain .b-input::before {\r\n\tvisibility: hidden;\r\n}\r\n\r\n.b-contain input:focus + .b-input::before {\r\n\tvisibility: visible;\r\n}\r\n\r\n.b-contain:first-child .b-input::before {\r\n\tvisibility: hidden;\r\n}\r\n\r\n.b-contain {\r\n    display: block;\r\n    font-family: Roboto;\r\n    font-size: 14px;\r\n    font-weight: 400;\r\n    line-height: 14px;\r\n}\r\n\r\n/********\r\nend of checkbox styling\r\n***********/\r\n\r\n.enterSkills {\r\n\tbox-sizing: border-box;\r\n\tfont-size: 14px;\r\n\tmargin-top: 16px;\r\n\tpadding: 0px 12px;\r\n\theight: 36px;\r\n\tline-height: 20.0167px;\r\n\tborder: 1px solid #bec0c2;\r\n\twidth: 100%;\r\n}\r\n\r\n.enterSkills:focus, .enterSkills:hover {\r\n\tborder: 2px solid #47a9e2;\r\n}\r\n\r\n.skillsSuggestions {\r\n\tdisplay: flex;\r\n\tflex-direction: column;\r\n}\r\n\r\n.skillsSuggestion {\r\n\tbox-sizing: border-box;\r\n\tpadding: 8px 16px;\r\n\tfont-size: 14px;\r\n\tline-height: 19.6px;\r\n\tcursor: pointer;\r\n}\r\n\r\n.skillsSuggestion:hover {\r\n\tcolor: white;\r\n\tbackground-color: rgb(0, 127, 237);\r\n}\r\n\r\n.jobFilter-heading {\r\n\tdisplay: flex;\r\n\tjustify-content: space-between;\r\n\talign-items: center;\r\n}\r\n\r\n.close-icon {\r\n\tfloat: right;\r\n\theight: 16px;\r\n\twidth: 16px;\r\n}", ""]);
 
 // exports
 
@@ -2018,7 +2018,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, ".searchedJobCard {\r\n    width: 100%;\r\n    padding: 0px 24px;\r\n    color: black;\r\n    overflow: hidden;\r\n    box-sizing: border-box;\r\n    display: flex;\r\n}\r\n\r\na {\r\n    color: black;\r\n    text-decoration: none;\r\n}\r\n\r\n.searchedJobCard:hover {\r\n    background-color: #f7f7f7;\r\n}\r\n\r\n.searchedJobCard-item {\r\n    box-sizing: border-box;\r\n    padding: 24px 0;\r\n    border-bottom: 1px solid #dedede;\r\n    display: flex;\r\n    justify-content: space-between;\r\n}\r\n\r\n.projectName {\r\n    text-decoration: none;\r\n    font-size: 16px;\r\n    line-height: 24px;\r\n}\r\n\r\n.projectName:hover {\r\n    color: rgb(19, 159, 240);\r\n    text-decoration: underline;\r\n}\r\n\r\n.projectDetails {\r\n    margin: 14px 0px 16px 0px;\r\n    font-family: Roboto;\r\n    font-size: 14px;\r\n    line-height: 19.6px;\r\n    -webkit-line-clamp: 3;\r\n    letter-spacing: 0.5px;\r\n}\r\n\r\n.skills {\r\n    display: flex;\r\n    padding-right: 24px;\r\n    display: flex;\r\n    flex-wrap: wrap;\r\n}\r\n\r\n.skill {\r\n    margin-right: 8px;\r\n    font-family: Roboto;\r\n    font-size: 16px;\r\n    color: rgb(0, 127, 237);\r\n    line-height: 19.6px;\r\n    letter-spacing: 0.5px;\r\n}\r\n\r\n.jobContainer {\r\n    width: 80%;\r\n}\r\n\r\n.budget {\r\n    font-family: Roboto;\r\n    font-size: 16px;\r\n    font-weight: 700;\r\n    line-height: 24px;\r\n}\r\n\r\n@media only screen and (max-width: 950px) {\r\n    .searchedJobCard-item {\r\n        flex-direction: column;\r\n    }\r\n\r\n    .budget {\r\n        font-size: 14px;\r\n    }\r\n\r\n    .jobContainer {\r\n        padding-bottom: 8px;\r\n    }\r\n}\r\n\r\n.searchResults-header-Container {\r\n    box-sizing: border-box;\r\n    display: flex;\r\n    padding: 24px;\r\n    width: 100%;\r\n    height: 100px;\r\n    border-bottom: 1px solid #dedede;\r\n    justify-content: center;\r\n    align-items: center;\r\n}\r\n\r\n.searchResults-header {\r\n    box-sizing: border-box;\r\n    display: flex;\r\n    justify-content: space-between;\r\n    width: 100%;\r\n}", ""]);
+exports.push([module.i, ".searchedJobCard {\r\n    width: 100%;\r\n    padding: 0px 24px;\r\n    color: black;\r\n    overflow: hidden;\r\n    box-sizing: border-box;\r\n    display: flex;\r\n}\r\n\r\na {\r\n    color: black;\r\n    text-decoration: none;\r\n}\r\n\r\n.searchedJobCard:hover {\r\n    background-color: #f7f7f7;\r\n}\r\n\r\n.searchedJobCard-item {\r\n    box-sizing: border-box;\r\n    padding: 24px 0;\r\n    border-bottom: 1px solid #dedede;\r\n    display: flex;\r\n    justify-content: space-between;\r\n}\r\n\r\n.projectName {\r\n    text-decoration: none;\r\n    font-size: 16px;\r\n    line-height: 24px;\r\n}\r\n\r\n.projectName:hover {\r\n    color: rgb(19, 159, 240);\r\n    text-decoration: underline;\r\n}\r\n\r\n.projectDetails {\r\n    margin: 14px 0px 16px 0px;\r\n    font-family: Roboto;\r\n    font-size: 14px;\r\n    line-height: 19.6px;\r\n    -webkit-line-clamp: 3;\r\n    letter-spacing: 0.5px;\r\n}\r\n\r\n.skills {\r\n    display: flex;\r\n    padding-right: 24px;\r\n    display: flex;\r\n    flex-wrap: wrap;\r\n}\r\n\r\n.skill {\r\n    margin-right: 8px;\r\n    font-family: Roboto;\r\n    font-size: 16px;\r\n    color: rgb(0, 127, 237);\r\n    line-height: 19.6px;\r\n    letter-spacing: 0.5px;\r\n}\r\n\r\n.jobContainer {\r\n    width: 80%;\r\n}\r\n\r\n.budget {\r\n    font-family: Roboto;\r\n    font-size: 16px;\r\n    font-weight: 700;\r\n    line-height: 24px;\r\n}\r\n\r\n@media only screen and (max-width: 950px) {\r\n    .searchedJobCard-item {\r\n        flex-direction: column;\r\n    }\r\n\r\n    .budget {\r\n        font-size: 14px;\r\n    }\r\n\r\n    .jobContainer {\r\n        padding-bottom: 8px;\r\n    }\r\n}\r\n\r\n.searchResults-header-Container {\r\n    box-sizing: border-box;\r\n    display: flex;\r\n    padding: 24px;\r\n    width: 100%;\r\n    height: 100px;\r\n    border-bottom: 1px solid #dedede;\r\n    justify-content: center;\r\n    align-items: center;\r\n}\r\n\r\n.searchResults-header {\r\n    box-sizing: border-box;\r\n    display: flex;\r\n    justify-content: space-between;\r\n    width: 100%;\r\n}\r\n\r\n\r\n.responsive-icon {\r\n    height: 40px;\r\n    width: 40px;\r\n    display: none;\r\n}\r\n\r\n@media only screen and (max-width: 950px) {\r\n    .paginator {\r\n        display: none;\r\n    }\r\n\r\n    .responsive-icon {\r\n        display: inline-block;\r\n    }\r\n  }", ""]);
 
 // exports
 
@@ -2056,7 +2056,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".container {\n  width: 100vw;\n  height: 100%;\n  background-color: #f0f0f0;\n  display: flex;\n  flex-direction: column;\n  align-content: center;\n  box-sizing: border-box;\n}\n\n.searchResultContainer {\n  padding: 0px 4%;  \n  display: flex;\n  justify-content: space-between;\n  align-items: flex-start;\n  margin-bottom: 100px;\n}\n\n@media only screen and (max-width: 700px) {\n  .container {\n    padding: 0px 15px;\n  }\n}\n\n.jobFilter {\n  background-color: white;\n  width: 22%;\n}\n\n.searchResults {\n  background-color: white;\n  width: 75%;\n  overflow: hidden;\n}\n\n.box-shadow {\n  box-shadow: rgba(0, 0, 0, 0.12) 0px 0px 6px 0px, rgba(0, 0, 0, 0.16) 0px 4px 10px 0px;\n}\n\n@media only screen and (max-width: 950px) {\n  .jobFilter {\n    display: none;\n  }\n  .searchResults {\n    width: 100%;\n  }\n}\n\n.jobFilter {\n  box-sizing: border-box;\n  padding: 24px;\n}\n", ""]);
+exports.push([module.i, ".container {\n  width: 100vw;\n  height: 100%;\n  background-color: #f0f0f0;\n  display: flex;\n  flex-direction: column;\n  align-content: center;\n  box-sizing: border-box;\n}\n\n.searchResultContainer {\n  padding: 0px 4%;  \n  display: flex;\n  justify-content: space-between;\n  align-items: flex-start;\n  margin-bottom: 100px;\n}\n\n@media only screen and (max-width: 700px) {\n  .container {\n    padding: 0px 15px;\n  }\n}\n\n.jobFilter {\n  background-color: white;\n  width: 22%;\n}\n\n.searchResults {\n  background-color: white;\n  width: 75%;\n  overflow: hidden;\n}\n\n.box-shadow {\n  box-shadow: rgba(0, 0, 0, 0.12) 0px 0px 6px 0px, rgba(0, 0, 0, 0.16) 0px 4px 10px 0px;\n}\n\n@media only screen and (max-width: 950px) {\n  .jobFilter {\n    display: none;\n  }\n  .searchResults {\n    width: 100%;\n  }\n\n  .jobFilterContainer {\n    padding-top: 0px!important;\n  }\n}\n\n.jobFilter {\n  box-sizing: border-box;\n  padding: 24px;\n}\n\n.popped {\n  display: block!important;\n  padding-top: 0px;\n  position: fixed;\n  top: 0px;\n  left: 0px;\n  overflow-y: scroll;\n  width: 100%;\n  height: 100%;\n  z-index: 5;\n}\n\n", ""]);
 
 // exports
 
@@ -35665,6 +35665,17 @@ if(false) {}
 
 /***/ }),
 
+/***/ "./resources/js/jobs/components/jobFilter/close.svg":
+/*!**********************************************************!*\
+  !*** ./resources/js/jobs/components/jobFilter/close.svg ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/close.svg?fb30fc33705d4dcd1a632ad4263e5e88";
+
+/***/ }),
+
 /***/ "./resources/js/jobs/components/jobFilter/jobFilter.js":
 /*!*************************************************************!*\
   !*** ./resources/js/jobs/components/jobFilter/jobFilter.js ***!
@@ -35682,6 +35693,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _JobFilter_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_JobFilter_css__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var _url__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../url */ "./resources/js/url.js");
+/* harmony import */ var _close_svg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./close.svg */ "./resources/js/jobs/components/jobFilter/close.svg");
+/* harmony import */ var _close_svg__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_close_svg__WEBPACK_IMPORTED_MODULE_5__);
 
 
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -35709,6 +35722,7 @@ function _assertThisInitialized(self) { if (self === void 0) { throw new Referen
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
 
 
 
@@ -35912,9 +35926,17 @@ var JobFilter = /*#__PURE__*/function (_React$Component) {
 
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         className: "jobFilterContainer"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+        className: "jobFilter-heading"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h5", {
         className: "recentSearchesHeading"
-      }, "My Recent Searches"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+      }, "My Recent Searches"), this.props.showJobFilter ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
+        src: _close_svg__WEBPACK_IMPORTED_MODULE_5___default.a,
+        className: "close-icon",
+        onClick: function onClick() {
+          return _this3.props.handleShowJobFilter(false);
+        }
+      }) : null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         className: "recentSearches"
       }, recentSearches)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         className: "typeFilterSection"
@@ -35958,7 +35980,8 @@ var JobFilter = /*#__PURE__*/function (_React$Component) {
 function mapStoreToProps(store) {
   return {
     recentSearches: store.recentSearches,
-    skills: store.filters.skills
+    skills: store.filters.skills,
+    showJobFilter: store.showJobFilter
   };
 }
 
@@ -36024,6 +36047,12 @@ function mapDispatchToProps(dispatch) {
       return dispatch({
         type: 'PAGINATE',
         pageNumber: 1
+      });
+    },
+    handleShowJobFilter: function handleShowJobFilter(show) {
+      return dispatch({
+        type: 'SHOW_JOB_FILTER',
+        show: show
       });
     }
   };
@@ -36473,6 +36502,17 @@ function Paginator() {
 
 /***/ }),
 
+/***/ "./resources/js/jobs/components/searchResults/responsive-icon.svg":
+/*!************************************************************************!*\
+  !*** ./resources/js/jobs/components/searchResults/responsive-icon.svg ***!
+  \************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/responsive-icon.svg?09aae35442d6345020b0e2b0d42c83ae";
+
+/***/ }),
+
 /***/ "./resources/js/jobs/components/searchResults/searchResults.js":
 /*!*********************************************************************!*\
   !*** ./resources/js/jobs/components/searchResults/searchResults.js ***!
@@ -36488,6 +36528,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _SearchResults_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_SearchResults_css__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var _paginator_paginator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./paginator/paginator */ "./resources/js/jobs/components/searchResults/paginator/paginator.js");
+/* harmony import */ var _responsive_icon_svg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./responsive-icon.svg */ "./resources/js/jobs/components/searchResults/responsive-icon.svg");
+/* harmony import */ var _responsive_icon_svg__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_responsive_icon_svg__WEBPACK_IMPORTED_MODULE_4__);
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -36509,6 +36551,7 @@ function _assertThisInitialized(self) { if (self === void 0) { throw new Referen
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
 
 
 
@@ -36542,6 +36585,8 @@ var SearchResults = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
+      var _this2 = this;
+
       var jobCount = 'No Jobs Found';
 
       if (this.props.unMutableSearchResults) {
@@ -36594,7 +36639,13 @@ var SearchResults = /*#__PURE__*/function (_React$Component) {
         className: "jobCount"
       }, jobCount), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "paginator"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_paginator_paginator__WEBPACK_IMPORTED_MODULE_3__["default"], null)))), searchedJobs);
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_paginator_paginator__WEBPACK_IMPORTED_MODULE_3__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: _responsive_icon_svg__WEBPACK_IMPORTED_MODULE_4___default.a,
+        className: "responsive-icon",
+        onClick: function onClick() {
+          return _this2.props.showJobFilter(true);
+        }
+      }))), searchedJobs);
     }
   }]);
 
@@ -36616,6 +36667,12 @@ function mapDispatchToProps(dispatch) {
       return dispatch({
         type: 'connected',
         componentName: componentName
+      });
+    },
+    showJobFilter: function showJobFilter(show) {
+      return dispatch({
+        type: 'SHOW_JOB_FILTER',
+        show: show
       });
     }
   };
@@ -36783,7 +36840,7 @@ var Jobs = /*#__PURE__*/function (_React$Component) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_search_search__WEBPACK_IMPORTED_MODULE_3__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "searchResultContainer"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "jobFilter box-shadow"
+        className: "jobFilter box-shadow" + (this.props.showJobFilter ? ' popped' : '')
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_jobFilter_jobFilter__WEBPACK_IMPORTED_MODULE_5__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "searchResults box-shadow"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_searchResults_searchResults__WEBPACK_IMPORTED_MODULE_4__["default"], null)))));
@@ -36794,7 +36851,9 @@ var Jobs = /*#__PURE__*/function (_React$Component) {
 }(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
 
 function mapStoreToProps(store) {
-  return {};
+  return {
+    showJobFilter: store.showJobFilter
+  };
 }
 
 function mapDispatchToProps(dispatch) {
@@ -36868,7 +36927,8 @@ var initialState = {
       'react': false,
       'web development': false
     }
-  }
+  },
+  showJobFilter: false
 };
 
 function handleSkillFilterState(filters, searchResults) {
@@ -37057,6 +37117,10 @@ function reducer() {
       newState.searchResults = _toConsumableArray(temp);
       break;
 
+    case 'SHOW_JOB_FILTER':
+      newState.showJobFilter = action.show;
+      break;
+
     default:
       break;
   }
@@ -37078,7 +37142,7 @@ function reducer() {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "url", function() { return url; });
-var url = "https://dummy-freelancer.herokuapp.com";
+var url = "https://dummy-freelancer.herokuapp.com"; // export const url = `http://localhost:8000`;
 
 /***/ }),
 

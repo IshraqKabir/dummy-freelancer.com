@@ -6,6 +6,8 @@ import { connect } from 'react-redux';
 
 import {url} from '../../../url';
 
+import Close from './close.svg';
+
 const axios = require('axios');
 
 class JobFilter extends React.Component
@@ -162,9 +164,18 @@ class JobFilter extends React.Component
     return (
       <React.Fragment>
         <div className="jobFilterContainer">
-          <h5 className="recentSearchesHeading">
-            My Recent Searches
-          </h5>
+          <div className="jobFilter-heading">
+            <h5 className="recentSearchesHeading">
+              My Recent Searches
+            </h5>
+            {this.props.showJobFilter ? 
+              <img 
+                src={Close}
+                className="close-icon"
+                onClick={() => this.props.handleShowJobFilter(false)}
+              />
+            :null}
+          </div>
           <div className="recentSearches">
             {recentSearches}
           </div>
@@ -218,6 +229,7 @@ function mapStoreToProps (store)
   return {
     recentSearches: store.recentSearches,
     skills: store.filters.skills,
+    showJobFilter: store.showJobFilter,
 
   }
 }
@@ -236,6 +248,8 @@ function mapDispatchToProps (dispatch)
     handleSkillFilterState: () => dispatch({type: 'HANDLE_SKILL_FILTER_STATE'}),
     handleSkillsSuggesionClick: (suggestion) => dispatch({type: 'ADD_SKILL_FILTER', suggestion}),
     paginate: () => dispatch({type: 'PAGINATE', pageNumber: 1}),
+    handleShowJobFilter: (show) => dispatch({type: 'SHOW_JOB_FILTER', show}),
+
 
   }
 }
