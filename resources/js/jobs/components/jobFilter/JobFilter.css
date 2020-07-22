@@ -287,3 +287,15 @@ end of checkbox styling
 	color: white;
 	background-color: rgb(0, 127, 237);
 }
+
+.jobFilter-heading {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.close-icon {
+	float: right;
+	height: 16px;
+	width: 16px;
+}

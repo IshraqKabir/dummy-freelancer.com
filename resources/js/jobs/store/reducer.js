@@ -16,7 +16,7 @@ const initialState = {
             'web development': false,
         },
     },
-
+    showJobFilter: false,
 };
 
 function handleSkillFilterState (filters, searchResults) 
@@ -192,6 +192,9 @@ function reducer(state = initialState, action) {
 
             temp = filteredSearchedResults.slice(startingPosition, endingPosition);
             newState.searchResults = [...temp];
+            break;
+        case 'SHOW_JOB_FILTER':
+            newState.showJobFilter = action.show;
             break;
         default:
             break;
