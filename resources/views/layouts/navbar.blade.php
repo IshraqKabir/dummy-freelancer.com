@@ -22,11 +22,9 @@
                     <a href="/register">Sign Up</a>
                 </li>
             @endguest
-            @auth     
-                <li class="button">
-                    <a href="/post-project">Post a Project</a>
-                </li>
-            @endauth
+            <li class="button">
+                <a href="/post-project">Post a Project</a>
+            </li>
         </div>
     </div>
 </ul>

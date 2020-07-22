@@ -36034,7 +36034,7 @@ function mapDispatchToProps(dispatch) {
     },
     handleSkillFilterState: function handleSkillFilterState() {
       return dispatch({
-        type: 'HANDLE_SKILL_FILTER_STATE'
+        type: 'HANDLE_SKILL_FILTER _STATE'
       });
     },
     handleSkillsSuggesionClick: function handleSkillsSuggesionClick(suggestion) {

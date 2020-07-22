@@ -245,7 +245,7 @@ function mapDispatchToProps (dispatch)
     handleShowHourlyChange: () => dispatch({type: 'HANDLE_SHOW_HOURLY_CHANGE'}),
     handleFilterChange: () => dispatch({type: 'HANDLE_FILTER_CHANGE'}),
     handleSkillFilterChange: (skill) => dispatch({type: 'HANDLE_SKILL_FILTER_CHANGE', skill}),
-    handleSkillFilterState: () => dispatch({type: 'HANDLE_SKILL_FILTER_STATE'}),
+    handleSkillFilterState: () => dispatch({type: 'HANDLE_SKILL_FILTER _STATE'}),
     handleSkillsSuggesionClick: (suggestion) => dispatch({type: 'ADD_SKILL_FILTER', suggestion}),
     paginate: () => dispatch({type: 'PAGINATE', pageNumber: 1}),
     handleShowJobFilter: (show) => dispatch({type: 'SHOW_JOB_FILTER', show}),
