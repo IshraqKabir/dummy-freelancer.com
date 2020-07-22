@@ -11,10 +11,10 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/post-project', 'ProjectController@create')->name('create-project');
-Route::get('', 'ProjectController@create')->name('create-project');
 Route::post('/post-project', 'ProjectController@store')->name('store-project')->middleware('auth');
 Route::get('/project/{project}', 'ProjectController@show')->name('project.show');
 Route::get('/jobs', 'ProjectController@index')->name('jobs');
+Route::get('', 'ProjectController@index')->name('jobs');
 Route::get('/jobsapi', 'ProjectController@searchAPI')->name('jobs-search-api');
 
 Route::get('/skills', 'SkillController@index')->name('skill-index-api');
