@@ -2056,7 +2056,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".container {\n  width: 100vw;\n  height: 100%;\n  background-color: #f0f0f0;\n  display: flex;\n  flex-direction: column;\n  align-content: center;\n  box-sizing: border-box;\n}\n\n.searchResultContainer {\n  padding: 0px 4%;  \n  display: flex;\n  justify-content: space-between;\n  align-items: flex-start;\n  margin-bottom: 100px;\n}\n\n@media only screen and (max-width: 700px) {\n  .container {\n    padding: 0px 15px;\n  }\n}\n\n.jobFilter {\n  background-color: white;\n  width: 22%;\n}\n\n.searchResults {\n  background-color: white;\n  width: 75%;\n  overflow: hidden;\n}\n\n.box-shadow {\n  box-shadow: rgba(0, 0, 0, 0.12) 0px 0px 6px 0px, rgba(0, 0, 0, 0.16) 0px 4px 10px 0px;\n}\n\n@media only screen and (max-width: 950px) {\n  .jobFilter {\n    display: none;\n  }\n  .searchResults {\n    width: 100%;\n  }\n\n  .jobFilterContainer {\n    padding-top: 0px!important;\n  }\n}\n\n.jobFilter {\n  box-sizing: border-box;\n  padding: 24px;\n}\n\n.popped {\n  display: block!important;\n  padding-top: 0px;\n  position: fixed;\n  top: 0px;\n  left: 0px;\n  overflow-y: scroll;\n  width: 100%;\n  height: 100%;\n  z-index: 5;\n}\n\n", ""]);
+exports.push([module.i, ".container {\r\n  width: 100vw;\r\n  height: 100%;\r\n  background-color: #f0f0f0;\r\n  display: flex;\r\n  flex-direction: column;\r\n  align-content: center;\r\n  box-sizing: border-box;\r\n}\r\n\r\n.searchResultContainer {\r\n  padding: 0px 4%;  \r\n  display: flex;\r\n  justify-content: space-between;\r\n  align-items: flex-start;\r\n  margin-bottom: 100px;\r\n}\r\n\r\n@media only screen and (max-width: 700px) {\r\n  .container {\r\n    padding: 0px 15px;\r\n  }\r\n}\r\n\r\n.jobFilter {\r\n  background-color: white;\r\n  width: 22%;\r\n}\r\n\r\n.searchResults {\r\n  background-color: white;\r\n  width: 75%;\r\n  overflow: hidden;\r\n}\r\n\r\n.box-shadow {\r\n  box-shadow: rgba(0, 0, 0, 0.12) 0px 0px 6px 0px, rgba(0, 0, 0, 0.16) 0px 4px 10px 0px;\r\n}\r\n\r\n@media only screen and (max-width: 950px) {\r\n  .jobFilter {\r\n    display: none;\r\n  }\r\n  .searchResults {\r\n    width: 100%;\r\n  }\r\n\r\n  .jobFilterContainer {\r\n    padding-top: 0px!important;\r\n  }\r\n}\r\n\r\n.jobFilter {\r\n  box-sizing: border-box;\r\n  padding: 24px;\r\n}\r\n\r\n.popped {\r\n  display: block!important;\r\n  padding-top: 0px;\r\n  position: fixed;\r\n  top: 0px;\r\n  left: 0px;\r\n  overflow-y: scroll;\r\n  width: 100%;\r\n  height: 100%;\r\n  z-index: 5;\r\n}\r\n\r\n", ""]);
 
 // exports
 
@@ -35672,7 +35672,7 @@ if(false) {}
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/images/close.svg?fb30fc33705d4dcd1a632ad4263e5e88";
+module.exports = "/images/close.svg?9442820c02c2ebdb0198d6de0675a608";
 
 /***/ }),
 
@@ -36509,7 +36509,7 @@ function Paginator() {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/images/responsive-icon.svg?09aae35442d6345020b0e2b0d42c83ae";
+module.exports = "/images/responsive-icon.svg?f0c351c2f98d1e11b235b7cfa2535c60";
 
 /***/ }),
 
