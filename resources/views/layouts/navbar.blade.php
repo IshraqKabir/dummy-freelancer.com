@@ -3,14 +3,14 @@
         <li>
         <img src="{{ asset('images/freelancer-logo.png') }}" class="logo" />
         </li>
-        <div class="link-set-1">
+        <!-- <div class="link-set-1">
             <li class="one">
                 <a href="#">How it works</a>
             </li>
             <li class="two">
                 <a href="#">Browse Jobs</a>
             </li>
-        </div>
+        </div> -->
     </div>
     <div class="second_section">
         <div class="link-set-2">

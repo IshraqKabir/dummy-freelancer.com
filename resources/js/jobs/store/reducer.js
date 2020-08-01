@@ -1,6 +1,6 @@
 import { getCookie, setCookie } from '../cookie';
 
-export const jobsPerPage = 1;
+export const jobsPerPage = 3;
 
 const initialState = {
     name: '',
